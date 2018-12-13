@@ -16,5 +16,6 @@ namespace MonsterHunterWorld.BUS
         {
             InitializeComponent();
         }
+
     }
 }
