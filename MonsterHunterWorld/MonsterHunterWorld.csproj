@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A7AA44B9-A3D8-4048-962D-7F0B4C6DCD24}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MonsterHunterWorld</RootNamespace>
+    <AssemblyName>MonsterHunterWorld</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BUS\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\FormJewel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FormJewel.Designer.cs">
+      <DependentUpon>FormJewel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\FormJewelInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FormJewelInfo.Designer.cs">
+      <DependentUpon>FormJewelInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\FormMonster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FormMonster.Designer.cs">
+      <DependentUpon>FormMonster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\FormMonsterInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FormMonsterInfo.Designer.cs">
+      <DependentUpon>FormMonsterInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\FormSkill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FormSkill.Designer.cs">
+      <DependentUpon>FormSkill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\FormSkillInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FormSkillInfo.Designer.cs">
+      <DependentUpon>FormSkillInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\FrmArmorInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FrmArmorInfo.Designer.cs">
+      <DependentUpon>FrmArmorInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\FrmArmors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FrmArmors.Designer.cs">
+      <DependentUpon>FrmArmors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\FrmChamList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FrmChamList.Designer.cs">
+      <DependentUpon>FrmChamList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\FrmItemInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FrmItemInfo.Designer.cs">
+      <DependentUpon>FrmItemInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\Frmitems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\Frmitems.Designer.cs">
+      <DependentUpon>Frmitems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\FrmWeaponInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FrmWeaponInfo.Designer.cs">
+      <DependentUpon>FrmWeaponInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\FrmWeaponList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FrmWeaponList.Designer.cs">
+      <DependentUpon>FrmWeaponList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\MonsterHunterAPI.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VO\Armors.cs" />
+    <Compile Include="VO\Cham.cs" />
+    <Compile Include="VO\Items.cs" />
+    <Compile Include="VO\Jewel.cs" />
+    <Compile Include="VO\Parameter.cs" />
+    <Compile Include="VO\Skill.cs" />
+    <Compile Include="VO\WeaponList.cs" />
+    <EmbeddedResource Include="BUS\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FormMonster.resx">
+      <DependentUpon>FormMonster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
