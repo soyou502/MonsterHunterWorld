@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Web;
 using Newtonsoft.Json.Linq;
+using MonsteHunterWorld;
 
 namespace MonsterHunterWorld.BUS
 {
@@ -36,6 +37,12 @@ namespace MonsterHunterWorld.BUS
             FormMonster form = new FormMonster();
             form.Owner = this;
             form.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmWeaponList fwl = new FrmWeaponList();
+            fwl.Show();
         }
     }
 }
