@@ -141,6 +141,7 @@
     <Compile Include="VO\Cham.cs" />
     <Compile Include="VO\Items.cs" />
     <Compile Include="VO\Jewel.cs" />
+    <Compile Include="VO\Material.cs" />
     <Compile Include="VO\Parameter.cs" />
     <Compile Include="VO\Skill.cs" />
     <Compile Include="VO\WeaponList.cs" />

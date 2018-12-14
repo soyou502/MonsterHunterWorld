@@ -14,7 +14,10 @@ namespace MonsterHunterWorld.VO
         private string decription;
         private int rare;
         private int price;
+        public Items()
+        {
 
+        }
         public Items(int idx, string type, string name, string decription, int rare, int price)
         {
             this.idx = idx;
