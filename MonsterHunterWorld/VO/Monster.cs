@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MonsterHunterWorld.VO
 {
-    class Monster
+    public class Monster
     {
         private int idx; // 인덱스번호
         private string image; // 이미지 주소

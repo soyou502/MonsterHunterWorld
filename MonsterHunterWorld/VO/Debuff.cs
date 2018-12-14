@@ -3,13 +3,18 @@
     /// <summary>
     /// 디버프 정보 클래스
     /// </summary>
-    internal class Debuff
+    public class Debuff
     {
         private int poison; // 독
         private int sleep; // 수면
         private int paralysis; // 마비
         private int explosion; // 폭파
         private int faint; // 기절
+
+        /// <summary>
+        /// Debuff 클래스 기본생성자
+        /// </summary>
+        public Debuff() { }
 
         /// <summary>
         /// Debuff 클래스 기본생성자

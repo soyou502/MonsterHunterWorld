@@ -10,6 +10,5 @@ namespace MonsterHunterWorld
     interface IGetListCollection<T>
     {
         IList<T> GetListCollection();
-        IList<T> GetListCollection(VO.Parameter parameter);
     }
 }

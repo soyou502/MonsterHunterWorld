@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MonsterHunterWorld.VO
 {
-    class Skill
+    public class Skill
     {
         private int idx; // 인덱스번호
         private string type; // 타입

@@ -64,7 +64,8 @@ namespace MonsterHunterWorld.DAO
             {
                 hexParameter += "&type=" + HttpUtility.UrlEncode(parameter.Type);
             }
-            return "http://www.mhwdb.kr/apis/" + hexParameter;
+
+            return ("http://www.mhwdb.kr/apis/" + hexParameter).Replace("%2f", "/");
         }
     }
 }
