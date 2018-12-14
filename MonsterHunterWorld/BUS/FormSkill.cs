@@ -52,9 +52,22 @@ namespace MonsterHunterWorld.BUS
             return searchSkills;
         }
 
-        private Skill SetSkill(JToken skill)
+        private Skill SetSkill(JToken item)
         {
-            throw new NotImplementedException();
+            Skill skill = new Skill();
+            skill.Idx = Convert.ToInt32(item["idx"].ToString());
+            skill.Name = item["name"].ToString();
+            skill.Type = item["type"].ToString();
+            skill.Desc = new List<SkillDesc>();
+            foreach (var subitem in item["desc"])
+            {
+                SkillDesc desc = new SkillDesc();
+                desc.Name = subitem["name"].ToString();
+                desc.Level = Convert.ToInt32(subitem["level"].ToString());
+                desc.Desc = subitem["desc"].ToString();
+                skill.Desc.Add(desc);
+            }
+            return skill;
         }
     }
 }
