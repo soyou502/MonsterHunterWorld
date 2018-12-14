@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MonsterHunterWorld.VO
 {
-    class Jewel
+    public class Jewel
     {
         private int idx; // 인덱스번호
         private string name; // 이름

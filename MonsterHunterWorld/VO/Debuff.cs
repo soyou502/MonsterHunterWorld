@@ -3,7 +3,7 @@
     /// <summary>
     /// 디버프 정보 클래스
     /// </summary>
-    internal class Debuff
+    public class Debuff
     {
         private int poison; // 독
         private int sleep; // 수면

@@ -3,7 +3,7 @@
     /// <summary>
     /// 스킬 레벨별 상세정보 클래스
     /// </summary>
-    internal class SkillDesc
+    public class SkillDesc
     {
         private string name; // 레벨이름
         private int level; // 레벨
