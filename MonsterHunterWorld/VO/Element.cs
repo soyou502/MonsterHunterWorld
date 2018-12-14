@@ -1,6 +1,6 @@
 ﻿namespace MonsterHunterWorld.VO
 {
-    internal class Weakness
+    internal class Element
     {
         private int fire;
         private int water;
@@ -8,7 +8,7 @@
         private int ice;
         private int dragon;
 
-        public Weakness(int fire, int water, int thunder, int ice, int dragon)
+        public Element(int fire, int water, int thunder, int ice, int dragon)
         {
             this.fire = fire;
             this.water = water;
