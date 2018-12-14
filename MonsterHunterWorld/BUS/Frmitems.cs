@@ -115,5 +115,21 @@ namespace MonsteHunterWorld
             }
             return items;
         }
+
+        public IList<Items> GetListCollection(Parameter parameter)
+        {
+            if (items == null)
+            {
+                MonsterHunterAPI api = new MonsterHunterAPI();
+                string json = api.GetJson(parameter);
+                JArray ja = JArray.Parse(json);
+                foreach (var item in ja)
+                {
+                    Items temp = new Items(int.Parse(item["idx"].ToString()), item["type"].ToString(), item["name"].ToString(), item["description"].ToString(), int.Parse(item["rare"].ToString()), int.Parse(item["price"].ToString()));
+                    items.Add(temp);
+                }
+            }
+            return items;
+        }
     }
 }
