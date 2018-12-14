@@ -1,5 +1,8 @@
 ﻿namespace MonsterHunterWorld.VO
 {
+    /// <summary>
+    /// 스킬 레벨별 상세정보 클래스
+    /// </summary>
     internal class SkillDesc
     {
         private string name;

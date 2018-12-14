@@ -1,5 +1,8 @@
 ﻿namespace MonsterHunterWorld.VO
 {
+    /// <summary>
+    /// 몬스터 드롭 아이템 정보 클래스
+    /// </summary>
     internal class Drop_Item : Items
     {
         private int idx;
