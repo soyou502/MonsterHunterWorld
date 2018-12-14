@@ -11,24 +11,22 @@ namespace MonsterHunterWorld.VO
     /// </summary>
     public class Parameter
     {
+        
+        private string getName;
+        private string name;
+        private string type;
+
         /// <summary>
+        /// Parameter 클래스 기본생성자
+        /// <param name="getName">
         /// 가능한 문자열 종류
         /// 몬스터 도감: monsters
         /// 스킬 도감: skills
         /// 아이템 도감: items
         /// 장비 도감: armors
         /// 호석 도감: charms
-        /// 장식품 도감: jewels
+        /// 장식품 도감: jewels</param>
         /// </summary>
-        private string getName;
-
-        private string name;
-        private string type;
-
-        /// <summary>
-        /// Parameter 클래스 기본생성자
-        /// </summary>
-        /// <param name="getName">접근할 도감이름</param>
         public Parameter(string getName)
         {
             this.getName = getName;

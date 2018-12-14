@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using MonsterHunterWorld.VO;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,25 +13,58 @@ using System.Windows.Forms;
 
 namespace MonsterHunterWorld.BUS
 {
-    public partial class FormMonster : Form
+    public partial class FormMonster : Form, IGetListCollection<VO.Monster>
     {
+        List<Monster> monsters;
         public FormMonster()
         {
             InitializeComponent();
         }
 
-        Form1 owner;
-        string getName;
+
         private void FormMonster_Load(object sender, EventArgs e)
         {
-            owner = this.Owner as Form1;
-            //owner.Visible = false; // 메인화면 안보이게하기
-            //owner.Enabled = false;
-            getName = "monsters";
-            //JArray ja = JArray.Parse(owner.GetJson(new Parameter(getName)));
-            //textBox1.Text = ja.ToString();
-            //textBox1.Text = ja.ToString();
-            
+
+        }
+
+        public IList<Monster> GetListCollection(Parameter parameter)
+        {
+            List<Monster> searchMonsters = new List<Monster>();
+            DAO.MonsterHunterAPI api = new DAO.MonsterHunterAPI();
+
+            JArray ja = JArray.Parse(api.GetJson(parameter));
+            foreach (var item in ja)
+            {
+                Monster monster = SetMonster(item);
+                searchMonsters.Add(monster);
+            }
+
+            return searchMonsters;
+        }
+
+        public IList<Monster> GetListCollection()
+        {
+            if (monsters == null)
+            {
+                monsters = new List<Monster>();
+                Parameter parameter = new Parameter("monsters");
+                DAO.MonsterHunterAPI api = new DAO.MonsterHunterAPI();
+
+                JArray ja = JArray.Parse(api.GetJson(parameter));
+                foreach (var item in ja)
+                {
+                    Monster monster = SetMonster(item);
+                    monsters.Add(monster);
+                }
+            }
+            return monsters;
+        }
+
+        private Monster SetMonster(JToken item)
+        {
+            Monster jewel = new Monster();
+
+            return jewel;
         }
     }
 }
