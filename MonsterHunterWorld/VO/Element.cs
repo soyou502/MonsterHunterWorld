@@ -27,7 +27,10 @@
             this.ice = ice;
             this.dragon = dragon;
         }
+        public Element()
+        {
 
+        }
         public int Fire { get => fire; set => fire = value; }
         public int Water { get => water; set => water = value; }
         public int Thunder { get => thunder; set => thunder = value; }

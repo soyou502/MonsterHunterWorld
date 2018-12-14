@@ -51,7 +51,7 @@ namespace MonsteHunterWorld
                     txtDescription.Text = item.Decription;
                 }
             }
-            foreach (var item in Form1.armors)
+            foreach (var item in new FrmArmors().GetListCollection())
             {
                 foreach (var item2 in item.Items)
                 {
@@ -65,19 +65,19 @@ namespace MonsteHunterWorld
             dataGridView1.Columns["name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
-        private void ArmorsTableAdd(Armor item)
+        private void ArmorsTableAdd(Armors armors)
         {
-            string level = item.Level;
-            string part = item.Part;
-            string name = item.Name;
-            string rare = item.Rare.ToString();
-            string slots = item.Slots;
-            string defense = item.Defense.ToString();
-            string fire = item.Resistances.Fire.ToString();
-            string water = item.Resistances.Water.ToString();
-            string thunder = item.Resistances.Thunder.ToString();
-            string ice = item.Resistances.Ice.ToString();
-            string dragon = item.Resistances.Dragon.ToString();
+            string level = armors.Level;
+            string part = armors.Part;
+            string name = armors.Name;
+            string rare = armors.Rare.ToString();
+            string slots = armors.Slots;
+            string defense = armors.Defense.ToString();
+            string fire = armors.Resistances.Fire.ToString();
+            string water = armors.Resistances.Water.ToString();
+            string thunder = armors.Resistances.Thunder.ToString();
+            string ice = armors.Resistances.Ice.ToString();
+            string dragon = armors.Resistances.Dragon.ToString();
             string items = "";
             dataGridView1.Rows.Add(new string[] { level, part, name, rare, slots, defense, fire, water, thunder, ice, dragon });
         }

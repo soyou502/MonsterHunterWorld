@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MonsterHunterWorld.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,7 +35,7 @@ namespace MonsteHunterWorld
             gViewSkill.Columns.Add("level", "등급");
             gViewSkill.BackgroundColor = Color.White;
             gViewSkill.Columns["name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            foreach (var item in Form1.armors)
+            foreach (var item in new FrmArmors().GetListCollection())
             {
                 if (item.Name == str)
                 {

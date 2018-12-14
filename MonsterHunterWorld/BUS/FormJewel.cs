@@ -36,5 +36,10 @@ namespace MonsterHunterWorld.BUS
             }
             return jewelList;
         }
+
+        public IList<Jewel> GetListCollection()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
