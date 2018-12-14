@@ -63,5 +63,10 @@ namespace MonsterHunterWorld.BUS
             jewel.Skill = new Skill(Convert.ToInt32(item["skill"]["idx"].ToString()), item["skill"]["name"].ToString(), item["skill"]["type"].ToString());
             return jewel;
         }
+
+        public IList<Jewel> GetListCollection()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

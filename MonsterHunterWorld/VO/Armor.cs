@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace MonsterHunterWorld.VO
 {
-    public class Armors
+    class Armor
     {
         private int idx;
         private int set_Num;
+        private string set_Name;
         private int part_No;
         private string setImage;
         private string level;
@@ -20,13 +21,13 @@ namespace MonsterHunterWorld.VO
         private int defense;
         private Element resistances;
         private List<Material> items = new List<Material>();
-        private List<ArmorSkill> skills = new List<ArmorSkill>();
+        private List<Skill> skills = new List<Skill>();
 
-        public Armors()
+        public Armor()
         {
         }
 
-        public Armors(int idx, int set_Num, int part_No, string setImage, string level, string part, string name, int rare, string slots, int defense, Element resistances, List<Material> items, List<ArmorSkill> skills)
+        public Armor(int idx, int set_Num, int part_No, string setImage, string level, string part, string name, int rare, string slots, int defense, Element resistances, List<Material> items, List<Skill> skills)
         {
             this.idx = idx;
             this.set_Num = set_Num;
@@ -55,6 +56,6 @@ namespace MonsterHunterWorld.VO
         public int Defense { get => defense; set => defense = value; }
         public Element Resistances { get => resistances; set => resistances = value; }
         public List<Material> Items { get => items; set => items = value; }
-        public List<ArmorSkill> Skills { get => skills; set => skills = value; }
+        public List<Skill> Skills { get => skills; set => skills = value; }
     }
 }
