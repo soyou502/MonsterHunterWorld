@@ -1,4 +1,9 @@
-﻿using System;
+﻿using MonsterHunterWorld;
+using MonsterHunterWorld.BUS;
+using MonsterHunterWorld.DAO;
+using MonsterHunterWorld.VO;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,14 +28,6 @@ namespace MonsteHunterWorld
         }
         private void FrmItemInfo_Load(object sender, EventArgs e)
         {
-            /*private string level;
-        private string part;
-        private string name;
-        private int rare;
-        private string slots;
-        private int defense;
-        private Resistance resistances;
-        private List<Needs> items = new List<Needs>();*/
             dataGridView1.Columns.Add("Level", "단계");
             dataGridView1.Columns.Add("Part", "부위");
             dataGridView1.Columns.Add("Name", "이름");
@@ -43,7 +40,7 @@ namespace MonsteHunterWorld
             dataGridView1.Columns.Add("IceResistances", "빙내성");
             dataGridView1.Columns.Add("DragonResistances", "용내성");
             dataGridView1.BackgroundColor = Color.White;
-            foreach (var item in Form1.items)
+            foreach (var item in new FrmItems().GetListCollection())
             {
                 if (item.Name == itemName)
                 {
@@ -68,7 +65,7 @@ namespace MonsteHunterWorld
             dataGridView1.Columns["name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
-        private void ArmorsTableAdd(Armors item)
+        private void ArmorsTableAdd(Armor item)
         {
             string level = item.Level;
             string part = item.Part;
@@ -82,7 +79,7 @@ namespace MonsteHunterWorld
             string ice = item.Resistances.Ice.ToString();
             string dragon = item.Resistances.Dragon.ToString();
             string items = "";
-            dataGridView1.Rows.Add(new string[] { level, part, name, rare, slots, defense, fire, water, thunder, ice, dragon});
+            dataGridView1.Rows.Add(new string[] { level, part, name, rare, slots, defense, fire, water, thunder, ice, dragon });
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

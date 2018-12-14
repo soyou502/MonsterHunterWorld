@@ -1,4 +1,8 @@
-﻿using System;
+﻿using MonsterHunterWorld;
+using MonsterHunterWorld.DAO;
+using MonsterHunterWorld.VO;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,31 +14,34 @@ using System.Windows.Forms;
 
 namespace MonsteHunterWorld
 {
-    public partial class FrmItems : Form
+    public partial class FrmItems : Form, IGetListCollection<Items>
     {
+        static List<Items> items;
         public FrmItems()
         {
             InitializeComponent();
         }
+
         private void FrmItems_Load(object sender, EventArgs e)
         {
+            items = GetListCollection() as List<Items>;
             this.Owner.Visible = false;
             this.LocationChanged += FrmItems_LocationChanged;
             this.FormClosing += FrmItems_FormClosing;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.BackgroundColor = Color.Transparent;
             for (int i = 0; i < 5; i++)
             {
                 dataGridView1.Columns.Add((i + 1).ToString(), (i + 1).ToString());
             }
-            for (int i = 0; i < Form1.items.Count; i++)
+            for (int i = 0; i < items.Count; i++)
             {
                 string[] arr = new string[5];
                 for (int j = 0; j < arr.Length; j++)
                 {
-                    if (i<Form1.items.Count)
+                    if (i<items.Count)
                     {
-                        arr[j] = Form1.items[i].Name;
+                        arr[j] = items[i].Name;
                         i++;
                     }
                 }
@@ -72,11 +79,11 @@ namespace MonsteHunterWorld
             dataGridView1.Rows.Clear();
             int j = 0;
             string[] arr = new string[5];
-            for (int i = 0; i < Form1.items.Count; i++)
+            for (int i = 0; i < items.Count; i++)
             {
-                if (i < Form1.items.Count && Form1.items[i].Name.Contains(textBox1.Text))
+                if (i < items.Count && items[i].Name.Contains(textBox1.Text))
                 {
-                    arr[j] = Form1.items[i].Name;
+                    arr[j] = items[i].Name;
                     j++;
                     if (j == 5)
                     {
@@ -85,11 +92,28 @@ namespace MonsteHunterWorld
                         j = 0;
                     }
                 }
-                if (i == Form1.items.Count-1)
+                if (i == items.Count-1)
                 {
                     dataGridView1.Rows.Add(arr);
                 }
             }
+        }
+
+        public IList<Items> GetListCollection()
+        {
+            if (items == null)
+            {
+                Parameter parameter = new Parameter("items");
+                MonsterHunterAPI api = new MonsterHunterAPI();
+                string json = api.GetJson(parameter);
+                JArray ja = JArray.Parse(json);
+                foreach (var item in ja)
+                {
+                    Items temp = new Items(int.Parse(item["idx"].ToString()), item["type"].ToString(), item["name"].ToString(), item["description"].ToString(), int.Parse(item["rare"].ToString()), int.Parse(item["price"].ToString()));
+                    items.Add(temp);
+                }
+            }
+            return items;
         }
     }
 }

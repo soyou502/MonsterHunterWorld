@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MonsterHunterWorld.VO
 {
-    class Items
+    public class Items
     {
         private int idx;
         private string type;
