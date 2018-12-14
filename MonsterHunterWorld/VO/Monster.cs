@@ -8,16 +8,16 @@ namespace MonsterHunterWorld.VO
 {
     class Monster
     {
-        private int idx;
-        private string image;
-        private string gubun;
-        private string nick;
-        private string description;
-        private string hunt_info;
-        private string[] location;
-        private Element weakness;
-        private Debuff debuff;
-        private IList<Drop_Item> drop_Item;
+        private int idx; // 인덱스번호
+        private string image; // 이미지 주소
+        private string gubun; // 구분
+        private string nick; // 몬스터 별명
+        private string description; // 몬스터 설명
+        private string hunt_info; // ?
+        private string[] location; // 출현장소
+        private Element weakness; // 약점 정보
+        private Debuff debuff; // 디버프 정보
+        private IList<Drop_Item> drop_Item; // 드롭 아이템 정보
 
         public int Idx { get => idx; set => idx = value; }
         public string Image { get => image; set => image = value; }

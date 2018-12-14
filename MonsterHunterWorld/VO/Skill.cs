@@ -8,10 +8,10 @@ namespace MonsterHunterWorld.VO
 {
     class Skill
     {
-        private int idx;
-        private string type;
-        private string name;
-        private IList<SkillDesc> desc;
+        private int idx; // 인덱스번호
+        private string type; // 타입
+        private string name; // 이름
+        private IList<SkillDesc> desc; // 스킬 상세정보
 
         /// <summary>
         /// Skill 객체 기본생성자

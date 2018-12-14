@@ -5,11 +5,11 @@
     /// </summary>
     internal class Debuff
     {
-        private int poison;
-        private int sleep;
-        private int paralysis;
-        private int explosion;
-        private int faint;
+        private int poison; // 독
+        private int sleep; // 수면
+        private int paralysis; // 마비
+        private int explosion; // 폭파
+        private int faint; // 기절
 
         /// <summary>
         /// Debuff 클래스 기본생성자

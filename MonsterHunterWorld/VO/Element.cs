@@ -5,11 +5,11 @@
     /// </summary>
     internal class Element
     {
-        private int fire;
-        private int water;
-        private int thunder;
-        private int ice;
-        private int dragon;
+        private int fire; // 불
+        private int water; // 물
+        private int thunder; // 번개
+        private int ice; // 빙
+        private int dragon; // 용
 
         /// <summary>
         /// Element 클래스 기본생성자

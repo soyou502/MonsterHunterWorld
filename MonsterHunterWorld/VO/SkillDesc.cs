@@ -5,9 +5,9 @@
     /// </summary>
     internal class SkillDesc
     {
-        private string name;
-        private int level;
-        private string desc;
+        private string name; // 레벨이름
+        private int level; // 레벨
+        private string desc; // 상세정보
 
         public string Name { get => name; set => name = value; }
         public int Level { get => level; set => level = value; }
