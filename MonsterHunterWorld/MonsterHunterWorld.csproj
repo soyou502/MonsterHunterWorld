@@ -141,6 +141,7 @@
     <Compile Include="VO\Armors.cs" />
     <Compile Include="VO\Cham.cs" />
     <Compile Include="VO\Debuff.cs" />
+    <Compile Include="VO\Material.cs" />
     <Compile Include="VO\SkillDesc.cs" />
     <Compile Include="VO\Drop_Item.cs" />
     <Compile Include="VO\Items.cs" />

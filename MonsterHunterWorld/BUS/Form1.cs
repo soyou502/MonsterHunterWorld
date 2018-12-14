@@ -24,12 +24,13 @@ namespace MonsterHunterWorld.BUS
         private void Form1_Load(object sender, EventArgs e)
         {
             //예제
-            //Parameter parameter = new Parameter("items");
-            //parameter.Name = "가마루코인";
-            //JArray ja = JArray.Parse(GetJson(parameter));          
-        }    
+            VO.Parameter parameter = new VO.Parameter("weapons/대검");
+            DAO.MonsterHunterAPI api = new DAO.MonsterHunterAPI();
+            JArray ja = JArray.Parse(api.GetJson(parameter));
+            textBox1.Text = ja.ToString();
+        }
 
-        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
