@@ -45,5 +45,11 @@ namespace MonsterHunterWorld.BUS
             FrmWeaponList fwl = new FrmWeaponList();
             fwl.Show();
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            FrmArmors fa = new FrmArmors();
+            fa.Show();
+        }
     }
 }
