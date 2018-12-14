@@ -10,6 +10,7 @@ namespace MonsterHunterWorld.VO
     {
         private int idx;
         private int set_Num;
+        private string set_Name;
         private int part_No;
         private string setImage;
         private string level;
