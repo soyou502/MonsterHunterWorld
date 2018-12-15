@@ -75,46 +75,48 @@ namespace MonsterHunterWorld.BUS
             {
                 monster.Location.Add(location.ToString());
             }
-            foreach (var weakness in item["weakness"])
+
+            monster.Weakness = new Element
             {
-                monster.Weakness = new Element
-                {
-                    Fire = Convert.ToInt32(weakness["fire"].ToString()),
-                    Water = Convert.ToInt32(weakness["water"].ToString()),
-                    Thunder = Convert.ToInt32(weakness["thunder"].ToString()),
-                    Ice = Convert.ToInt32(weakness["ice"].ToString()),
-                    Dragon = Convert.ToInt32(weakness["dragon"].ToString())
-                };
-            }
-            foreach (var debuff in item["debuff"])
+                Fire = Convert.ToInt32(item["weakness"]["fire"].ToString()),
+                Water = Convert.ToInt32(item["weakness"]["water"].ToString()),
+                Thunder = Convert.ToInt32(item["weakness"]["thunder"].ToString()),
+                Ice = Convert.ToInt32(item["weakness"]["ice"].ToString()),
+                Dragon = Convert.ToInt32(item["weakness"]["dragon"].ToString())
+            };
+
+            monster.Debuff = new Debuff
             {
-                monster.Debuff = new Debuff
-                {
-                    Poison = Convert.ToInt32(debuff["poison"].ToString()),
-                    Sleep = Convert.ToInt32(debuff["sleep"].ToString()),
-                    Paralysis = Convert.ToInt32(debuff["paralysis"].ToString()),
-                    Explosion = Convert.ToInt32(debuff["explosion"].ToString()),
-                    Faint = Convert.ToInt32(debuff["faint"].ToString())
-                };
-            }
-            monster.Drop_Item = new List<Drop_Item>();
-            foreach (var drop in item["drop_items"])
+                Poison = Convert.ToInt32(item["debuff"]["poison"].ToString()),
+                Sleep = Convert.ToInt32(item["debuff"]["sleep"].ToString()),
+                Paralysis = Convert.ToInt32(item["debuff"]["paralysis"].ToString()),
+                Explosion = Convert.ToInt32(item["debuff"]["explosion"].ToString()),
+                Faint = Convert.ToInt32(item["debuff"]["faint"].ToString())
+            };
+
+
+            try
             {
-                monster.Drop_Item.Add(new Drop_Item
+                monster.Drop_Item = new List<Drop_Item>();
+                foreach (var drop in item["drop_items"])
                 {
-                    Idx = Convert.ToInt32(drop["idx"].ToString()),
-                    Level = drop["level"].ToString(),
-                    Part = drop["part"].ToString(),
-                    Difficulty = Convert.ToInt32(drop["difficulty"].ToString()),
-                    Type = drop["type"].ToString(),
-                    Subtype = drop["subtype"].ToString(),
-                    Name = drop["name"].ToString(),
-                    Description = drop["description"].ToString(),
-                    Rare = Convert.ToInt32(drop["rare"].ToString()),
-                    Price = Convert.ToInt32(drop["price"].ToString())
-                });
+                    monster.Drop_Item.Add(new Drop_Item
+                    {
+                        Idx = Convert.ToInt32(drop["idx"].ToString()),
+                        Level = drop["level"].ToString(),
+                        Part = drop["part"].ToString(),
+                        Difficulty = Convert.ToInt32(drop["difficulty"].ToString()),
+                        Type = drop["type"].ToString(),
+                        Subtype = drop["subtype"].ToString(),
+                        Name = drop["name"].ToString(),
+                        Description = drop["description"].ToString(),
+                        Rare = Convert.ToInt32(drop["rare"].ToString()),
+                        Price = Convert.ToInt32(drop["price"].ToString())
+                    });
+                }
             }
-            return monster;
+            catch (NullReferenceException) { }
+            creturn monster;
         }
     }
 }
