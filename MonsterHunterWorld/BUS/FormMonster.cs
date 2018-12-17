@@ -94,8 +94,7 @@ namespace MonsterHunterWorld.BUS
                 Faint = Convert.ToInt32(item["debuff"]["faint"].ToString())
             };
 
-
-            try
+            if (item["gubun"].ToString() != "환경")
             {
                 monster.Drop_Item = new List<Drop_Item>();
                 foreach (var drop in item["drop_items"])
@@ -115,8 +114,7 @@ namespace MonsterHunterWorld.BUS
                     });
                 }
             }
-            catch (NullReferenceException) { }
-            creturn monster;
+            return monster;
         }
     }
 }
