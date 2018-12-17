@@ -110,6 +110,7 @@ namespace MonsterHunterWorld.BUS
         {
             dataGridView1.Rows.Clear();
             string slots = "";
+            string part = "";
             foreach (RadioButton item in groupBox1.Controls)
             {
                 if (item.Checked && item.Text != "상관없음")
@@ -121,9 +122,20 @@ namespace MonsterHunterWorld.BUS
                     slots = "";
                 }
             }
+            foreach (RadioButton item in groupBox2.Controls)
+            {
+                if (item.Checked && item.Text != "상관없음")
+                {
+                    part = item.Text;
+                }
+                else
+                {
+                    part = "";
+                }
+            }
             foreach (var item in armors)
             {
-                if (item.Name.Contains(textBox1.Text) && item.Slots.Contains(slots))
+                if (item.Name.Contains(textBox1.Text) && item.Slots.Contains(slots) && item.Part.Contains(part))
                 {
                     string[] temp = new string[4];
                     temp[0] = item.Name;

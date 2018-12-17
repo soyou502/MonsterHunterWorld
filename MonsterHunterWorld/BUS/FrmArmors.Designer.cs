@@ -40,8 +40,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rdoHead = new System.Windows.Forms.RadioButton();
+            this.rdoChest = new System.Windows.Forms.RadioButton();
+            this.rdiArm = new System.Windows.Forms.RadioButton();
+            this.rdoWaist = new System.Windows.Forms.RadioButton();
+            this.rdoReg = new System.Windows.Forms.RadioButton();
+            this.rdoNotSelect = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -57,7 +65,7 @@
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(472, 53);
+            this.groupBox1.Size = new System.Drawing.Size(419, 53);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "장신주 슬롯";
@@ -65,7 +73,8 @@
             // radioButton8
             // 
             this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(385, 20);
+            this.radioButton8.Checked = true;
+            this.radioButton8.Location = new System.Drawing.Point(343, 20);
             this.radioButton8.Name = "radioButton8";
             this.radioButton8.Size = new System.Drawing.Size(71, 16);
             this.radioButton8.TabIndex = 19;
@@ -76,7 +85,7 @@
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(223, 20);
+            this.radioButton5.Location = new System.Drawing.Point(199, 20);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(41, 16);
             this.radioButton5.TabIndex = 16;
@@ -87,7 +96,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(115, 20);
+            this.radioButton3.Location = new System.Drawing.Point(103, 20);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(41, 16);
             this.radioButton3.TabIndex = 14;
@@ -98,7 +107,7 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(169, 20);
+            this.radioButton4.Location = new System.Drawing.Point(151, 20);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(41, 16);
             this.radioButton4.TabIndex = 15;
@@ -109,7 +118,7 @@
             // radioButton7
             // 
             this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(331, 20);
+            this.radioButton7.Location = new System.Drawing.Point(295, 20);
             this.radioButton7.Name = "radioButton7";
             this.radioButton7.Size = new System.Drawing.Size(41, 16);
             this.radioButton7.TabIndex = 18;
@@ -120,7 +129,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(61, 20);
+            this.radioButton2.Location = new System.Drawing.Point(55, 20);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(41, 16);
             this.radioButton2.TabIndex = 13;
@@ -131,7 +140,7 @@
             // radioButton6
             // 
             this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(277, 20);
+            this.radioButton6.Location = new System.Drawing.Point(247, 20);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(41, 16);
             this.radioButton6.TabIndex = 17;
@@ -178,11 +187,94 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 347);
             this.dataGridView1.TabIndex = 11;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rdoNotSelect);
+            this.groupBox2.Controls.Add(this.rdoReg);
+            this.groupBox2.Controls.Add(this.rdoWaist);
+            this.groupBox2.Controls.Add(this.rdiArm);
+            this.groupBox2.Controls.Add(this.rdoChest);
+            this.groupBox2.Controls.Add(this.rdoHead);
+            this.groupBox2.Location = new System.Drawing.Point(437, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(351, 53);
+            this.groupBox2.TabIndex = 12;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "부위";
+            // 
+            // rdoHead
+            // 
+            this.rdoHead.AutoSize = true;
+            this.rdoHead.Location = new System.Drawing.Point(7, 21);
+            this.rdoHead.Name = "rdoHead";
+            this.rdoHead.Size = new System.Drawing.Size(47, 16);
+            this.rdoHead.TabIndex = 0;
+            this.rdoHead.TabStop = true;
+            this.rdoHead.Text = "머리";
+            this.rdoHead.UseVisualStyleBackColor = true;
+            // 
+            // rdoChest
+            // 
+            this.rdoChest.AutoSize = true;
+            this.rdoChest.Location = new System.Drawing.Point(62, 21);
+            this.rdoChest.Name = "rdoChest";
+            this.rdoChest.Size = new System.Drawing.Size(47, 16);
+            this.rdoChest.TabIndex = 1;
+            this.rdoChest.TabStop = true;
+            this.rdoChest.Text = "가슴";
+            this.rdoChest.UseVisualStyleBackColor = true;
+            // 
+            // rdiArm
+            // 
+            this.rdiArm.AutoSize = true;
+            this.rdiArm.Location = new System.Drawing.Point(117, 21);
+            this.rdiArm.Name = "rdiArm";
+            this.rdiArm.Size = new System.Drawing.Size(35, 16);
+            this.rdiArm.TabIndex = 2;
+            this.rdiArm.TabStop = true;
+            this.rdiArm.Text = "팔";
+            this.rdiArm.UseVisualStyleBackColor = true;
+            // 
+            // rdoWaist
+            // 
+            this.rdoWaist.AutoSize = true;
+            this.rdoWaist.Location = new System.Drawing.Point(160, 21);
+            this.rdoWaist.Name = "rdoWaist";
+            this.rdoWaist.Size = new System.Drawing.Size(47, 16);
+            this.rdoWaist.TabIndex = 3;
+            this.rdoWaist.TabStop = true;
+            this.rdoWaist.Text = "허리";
+            this.rdoWaist.UseVisualStyleBackColor = true;
+            // 
+            // rdoReg
+            // 
+            this.rdoReg.AutoSize = true;
+            this.rdoReg.Location = new System.Drawing.Point(215, 21);
+            this.rdoReg.Name = "rdoReg";
+            this.rdoReg.Size = new System.Drawing.Size(47, 16);
+            this.rdoReg.TabIndex = 4;
+            this.rdoReg.TabStop = true;
+            this.rdoReg.Text = "다리";
+            this.rdoReg.UseVisualStyleBackColor = true;
+            // 
+            // rdoNotSelect
+            // 
+            this.rdoNotSelect.AutoSize = true;
+            this.rdoNotSelect.Checked = true;
+            this.rdoNotSelect.Location = new System.Drawing.Point(270, 21);
+            this.rdoNotSelect.Name = "rdoNotSelect";
+            this.rdoNotSelect.Size = new System.Drawing.Size(71, 16);
+            this.rdoNotSelect.TabIndex = 20;
+            this.rdoNotSelect.TabStop = true;
+            this.rdoNotSelect.Text = "상관없음";
+            this.rdoNotSelect.UseVisualStyleBackColor = true;
+            // 
             // FrmArmors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
@@ -193,6 +285,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,5 +305,12 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton rdoNotSelect;
+        private System.Windows.Forms.RadioButton rdoReg;
+        private System.Windows.Forms.RadioButton rdoWaist;
+        private System.Windows.Forms.RadioButton rdiArm;
+        private System.Windows.Forms.RadioButton rdoChest;
+        private System.Windows.Forms.RadioButton rdoHead;
     }
 }

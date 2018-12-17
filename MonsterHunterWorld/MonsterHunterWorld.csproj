@@ -155,6 +155,12 @@
     <EmbeddedResource Include="BUS\FormMonster.resx">
       <DependentUpon>FormMonster.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmArmorInfo.resx">
+      <DependentUpon>FrmArmorInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmArmors.resx">
+      <DependentUpon>FrmArmors.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
