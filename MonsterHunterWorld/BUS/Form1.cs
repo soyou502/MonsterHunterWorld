@@ -51,5 +51,12 @@ namespace MonsterHunterWorld.BUS
             FrmArmors fa = new FrmArmors();
             fa.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmItems fi = new FrmItems();
+            fi.Owner = this;
+            fi.Show();
+        }
     }
 }
