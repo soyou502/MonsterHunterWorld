@@ -36,7 +36,6 @@ namespace MonsterHunterWorld.BUS
         private void button1_Click(object sender, EventArgs e)
         {
             FormMonster form = new FormMonster();
-            form.Owner = this;
             form.Show();
         }
 
@@ -49,13 +48,14 @@ namespace MonsterHunterWorld.BUS
         private void button2_Click_1(object sender, EventArgs e)
         {
             FrmArmors fa = new FrmArmors();
+            fa.Location = this.Location;
             fa.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             FrmItems fi = new FrmItems();
-            fi.Owner = this;
+            fi.Location = this.Location;
             fi.Show();
         }
     }

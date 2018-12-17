@@ -60,6 +60,7 @@ namespace MonsterHunterWorld.BUS
                     Items = items,
                     Skills = skills
                 };
+                textBox1.AutoCompleteCustomSource.Add(item["name"].ToString());
                 armors.Add(ar);
             }
         }
@@ -100,6 +101,8 @@ namespace MonsterHunterWorld.BUS
             dataGridView1.Columns.Add("Skill", "스킬");
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridView1.Columns["Skill"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            textBox1.AutoCompleteMode = AutoCompleteMode.Suggest;
+            textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
             button1_Click(null, null);
         }
 
@@ -113,7 +116,7 @@ namespace MonsterHunterWorld.BUS
                 {
                     slots = item.Text.Replace("_", "");
                 }
-                else if (item.Checked && item.Text == "상관없음")
+                else
                 {
                     slots = "";
                 }
@@ -134,8 +137,6 @@ namespace MonsterHunterWorld.BUS
                     dataGridView1.Rows.Add(temp);
                 }
             }
-           
-
         }
     }
 }

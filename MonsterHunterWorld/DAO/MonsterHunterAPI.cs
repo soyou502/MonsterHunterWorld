@@ -61,17 +61,20 @@ namespace MonsterHunterWorld.DAO
         private string GetUrl(MonsterHunterWorld.VO.Parameter parameter)
         {
             string hexParameter = "";
+            bool check = false;
             if (parameter.GetName != null)
             {
                 hexParameter += HttpUtility.UrlEncode(parameter.GetName);
             }
             if (parameter.Name != null)
             {
-                hexParameter += "?name=" + HttpUtility.UrlEncode(parameter.Name);
+                hexParameter += (check) ? "&" : "?" + "name=" + HttpUtility.UrlEncode(parameter.Name);
+                check = true;
             }
             if (parameter.Type != null)
             {
-                hexParameter += "&type=" + HttpUtility.UrlEncode(parameter.Type);
+                hexParameter += (check) ? "&" : "?" + "name=" + "type=" + HttpUtility.UrlEncode(parameter.Type);
+                check = true;
             }
 
             return ("http://www.mhwdb.kr/apis/" + hexParameter).Replace("%2f", "/");

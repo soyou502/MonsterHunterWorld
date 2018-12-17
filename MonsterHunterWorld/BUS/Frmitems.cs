@@ -24,13 +24,9 @@ namespace MonsteHunterWorld
 
         private void FrmItems_Load(object sender, EventArgs e)
         {
-            items = GetListCollection() as List<Items>;
-            this.Location = this.Owner.Location;
-            this.Owner.Visible = false;
+            GetListCollection();
             textBox1.AutoCompleteMode = AutoCompleteMode.Suggest;
             textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            this.LocationChanged += FrmItems_LocationChanged;
-            this.FormClosing += FrmItems_FormClosing;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             for (int i = 0; i < 5; i++)
             {
@@ -52,30 +48,12 @@ namespace MonsteHunterWorld
             btnSearch_Click(null, null);
         }
 
-        private void FrmItems_LocationChanged(object sender, EventArgs e)
-        {
-            this.Owner.Location = this.Location;
-        }
-
-        private void FrmItems_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            this.Owner.Visible = true;
-        }
-
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             FrmItemInfo info = new FrmItemInfo(dataGridView1.SelectedCells[0].Value.ToString());
-            info.Show();
             info.Location = this.Location;
-            info.Disposed += Info_Disposed;
-            this.Visible = false;
+            info.Show();
         }
-
-        private void Info_Disposed(object sender, EventArgs e)
-        {
-            this.Visible = true;
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
