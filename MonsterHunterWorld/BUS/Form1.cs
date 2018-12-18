@@ -69,6 +69,8 @@ namespace MonsterHunterWorld.BUS
 
         private void button5_Click(object sender, EventArgs e)
         {
+            FrmCharm fc = new FrmCharm();
+            fc.ShowDialog();
         }
     }
 }

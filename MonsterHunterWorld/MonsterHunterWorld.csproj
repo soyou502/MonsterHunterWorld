@@ -111,6 +111,12 @@
     <Compile Include="BUS\FrmChamList.Designer.cs">
       <DependentUpon>FrmChamList.cs</DependentUpon>
     </Compile>
+    <Compile Include="BUS\FrmCharm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FrmCharm.Designer.cs">
+      <DependentUpon>FrmCharm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\FrmItemInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,16 +143,16 @@
     </Compile>
     <Compile Include="DAO\MonsterHunterAPI.cs" />
     <Compile Include="DAO\MonsterHunterUserDB.cs" />
-    <Compile Include="FrmLogin.cs">
+    <Compile Include="BUS\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLogin.Designer.cs">
+    <Compile Include="BUS\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmsignIn.cs">
+    <Compile Include="BUS\FrmsignIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmsignIn.Designer.cs">
+    <Compile Include="BUS\FrmsignIn.Designer.cs">
       <DependentUpon>FrmsignIn.cs</DependentUpon>
     </Compile>
     <Compile Include="IGetListCollection.cs" />
@@ -154,7 +160,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VO\Armors.cs" />
     <Compile Include="VO\ArmorSkill.cs" />
-    <Compile Include="VO\Cham.cs" />
+    <Compile Include="VO\Charm.cs" />
     <Compile Include="VO\Element.cs" />
     <Compile Include="VO\Items.cs" />
     <Compile Include="VO\Jewel.cs" />
@@ -176,10 +182,16 @@
     <EmbeddedResource Include="BUS\FrmArmors.resx">
       <DependentUpon>FrmArmors.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLogin.resx">
+    <EmbeddedResource Include="BUS\FrmCharm.resx">
+      <DependentUpon>FrmCharm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmItemInfo.resx">
+      <DependentUpon>FrmItemInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmsignIn.resx">
+    <EmbeddedResource Include="BUS\FrmsignIn.resx">
       <DependentUpon>FrmsignIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
