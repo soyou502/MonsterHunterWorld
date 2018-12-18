@@ -37,6 +37,7 @@
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -135,6 +136,19 @@
       <DependentUpon>FrmWeaponList.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\MonsterHunterAPI.cs" />
+    <Compile Include="DAO\MonsterHunterUserDB.cs" />
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmsignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmsignIn.Designer.cs">
+      <DependentUpon>FrmsignIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="IGetListCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -148,6 +162,7 @@
     <Compile Include="VO\Parameter.cs" />
     <Compile Include="VO\Skill.cs" />
     <Compile Include="VO\SkillDesc.cs" />
+    <Compile Include="VO\UserInfo.cs" />
     <Compile Include="VO\WeaponList.cs" />
     <EmbeddedResource Include="BUS\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -160,6 +175,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BUS\FrmArmors.resx">
       <DependentUpon>FrmArmors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmsignIn.resx">
+      <DependentUpon>FrmsignIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
