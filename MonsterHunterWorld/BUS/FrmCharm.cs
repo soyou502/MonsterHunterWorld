@@ -1,4 +1,5 @@
-﻿using MonsterHunterWorld.DAO;
+﻿using MonsteHunterWorld;
+using MonsterHunterWorld.DAO;
 using MonsterHunterWorld.VO;
 using Newtonsoft.Json.Linq;
 using System;
@@ -130,7 +131,11 @@ namespace MonsterHunterWorld.BUS
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.ColumnIndex>=3 && e.ColumnIndex <= 6)
+            {
+                FrmItemInfo fii = new FrmItemInfo(dataGridView1.SelectedCells[0].Value.ToString());
+                fii.ShowDialog();
+            }
         }
     }
 }

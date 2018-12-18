@@ -42,7 +42,7 @@ namespace MonsteHunterWorld
             dataGridView1.BackgroundColor = Color.White;
             foreach (var item in new FrmItems().GetListCollection())
             {
-                if (item.Name == itemName)
+                if (item.Name.Contains(itemName) || itemName.Contains(item.Name))
                 {
                     txtType.Text = item.Type;
                     txtName.Text = item.Name;
@@ -55,7 +55,7 @@ namespace MonsteHunterWorld
             {
                 foreach (var item2 in item.Items)
                 {
-                    if (item2.Name == itemName)
+                    if (item2.Name.Contains(itemName) || itemName.Contains(item2.Name))
                     {
                         ArmorsTableAdd(item);
                     }
