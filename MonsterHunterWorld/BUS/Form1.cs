@@ -58,5 +58,17 @@ namespace MonsterHunterWorld.BUS
             fi.Location = this.Location;
             fi.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            FrmLogin fl = new FrmLogin();
+            fl.Location = this.Location;
+            fl.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

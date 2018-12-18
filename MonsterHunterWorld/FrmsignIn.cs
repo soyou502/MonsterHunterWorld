@@ -44,7 +44,7 @@ namespace MonsterHunterWorld
                 MessageBox.Show("비밀번호가 다릅니다.");
                 return;
             }
-
+            db.InsertUserInfo(txtID.Text, txtPassword.Text);
         }
 
         private void FrmsignIn_Load(object sender, EventArgs e)
@@ -61,8 +61,6 @@ namespace MonsterHunterWorld
             {
                 passwordCheck = false;
             }
-
-            db.InsertUserInfo(txtID.Text, txtPassword.Text);
         }
     }
 }

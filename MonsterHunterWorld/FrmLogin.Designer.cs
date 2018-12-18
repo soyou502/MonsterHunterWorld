@@ -32,6 +32,7 @@
             this.txtUserPassword = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.chkAutoLogin = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txtUserID
@@ -60,7 +61,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(334, 283);
+            this.button2.Location = new System.Drawing.Point(477, 224);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -68,17 +69,29 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // chkAutoLogin
+            // 
+            this.chkAutoLogin.AutoSize = true;
+            this.chkAutoLogin.Location = new System.Drawing.Point(325, 269);
+            this.chkAutoLogin.Name = "chkAutoLogin";
+            this.chkAutoLogin.Size = new System.Drawing.Size(88, 16);
+            this.chkAutoLogin.TabIndex = 4;
+            this.chkAutoLogin.Text = "자동 로그인";
+            this.chkAutoLogin.UseVisualStyleBackColor = true;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.chkAutoLogin);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtUserPassword);
             this.Controls.Add(this.txtUserID);
             this.Name = "FrmLogin";
             this.Text = "FrmLogin";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,5 +103,6 @@
         private System.Windows.Forms.TextBox txtUserPassword;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.CheckBox chkAutoLogin;
     }
 }
