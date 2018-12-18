@@ -155,8 +155,17 @@
     <EmbeddedResource Include="BUS\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FormJewel.resx">
+      <DependentUpon>FormJewel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BUS\FormMonster.resx">
       <DependentUpon>FormMonster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FormSkill.resx">
+      <DependentUpon>FormSkill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FormSkillInfo.resx">
+      <DependentUpon>FormSkillInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BUS\FrmArmorInfo.resx">
       <DependentUpon>FrmArmorInfo.cs</DependentUpon>
@@ -182,7 +191,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="json1.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
