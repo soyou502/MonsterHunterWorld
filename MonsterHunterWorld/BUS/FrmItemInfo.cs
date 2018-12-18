@@ -48,7 +48,7 @@ namespace MonsteHunterWorld
                     txtName.Text = item.Name;
                     txtRare.Text = item.Rare.ToString();
                     txtPrice.Text = item.Price.ToString();
-                    txtDescription.Text = item.Decription;
+                    txtDescription.Text = item.Description;
                 }
             }
             foreach (var item in new FrmArmors().GetListCollection())

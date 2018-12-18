@@ -33,10 +33,10 @@
             this.faint = faint;
         }
 
-        public int Poison { get => poison; }
-        public int Sleep { get => sleep; }
-        public int Paralysis { get => paralysis; }
-        public int Explosion { get => explosion; }
-        public int Faint { get => faint; }
+        public int Poison { get => poison; set => poison = value; }
+        public int Sleep { get => sleep; set => sleep = value; }
+        public int Paralysis { get => paralysis; set => paralysis = value; }
+        public int Explosion { get => explosion; set => explosion = value; }
+        public int Faint { get => faint; set => faint = value; }
     }
 }

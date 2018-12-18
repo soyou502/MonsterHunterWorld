@@ -46,11 +46,12 @@ namespace MonsterHunterWorld.VO
 
         public int Idx { get => idx; set => idx = value; }
         public int Set_Num { get => set_Num; set => set_Num = value; }
+        public string Set_Name { get => set_Name; set => set_Name = value; }
         public int Part_No { get => part_No; set => part_No = value; }
         public string SetImage { get => setImage; set => setImage = value; }
         public string Level { get => level; set => level = value; }
         public string Part { get => part; set => part = value; }
-        public string Name { get => name; set => name = value; }
+        //public string Name { get => name; set => name = value; }
         public int Rare { get => rare; set => rare = value; }
         public string Slots { get => slots; set => slots = value; }
         public int Defense { get => defense; set => defense = value; }

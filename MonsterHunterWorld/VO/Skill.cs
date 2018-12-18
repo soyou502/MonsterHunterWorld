@@ -36,7 +36,7 @@ namespace MonsterHunterWorld.VO
         /// <param name="idx"></param>
         /// <param name="type"></param>
         /// <param name="name"></param>
-        public Skill(int idx, string type, string name)
+        public Skill(int idx, string name, string type)
         {
             this.idx = idx;
             this.type = type;

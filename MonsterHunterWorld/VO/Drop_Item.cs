@@ -5,6 +5,7 @@
     /// </summary>
     public class Drop_Item : Items
     {
+        
         private string level;
         private string part;
         private int difficulty;
