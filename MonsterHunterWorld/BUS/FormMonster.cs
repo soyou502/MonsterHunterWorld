@@ -116,7 +116,7 @@ namespace MonsterHunterWorld.BUS
                 }
             }
             catch (NullReferenceException) { }
-            creturn monster;
+            return monster;
         }
     }
 }

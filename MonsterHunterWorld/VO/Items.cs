@@ -31,7 +31,7 @@ namespace MonsterHunterWorld.VO
         public int Idx { get => idx; set => idx = value; }
         public string Type { get => type; set => type = value; }
         public string Name { get => name; set => name = value; }
-        public string Decription { get => description; set => description = value; }
+        public string Description { get => description; set => description = value; }
         public int Rare { get => rare; set => rare = value; }
         public int Price { get => price; set => price = value; }
     }

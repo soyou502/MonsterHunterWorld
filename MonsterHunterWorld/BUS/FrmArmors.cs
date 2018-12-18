@@ -146,6 +146,10 @@ namespace MonsterHunterWorld.BUS
                     {
                         temp[3] += skill.Name + skill.Level + "  ";
                     }
+                    if (item.Skills.Count == 0)
+                    {
+                        temp[3] += "스킬없음";
+                    }
                     dataGridView1.Rows.Add(temp);
                 }
             }

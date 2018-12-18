@@ -41,6 +41,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(776, 426);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // FrmSimulatorSearch
             // 
@@ -50,6 +51,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmSimulatorSearch";
             this.Text = "FrmSimulatorSearch";
+            this.Load += new System.EventHandler(this.FrmSimulatorSearch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

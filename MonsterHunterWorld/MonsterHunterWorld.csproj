@@ -129,6 +129,18 @@
     <Compile Include="BUS\Frmitems.Designer.cs">
       <DependentUpon>Frmitems.cs</DependentUpon>
     </Compile>
+    <Compile Include="BUS\FrmSimulator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FrmSimulator.Designer.cs">
+      <DependentUpon>FrmSimulator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\FrmSimulatorSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FrmSimulatorSearch.Designer.cs">
+      <DependentUpon>FrmSimulatorSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\FrmWeaponInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,10 +173,13 @@
     <Compile Include="VO\Armors.cs" />
     <Compile Include="VO\ArmorSkill.cs" />
     <Compile Include="VO\Charm.cs" />
+    <Compile Include="VO\Debuff.cs" />
+    <Compile Include="VO\Drop_Item.cs" />
     <Compile Include="VO\Element.cs" />
     <Compile Include="VO\Items.cs" />
     <Compile Include="VO\Jewel.cs" />
     <Compile Include="VO\Material.cs" />
+    <Compile Include="VO\Monster.cs" />
     <Compile Include="VO\Parameter.cs" />
     <Compile Include="VO\Skill.cs" />
     <Compile Include="VO\SkillDesc.cs" />
@@ -193,6 +208,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BUS\FrmsignIn.resx">
       <DependentUpon>FrmsignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmSimulator.resx">
+      <DependentUpon>FrmSimulator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmSimulatorSearch.resx">
+      <DependentUpon>FrmSimulatorSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
