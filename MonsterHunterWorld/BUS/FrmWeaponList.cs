@@ -66,7 +66,7 @@ namespace MonsteHunterWorld
                     string slots = item["slots"].ToString();
 
                     // 무기 기본 정보 데이터 저장
-                    wbList.Add(new WeaponBase(idx,name,rare,attack,defense,critical,slots));
+                    wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slots));
 
                     // JObject job = JObject.Parse(item.ToString());
 
@@ -85,7 +85,7 @@ namespace MonsteHunterWorld
                     else
                     {
                         MessageBox.Show("Test");
-                    } 
+                    }
                     #endregion
 
 
@@ -119,11 +119,30 @@ namespace MonsteHunterWorld
             }
         }
 
-        /// <summary>
-        /// 무기전용 제이슨따기
-        /// </summary>
-        /// <param name="parameter"></param>
-        /// <returns>제이슨 문자열 반환</returns>
+        /* //  메모용 
+        //기본정보
+        무기번호
+        이름
+        레어도
+        공격력
+        방어력
+        회심률
+        슬롯
 
+        //속성정보
+        무기번호
+        속성이름
+        속성수치
+        상태이상이름
+        상태이상수치
+
+        // 제작정보
+                무기번호
+        이미지
+        소재파생
+        제작가능여부
+        제작비용
+        업글비용
+        */ 
     }
 }
