@@ -16,7 +16,7 @@ namespace MonsterHunterWorld.BUS
 {
     public partial class FrmCharm : Form, IGetListCollection<Charm>
     {
-        List<Charm> charms;
+        static List<Charm> charms;
         public FrmCharm()
         {
             InitializeComponent();

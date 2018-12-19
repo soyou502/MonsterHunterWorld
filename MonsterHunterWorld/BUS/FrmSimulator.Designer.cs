@@ -40,7 +40,7 @@
             this.cboWaist = new System.Windows.Forms.ComboBox();
             this.cboLeg = new System.Windows.Forms.ComboBox();
             this.gViewResistance = new System.Windows.Forms.DataGridView();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.cboWeapon = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -100,7 +100,7 @@
             this.cboSkill1.FormattingEnabled = true;
             this.cboSkill1.Items.AddRange(new object[] {
             ""});
-            this.cboSkill1.Location = new System.Drawing.Point(53, 11);
+            this.cboSkill1.Location = new System.Drawing.Point(95, 11);
             this.cboSkill1.Name = "cboSkill1";
             this.cboSkill1.Size = new System.Drawing.Size(300, 20);
             this.cboSkill1.TabIndex = 0;
@@ -111,7 +111,7 @@
             this.cboSkill2.FormattingEnabled = true;
             this.cboSkill2.Items.AddRange(new object[] {
             ""});
-            this.cboSkill2.Location = new System.Drawing.Point(399, 12);
+            this.cboSkill2.Location = new System.Drawing.Point(441, 12);
             this.cboSkill2.Name = "cboSkill2";
             this.cboSkill2.Size = new System.Drawing.Size(300, 20);
             this.cboSkill2.TabIndex = 1;
@@ -125,7 +125,7 @@
             "1",
             "2",
             "3"});
-            this.cboSlotLevel.Location = new System.Drawing.Point(10, 61);
+            this.cboSlotLevel.Location = new System.Drawing.Point(52, 61);
             this.cboSlotLevel.Name = "cboSlotLevel";
             this.cboSlotLevel.Size = new System.Drawing.Size(121, 20);
             this.cboSlotLevel.TabIndex = 2;
@@ -144,7 +144,7 @@
             "3__",
             "31_",
             "상관없음"});
-            this.cboSlotCount.Location = new System.Drawing.Point(187, 61);
+            this.cboSlotCount.Location = new System.Drawing.Point(229, 61);
             this.cboSlotCount.Name = "cboSlotCount";
             this.cboSlotCount.Size = new System.Drawing.Size(121, 20);
             this.cboSlotCount.TabIndex = 3;
@@ -161,14 +161,14 @@
             "허리",
             "다리",
             "상관없음"});
-            this.cboPart.Location = new System.Drawing.Point(364, 61);
+            this.cboPart.Location = new System.Drawing.Point(406, 61);
             this.cboPart.Name = "cboPart";
             this.cboPart.Size = new System.Drawing.Size(121, 20);
             this.cboPart.TabIndex = 4;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(541, 58);
+            this.textBox1.Location = new System.Drawing.Point(583, 58);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 21);
             this.textBox1.TabIndex = 5;
@@ -177,6 +177,8 @@
             // 
             this.cboHead.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboHead.FormattingEnabled = true;
+            this.cboHead.Items.AddRange(new object[] {
+            ""});
             this.cboHead.Location = new System.Drawing.Point(76, 223);
             this.cboHead.Name = "cboHead";
             this.cboHead.Size = new System.Drawing.Size(300, 20);
@@ -187,6 +189,8 @@
             // 
             this.cboChest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboChest.FormattingEnabled = true;
+            this.cboChest.Items.AddRange(new object[] {
+            ""});
             this.cboChest.Location = new System.Drawing.Point(76, 308);
             this.cboChest.Name = "cboChest";
             this.cboChest.Size = new System.Drawing.Size(300, 20);
@@ -197,6 +201,8 @@
             // 
             this.cboArm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboArm.FormattingEnabled = true;
+            this.cboArm.Items.AddRange(new object[] {
+            ""});
             this.cboArm.Location = new System.Drawing.Point(76, 393);
             this.cboArm.Name = "cboArm";
             this.cboArm.Size = new System.Drawing.Size(300, 20);
@@ -207,6 +213,8 @@
             // 
             this.cboWaist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboWaist.FormattingEnabled = true;
+            this.cboWaist.Items.AddRange(new object[] {
+            ""});
             this.cboWaist.Location = new System.Drawing.Point(76, 478);
             this.cboWaist.Name = "cboWaist";
             this.cboWaist.Size = new System.Drawing.Size(300, 20);
@@ -217,6 +225,8 @@
             // 
             this.cboLeg.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLeg.FormattingEnabled = true;
+            this.cboLeg.Items.AddRange(new object[] {
+            ""});
             this.cboLeg.Location = new System.Drawing.Point(76, 563);
             this.cboLeg.Name = "cboLeg";
             this.cboLeg.Size = new System.Drawing.Size(300, 20);
@@ -225,27 +235,34 @@
             // 
             // gViewResistance
             // 
+            this.gViewResistance.AllowUserToAddRows = false;
+            this.gViewResistance.AllowUserToDeleteRows = false;
+            this.gViewResistance.AllowUserToResizeColumns = false;
+            this.gViewResistance.AllowUserToResizeRows = false;
             this.gViewResistance.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gViewResistance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gViewResistance.Location = new System.Drawing.Point(399, 149);
             this.gViewResistance.Name = "gViewResistance";
+            this.gViewResistance.RowHeadersVisible = false;
             this.gViewResistance.RowTemplate.Height = 23;
-            this.gViewResistance.Size = new System.Drawing.Size(389, 167);
+            this.gViewResistance.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.gViewResistance.Size = new System.Drawing.Size(451, 167);
             this.gViewResistance.TabIndex = 11;
             // 
-            // comboBox11
+            // cboWeapon
             // 
-            this.comboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Items.AddRange(new object[] {
+            this.cboWeapon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboWeapon.FormattingEnabled = true;
+            this.cboWeapon.Items.AddRange(new object[] {
+            "",
             "1",
             "2",
             "3"});
-            this.comboBox11.Location = new System.Drawing.Point(76, 137);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(300, 20);
-            this.comboBox11.TabIndex = 12;
-            this.comboBox11.SelectedIndexChanged += new System.EventHandler(this.cboHead_SelectedIndexChanged);
+            this.cboWeapon.Location = new System.Drawing.Point(76, 137);
+            this.cboWeapon.Name = "cboWeapon";
+            this.cboWeapon.Size = new System.Drawing.Size(300, 20);
+            this.cboWeapon.TabIndex = 12;
+            this.cboWeapon.SelectedIndexChanged += new System.EventHandler(this.cboHead_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -304,7 +321,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 15);
+            this.label7.Location = new System.Drawing.Point(54, 15);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 12);
             this.label7.TabIndex = 19;
@@ -313,7 +330,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(358, 16);
+            this.label8.Location = new System.Drawing.Point(400, 16);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 12);
             this.label8.TabIndex = 20;
@@ -322,7 +339,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 43);
+            this.label9.Location = new System.Drawing.Point(52, 43);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 12);
             this.label9.TabIndex = 21;
@@ -331,7 +348,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(195, 43);
+            this.label10.Location = new System.Drawing.Point(237, 43);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 12);
             this.label10.TabIndex = 22;
@@ -340,7 +357,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(380, 43);
+            this.label11.Location = new System.Drawing.Point(422, 43);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(29, 12);
             this.label11.TabIndex = 23;
@@ -349,7 +366,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(541, 43);
+            this.label12.Location = new System.Drawing.Point(583, 43);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(29, 12);
             this.label12.TabIndex = 24;
@@ -385,18 +402,23 @@
             // 
             // gVIewSkill
             // 
+            this.gVIewSkill.AllowUserToAddRows = false;
+            this.gVIewSkill.AllowUserToDeleteRows = false;
+            this.gVIewSkill.AllowUserToResizeColumns = false;
+            this.gVIewSkill.AllowUserToResizeRows = false;
             this.gVIewSkill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gVIewSkill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gVIewSkill.Location = new System.Drawing.Point(399, 342);
+            this.gVIewSkill.Location = new System.Drawing.Point(399, 379);
             this.gVIewSkill.Name = "gVIewSkill";
+            this.gVIewSkill.RowHeadersVisible = false;
             this.gVIewSkill.RowTemplate.Height = 23;
-            this.gVIewSkill.Size = new System.Drawing.Size(389, 326);
+            this.gVIewSkill.Size = new System.Drawing.Size(451, 326);
             this.gVIewSkill.TabIndex = 28;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(397, 319);
+            this.label15.Location = new System.Drawing.Point(397, 356);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(29, 12);
             this.label15.TabIndex = 29;
@@ -404,7 +426,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(689, 56);
+            this.button1.Location = new System.Drawing.Point(731, 56);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 30;
@@ -430,6 +452,7 @@
             this.cbo1.Name = "cbo1";
             this.cbo1.Size = new System.Drawing.Size(95, 20);
             this.cbo1.TabIndex = 32;
+            this.cbo1.SelectedIndexChanged += new System.EventHandler(this.cbo1_SelectedIndexChanged);
             // 
             // cbo2
             // 
@@ -665,7 +688,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 717);
+            this.ClientSize = new System.Drawing.Size(862, 717);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -691,7 +714,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox11);
+            this.Controls.Add(this.cboWeapon);
             this.Controls.Add(this.gViewResistance);
             this.Controls.Add(this.cboLeg);
             this.Controls.Add(this.cboWaist);
@@ -734,7 +757,7 @@
         public System.Windows.Forms.ComboBox cboWaist;
         public System.Windows.Forms.ComboBox cboLeg;
         private System.Windows.Forms.DataGridView gViewResistance;
-        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.ComboBox cboWeapon;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
