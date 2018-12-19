@@ -60,30 +60,30 @@
             this.label15 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.cboCharmRank = new System.Windows.Forms.ComboBox();
-            this.cbo1 = new System.Windows.Forms.ComboBox();
-            this.cbo2 = new System.Windows.Forms.ComboBox();
-            this.cbo3 = new System.Windows.Forms.ComboBox();
+            this.cboWeaponJewel1 = new System.Windows.Forms.ComboBox();
+            this.cboWeaponJewel2 = new System.Windows.Forms.ComboBox();
+            this.cboWeaponJewel3 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cboCJewel1 = new System.Windows.Forms.ComboBox();
+            this.cboCJewel2 = new System.Windows.Forms.ComboBox();
+            this.cboCJewel3 = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.cboHJewel1 = new System.Windows.Forms.ComboBox();
+            this.cboHJewel2 = new System.Windows.Forms.ComboBox();
+            this.cboHJewel3 = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.comboBox13 = new System.Windows.Forms.ComboBox();
-            this.comboBox14 = new System.Windows.Forms.ComboBox();
-            this.comboBox15 = new System.Windows.Forms.ComboBox();
+            this.cboAJewel1 = new System.Windows.Forms.ComboBox();
+            this.cboAJewel2 = new System.Windows.Forms.ComboBox();
+            this.cboAJewel3 = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.comboBox16 = new System.Windows.Forms.ComboBox();
-            this.comboBox17 = new System.Windows.Forms.ComboBox();
-            this.comboBox18 = new System.Windows.Forms.ComboBox();
+            this.cboWJewel1 = new System.Windows.Forms.ComboBox();
+            this.cboWJewel2 = new System.Windows.Forms.ComboBox();
+            this.cboWJewel3 = new System.Windows.Forms.ComboBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.comboBox19 = new System.Windows.Forms.ComboBox();
-            this.comboBox20 = new System.Windows.Forms.ComboBox();
-            this.comboBox21 = new System.Windows.Forms.ComboBox();
+            this.cboLJewel1 = new System.Windows.Forms.ComboBox();
+            this.cboLJewel2 = new System.Windows.Forms.ComboBox();
+            this.cboLJewel3 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.gViewResistance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gVIewSkill)).BeginInit();
             this.panel1.SuspendLayout();
@@ -376,7 +376,7 @@
             // 
             this.cboCharm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCharm.FormattingEnabled = true;
-            this.cboCharm.Location = new System.Drawing.Point(73, 648);
+            this.cboCharm.Location = new System.Drawing.Point(72, 653);
             this.cboCharm.Name = "cboCharm";
             this.cboCharm.Size = new System.Drawing.Size(258, 20);
             this.cboCharm.TabIndex = 25;
@@ -438,251 +438,250 @@
             // 
             this.cboCharmRank.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCharmRank.FormattingEnabled = true;
-            this.cboCharmRank.Location = new System.Drawing.Point(337, 648);
+            this.cboCharmRank.Location = new System.Drawing.Point(343, 653);
             this.cboCharmRank.Name = "cboCharmRank";
             this.cboCharmRank.Size = new System.Drawing.Size(37, 20);
             this.cboCharmRank.TabIndex = 31;
             // 
-            // cbo1
+            // cboWeaponJewel1
             // 
-            this.cbo1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo1.Enabled = false;
-            this.cbo1.FormattingEnabled = true;
-            this.cbo1.Location = new System.Drawing.Point(3, 7);
-            this.cbo1.Name = "cbo1";
-            this.cbo1.Size = new System.Drawing.Size(95, 20);
-            this.cbo1.TabIndex = 32;
-            this.cbo1.SelectedIndexChanged += new System.EventHandler(this.cbo1_SelectedIndexChanged);
+            this.cboWeaponJewel1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboWeaponJewel1.Enabled = false;
+            this.cboWeaponJewel1.FormattingEnabled = true;
+            this.cboWeaponJewel1.Location = new System.Drawing.Point(3, 7);
+            this.cboWeaponJewel1.Name = "cboWeaponJewel1";
+            this.cboWeaponJewel1.Size = new System.Drawing.Size(95, 20);
+            this.cboWeaponJewel1.TabIndex = 32;
             // 
-            // cbo2
+            // cboWeaponJewel2
             // 
-            this.cbo2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo2.Enabled = false;
-            this.cbo2.FormattingEnabled = true;
-            this.cbo2.Location = new System.Drawing.Point(106, 7);
-            this.cbo2.Name = "cbo2";
-            this.cbo2.Size = new System.Drawing.Size(95, 20);
-            this.cbo2.TabIndex = 33;
+            this.cboWeaponJewel2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboWeaponJewel2.Enabled = false;
+            this.cboWeaponJewel2.FormattingEnabled = true;
+            this.cboWeaponJewel2.Location = new System.Drawing.Point(106, 7);
+            this.cboWeaponJewel2.Name = "cboWeaponJewel2";
+            this.cboWeaponJewel2.Size = new System.Drawing.Size(95, 20);
+            this.cboWeaponJewel2.TabIndex = 33;
             // 
-            // cbo3
+            // cboWeaponJewel3
             // 
-            this.cbo3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo3.Enabled = false;
-            this.cbo3.FormattingEnabled = true;
-            this.cbo3.Location = new System.Drawing.Point(209, 7);
-            this.cbo3.Name = "cbo3";
-            this.cbo3.Size = new System.Drawing.Size(95, 20);
-            this.cbo3.TabIndex = 34;
+            this.cboWeaponJewel3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboWeaponJewel3.Enabled = false;
+            this.cboWeaponJewel3.FormattingEnabled = true;
+            this.cboWeaponJewel3.Location = new System.Drawing.Point(209, 7);
+            this.cboWeaponJewel3.Name = "cboWeaponJewel3";
+            this.cboWeaponJewel3.Size = new System.Drawing.Size(95, 20);
+            this.cboWeaponJewel3.TabIndex = 34;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.cbo1);
-            this.panel1.Controls.Add(this.cbo2);
-            this.panel1.Controls.Add(this.cbo3);
-            this.panel1.Location = new System.Drawing.Point(72, 163);
+            this.panel1.Controls.Add(this.cboWeaponJewel1);
+            this.panel1.Controls.Add(this.cboWeaponJewel2);
+            this.panel1.Controls.Add(this.cboWeaponJewel3);
+            this.panel1.Location = new System.Drawing.Point(72, 184);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(308, 33);
             this.panel1.TabIndex = 50;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.comboBox2);
-            this.panel2.Controls.Add(this.comboBox3);
+            this.panel2.Controls.Add(this.cboCJewel1);
+            this.panel2.Controls.Add(this.cboCJewel2);
+            this.panel2.Controls.Add(this.cboCJewel3);
             this.panel2.Location = new System.Drawing.Point(72, 334);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(308, 33);
             this.panel2.TabIndex = 51;
             // 
-            // comboBox1
+            // cboCJewel1
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Enabled = false;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 7);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(95, 20);
-            this.comboBox1.TabIndex = 32;
+            this.cboCJewel1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCJewel1.Enabled = false;
+            this.cboCJewel1.FormattingEnabled = true;
+            this.cboCJewel1.Location = new System.Drawing.Point(3, 7);
+            this.cboCJewel1.Name = "cboCJewel1";
+            this.cboCJewel1.Size = new System.Drawing.Size(95, 20);
+            this.cboCJewel1.TabIndex = 32;
             // 
-            // comboBox2
+            // cboCJewel2
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Enabled = false;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(106, 7);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(95, 20);
-            this.comboBox2.TabIndex = 33;
+            this.cboCJewel2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCJewel2.Enabled = false;
+            this.cboCJewel2.FormattingEnabled = true;
+            this.cboCJewel2.Location = new System.Drawing.Point(106, 7);
+            this.cboCJewel2.Name = "cboCJewel2";
+            this.cboCJewel2.Size = new System.Drawing.Size(95, 20);
+            this.cboCJewel2.TabIndex = 33;
             // 
-            // comboBox3
+            // cboCJewel3
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.Enabled = false;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(209, 7);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(95, 20);
-            this.comboBox3.TabIndex = 34;
+            this.cboCJewel3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCJewel3.Enabled = false;
+            this.cboCJewel3.FormattingEnabled = true;
+            this.cboCJewel3.Location = new System.Drawing.Point(209, 7);
+            this.cboCJewel3.Name = "cboCJewel3";
+            this.cboCJewel3.Size = new System.Drawing.Size(95, 20);
+            this.cboCJewel3.TabIndex = 34;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.comboBox4);
-            this.panel3.Controls.Add(this.comboBox5);
-            this.panel3.Controls.Add(this.comboBox12);
-            this.panel3.Location = new System.Drawing.Point(72, 249);
+            this.panel3.Controls.Add(this.cboHJewel1);
+            this.panel3.Controls.Add(this.cboHJewel2);
+            this.panel3.Controls.Add(this.cboHJewel3);
+            this.panel3.Location = new System.Drawing.Point(72, 269);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(308, 33);
             this.panel3.TabIndex = 51;
             // 
-            // comboBox4
+            // cboHJewel1
             // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.Enabled = false;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(3, 7);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(95, 20);
-            this.comboBox4.TabIndex = 32;
+            this.cboHJewel1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboHJewel1.Enabled = false;
+            this.cboHJewel1.FormattingEnabled = true;
+            this.cboHJewel1.Location = new System.Drawing.Point(3, 7);
+            this.cboHJewel1.Name = "cboHJewel1";
+            this.cboHJewel1.Size = new System.Drawing.Size(95, 20);
+            this.cboHJewel1.TabIndex = 32;
             // 
-            // comboBox5
+            // cboHJewel2
             // 
-            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox5.Enabled = false;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(106, 7);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(95, 20);
-            this.comboBox5.TabIndex = 33;
+            this.cboHJewel2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboHJewel2.Enabled = false;
+            this.cboHJewel2.FormattingEnabled = true;
+            this.cboHJewel2.Location = new System.Drawing.Point(106, 7);
+            this.cboHJewel2.Name = "cboHJewel2";
+            this.cboHJewel2.Size = new System.Drawing.Size(95, 20);
+            this.cboHJewel2.TabIndex = 33;
             // 
-            // comboBox12
+            // cboHJewel3
             // 
-            this.comboBox12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox12.Enabled = false;
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(209, 7);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(95, 20);
-            this.comboBox12.TabIndex = 34;
+            this.cboHJewel3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboHJewel3.Enabled = false;
+            this.cboHJewel3.FormattingEnabled = true;
+            this.cboHJewel3.Location = new System.Drawing.Point(209, 7);
+            this.cboHJewel3.Name = "cboHJewel3";
+            this.cboHJewel3.Size = new System.Drawing.Size(95, 20);
+            this.cboHJewel3.TabIndex = 34;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.comboBox13);
-            this.panel4.Controls.Add(this.comboBox14);
-            this.panel4.Controls.Add(this.comboBox15);
-            this.panel4.Location = new System.Drawing.Point(72, 419);
+            this.panel4.Controls.Add(this.cboAJewel1);
+            this.panel4.Controls.Add(this.cboAJewel2);
+            this.panel4.Controls.Add(this.cboAJewel3);
+            this.panel4.Location = new System.Drawing.Point(72, 439);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(308, 33);
             this.panel4.TabIndex = 51;
             // 
-            // comboBox13
+            // cboAJewel1
             // 
-            this.comboBox13.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox13.Enabled = false;
-            this.comboBox13.FormattingEnabled = true;
-            this.comboBox13.Location = new System.Drawing.Point(3, 7);
-            this.comboBox13.Name = "comboBox13";
-            this.comboBox13.Size = new System.Drawing.Size(95, 20);
-            this.comboBox13.TabIndex = 32;
+            this.cboAJewel1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAJewel1.Enabled = false;
+            this.cboAJewel1.FormattingEnabled = true;
+            this.cboAJewel1.Location = new System.Drawing.Point(3, 7);
+            this.cboAJewel1.Name = "cboAJewel1";
+            this.cboAJewel1.Size = new System.Drawing.Size(95, 20);
+            this.cboAJewel1.TabIndex = 32;
             // 
-            // comboBox14
+            // cboAJewel2
             // 
-            this.comboBox14.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox14.Enabled = false;
-            this.comboBox14.FormattingEnabled = true;
-            this.comboBox14.Location = new System.Drawing.Point(106, 7);
-            this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(95, 20);
-            this.comboBox14.TabIndex = 33;
+            this.cboAJewel2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAJewel2.Enabled = false;
+            this.cboAJewel2.FormattingEnabled = true;
+            this.cboAJewel2.Location = new System.Drawing.Point(106, 7);
+            this.cboAJewel2.Name = "cboAJewel2";
+            this.cboAJewel2.Size = new System.Drawing.Size(95, 20);
+            this.cboAJewel2.TabIndex = 33;
             // 
-            // comboBox15
+            // cboAJewel3
             // 
-            this.comboBox15.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox15.Enabled = false;
-            this.comboBox15.FormattingEnabled = true;
-            this.comboBox15.Location = new System.Drawing.Point(209, 7);
-            this.comboBox15.Name = "comboBox15";
-            this.comboBox15.Size = new System.Drawing.Size(95, 20);
-            this.comboBox15.TabIndex = 34;
+            this.cboAJewel3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAJewel3.Enabled = false;
+            this.cboAJewel3.FormattingEnabled = true;
+            this.cboAJewel3.Location = new System.Drawing.Point(209, 7);
+            this.cboAJewel3.Name = "cboAJewel3";
+            this.cboAJewel3.Size = new System.Drawing.Size(95, 20);
+            this.cboAJewel3.TabIndex = 34;
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.comboBox16);
-            this.panel5.Controls.Add(this.comboBox17);
-            this.panel5.Controls.Add(this.comboBox18);
-            this.panel5.Location = new System.Drawing.Point(72, 504);
+            this.panel5.Controls.Add(this.cboWJewel1);
+            this.panel5.Controls.Add(this.cboWJewel2);
+            this.panel5.Controls.Add(this.cboWJewel3);
+            this.panel5.Location = new System.Drawing.Point(72, 524);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(308, 33);
             this.panel5.TabIndex = 51;
             // 
-            // comboBox16
+            // cboWJewel1
             // 
-            this.comboBox16.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox16.Enabled = false;
-            this.comboBox16.FormattingEnabled = true;
-            this.comboBox16.Location = new System.Drawing.Point(3, 7);
-            this.comboBox16.Name = "comboBox16";
-            this.comboBox16.Size = new System.Drawing.Size(95, 20);
-            this.comboBox16.TabIndex = 32;
+            this.cboWJewel1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboWJewel1.Enabled = false;
+            this.cboWJewel1.FormattingEnabled = true;
+            this.cboWJewel1.Location = new System.Drawing.Point(3, 7);
+            this.cboWJewel1.Name = "cboWJewel1";
+            this.cboWJewel1.Size = new System.Drawing.Size(95, 20);
+            this.cboWJewel1.TabIndex = 32;
             // 
-            // comboBox17
+            // cboWJewel2
             // 
-            this.comboBox17.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox17.Enabled = false;
-            this.comboBox17.FormattingEnabled = true;
-            this.comboBox17.Location = new System.Drawing.Point(106, 7);
-            this.comboBox17.Name = "comboBox17";
-            this.comboBox17.Size = new System.Drawing.Size(95, 20);
-            this.comboBox17.TabIndex = 33;
+            this.cboWJewel2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboWJewel2.Enabled = false;
+            this.cboWJewel2.FormattingEnabled = true;
+            this.cboWJewel2.Location = new System.Drawing.Point(106, 7);
+            this.cboWJewel2.Name = "cboWJewel2";
+            this.cboWJewel2.Size = new System.Drawing.Size(95, 20);
+            this.cboWJewel2.TabIndex = 33;
             // 
-            // comboBox18
+            // cboWJewel3
             // 
-            this.comboBox18.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox18.Enabled = false;
-            this.comboBox18.FormattingEnabled = true;
-            this.comboBox18.Location = new System.Drawing.Point(209, 7);
-            this.comboBox18.Name = "comboBox18";
-            this.comboBox18.Size = new System.Drawing.Size(95, 20);
-            this.comboBox18.TabIndex = 34;
+            this.cboWJewel3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboWJewel3.Enabled = false;
+            this.cboWJewel3.FormattingEnabled = true;
+            this.cboWJewel3.Location = new System.Drawing.Point(209, 7);
+            this.cboWJewel3.Name = "cboWJewel3";
+            this.cboWJewel3.Size = new System.Drawing.Size(95, 20);
+            this.cboWJewel3.TabIndex = 34;
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.comboBox19);
-            this.panel6.Controls.Add(this.comboBox20);
-            this.panel6.Controls.Add(this.comboBox21);
-            this.panel6.Location = new System.Drawing.Point(72, 589);
+            this.panel6.Controls.Add(this.cboLJewel1);
+            this.panel6.Controls.Add(this.cboLJewel2);
+            this.panel6.Controls.Add(this.cboLJewel3);
+            this.panel6.Location = new System.Drawing.Point(72, 609);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(308, 33);
             this.panel6.TabIndex = 51;
             // 
-            // comboBox19
+            // cboLJewel1
             // 
-            this.comboBox19.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox19.Enabled = false;
-            this.comboBox19.FormattingEnabled = true;
-            this.comboBox19.Location = new System.Drawing.Point(3, 7);
-            this.comboBox19.Name = "comboBox19";
-            this.comboBox19.Size = new System.Drawing.Size(95, 20);
-            this.comboBox19.TabIndex = 32;
+            this.cboLJewel1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboLJewel1.Enabled = false;
+            this.cboLJewel1.FormattingEnabled = true;
+            this.cboLJewel1.Location = new System.Drawing.Point(3, 7);
+            this.cboLJewel1.Name = "cboLJewel1";
+            this.cboLJewel1.Size = new System.Drawing.Size(95, 20);
+            this.cboLJewel1.TabIndex = 32;
             // 
-            // comboBox20
+            // cboLJewel2
             // 
-            this.comboBox20.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox20.Enabled = false;
-            this.comboBox20.FormattingEnabled = true;
-            this.comboBox20.Location = new System.Drawing.Point(106, 7);
-            this.comboBox20.Name = "comboBox20";
-            this.comboBox20.Size = new System.Drawing.Size(95, 20);
-            this.comboBox20.TabIndex = 33;
+            this.cboLJewel2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboLJewel2.Enabled = false;
+            this.cboLJewel2.FormattingEnabled = true;
+            this.cboLJewel2.Location = new System.Drawing.Point(106, 7);
+            this.cboLJewel2.Name = "cboLJewel2";
+            this.cboLJewel2.Size = new System.Drawing.Size(95, 20);
+            this.cboLJewel2.TabIndex = 33;
             // 
-            // comboBox21
+            // cboLJewel3
             // 
-            this.comboBox21.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox21.Enabled = false;
-            this.comboBox21.FormattingEnabled = true;
-            this.comboBox21.Location = new System.Drawing.Point(209, 7);
-            this.comboBox21.Name = "comboBox21";
-            this.comboBox21.Size = new System.Drawing.Size(95, 20);
-            this.comboBox21.TabIndex = 34;
+            this.cboLJewel3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboLJewel3.Enabled = false;
+            this.cboLJewel3.FormattingEnabled = true;
+            this.cboLJewel3.Location = new System.Drawing.Point(209, 7);
+            this.cboLJewel3.Name = "cboLJewel3";
+            this.cboLJewel3.Size = new System.Drawing.Size(95, 20);
+            this.cboLJewel3.TabIndex = 34;
             // 
             // FrmSimulator
             // 
@@ -777,29 +776,29 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cboCharmRank;
-        private System.Windows.Forms.ComboBox cbo1;
-        private System.Windows.Forms.ComboBox cbo2;
-        private System.Windows.Forms.ComboBox cbo3;
+        private System.Windows.Forms.ComboBox cboWeaponJewel1;
+        private System.Windows.Forms.ComboBox cboWeaponJewel2;
+        private System.Windows.Forms.ComboBox cboWeaponJewel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cboCJewel1;
+        private System.Windows.Forms.ComboBox cboCJewel2;
+        private System.Windows.Forms.ComboBox cboCJewel3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox12;
+        private System.Windows.Forms.ComboBox cboHJewel1;
+        private System.Windows.Forms.ComboBox cboHJewel2;
+        private System.Windows.Forms.ComboBox cboHJewel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ComboBox comboBox13;
-        private System.Windows.Forms.ComboBox comboBox14;
-        private System.Windows.Forms.ComboBox comboBox15;
+        private System.Windows.Forms.ComboBox cboAJewel1;
+        private System.Windows.Forms.ComboBox cboAJewel2;
+        private System.Windows.Forms.ComboBox cboAJewel3;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.ComboBox comboBox16;
-        private System.Windows.Forms.ComboBox comboBox17;
-        private System.Windows.Forms.ComboBox comboBox18;
+        private System.Windows.Forms.ComboBox cboWJewel1;
+        private System.Windows.Forms.ComboBox cboWJewel2;
+        private System.Windows.Forms.ComboBox cboWJewel3;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.ComboBox comboBox19;
-        private System.Windows.Forms.ComboBox comboBox20;
-        private System.Windows.Forms.ComboBox comboBox21;
+        private System.Windows.Forms.ComboBox cboLJewel1;
+        private System.Windows.Forms.ComboBox cboLJewel2;
+        private System.Windows.Forms.ComboBox cboLJewel3;
     }
 }
