@@ -179,7 +179,7 @@
             this.cboHead.FormattingEnabled = true;
             this.cboHead.Items.AddRange(new object[] {
             ""});
-            this.cboHead.Location = new System.Drawing.Point(76, 223);
+            this.cboHead.Location = new System.Drawing.Point(76, 220);
             this.cboHead.Name = "cboHead";
             this.cboHead.Size = new System.Drawing.Size(300, 20);
             this.cboHead.TabIndex = 6;
@@ -191,7 +191,7 @@
             this.cboChest.FormattingEnabled = true;
             this.cboChest.Items.AddRange(new object[] {
             ""});
-            this.cboChest.Location = new System.Drawing.Point(76, 308);
+            this.cboChest.Location = new System.Drawing.Point(76, 303);
             this.cboChest.Name = "cboChest";
             this.cboChest.Size = new System.Drawing.Size(300, 20);
             this.cboChest.TabIndex = 7;
@@ -203,7 +203,7 @@
             this.cboArm.FormattingEnabled = true;
             this.cboArm.Items.AddRange(new object[] {
             ""});
-            this.cboArm.Location = new System.Drawing.Point(76, 393);
+            this.cboArm.Location = new System.Drawing.Point(76, 386);
             this.cboArm.Name = "cboArm";
             this.cboArm.Size = new System.Drawing.Size(300, 20);
             this.cboArm.TabIndex = 8;
@@ -215,7 +215,7 @@
             this.cboWaist.FormattingEnabled = true;
             this.cboWaist.Items.AddRange(new object[] {
             ""});
-            this.cboWaist.Location = new System.Drawing.Point(76, 478);
+            this.cboWaist.Location = new System.Drawing.Point(76, 469);
             this.cboWaist.Name = "cboWaist";
             this.cboWaist.Size = new System.Drawing.Size(300, 20);
             this.cboWaist.TabIndex = 9;
@@ -227,7 +227,7 @@
             this.cboLeg.FormattingEnabled = true;
             this.cboLeg.Items.AddRange(new object[] {
             ""});
-            this.cboLeg.Location = new System.Drawing.Point(76, 563);
+            this.cboLeg.Location = new System.Drawing.Point(76, 552);
             this.cboLeg.Name = "cboLeg";
             this.cboLeg.Size = new System.Drawing.Size(300, 20);
             this.cboLeg.TabIndex = 10;
@@ -255,9 +255,15 @@
             this.cboWeapon.FormattingEnabled = true;
             this.cboWeapon.Items.AddRange(new object[] {
             "",
-            "1",
-            "2",
-            "3"});
+            "1__",
+            "11_",
+            "2__",
+            "21_",
+            "22_",
+            "3__",
+            "31_",
+            "32_",
+            "33_"});
             this.cboWeapon.Location = new System.Drawing.Point(76, 137);
             this.cboWeapon.Name = "cboWeapon";
             this.cboWeapon.Size = new System.Drawing.Size(300, 20);
@@ -267,7 +273,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 146);
+            this.label1.Location = new System.Drawing.Point(22, 140);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 13;
@@ -276,7 +282,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 231);
+            this.label2.Location = new System.Drawing.Point(22, 223);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 14;
@@ -285,7 +291,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 316);
+            this.label3.Location = new System.Drawing.Point(22, 306);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 12);
             this.label3.TabIndex = 15;
@@ -294,7 +300,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 401);
+            this.label4.Location = new System.Drawing.Point(28, 389);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(17, 12);
             this.label4.TabIndex = 16;
@@ -303,7 +309,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 486);
+            this.label5.Location = new System.Drawing.Point(22, 472);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 12);
             this.label5.TabIndex = 17;
@@ -312,7 +318,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 571);
+            this.label6.Location = new System.Drawing.Point(22, 555);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 12);
             this.label6.TabIndex = 18;
@@ -385,7 +391,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(10, 656);
+            this.label13.Location = new System.Drawing.Point(22, 656);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(29, 12);
             this.label13.TabIndex = 26;
@@ -452,6 +458,7 @@
             this.cboWeaponJewel1.Name = "cboWeaponJewel1";
             this.cboWeaponJewel1.Size = new System.Drawing.Size(95, 20);
             this.cboWeaponJewel1.TabIndex = 32;
+            this.cboWeaponJewel1.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
             // 
             // cboWeaponJewel2
             // 
@@ -462,6 +469,7 @@
             this.cboWeaponJewel2.Name = "cboWeaponJewel2";
             this.cboWeaponJewel2.Size = new System.Drawing.Size(95, 20);
             this.cboWeaponJewel2.TabIndex = 33;
+            this.cboWeaponJewel2.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
             // 
             // cboWeaponJewel3
             // 
@@ -472,13 +480,14 @@
             this.cboWeaponJewel3.Name = "cboWeaponJewel3";
             this.cboWeaponJewel3.Size = new System.Drawing.Size(95, 20);
             this.cboWeaponJewel3.TabIndex = 34;
+            this.cboWeaponJewel3.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.cboWeaponJewel1);
             this.panel1.Controls.Add(this.cboWeaponJewel2);
             this.panel1.Controls.Add(this.cboWeaponJewel3);
-            this.panel1.Location = new System.Drawing.Point(72, 184);
+            this.panel1.Location = new System.Drawing.Point(72, 172);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(308, 33);
             this.panel1.TabIndex = 50;
@@ -488,7 +497,7 @@
             this.panel2.Controls.Add(this.cboCJewel1);
             this.panel2.Controls.Add(this.cboCJewel2);
             this.panel2.Controls.Add(this.cboCJewel3);
-            this.panel2.Location = new System.Drawing.Point(72, 334);
+            this.panel2.Location = new System.Drawing.Point(72, 338);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(308, 33);
             this.panel2.TabIndex = 51;
@@ -502,6 +511,7 @@
             this.cboCJewel1.Name = "cboCJewel1";
             this.cboCJewel1.Size = new System.Drawing.Size(95, 20);
             this.cboCJewel1.TabIndex = 32;
+            this.cboCJewel1.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
             // 
             // cboCJewel2
             // 
@@ -512,6 +522,7 @@
             this.cboCJewel2.Name = "cboCJewel2";
             this.cboCJewel2.Size = new System.Drawing.Size(95, 20);
             this.cboCJewel2.TabIndex = 33;
+            this.cboCJewel2.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
             // 
             // cboCJewel3
             // 
@@ -522,13 +533,14 @@
             this.cboCJewel3.Name = "cboCJewel3";
             this.cboCJewel3.Size = new System.Drawing.Size(95, 20);
             this.cboCJewel3.TabIndex = 34;
+            this.cboCJewel3.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.cboHJewel1);
             this.panel3.Controls.Add(this.cboHJewel2);
             this.panel3.Controls.Add(this.cboHJewel3);
-            this.panel3.Location = new System.Drawing.Point(72, 269);
+            this.panel3.Location = new System.Drawing.Point(72, 255);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(308, 33);
             this.panel3.TabIndex = 51;
@@ -542,6 +554,7 @@
             this.cboHJewel1.Name = "cboHJewel1";
             this.cboHJewel1.Size = new System.Drawing.Size(95, 20);
             this.cboHJewel1.TabIndex = 32;
+            this.cboHJewel1.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
             // 
             // cboHJewel2
             // 
@@ -552,6 +565,7 @@
             this.cboHJewel2.Name = "cboHJewel2";
             this.cboHJewel2.Size = new System.Drawing.Size(95, 20);
             this.cboHJewel2.TabIndex = 33;
+            this.cboHJewel2.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
             // 
             // cboHJewel3
             // 
@@ -562,13 +576,14 @@
             this.cboHJewel3.Name = "cboHJewel3";
             this.cboHJewel3.Size = new System.Drawing.Size(95, 20);
             this.cboHJewel3.TabIndex = 34;
+            this.cboHJewel3.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.cboAJewel1);
             this.panel4.Controls.Add(this.cboAJewel2);
             this.panel4.Controls.Add(this.cboAJewel3);
-            this.panel4.Location = new System.Drawing.Point(72, 439);
+            this.panel4.Location = new System.Drawing.Point(72, 421);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(308, 33);
             this.panel4.TabIndex = 51;
@@ -582,6 +597,7 @@
             this.cboAJewel1.Name = "cboAJewel1";
             this.cboAJewel1.Size = new System.Drawing.Size(95, 20);
             this.cboAJewel1.TabIndex = 32;
+            this.cboAJewel1.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
             // 
             // cboAJewel2
             // 
@@ -592,6 +608,7 @@
             this.cboAJewel2.Name = "cboAJewel2";
             this.cboAJewel2.Size = new System.Drawing.Size(95, 20);
             this.cboAJewel2.TabIndex = 33;
+            this.cboAJewel2.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
             // 
             // cboAJewel3
             // 
@@ -602,13 +619,14 @@
             this.cboAJewel3.Name = "cboAJewel3";
             this.cboAJewel3.Size = new System.Drawing.Size(95, 20);
             this.cboAJewel3.TabIndex = 34;
+            this.cboAJewel3.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.cboWJewel1);
             this.panel5.Controls.Add(this.cboWJewel2);
             this.panel5.Controls.Add(this.cboWJewel3);
-            this.panel5.Location = new System.Drawing.Point(72, 524);
+            this.panel5.Location = new System.Drawing.Point(72, 504);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(308, 33);
             this.panel5.TabIndex = 51;
@@ -622,6 +640,7 @@
             this.cboWJewel1.Name = "cboWJewel1";
             this.cboWJewel1.Size = new System.Drawing.Size(95, 20);
             this.cboWJewel1.TabIndex = 32;
+            this.cboWJewel1.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
             // 
             // cboWJewel2
             // 
@@ -632,6 +651,7 @@
             this.cboWJewel2.Name = "cboWJewel2";
             this.cboWJewel2.Size = new System.Drawing.Size(95, 20);
             this.cboWJewel2.TabIndex = 33;
+            this.cboWJewel2.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
             // 
             // cboWJewel3
             // 
@@ -642,13 +662,14 @@
             this.cboWJewel3.Name = "cboWJewel3";
             this.cboWJewel3.Size = new System.Drawing.Size(95, 20);
             this.cboWJewel3.TabIndex = 34;
+            this.cboWJewel3.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.cboLJewel1);
             this.panel6.Controls.Add(this.cboLJewel2);
             this.panel6.Controls.Add(this.cboLJewel3);
-            this.panel6.Location = new System.Drawing.Point(72, 609);
+            this.panel6.Location = new System.Drawing.Point(72, 587);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(308, 33);
             this.panel6.TabIndex = 51;
@@ -662,6 +683,7 @@
             this.cboLJewel1.Name = "cboLJewel1";
             this.cboLJewel1.Size = new System.Drawing.Size(95, 20);
             this.cboLJewel1.TabIndex = 32;
+            this.cboLJewel1.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
             // 
             // cboLJewel2
             // 
@@ -672,6 +694,7 @@
             this.cboLJewel2.Name = "cboLJewel2";
             this.cboLJewel2.Size = new System.Drawing.Size(95, 20);
             this.cboLJewel2.TabIndex = 33;
+            this.cboLJewel2.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
             // 
             // cboLJewel3
             // 
@@ -682,6 +705,7 @@
             this.cboLJewel3.Name = "cboLJewel3";
             this.cboLJewel3.Size = new System.Drawing.Size(95, 20);
             this.cboLJewel3.TabIndex = 34;
+            this.cboLJewel3.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
             // 
             // FrmSimulator
             // 

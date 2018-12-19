@@ -161,128 +161,103 @@ namespace MonsterHunterWorld.BUS
             GetResistance(sender);
             GetSkillList();
             SetJewelSlots();
+            GetJewelSkill();
+            SkillTotalScore();
+            SkillOverLapDelete();
         }
 
+        private void GetJewelSkill()
+        {
+            ComboBox[][] boxes = new ComboBox[][] { weaponJewel, headJewel, chestJewel, armJewel, waistJewel, legJewel };
+            for (int i = 0; i < boxes.Length; i++)
+            {
+                foreach (var item in boxes[i])
+                {
+                    if (item.Enabled)
+                    {
+                        foreach (var jewel in Jewel.GetListCollection())
+                        {
+                            if (item.SelectedItem != null)
+                            {
+                                if (item.SelectedItem.ToString().Contains(jewel.Name))
+                                {
+                                    foreach (var skill in skill.GetListCollection())
+                                    {
+                                        if (jewel.Skill.Name == skill.Name)
+                                        {
+                                            string[] temp = new string[] { "0", "0", "0", "0", "0", "0", "0", "0" };
+                                            temp[0] = skill.Name;
+                                            temp[i + 1] = "1";
+                                            gVIewSkill.Rows.Add(temp);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         private void SetJewelSlots()
         {
-            foreach (ComboBox armor in ArmorCombo)
+            ComboBox[][] boxes = new ComboBox[][] { headJewel, chestJewel, armJewel, waistJewel, legJewel };
+            string[] parts = new string[] { "머리", "몸통", "팔", "허리", "다리" };
+            for (int k = 0; k < ArmorCombo.Length; k++)
             {
                 foreach (var item in armors.GetListCollection())
                 {
-                    if (armor.SelectedItem != null)
+                    if (ArmorCombo[k].SelectedItem != null)
                     {
-                        if (armor.SelectedItem.ToString() == item.Name)
+                        if (ArmorCombo[k].SelectedItem.ToString() == item.Name)
                         {
                             string a = item.Slots.Replace("_", "");
-                            if (item.Part == "머리")
+                            for (int l = 0; l < parts.Length; l++)
                             {
-                                for (int i = 0; i < 3; i++)
+                                if (item.Part == parts[l])
                                 {
-                                    headJewel[i].Enabled = false;
-                                }
-                                for (int i = 0; i < a.Length; i++)
-                                {
-                                    headJewel[i].Enabled = true;
-                                    headJewel[i].Items.Clear();
-                                    foreach (var jewel in Jewel.GetListCollection())
+                                    for (int i = 0; i < 3; i++)
                                     {
-                                        if (a[i].ToString() == jewel.Slot_level.ToString())
+                                        boxes[l][i].Enabled = false;
+                                    }
+                                    for (int i = 0; i < a.Length; i++)
+                                    {
+                                        boxes[l][i].Enabled = true;
+                                        boxes[l][i].Items.Clear();
+                                        boxes[l][i].Items.Add("");
+                                        foreach (var jewel in Jewel.GetListCollection())
                                         {
-                                            headJewel[i].Items.Add(jewel.Name + " lv " + jewel.Slot_level);
+                                            if (a[i].ToString() == jewel.Slot_level.ToString())
+                                            {
+                                                boxes[l][i].Items.Add(jewel.Name + " lv " + jewel.Slot_level);
+                                            }
                                         }
                                     }
                                 }
                             }
-                            if (item.Part == "몸통")
-                            {
-                                for (int i = 0; i < 3; i++)
-                                {
-                                    chestJewel[i].Enabled = false;
-                                }
-                                for (int i = 0; i < a.Length; i++)
-                                {
-                                    chestJewel[i].Enabled = true;
-                                    chestJewel[i].Items.Clear();
-                                    foreach (var jewel in Jewel.GetListCollection())
-                                    {
-                                        if (a[i].ToString() == jewel.Slot_level.ToString())
-                                        {
-                                            chestJewel[i].Items.Add(jewel.Name + " lv " + jewel.Slot_level);
-                                        }
-                                    }
-                                }
-                            }
-                            if (item.Part == "팔")
-                            {
-                                for (int i = 0; i < 3; i++)
-                                {
-                                    armJewel[i].Enabled = false;
-                                }
-                                for (int i = 0; i < a.Length; i++)
-                                {
-                                    armJewel[i].Enabled = true;
-                                    armJewel[i].Items.Clear();
-                                    foreach (var jewel in Jewel.GetListCollection())
-                                    {
-                                        if (a[i].ToString() == jewel.Slot_level.ToString())
-                                        {
-                                            armJewel[i].Items.Add(jewel.Name + " lv " + jewel.Slot_level);
-                                        }
-                                    }
-                                }
-                            }
-                            if (item.Part == "허리")
-                            {
-                                for (int i = 0; i < 3; i++)
-                                {
-                                    waistJewel[i].Enabled = false;
-                                }
-                                for (int i = 0; i < a.Length; i++)
-                                {
-                                    waistJewel[i].Enabled = true;
-                                    waistJewel[i].Items.Clear();
-                                    foreach (var jewel in Jewel.GetListCollection())
-                                    {
-                                        if (a[i].ToString() == jewel.Slot_level.ToString())
-                                        {
-                                            waistJewel[i].Items.Add(jewel.Name + " lv " + jewel.Slot_level);
-                                        }
-                                    }
-                                }
-                            }
-                            if (item.Part == "다리")
-                            {
-                                for (int i = 0; i < 3; i++)
-                                {
-                                    legJewel[i].Enabled = false;
-                                }
-                                for (int i = 0; i < a.Length; i++)
-                                {
-                                    legJewel[i].Enabled = true;
-                                    legJewel[i].Items.Clear();
-                                    foreach (var jewel in Jewel.GetListCollection())
-                                    {
-                                        if (a[i].ToString() == jewel.Slot_level.ToString())
-                                        {
-                                            legJewel[i].Items.Add(jewel.Name + " lv " + jewel.Slot_level);
-                                        }
-                                    }
-                                }
-                            }
-                        } 
+                        }
                     }
-                } 
+                }
             }
             if (cboWeapon.SelectedItem != null)
             {
+                string a = cboWeapon.SelectedItem.ToString().Replace("_", "");
                 for (int i = 0; i < 3; i++)
                 {
                     weaponJewel[i].Enabled = false;
                 }
-                for (int i = 0; i < int.Parse(cboWeapon.SelectedItem.ToString()); i++)
+                for (int i = 0; i < a.Length; i++)
                 {
                     weaponJewel[i].Enabled = true;
-                } 
+                    weaponJewel[i].Items.Clear();
+                    weaponJewel[i].Items.Add("");
+                    foreach (var jewel in Jewel.GetListCollection())
+                    {
+                        if (a[i].ToString() == jewel.Slot_level.ToString())
+                        {
+                            weaponJewel[i].Items.Add(jewel.Name + " lv " + jewel.Slot_level);
+                        }
+                    }
+                }
             }
 
         }
@@ -395,9 +370,14 @@ namespace MonsterHunterWorld.BUS
                                 }
                             }
                         }
-                    } 
+                    }
                 }
             }
+            
+        }
+
+        private void SkillTotalScore()
+        {
             if (gVIewSkill.Rows.Count > 0)
             {
                 for (int i = 0; i < gVIewSkill.Rows.Count; i++)
@@ -413,13 +393,17 @@ namespace MonsterHunterWorld.BUS
                     gVIewSkill.Rows[i].Cells[7].Value = result.ToString();
                 }
             }
+        }
+
+        private void SkillOverLapDelete()
+        {
             for (int i = 0; i < gVIewSkill.Rows.Count - 1; i++)
             {
                 for (int j = 1; j < gVIewSkill.Rows.Count; j++)
                 {
-                    if (gVIewSkill.Rows[i].Cells[0].Value == gVIewSkill.Rows[j].Cells[0].Value)
+                    if (gVIewSkill.Rows[i].Cells["Skill"].Value.ToString() == gVIewSkill.Rows[j].Cells["Skill"].Value.ToString())
                     {
-                        for (int k = 2; k < gVIewSkill.Rows[i].Cells.Count; k++)
+                        for (int k = 1; k < gVIewSkill.Rows[i].Cells.Count; k++)
                         {
                             gVIewSkill.Rows[i].Cells[k].Value = (int.Parse(gVIewSkill.Rows[i].Cells[k].Value.ToString()) + int.Parse(gVIewSkill.Rows[j].Cells[k].Value.ToString())).ToString();
                         }
@@ -428,6 +412,13 @@ namespace MonsterHunterWorld.BUS
                     }
                 }
             }
+        }
+
+        private void cboWeaponJewel1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GetJewelSkill();
+            SkillOverLapDelete();
+            SkillTotalScore();
         }
     }
 }
