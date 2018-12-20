@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.8.11.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.8.11\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -166,6 +169,7 @@
       <DependentUpon>FrmWeaponList.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\MonsterHunterAPI.cs" />
+    <Compile Include="DAO\MonsterInfoHtmlDAO.cs" />
     <Compile Include="DAO\MonsterHunterUserDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -189,8 +193,20 @@
     <EmbeddedResource Include="BUS\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FormJewel.resx">
+      <DependentUpon>FormJewel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BUS\FormMonster.resx">
       <DependentUpon>FormMonster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FormMonsterInfo.resx">
+      <DependentUpon>FormMonsterInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FormSkill.resx">
+      <DependentUpon>FormSkill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FormSkillInfo.resx">
+      <DependentUpon>FormSkillInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BUS\FrmArmorInfo.resx">
       <DependentUpon>FrmArmorInfo.cs</DependentUpon>
@@ -247,7 +263,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="Resources\001.jpg" />
+=======
+    <Content Include="HTMLPage1.html" />
+>>>>>>> d2d493b104b50ff859a5db5aa2263ca208c470c9
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
