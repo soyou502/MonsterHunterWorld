@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.waepon_data = new System.Windows.Forms.DataGridView();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_GreatSword = new System.Windows.Forms.Button();
             this.btn_tachi = new System.Windows.Forms.Button();
@@ -50,11 +52,9 @@
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.waepon_data = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.waepon_data)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,6 +65,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1213, 322);
             this.panel1.TabIndex = 0;
+            // 
+            // waepon_data
+            // 
+            this.waepon_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.waepon_data.Location = new System.Drawing.Point(584, 3);
+            this.waepon_data.Name = "waepon_data";
+            this.waepon_data.RowTemplate.Height = 23;
+            this.waepon_data.Size = new System.Drawing.Size(459, 316);
+            this.waepon_data.TabIndex = 2;
+            // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(6, 3);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(572, 316);
+            this.treeView1.TabIndex = 1;
             // 
             // flowLayoutPanel1
             // 
@@ -277,22 +293,6 @@
             this.radioButton9.Text = "전체";
             this.radioButton9.UseVisualStyleBackColor = true;
             // 
-            // treeView1
-            // 
-            this.treeView1.Location = new System.Drawing.Point(6, 3);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(572, 316);
-            this.treeView1.TabIndex = 1;
-            // 
-            // waepon_data
-            // 
-            this.waepon_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.waepon_data.Location = new System.Drawing.Point(584, 3);
-            this.waepon_data.Name = "waepon_data";
-            this.waepon_data.RowTemplate.Height = 23;
-            this.waepon_data.Size = new System.Drawing.Size(459, 316);
-            this.waepon_data.TabIndex = 2;
-            // 
             // FrmWeaponList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -322,8 +322,8 @@
             this.Text = "FrmWeaponList";
             this.Load += new System.EventHandler(this.FrmWeaponList_Load);
             this.panel1.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.waepon_data)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

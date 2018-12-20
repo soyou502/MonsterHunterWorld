@@ -81,13 +81,13 @@ namespace MonsterHunterWorld.BUS
         {
             for (int i = 0; i < charms.Count; i++)
             {
-               
+
                 int materialIndex = 0;
                 for (int j = 0; j < charms[i].Max_level; j++)
                 {
                     string[] str = new string[8];
                     str[0] = charms[i].Name;
-                    str[1] = (j+1).ToString();
+                    str[1] = (j + 1).ToString();
                     foreach (var skill in charms[i].Skills)
                     {
                         str[2] += skill.Name;
@@ -110,7 +110,7 @@ namespace MonsterHunterWorld.BUS
                     }
                     dataGridView1.Rows.Add(str);
                 }
-                
+
             }
         }
         private void FrmCharm_Load(object sender, EventArgs e)
@@ -131,7 +131,7 @@ namespace MonsterHunterWorld.BUS
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex>=3 && e.ColumnIndex <= 6)
+            if (e.ColumnIndex >= 3 && e.ColumnIndex <= 6)
             {
                 FrmItemInfo fii = new FrmItemInfo(dataGridView1.SelectedCells[0].Value.ToString());
                 fii.ShowDialog();

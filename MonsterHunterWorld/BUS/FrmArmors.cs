@@ -20,7 +20,7 @@ namespace MonsterHunterWorld.BUS
         {
             InitializeComponent();
         }
-       
+
         private void AddArmorList(JArray ja)
         {
             foreach (var item in ja)
@@ -117,7 +117,7 @@ namespace MonsterHunterWorld.BUS
                 {
                     slots = item.Text.Replace("_", "");
                 }
-                else
+                else if(item.Checked && item.Text == "상관없음")
                 {
                     slots = "";
                 }
@@ -128,14 +128,14 @@ namespace MonsterHunterWorld.BUS
                 {
                     part = item.Text;
                 }
-                else
+                else if(item.Checked && item.Text == "상관없음")
                 {
                     part = "";
                 }
             }
             foreach (var item in armors)
             {
-                if (item.Name.Contains(textBox1.Text) && item.Slots.Contains(slots) && item.Part.Contains(part))
+                if (item.Name.Contains(textBox1.Text) && item.Slots.Replace(" " , "") == slots && item.Part.Contains(part))
                 {
                     string[] temp = new string[4];
                     temp[0] = item.Name;
@@ -148,7 +148,7 @@ namespace MonsterHunterWorld.BUS
                     }
                     if (item.Skills.Count == 0)
                     {
-                        temp[3] += "스킬없음";
+                        temp[3] += "";
                     }
                     dataGridView1.Rows.Add(temp);
                 }

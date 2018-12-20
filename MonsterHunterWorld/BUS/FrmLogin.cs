@@ -33,12 +33,13 @@ namespace MonsterHunterWorld
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(db.UserCheck(txtUserID.Text, txtUserPassword.Text))
+            if (db.UserCheck(txtUserID.Text, txtUserPassword.Text))
             {
                 db.InsertXml(txtUserID.Text, txtUserPassword.Text, chkAutoLogin.Checked);
                 FrmItems frmItems = new FrmItems();
                 frmItems.ShowDialog();
-            }else
+            }
+            else
             {
                 MessageBox.Show("아이디 또는 비밀번호를 확인해주세요.");
                 return;

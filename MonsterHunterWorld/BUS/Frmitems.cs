@@ -37,7 +37,7 @@ namespace MonsteHunterWorld
                 string[] arr = new string[5];
                 for (int j = 0; j < arr.Length; j++)
                 {
-                    if (i<items.Count)
+                    if (i < items.Count)
                     {
                         arr[j] = items[i].Name;
                         i++;
@@ -72,7 +72,7 @@ namespace MonsteHunterWorld
                         j = 0;
                     }
                 }
-                if (i == items.Count-1)
+                if (i == items.Count - 1)
                 {
                     dataGridView1.Rows.Add(arr);
                 }

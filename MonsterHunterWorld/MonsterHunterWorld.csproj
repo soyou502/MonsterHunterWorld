@@ -54,79 +54,117 @@
     <Compile Include="BUS\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\Form1.Designer.cs" />
-    <Compile Include="BUS\FormJewel.cs">
+    <Compile Include="BUS\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\FormJewl.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\FormJewel.Designer.cs" />
-    <Compile Include="BUS\FormJewelInfo.cs">
+    <Compile Include="BUS\FormJewl.Designer.cs">
+      <DependentUpon>FormJewl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\FormJewlInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\FormJewelInfo.Designer.cs" />
+    <Compile Include="BUS\FormJewlInfo.Designer.cs">
+      <DependentUpon>FormJewlInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\FormMonster.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\FormMonster.Designer.cs" />
+    <Compile Include="BUS\FormMonster.Designer.cs">
+      <DependentUpon>FormMonster.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\FormMonsterInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\FormMonsterInfo.Designer.cs" />
+    <Compile Include="BUS\FormMonsterInfo.Designer.cs">
+      <DependentUpon>FormMonsterInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\FormSkill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\FormSkill.Designer.cs" />
+    <Compile Include="BUS\FormSkill.Designer.cs">
+      <DependentUpon>FormSkill.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\FormSkillInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\FormSkillInfo.Designer.cs" />
+    <Compile Include="BUS\FormSkillInfo.Designer.cs">
+      <DependentUpon>FormSkillInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\FrmArmorInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\FrmArmorInfo.Designer.cs" />
+    <Compile Include="BUS\FrmArmorInfo.Designer.cs">
+      <DependentUpon>FrmArmorInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\FrmArmors.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\FrmArmors.Designer.cs" />
+    <Compile Include="BUS\FrmArmors.Designer.cs">
+      <DependentUpon>FrmArmors.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\FrmChamList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\FrmChamList.Designer.cs" />
+    <Compile Include="BUS\FrmChamList.Designer.cs">
+      <DependentUpon>FrmChamList.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\FrmCharm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\FrmCharm.Designer.cs" />
+    <Compile Include="BUS\FrmCharm.Designer.cs">
+      <DependentUpon>FrmCharm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\FrmItemInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\FrmItemInfo.Designer.cs" />
-    <Compile Include="BUS\Frmitems.cs">
+    <Compile Include="BUS\FrmItemInfo.Designer.cs">
+      <DependentUpon>FrmItemInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\FrmItems.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\Frmitems.Designer.cs" />
+    <Compile Include="BUS\FrmItems.Designer.cs">
+      <DependentUpon>FrmItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\FrmLogin.Designer.cs" />
-    <Compile Include="BUS\FrmsignIn.cs">
+    <Compile Include="BUS\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\FrmSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\FrmsignIn.Designer.cs" />
+    <Compile Include="BUS\FrmSignIn.Designer.cs">
+      <DependentUpon>FrmSignIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\FrmSimulator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\FrmSimulator.Designer.cs" />
+    <Compile Include="BUS\FrmSimulator.Designer.cs">
+      <DependentUpon>FrmSimulator.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\FrmSimulatorSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\FrmSimulatorSearch.Designer.cs" />
+    <Compile Include="BUS\FrmSimulatorSearch.Designer.cs">
+      <DependentUpon>FrmSimulatorSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\FrmWeaponInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\FrmWeaponInfo.Designer.cs" />
+    <Compile Include="BUS\FrmWeaponInfo.Designer.cs">
+      <DependentUpon>FrmWeaponInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\FrmWeaponList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\FrmWeaponList.Designer.cs" />
+    <Compile Include="BUS\FrmWeaponList.Designer.cs">
+      <DependentUpon>FrmWeaponList.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\MonsterHunterAPI.cs" />
     <Compile Include="DAO\MonsterHunterUserDB.cs" />
     <Compile Include="Program.cs" />
@@ -148,18 +186,42 @@
     <Compile Include="VO\SkillDesc.cs" />
     <Compile Include="VO\UserInfo.cs" />
     <Compile Include="VO\WeaponList.cs" />
-    <EmbeddedResource Include="BUS\Form1.resx" />
-    <EmbeddedResource Include="BUS\FormMonster.resx" />
-    <EmbeddedResource Include="BUS\FrmArmorInfo.resx" />
-    <EmbeddedResource Include="BUS\FrmArmors.resx" />
-    <EmbeddedResource Include="BUS\FrmCharm.resx" />
-    <EmbeddedResource Include="BUS\FrmItemInfo.resx" />
-    <EmbeddedResource Include="BUS\FrmItems.resx" />
-    <EmbeddedResource Include="BUS\FrmLogin.resx" />
-    <EmbeddedResource Include="BUS\FrmsignIn.resx" />
-    <EmbeddedResource Include="BUS\FrmSimulator.resx" />
-    <EmbeddedResource Include="BUS\FrmSimulatorSearch.resx" />
-    <EmbeddedResource Include="BUS\FrmWeaponList.resx" />
+    <EmbeddedResource Include="BUS\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FormMonster.resx">
+      <DependentUpon>FormMonster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmArmorInfo.resx">
+      <DependentUpon>FrmArmorInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmArmors.resx">
+      <DependentUpon>FrmArmors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmCharm.resx">
+      <DependentUpon>FrmCharm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmItemInfo.resx">
+      <DependentUpon>FrmItemInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmItems.resx">
+      <DependentUpon>FrmItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmSignIn.resx">
+      <DependentUpon>FrmSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmSimulator.resx">
+      <DependentUpon>FrmSimulator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmSimulatorSearch.resx">
+      <DependentUpon>FrmSimulatorSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmWeaponList.resx">
+      <DependentUpon>FrmWeaponList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

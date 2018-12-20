@@ -70,12 +70,12 @@ namespace MonsteHunterWorld
                     {
                         string[] arr = new string[3];
                         arr[0] = skill.Type;
-                        arr[1] = skill.Name; 
+                        arr[1] = skill.Name;
                         arr[2] = skill.Level.ToString();
                         gViewSkill.Rows.Add(arr);
                     }
                 }
-            }    
+            }
         }
 
         private void gViewItem_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

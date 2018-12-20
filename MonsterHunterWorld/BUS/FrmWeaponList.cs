@@ -31,13 +31,13 @@ namespace MonsteHunterWorld
 
         private void FrmWeaponList_Load(object sender, EventArgs e)
         {
-           
+
 
         }
 
-       
 
-        
+
+
 
         private void GetWeaponDate(string weapon_type)
         {
@@ -46,26 +46,26 @@ namespace MonsteHunterWorld
             {
                 foreach (var item in json)
                 {
-                   //wlist.Add(new WeaponList() {
-                   //ImgUri = item["icon"].ToString(),  // 이미지
-                   //WeaponName = item["name"].ToString(), // 무기이름
-                   //Rare = Int32.Parse(item["rare"].ToString()), // 레어도
-                   //Attack = Int32.Parse(item["attack"].ToString()),// 공격력
-                   //Defence = Int32.Parse(item["defense"].ToString()),// 방어력
-                   //Critical = Int32.Parse(item["critical"].ToString()),// 회심률
-                   //Slot = item["slots"].ToString(), // 슬롯수
-                   //Derivation = item["derivation"].ToString(),// 소재파생
-                   //                                           //  
-                   //Elmental_name = item["weakness"].ToString(), // 속성이름
-                   // Elmental_value = Int32.Parse(item["value"].ToString()), // 속성수치 
+                    //wlist.Add(new WeaponList() {
+                    //ImgUri = item["icon"].ToString(),  // 이미지
+                    //WeaponName = item["name"].ToString(), // 무기이름
+                    //Rare = Int32.Parse(item["rare"].ToString()), // 레어도
+                    //Attack = Int32.Parse(item["attack"].ToString()),// 공격력
+                    //Defence = Int32.Parse(item["defense"].ToString()),// 방어력
+                    //Critical = Int32.Parse(item["critical"].ToString()),// 회심률
+                    //Slot = item["slots"].ToString(), // 슬롯수
+                    //Derivation = item["derivation"].ToString(),// 소재파생
+                    //                                           //  
+                    //Elmental_name = item["weakness"].ToString(), // 속성이름
+                    // Elmental_value = Int32.Parse(item["value"].ToString()), // 속성수치 
 
-                   // // 상태이상
-                   // Debuff_type = item["name"].ToString(), // 상태이상 이름
-                   // Debuff_value = Int32.Parse(item["name"].ToString()), // 상태이상 수치
-                   // Con_make = bool.Parse(item["name"].ToString()), // 생산 여부
-                   // Make_price = Int32.Parse(item["name"].ToString()), // 생산 비용
-                   // Upgrade_price = Int32.Parse(item["name"].ToString()), // 업그레이드 비용
-                   //});
+                    // // 상태이상
+                    // Debuff_type = item["name"].ToString(), // 상태이상 이름
+                    // Debuff_value = Int32.Parse(item["name"].ToString()), // 상태이상 수치
+                    // Con_make = bool.Parse(item["name"].ToString()), // 생산 여부
+                    // Make_price = Int32.Parse(item["name"].ToString()), // 생산 비용
+                    // Upgrade_price = Int32.Parse(item["name"].ToString()), // 업그레이드 비용
+                    //});
                 }
             }
             else if (weapon_type.Contains("수렵피리"))
@@ -103,7 +103,7 @@ namespace MonsteHunterWorld
         /// <returns>제이슨 문자열 반환</returns>
         private void btn_weapons_Click(object sender, EventArgs e)
         {
-            GetWeaponDate(("weapons/"+((Button)sender).Text));
+            GetWeaponDate(("weapons/" + ((Button)sender).Text));
         }
     }
 }

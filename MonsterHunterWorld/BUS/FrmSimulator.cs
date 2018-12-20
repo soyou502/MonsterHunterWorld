@@ -400,7 +400,7 @@ namespace MonsterHunterWorld.BUS
             {
                 for (int j = 1; j < gVIewSkill.Rows.Count; j++)
                 {
-                    if (i!=j)
+                    if (i != j)
                     {
                         if (gVIewSkill.Rows[i].Cells["Skill"].Value.ToString() == gVIewSkill.Rows[j].Cells["Skill"].Value.ToString())
                         {
@@ -410,7 +410,7 @@ namespace MonsterHunterWorld.BUS
                             }
                             gVIewSkill.Rows.RemoveAt(j);
                             gVIewSkill.Refresh();
-                        } 
+                        }
                     }
                 }
             }

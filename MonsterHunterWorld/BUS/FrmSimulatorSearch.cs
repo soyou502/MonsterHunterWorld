@@ -48,7 +48,7 @@ namespace MonsterHunterWorld.BUS
         {
             foreach (var item in frmarmors.GetListCollection())
             {
-                if (item.Name.Contains(name)&&item.Part.Contains(part) && item.Slots.Contains(slots) && item.Slots.Contains(slotLevel))
+                if (item.Name.Contains(name) && item.Part.Contains(part) && item.Slots.Contains(slots) && item.Slots.Contains(slotLevel))
                 {
                     if (item.Skills.Count == 0 && skill1 == "" && skill2 == "")
                     {
@@ -93,7 +93,8 @@ namespace MonsterHunterWorld.BUS
                     if (item.Part == "머리")
                     {
                         frmSimulator.cboHead.Items.Add(item.Name);
-                    }else if(item.Part == "몸통")
+                    }
+                    else if (item.Part == "몸통")
                     {
                         frmSimulator.cboChest.Items.Add(item.Name);
                     }
