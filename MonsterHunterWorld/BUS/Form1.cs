@@ -27,54 +27,6 @@ namespace MonsterHunterWorld.BUS
         {
         }
 
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FormMonster form = new FormMonster();
-            form.Show();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            FrmWeaponList fwl = new FrmWeaponList();
-            fwl.Show();
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            FrmArmors fa = new FrmArmors();
-            fa.Location = this.Location;
-            fa.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            FrmItems fi = new FrmItems();
-            fi.Location = this.Location;
-            fi.Show();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-            FrmLogin fl = new FrmLogin();
-            fl.Location = this.Location;
-            fl.Show();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            FrmCharm fc = new FrmCharm();
-            fc.ShowDialog();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            FrmSimulator fs = new FrmSimulator();
-            fs.ShowDialog();
-        }
-
         private void label7_MouseMove(object sender, MouseEventArgs e)
         {
             Label lbl = (Label)sender;
@@ -95,42 +47,49 @@ namespace MonsterHunterWorld.BUS
         private void lblItems_Click(object sender, EventArgs e)
         {
             FrmItems items = new FrmItems();
+            items.Location = this.Location;
             items.Show();
         }
 
         private void lblArmors_Click(object sender, EventArgs e)
         {
             FrmArmors armors = new FrmArmors();
+            armors.Location = this.Location;
             armors.Show();
         }
 
         private void lblMonsters_Click(object sender, EventArgs e)
         {
             FormMonster monsters = new FormMonster();
+            monsters.Location = this.Location;
             monsters.Show();
         }
 
         private void lblWeapons_Click(object sender, EventArgs e)
         {
             FrmWeaponList weaponList = new FrmWeaponList();
+            weaponList.Location = this.Location;
             weaponList.Show();
         }
 
         private void lblCharms_Click(object sender, EventArgs e)
         {
             FrmCharm charms = new FrmCharm();
+            charms.Location = this.Location;
             charms.Show();
         }
 
         private void lblJewels_Click(object sender, EventArgs e)
         {
             FormJewel jewels = new FormJewel();
+            jewels.Location = this.Location;
             jewels.Show();
         }
 
         private void lblSkillSimulator_Click(object sender, EventArgs e)
         {
             FrmSimulator simulator = new FrmSimulator();
+            simulator.Location = this.Location;
             simulator.Show();
         }
         private Point mousePoint;
