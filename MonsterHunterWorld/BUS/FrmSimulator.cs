@@ -373,7 +373,6 @@ namespace MonsterHunterWorld.BUS
                     }
                 }
             }
-            
         }
 
         private void SkillTotalScore()
@@ -397,18 +396,21 @@ namespace MonsterHunterWorld.BUS
 
         private void SkillOverLapDelete()
         {
-            for (int i = 0; i < gVIewSkill.Rows.Count - 1; i++)
+            for (int i = 0; i < gVIewSkill.Rows.Count; i++)
             {
                 for (int j = 1; j < gVIewSkill.Rows.Count; j++)
                 {
-                    if (gVIewSkill.Rows[i].Cells["Skill"].Value.ToString() == gVIewSkill.Rows[j].Cells["Skill"].Value.ToString())
+                    if (i!=j)
                     {
-                        for (int k = 1; k < gVIewSkill.Rows[i].Cells.Count; k++)
+                        if (gVIewSkill.Rows[i].Cells["Skill"].Value.ToString() == gVIewSkill.Rows[j].Cells["Skill"].Value.ToString())
                         {
-                            gVIewSkill.Rows[i].Cells[k].Value = (int.Parse(gVIewSkill.Rows[i].Cells[k].Value.ToString()) + int.Parse(gVIewSkill.Rows[j].Cells[k].Value.ToString())).ToString();
-                        }
-                        gVIewSkill.Rows.RemoveAt(j);
-                        gVIewSkill.Refresh();
+                            for (int k = 1; k < gVIewSkill.Rows[i].Cells.Count; k++)
+                            {
+                                gVIewSkill.Rows[i].Cells[k].Value = (int.Parse(gVIewSkill.Rows[i].Cells[k].Value.ToString()) + int.Parse(gVIewSkill.Rows[j].Cells[k].Value.ToString())).ToString();
+                            }
+                            gVIewSkill.Rows.RemoveAt(j);
+                            gVIewSkill.Refresh();
+                        } 
                     }
                 }
             }
