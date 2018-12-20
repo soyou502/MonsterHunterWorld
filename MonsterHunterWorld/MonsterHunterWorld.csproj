@@ -60,11 +60,11 @@
     <Compile Include="BUS\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="BUS\FormJewl.cs">
+    <Compile Include="BUS\FormJewel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\FormJewl.Designer.cs">
-      <DependentUpon>FormJewl.cs</DependentUpon>
+    <Compile Include="BUS\FormJewel.Designer.cs">
+      <DependentUpon>FormJewel.cs</DependentUpon>
     </Compile>
     <Compile Include="BUS\FormJewlInfo.cs">
       <SubType>Form</SubType>
@@ -173,7 +173,6 @@
     <Compile Include="DAO\MonsterHunterUserDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VO\Armor.cs" />
     <Compile Include="VO\Armors.cs" />
     <Compile Include="VO\ArmorSkill.cs" />
     <Compile Include="VO\Charm.cs" />
@@ -263,11 +262,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <None Include="Resources\001.jpg" />
-=======
     <Content Include="HTMLPage1.html" />
->>>>>>> d2d493b104b50ff859a5db5aa2263ca208c470c9
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

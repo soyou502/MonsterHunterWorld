@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
-            this.SuspendLayout();
-            // 
-=======
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -56,23 +52,16 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
->>>>>>> d2d493b104b50ff859a5db5aa2263ca208c470c9
             // FormSkill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "FormSkill";
-            this.Text = "FormSkill";
-=======
             this.ClientSize = new System.Drawing.Size(1039, 450);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormSkill";
             this.Text = "FormSkill";
             this.Load += new System.EventHandler(this.FormSkill_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
->>>>>>> d2d493b104b50ff859a5db5aa2263ca208c470c9
             this.ResumeLayout(false);
 
         }
