@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.8.11.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.8.11\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -154,6 +157,7 @@
       <DependentUpon>FrmWeaponList.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\MonsterHunterAPI.cs" />
+<<<<<<< HEAD
     <Compile Include="DAO\MonsterHunterUserDB.cs" />
     <Compile Include="BUS\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -168,6 +172,9 @@
       <DependentUpon>FrmsignIn.cs</DependentUpon>
     </Compile>
     <Compile Include="IGetListCollection.cs" />
+=======
+    <Compile Include="DAO\MonsterInfoHtmlDAO.cs" />
+>>>>>>> 2cfd8d5fcbe9c461159a6279ff370f4fe75b84ac
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VO\Armors.cs" />
@@ -188,8 +195,20 @@
     <EmbeddedResource Include="BUS\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FormJewel.resx">
+      <DependentUpon>FormJewel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BUS\FormMonster.resx">
       <DependentUpon>FormMonster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FormMonsterInfo.resx">
+      <DependentUpon>FormMonsterInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FormSkill.resx">
+      <DependentUpon>FormSkill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FormSkillInfo.resx">
+      <DependentUpon>FormSkillInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BUS\FrmArmorInfo.resx">
       <DependentUpon>FrmArmorInfo.cs</DependentUpon>
@@ -237,6 +256,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTMLPage1.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
