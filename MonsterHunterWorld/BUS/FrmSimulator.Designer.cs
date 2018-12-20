@@ -84,6 +84,7 @@
             this.cboLJewel1 = new System.Windows.Forms.ComboBox();
             this.cboLJewel2 = new System.Windows.Forms.ComboBox();
             this.cboLJewel3 = new System.Windows.Forms.ComboBox();
+            this.txtSkillInfo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gViewResistance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gVIewSkill)).BeginInit();
             this.panel1.SuspendLayout();
@@ -242,10 +243,12 @@
             this.gViewResistance.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gViewResistance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gViewResistance.Location = new System.Drawing.Point(399, 149);
+            this.gViewResistance.MultiSelect = false;
             this.gViewResistance.Name = "gViewResistance";
             this.gViewResistance.RowHeadersVisible = false;
             this.gViewResistance.RowTemplate.Height = 23;
             this.gViewResistance.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.gViewResistance.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gViewResistance.Size = new System.Drawing.Size(451, 167);
             this.gViewResistance.TabIndex = 11;
             // 
@@ -414,17 +417,20 @@
             this.gVIewSkill.AllowUserToResizeRows = false;
             this.gVIewSkill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gVIewSkill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gVIewSkill.Location = new System.Drawing.Point(399, 379);
+            this.gVIewSkill.Location = new System.Drawing.Point(399, 428);
+            this.gVIewSkill.MultiSelect = false;
             this.gVIewSkill.Name = "gVIewSkill";
             this.gVIewSkill.RowHeadersVisible = false;
             this.gVIewSkill.RowTemplate.Height = 23;
-            this.gVIewSkill.Size = new System.Drawing.Size(451, 326);
+            this.gVIewSkill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gVIewSkill.Size = new System.Drawing.Size(451, 277);
             this.gVIewSkill.TabIndex = 28;
+            this.gVIewSkill.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVIewSkill_CellClick);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(397, 356);
+            this.label15.Location = new System.Drawing.Point(397, 413);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(29, 12);
             this.label15.TabIndex = 29;
@@ -708,11 +714,21 @@
             this.cboLJewel3.TabIndex = 34;
             this.cboLJewel3.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
             // 
+            // txtSkillInfo
+            // 
+            this.txtSkillInfo.Location = new System.Drawing.Point(399, 322);
+            this.txtSkillInfo.Multiline = true;
+            this.txtSkillInfo.Name = "txtSkillInfo";
+            this.txtSkillInfo.ReadOnly = true;
+            this.txtSkillInfo.Size = new System.Drawing.Size(451, 79);
+            this.txtSkillInfo.TabIndex = 52;
+            // 
             // FrmSimulator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(862, 717);
+            this.Controls.Add(this.txtSkillInfo);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -825,5 +841,6 @@
         private System.Windows.Forms.ComboBox cboLJewel1;
         private System.Windows.Forms.ComboBox cboLJewel2;
         private System.Windows.Forms.ComboBox cboLJewel3;
+        private System.Windows.Forms.TextBox txtSkillInfo;
     }
 }

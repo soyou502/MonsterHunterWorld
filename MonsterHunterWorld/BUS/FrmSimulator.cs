@@ -62,6 +62,7 @@ namespace MonsterHunterWorld.BUS
             gVIewSkill.Columns.Add("Leg", "다리");
             gVIewSkill.Columns.Add("Charm", "호석");
             gVIewSkill.Columns.Add("totla", "총합");
+            //gVIewSkill.Columns.Add
             gVIewSkill.Columns["Skill"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             gViewResistance.Rows.Add(new string[] { "총합", "0", "0", "0", "0", "0", "0" });
             foreach (var item in skill.GetListCollection())
@@ -458,6 +459,22 @@ namespace MonsterHunterWorld.BUS
             GetCharmSkill();
             SkillOverLapDelete();
             SkillTotalScore();
+        }
+
+        private void gVIewSkill_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtSkillInfo.Text = String.Empty;
+            foreach (var item in skill.GetListCollection())
+            {
+                if (gVIewSkill.SelectedRows[0].Cells[0].Value.ToString() == item.Name)
+                {
+                    
+                    foreach (var desc in item.Desc)
+                    {
+                        txtSkillInfo.Text  += item.Name + " " + desc.Name + " " + desc.Desc + Environment.NewLine;
+                    }
+                }
+            }
         }
     }
 }
