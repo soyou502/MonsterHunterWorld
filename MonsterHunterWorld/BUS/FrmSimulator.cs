@@ -60,6 +60,7 @@ namespace MonsterHunterWorld.BUS
             gVIewSkill.Columns.Add("Arm", "팔");
             gVIewSkill.Columns.Add("Waist", "허리");
             gVIewSkill.Columns.Add("Leg", "다리");
+            gVIewSkill.Columns.Add("Charm", "호석");
             gVIewSkill.Columns.Add("totla", "총합");
             gVIewSkill.Columns["Skill"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             gViewResistance.Rows.Add(new string[] { "총합", "0", "0", "0", "0", "0", "0" });
@@ -93,6 +94,7 @@ namespace MonsterHunterWorld.BUS
                     break;
                 }
             }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -162,6 +164,7 @@ namespace MonsterHunterWorld.BUS
             GetSkillList();
             SetJewelSlots();
             GetJewelSkill();
+            GetCharmSkill();
             SkillTotalScore();
             SkillOverLapDelete();
         }
@@ -185,7 +188,7 @@ namespace MonsterHunterWorld.BUS
                                     {
                                         if (jewel.Skill.Name == skill.Name)
                                         {
-                                            string[] temp = new string[] { "0", "0", "0", "0", "0", "0", "0", "0" };
+                                            string[] temp = new string[] { "0", "0", "0", "0", "0", "0", "0", "0", "0"  };
                                             temp[0] = skill.Name;
                                             temp[i + 1] = "1";
                                             gVIewSkill.Rows.Add(temp);
@@ -198,6 +201,7 @@ namespace MonsterHunterWorld.BUS
                 }
             }
         }
+
         private void SetJewelSlots()
         {
             ComboBox[][] boxes = new ComboBox[][] { headJewel, chestJewel, armJewel, waistJewel, legJewel };
@@ -326,6 +330,7 @@ namespace MonsterHunterWorld.BUS
                 }
             }
         }
+
         private void GetSkillList()
         {
             gVIewSkill.Rows.Clear();
@@ -343,7 +348,7 @@ namespace MonsterHunterWorld.BUS
                                 {
                                     if (armorSkill.Name.Contains(skill.Name))
                                     {
-                                        string[] temp = new string[] { "0", "0", "0", "0", "0", "0", "0", "0" };
+                                        string[] temp = new string[] { "0", "0", "0", "0", "0", "0", "0", "0", "0" };
                                         temp[0] = skill.Name;
                                         if (armor.Part == "머리")
                                         {
@@ -382,14 +387,14 @@ namespace MonsterHunterWorld.BUS
                 for (int i = 0; i < gVIewSkill.Rows.Count; i++)
                 {
                     int result = 0;
-                    for (int j = 2; j < 8; j++)
+                    for (int j = 2; j < 9; j++)
                     {
                         if (!string.IsNullOrEmpty(gVIewSkill.Rows[i].Cells[j].Value.ToString()))
                         {
                             result += int.Parse(gVIewSkill.Rows[i].Cells[j].Value.ToString());
                         }
                     }
-                    gVIewSkill.Rows[i].Cells[7].Value = result.ToString();
+                    gVIewSkill.Rows[i].Cells[8].Value = result.ToString();
                 }
             }
         }
@@ -398,11 +403,11 @@ namespace MonsterHunterWorld.BUS
         {
             for (int i = 0; i < gVIewSkill.Rows.Count; i++)
             {
-                for (int j = 1; j < gVIewSkill.Rows.Count; j++)
+                for (int j = 0; j < gVIewSkill.Rows.Count; j++)
                 {
                     if (i != j)
                     {
-                        if (gVIewSkill.Rows[i].Cells["Skill"].Value.ToString() == gVIewSkill.Rows[j].Cells["Skill"].Value.ToString())
+                        if (gVIewSkill.Rows[i].Cells["Skill"].Value.ToString()== gVIewSkill.Rows[j].Cells["Skill"].Value.ToString())
                         {
                             for (int k = 1; k < gVIewSkill.Rows[i].Cells.Count; k++)
                             {
@@ -410,7 +415,29 @@ namespace MonsterHunterWorld.BUS
                             }
                             gVIewSkill.Rows.RemoveAt(j);
                             gVIewSkill.Refresh();
+                            SkillOverLapDelete();
                         }
+                    }
+                }
+            }
+        }
+
+        private void GetCharmSkill()
+        {
+            if (cboCharm.SelectedItem != null && cboCharmRank.SelectedItem != null)
+            {
+                foreach (var item in charm.GetListCollection())
+                {
+                    if (item.Name == cboCharm.SelectedItem.ToString())
+                    {
+                        foreach (var skill in item.Skills)
+                        {
+                            string[] temp = new string[] { "0", "0", "0", "0", "0", "0", "0", "0", "0" };
+                            temp[0] = skill.Name;
+                            temp[7] = cboCharmRank.SelectedItem.ToString();
+                            gVIewSkill.Rows.Add(temp);
+                        }
+                        
                     }
                 }
             }
@@ -418,7 +445,17 @@ namespace MonsterHunterWorld.BUS
 
         private void cboWeaponJewel1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            GetSkillList();
             GetJewelSkill();
+            SkillOverLapDelete();
+            SkillTotalScore();
+        }
+
+        private void cboCharmRank_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GetSkillList();
+            GetJewelSkill();
+            GetCharmSkill();
             SkillOverLapDelete();
             SkillTotalScore();
         }

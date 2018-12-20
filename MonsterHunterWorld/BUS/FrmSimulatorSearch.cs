@@ -50,6 +50,7 @@ namespace MonsterHunterWorld.BUS
             {
                 if (item.Name.Contains(name) && item.Part.Contains(part) && item.Slots.Contains(slots) && item.Slots.Contains(slotLevel))
                 {
+
                     if (item.Skills.Count == 0 && skill1 == "" && skill2 == "")
                     {
                         string[] temp = new string[4];
@@ -59,25 +60,22 @@ namespace MonsterHunterWorld.BUS
                         temp[3] += "스킬없음";
                         dataGridView1.Rows.Add(temp);
                     }
-                    foreach (var skill in item.Skills)
+                    else
                     {
-                        if (skill.Name.Contains(skill1) && skill.Name.Contains(skill2))
+                        string[] temp = new string[4];
+                        temp[0] = item.Name;
+                        temp[1] = item.Rare.ToString();
+                        temp[2] = item.Slots;
+                        temp[3] = "";
+                        foreach (var armorskill in item.Skills)
                         {
-                            string[] temp = new string[4];
-                            temp[0] = item.Name;
-                            temp[1] = item.Rare.ToString();
-                            temp[2] = item.Slots;
-                            temp[3] = "";
-                            foreach (var armorskill in item.Skills)
-                            {
-                                temp[3] += armorskill.Name + armorskill.Level + "  ";
-                            }
-                            if (item.Skills.Count == 0)
-                            {
-                                temp[3] += "스킬없음";
-                            }
-                            dataGridView1.Rows.Add(temp);
+                            temp[3] += armorskill.Name + armorskill.Level + "  ";
                         }
+                        if (item.Skills.Count == 0)
+                        {
+                            temp[3] += "스킬없음";
+                        }
+                        dataGridView1.Rows.Add(temp);
                     }
                 }
             }

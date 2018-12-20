@@ -448,6 +448,7 @@
             this.cboCharmRank.Name = "cboCharmRank";
             this.cboCharmRank.Size = new System.Drawing.Size(37, 20);
             this.cboCharmRank.TabIndex = 31;
+            this.cboCharmRank.SelectedIndexChanged += new System.EventHandler(this.cboCharmRank_SelectedIndexChanged);
             // 
             // cboWeaponJewel1
             // 
