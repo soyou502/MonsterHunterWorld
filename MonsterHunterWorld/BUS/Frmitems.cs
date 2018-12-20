@@ -102,7 +102,7 @@ namespace MonsteHunterWorld
                     }
 
                 }
-            } 
+            }
         }
 
         public IList<Items> GetListCollection()

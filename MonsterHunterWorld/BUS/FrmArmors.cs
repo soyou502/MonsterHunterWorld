@@ -16,6 +16,7 @@ namespace MonsterHunterWorld.BUS
     public partial class FrmArmors : Form, IGetListCollection<Armors>
     {
         static List<Armors> armors;
+        Color[] color = new Color[] { Color.Gray, Color.Black, Color.LightGreen, Color.ForestGreen, Color.SkyBlue, Color.Purple, Color.HotPink, Color.Orange };
         public FrmArmors()
         {
             InitializeComponent();
@@ -151,6 +152,24 @@ namespace MonsterHunterWorld.BUS
                         temp[3] += "";
                     }
                     dataGridView1.Rows.Add(temp);
+                }
+            }
+            SetColorPerRare();
+        }
+
+        private void SetColorPerRare()
+        {
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                foreach (var item in armors)
+                {
+                    if (dataGridView1.Rows[i].Cells[0].Value != null)
+                    {
+                        if (dataGridView1.Rows[i].Cells[0].Value.ToString() == item.Name)
+                        {
+                            dataGridView1.Rows[i].Cells[0].Style.ForeColor = color[item.Rare - 1];
+                        }
+                    }
                 }
             }
         }
