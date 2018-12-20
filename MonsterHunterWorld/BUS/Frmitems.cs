@@ -24,12 +24,10 @@ namespace MonsteHunterWorld
 
         private void FrmItems_Load(object sender, EventArgs e)
         {
-            items = GetListCollection() as List<Items>;
-            this.Owner.Visible = false;
-            this.LocationChanged += FrmItems_LocationChanged;
-            this.FormClosing += FrmItems_FormClosing;
+            GetListCollection();
+            textBox1.AutoCompleteMode = AutoCompleteMode.Suggest;
+            textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.Transparent;
             for (int i = 0; i < 5; i++)
             {
                 dataGridView1.Columns.Add((i + 1).ToString(), (i + 1).ToString());
@@ -50,30 +48,12 @@ namespace MonsteHunterWorld
             btnSearch_Click(null, null);
         }
 
-        private void FrmItems_LocationChanged(object sender, EventArgs e)
-        {
-            this.Owner.Location = this.Location;
-        }
-
-        private void FrmItems_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            this.Owner.Visible = true;
-        }
-
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             FrmItemInfo info = new FrmItemInfo(dataGridView1.SelectedCells[0].Value.ToString());
-            info.Show();
             info.Location = this.Location;
-            info.Disposed += Info_Disposed;
-            this.Visible = false;
+            info.Show();
         }
-
-        private void Info_Disposed(object sender, EventArgs e)
-        {
-            this.Visible = true;
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
@@ -103,12 +83,14 @@ namespace MonsteHunterWorld
         {
             if (items == null)
             {
+                items = new List<Items>();
                 Parameter parameter = new Parameter("items");
                 MonsterHunterAPI api = new MonsterHunterAPI();
                 string json = api.GetJson(parameter);
                 JArray ja = JArray.Parse(json);
                 foreach (var item in ja)
                 {
+                    textBox1.AutoCompleteCustomSource.Add(item["name"].ToString());
                     Items temp = new Items(int.Parse(item["idx"].ToString()), item["type"].ToString(), item["name"].ToString(), item["description"].ToString(), int.Parse(item["rare"].ToString()), int.Parse(item["price"].ToString()));
                     items.Add(temp);
                 }
@@ -120,6 +102,7 @@ namespace MonsteHunterWorld
         {
             if (items == null)
             {
+                items = new List<Items>();
                 MonsterHunterAPI api = new MonsterHunterAPI();
                 string json = api.GetJson(parameter);
                 JArray ja = JArray.Parse(json);

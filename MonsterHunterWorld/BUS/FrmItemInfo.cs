@@ -42,7 +42,7 @@ namespace MonsteHunterWorld
             dataGridView1.BackgroundColor = Color.White;
             foreach (var item in new FrmItems().GetListCollection())
             {
-                if (item.Name == itemName)
+                if (item.Name.Contains(itemName) || itemName.Contains(item.Name))
                 {
                     txtType.Text = item.Type;
                     txtName.Text = item.Name;
@@ -55,7 +55,7 @@ namespace MonsteHunterWorld
             {
                 foreach (var item2 in item.Items)
                 {
-                    if (item2.Name == itemName)
+                    if (item2.Name.Contains(itemName) || itemName.Contains(item2.Name))
                     {
                         ArmorsTableAdd(item);
                     }
@@ -78,7 +78,6 @@ namespace MonsteHunterWorld
             string thunder = armors.Resistances.Thunder.ToString();
             string ice = armors.Resistances.Ice.ToString();
             string dragon = armors.Resistances.Dragon.ToString();
-            string items = "";
             dataGridView1.Rows.Add(new string[] { level, part, name, rare, slots, defense, fire, water, thunder, ice, dragon });
         }
 
@@ -86,15 +85,8 @@ namespace MonsteHunterWorld
         {
             string str = dataGridView1.Rows[e.RowIndex].Cells["name"].Value.ToString();
             FrmArmorInfo fai = new FrmArmorInfo(str);
-            fai.Show();
             fai.Location = this.Location;
-            this.Visible = false;
-            fai.Disposed += Fai_Disposed;
-        }
-
-        private void Fai_Disposed(object sender, EventArgs e)
-        {
-            this.Visible = true;
+            fai.Show();
         }
     }
 }

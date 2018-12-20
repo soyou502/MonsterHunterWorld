@@ -81,9 +81,8 @@ namespace MonsteHunterWorld
         private void gViewItem_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             FrmItemInfo fii = new FrmItemInfo(gViewItem.Rows[e.RowIndex].Cells["item"].Value.ToString());
-            fii.Show();
             fii.Location = this.Location;
-            this.Visible = false;
+            fii.Show();
         }
     }
 }

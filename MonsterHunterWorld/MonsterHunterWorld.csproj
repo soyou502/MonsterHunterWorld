@@ -40,6 +40,7 @@
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -113,6 +114,12 @@
     <Compile Include="BUS\FrmChamList.Designer.cs">
       <DependentUpon>FrmChamList.cs</DependentUpon>
     </Compile>
+    <Compile Include="BUS\FrmCharm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FrmCharm.Designer.cs">
+      <DependentUpon>FrmCharm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\FrmItemInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +131,18 @@
     </Compile>
     <Compile Include="BUS\Frmitems.Designer.cs">
       <DependentUpon>Frmitems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\FrmSimulator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FrmSimulator.Designer.cs">
+      <DependentUpon>FrmSimulator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\FrmSimulatorSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FrmSimulatorSearch.Designer.cs">
+      <DependentUpon>FrmSimulatorSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="BUS\FrmWeaponInfo.cs">
       <SubType>Form</SubType>
@@ -139,15 +158,28 @@
     </Compile>
     <Compile Include="DAO\MonsterHunterAPI.cs" />
     <Compile Include="DAO\MonsterInfoHtmlDAO.cs" />
+    <Compile Include="DAO\MonsterHunterUserDB.cs" />
+    <Compile Include="BUS\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUS\FrmsignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FrmsignIn.Designer.cs">
+      <DependentUpon>FrmsignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IGetListCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VO\Armors.cs" />
     <Compile Include="VO\ArmorSkill.cs" />
-    <Compile Include="VO\Cham.cs" />
+    <Compile Include="VO\Charm.cs" />
     <Compile Include="VO\Debuff.cs" />
     <Compile Include="VO\Drop_Item.cs" />
     <Compile Include="VO\Element.cs" />
-    <Compile Include="VO\IGetListCollection.cs" />
     <Compile Include="VO\Items.cs" />
     <Compile Include="VO\Jewel.cs" />
     <Compile Include="VO\Material.cs" />
@@ -155,6 +187,7 @@
     <Compile Include="VO\Parameter.cs" />
     <Compile Include="VO\Skill.cs" />
     <Compile Include="VO\SkillDesc.cs" />
+    <Compile Include="VO\UserInfo.cs" />
     <Compile Include="VO\WeaponList.cs" />
     <EmbeddedResource Include="BUS\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -180,14 +213,23 @@
     <EmbeddedResource Include="BUS\FrmArmors.resx">
       <DependentUpon>FrmArmors.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmCharm.resx">
+      <DependentUpon>FrmCharm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BUS\FrmItemInfo.resx">
       <DependentUpon>FrmItemInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FrmItems.resx">
-      <DependentUpon>Frmitems.cs</DependentUpon>
+    <EmbeddedResource Include="BUS\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FrmWeaponList.resx">
-      <DependentUpon>FrmWeaponList.cs</DependentUpon>
+    <EmbeddedResource Include="BUS\FrmsignIn.resx">
+      <DependentUpon>FrmsignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmSimulator.resx">
+      <DependentUpon>FrmSimulator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmSimulatorSearch.resx">
+      <DependentUpon>FrmSimulatorSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
