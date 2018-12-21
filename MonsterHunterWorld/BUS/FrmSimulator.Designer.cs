@@ -84,6 +84,11 @@
             this.cboLJewel1 = new System.Windows.Forms.ComboBox();
             this.cboLJewel2 = new System.Windows.Forms.ComboBox();
             this.cboLJewel3 = new System.Windows.Forms.ComboBox();
+            this.txtSkillInfo = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.txtSaveFileName = new System.Windows.Forms.TextBox();
+            this.btnOpen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gViewResistance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gVIewSkill)).BeginInit();
             this.panel1.SuspendLayout();
@@ -100,7 +105,7 @@
             this.cboSkill1.FormattingEnabled = true;
             this.cboSkill1.Items.AddRange(new object[] {
             ""});
-            this.cboSkill1.Location = new System.Drawing.Point(95, 11);
+            this.cboSkill1.Location = new System.Drawing.Point(55, 21);
             this.cboSkill1.Name = "cboSkill1";
             this.cboSkill1.Size = new System.Drawing.Size(300, 20);
             this.cboSkill1.TabIndex = 0;
@@ -111,7 +116,7 @@
             this.cboSkill2.FormattingEnabled = true;
             this.cboSkill2.Items.AddRange(new object[] {
             ""});
-            this.cboSkill2.Location = new System.Drawing.Point(441, 12);
+            this.cboSkill2.Location = new System.Drawing.Point(401, 22);
             this.cboSkill2.Name = "cboSkill2";
             this.cboSkill2.Size = new System.Drawing.Size(300, 20);
             this.cboSkill2.TabIndex = 1;
@@ -125,7 +130,7 @@
             "1",
             "2",
             "3"});
-            this.cboSlotLevel.Location = new System.Drawing.Point(52, 61);
+            this.cboSlotLevel.Location = new System.Drawing.Point(12, 71);
             this.cboSlotLevel.Name = "cboSlotLevel";
             this.cboSlotLevel.Size = new System.Drawing.Size(121, 20);
             this.cboSlotLevel.TabIndex = 2;
@@ -144,7 +149,7 @@
             "3__",
             "31_",
             "상관없음"});
-            this.cboSlotCount.Location = new System.Drawing.Point(229, 61);
+            this.cboSlotCount.Location = new System.Drawing.Point(189, 71);
             this.cboSlotCount.Name = "cboSlotCount";
             this.cboSlotCount.Size = new System.Drawing.Size(121, 20);
             this.cboSlotCount.TabIndex = 3;
@@ -161,14 +166,14 @@
             "허리",
             "다리",
             "상관없음"});
-            this.cboPart.Location = new System.Drawing.Point(406, 61);
+            this.cboPart.Location = new System.Drawing.Point(366, 71);
             this.cboPart.Name = "cboPart";
             this.cboPart.Size = new System.Drawing.Size(121, 20);
             this.cboPart.TabIndex = 4;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(583, 58);
+            this.textBox1.Location = new System.Drawing.Point(543, 68);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 21);
             this.textBox1.TabIndex = 5;
@@ -242,10 +247,12 @@
             this.gViewResistance.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gViewResistance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gViewResistance.Location = new System.Drawing.Point(399, 149);
+            this.gViewResistance.MultiSelect = false;
             this.gViewResistance.Name = "gViewResistance";
             this.gViewResistance.RowHeadersVisible = false;
             this.gViewResistance.RowTemplate.Height = 23;
             this.gViewResistance.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.gViewResistance.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gViewResistance.Size = new System.Drawing.Size(451, 167);
             this.gViewResistance.TabIndex = 11;
             // 
@@ -268,7 +275,7 @@
             this.cboWeapon.Name = "cboWeapon";
             this.cboWeapon.Size = new System.Drawing.Size(300, 20);
             this.cboWeapon.TabIndex = 12;
-            this.cboWeapon.SelectedIndexChanged += new System.EventHandler(this.cboHead_SelectedIndexChanged);
+            this.cboWeapon.SelectedIndexChanged += new System.EventHandler(this.cboWeapon_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -327,7 +334,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(54, 15);
+            this.label7.Location = new System.Drawing.Point(14, 25);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 12);
             this.label7.TabIndex = 19;
@@ -336,7 +343,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(400, 16);
+            this.label8.Location = new System.Drawing.Point(360, 26);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 12);
             this.label8.TabIndex = 20;
@@ -345,7 +352,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(52, 43);
+            this.label9.Location = new System.Drawing.Point(12, 53);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 12);
             this.label9.TabIndex = 21;
@@ -354,7 +361,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(237, 43);
+            this.label10.Location = new System.Drawing.Point(197, 53);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 12);
             this.label10.TabIndex = 22;
@@ -363,7 +370,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(422, 43);
+            this.label11.Location = new System.Drawing.Point(382, 53);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(29, 12);
             this.label11.TabIndex = 23;
@@ -372,7 +379,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(583, 43);
+            this.label12.Location = new System.Drawing.Point(543, 53);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(29, 12);
             this.label12.TabIndex = 24;
@@ -414,17 +421,20 @@
             this.gVIewSkill.AllowUserToResizeRows = false;
             this.gVIewSkill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gVIewSkill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gVIewSkill.Location = new System.Drawing.Point(399, 379);
+            this.gVIewSkill.Location = new System.Drawing.Point(399, 450);
+            this.gVIewSkill.MultiSelect = false;
             this.gVIewSkill.Name = "gVIewSkill";
             this.gVIewSkill.RowHeadersVisible = false;
             this.gVIewSkill.RowTemplate.Height = 23;
-            this.gVIewSkill.Size = new System.Drawing.Size(451, 326);
+            this.gVIewSkill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gVIewSkill.Size = new System.Drawing.Size(451, 277);
             this.gVIewSkill.TabIndex = 28;
+            this.gVIewSkill.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVIewSkill_CellClick);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(397, 356);
+            this.label15.Location = new System.Drawing.Point(397, 431);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(29, 12);
             this.label15.TabIndex = 29;
@@ -432,7 +442,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(731, 56);
+            this.button1.Location = new System.Drawing.Point(691, 66);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 30;
@@ -448,6 +458,7 @@
             this.cboCharmRank.Name = "cboCharmRank";
             this.cboCharmRank.Size = new System.Drawing.Size(37, 20);
             this.cboCharmRank.TabIndex = 31;
+            this.cboCharmRank.SelectedIndexChanged += new System.EventHandler(this.cboCharmRank_SelectedIndexChanged);
             // 
             // cboWeaponJewel1
             // 
@@ -707,11 +718,62 @@
             this.cboLJewel3.TabIndex = 34;
             this.cboLJewel3.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
             // 
+            // txtSkillInfo
+            // 
+            this.txtSkillInfo.Location = new System.Drawing.Point(399, 322);
+            this.txtSkillInfo.Multiline = true;
+            this.txtSkillInfo.Name = "txtSkillInfo";
+            this.txtSkillInfo.ReadOnly = true;
+            this.txtSkillInfo.Size = new System.Drawing.Size(451, 106);
+            this.txtSkillInfo.TabIndex = 52;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(691, 120);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 53;
+            this.btnSave.Text = "저장";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(775, 120);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 54;
+            this.btnClose.Text = "종료";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // txtSaveFileName
+            // 
+            this.txtSaveFileName.Location = new System.Drawing.Point(582, 122);
+            this.txtSaveFileName.Name = "txtSaveFileName";
+            this.txtSaveFileName.Size = new System.Drawing.Size(100, 21);
+            this.txtSaveFileName.TabIndex = 55;
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.Location = new System.Drawing.Point(775, 66);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(75, 23);
+            this.btnOpen.TabIndex = 56;
+            this.btnOpen.Text = "불러오기";
+            this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
             // FrmSimulator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 717);
+            this.ClientSize = new System.Drawing.Size(862, 739);
+            this.Controls.Add(this.btnOpen);
+            this.Controls.Add(this.txtSaveFileName);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.txtSkillInfo);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -750,9 +812,13 @@
             this.Controls.Add(this.cboSlotLevel);
             this.Controls.Add(this.cboSkill2);
             this.Controls.Add(this.cboSkill1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmSimulator";
             this.Text = "FrmSimulator";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmSimulator_FormClosed);
             this.Load += new System.EventHandler(this.FrmSimulator_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.gViewResistance)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gVIewSkill)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -824,5 +890,10 @@
         private System.Windows.Forms.ComboBox cboLJewel1;
         private System.Windows.Forms.ComboBox cboLJewel2;
         private System.Windows.Forms.ComboBox cboLJewel3;
+        private System.Windows.Forms.TextBox txtSkillInfo;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.TextBox txtSaveFileName;
+        private System.Windows.Forms.Button btnOpen;
     }
 }

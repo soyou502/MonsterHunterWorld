@@ -5,6 +5,7 @@ namespace MonsterHunterWorld.VO
     /// <summary>
     /// 디버프 정보 클래스
     /// </summary>
+
     public class Debuff
     {
         private int poison; // 독
@@ -21,6 +22,7 @@ namespace MonsterHunterWorld.VO
         /// <summary>
         /// Debuff 클래스 기본생성자
         /// </summary>
+
         /// <param name="poison">독</param>
         /// <param name="sleep">수면</param>
         /// <param name="paralysis">마비</param>

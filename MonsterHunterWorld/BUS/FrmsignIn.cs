@@ -22,11 +22,12 @@ namespace MonsterHunterWorld
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if(db.UserIDCheck(txtID.Text))
+            if (db.UserIDCheck(txtID.Text))
             {
                 MessageBox.Show("사용가능한 아이디입니다.");
                 idCheck = true;
-            }else
+            }
+            else
             {
                 MessageBox.Show("사용불가능한 아이디입니다.");
             }
@@ -57,7 +58,8 @@ namespace MonsterHunterWorld
             if (txtPassword.Text == txtRePassword.Text)
             {
                 passwordCheck = true;
-            }else
+            }
+            else
             {
                 passwordCheck = false;
             }

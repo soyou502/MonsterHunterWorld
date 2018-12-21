@@ -48,20 +48,21 @@ namespace MonsterHunterWorld.BUS
         {
             foreach (var item in frmarmors.GetListCollection())
             {
-                if (item.Name.Contains(name)&&item.Part.Contains(part) && item.Slots.Contains(slots) && item.Slots.Contains(slotLevel))
+                if (item.Name.Contains(name) && item.Part.Contains(part) && item.Slots.Contains(slots) && item.Slots.Contains(slotLevel))
                 {
-                    if (item.Skills.Count == 0 && skill1 == "" && skill2 == "")
+
+                    if (skill1 == "" && skill2 == "")
                     {
-                        string[] temp = new string[4];
-                        temp[0] = item.Name;
-                        temp[1] = item.Rare.ToString();
-                        temp[2] = item.Slots;
-                        temp[3] += "스킬없음";
-                        dataGridView1.Rows.Add(temp);
-                    }
-                    foreach (var skill in item.Skills)
-                    {
-                        if (skill.Name.Contains(skill1) && skill.Name.Contains(skill2))
+                        if (item.Skills.Count == 0)
+                        {
+                            string[] temp = new string[4];
+                            temp[0] = item.Name;
+                            temp[1] = item.Rare.ToString();
+                            temp[2] = item.Slots;
+                            temp[3] += "스킬없음";
+                            dataGridView1.Rows.Add(temp);
+                        }
+                        else
                         {
                             string[] temp = new string[4];
                             temp[0] = item.Name;
@@ -72,11 +73,26 @@ namespace MonsterHunterWorld.BUS
                             {
                                 temp[3] += armorskill.Name + armorskill.Level + "  ";
                             }
-                            if (item.Skills.Count == 0)
-                            {
-                                temp[3] += "스킬없음";
-                            }
                             dataGridView1.Rows.Add(temp);
+                        }
+                    }
+                    else
+                    {
+                        foreach (var skill in item.Skills)
+                        {
+                            if (skill.Name == skill1 || skill.Name == skill2)
+                            {
+                                string[] temp = new string[4];
+                                temp[0] = item.Name;
+                                temp[1] = item.Rare.ToString();
+                                temp[2] = item.Slots;
+                                temp[3] = "";
+                                foreach (var armorskill in item.Skills)
+                                {
+                                    temp[3] += armorskill.Name + armorskill.Level + "  ";
+                                }
+                                dataGridView1.Rows.Add(temp);
+                            }
                         }
                     }
                 }
@@ -93,7 +109,8 @@ namespace MonsterHunterWorld.BUS
                     if (item.Part == "머리")
                     {
                         frmSimulator.cboHead.Items.Add(item.Name);
-                    }else if(item.Part == "몸통")
+                    }
+                    else if (item.Part == "몸통")
                     {
                         frmSimulator.cboChest.Items.Add(item.Name);
                     }
@@ -111,6 +128,11 @@ namespace MonsterHunterWorld.BUS
                     }
                 }
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

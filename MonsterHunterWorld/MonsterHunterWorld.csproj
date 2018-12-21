@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A7AA44B9-A3D8-4048-962D-7F0B4C6DCD24}</ProjectGuid>
+    <ProjectGuid>{2BC405FA-3C2C-4C9A-95F5-64AC03F62E4F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>MonsterHunterWorld</RootNamespace>
     <AssemblyName>MonsterHunterWorld</AssemblyName>
@@ -43,6 +43,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,11 +67,11 @@
     <Compile Include="BUS\FormJewel.Designer.cs">
       <DependentUpon>FormJewel.cs</DependentUpon>
     </Compile>
-    <Compile Include="BUS\FormJewelInfo.cs">
+    <Compile Include="BUS\FormJewlInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\FormJewelInfo.Designer.cs">
-      <DependentUpon>FormJewelInfo.cs</DependentUpon>
+    <Compile Include="BUS\FormJewlInfo.Designer.cs">
+      <DependentUpon>FormJewlInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="BUS\FormMonster.cs">
       <SubType>Form</SubType>
@@ -107,12 +108,6 @@
     </Compile>
     <Compile Include="BUS\FrmArmors.Designer.cs">
       <DependentUpon>FrmArmors.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BUS\FrmChamList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BUS\FrmChamList.Designer.cs">
-      <DependentUpon>FrmChamList.cs</DependentUpon>
     </Compile>
     <Compile Include="BUS\FrmCharm.cs">
       <SubType>Form</SubType>
@@ -158,57 +153,33 @@
     </Compile>
     <Compile Include="DAO\MonsterHunterAPI.cs" />
     <Compile Include="DAO\MonsterInfoHtmlDAO.cs" />
-    <Compile Include="DAO\MonsterHunterUserDB.cs" />
-    <Compile Include="BUS\FrmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BUS\FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BUS\FrmsignIn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BUS\FrmsignIn.Designer.cs">
-      <DependentUpon>FrmsignIn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IGetListCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VO\Armors.cs" />
     <Compile Include="VO\ArmorSkill.cs" />
     <Compile Include="VO\Charm.cs" />
     <Compile Include="VO\Debuff.cs" />
+    <Compile Include="VO\IGetListCollection.cs" />
+    <Compile Include="VO\Material.cs" />
+    <Compile Include="VO\SkillDesc.cs" />
     <Compile Include="VO\Drop_Item.cs" />
-    <Compile Include="VO\Element.cs" />
     <Compile Include="VO\Items.cs" />
     <Compile Include="VO\Jewel.cs" />
-    <Compile Include="VO\Material.cs" />
     <Compile Include="VO\Monster.cs" />
     <Compile Include="VO\Parameter.cs" />
     <Compile Include="VO\Skill.cs" />
-    <Compile Include="VO\SkillDesc.cs" />
-    <Compile Include="VO\UserInfo.cs" />
-    <Compile Include="VO\WeaponList.cs" />
+    <Compile Include="VO\Element.cs" />
+    <Compile Include="VO\WeaponBase.cs" />
+    <Compile Include="VO\WeaponCreate.cs" />
+    <Compile Include="VO\WeaponDebuff.cs" />
+    <Compile Include="VO\WeaponEelemental.cs" />
+    <Compile Include="VO\Weapons_Durability.cs" />
+    <Compile Include="VO\Weapons_Image.cs" />
     <EmbeddedResource Include="BUS\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FormJewel.resx">
-      <DependentUpon>FormJewel.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BUS\FormMonster.resx">
       <DependentUpon>FormMonster.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FormMonsterInfo.resx">
-      <DependentUpon>FormMonsterInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FormSkill.resx">
-      <DependentUpon>FormSkill.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FormSkillInfo.resx">
-      <DependentUpon>FormSkillInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FrmArmorInfo.resx">
-      <DependentUpon>FrmArmorInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BUS\FrmArmors.resx">
       <DependentUpon>FrmArmors.cs</DependentUpon>
@@ -219,17 +190,20 @@
     <EmbeddedResource Include="BUS\FrmItemInfo.resx">
       <DependentUpon>FrmItemInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FrmsignIn.resx">
-      <DependentUpon>FrmsignIn.cs</DependentUpon>
+    <EmbeddedResource Include="BUS\FrmItems.resx">
+      <DependentUpon>Frmitems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BUS\FrmSimulator.resx">
       <DependentUpon>FrmSimulator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BUS\FrmSimulatorSearch.resx">
       <DependentUpon>FrmSimulatorSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmWeaponInfo.resx">
+      <DependentUpon>FrmWeaponInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmWeaponList.resx">
+      <DependentUpon>FrmWeaponList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -255,11 +229,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+
     <Content Include="HTMLPage1.html" />
     <Content Include="Images\나도한마디.PNG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\소재정보.PNG" />
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

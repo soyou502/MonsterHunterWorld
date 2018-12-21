@@ -79,7 +79,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dataGridView1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmItems";
             this.Text = "FrmItems";
             this.Load += new System.EventHandler(this.FrmItems_Load);

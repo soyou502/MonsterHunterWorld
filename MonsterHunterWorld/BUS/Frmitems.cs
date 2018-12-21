@@ -1,4 +1,5 @@
 ﻿using MonsterHunterWorld;
+using MonsterHunterWorld.BUS;
 using MonsterHunterWorld.DAO;
 using MonsterHunterWorld.VO;
 using Newtonsoft.Json.Linq;
@@ -17,9 +18,17 @@ namespace MonsteHunterWorld
     public partial class FrmItems : Form, IGetListCollection<Items>
     {
         static List<Items> items;
+        Color[] color = new Color[] { Color.Gray, Color.Black, Color.LightGreen, Color.ForestGreen, Color.SkyBlue, Color.Purple, Color.HotPink, Color.Orange };
+        private Form form1;
+
         public FrmItems()
         {
             InitializeComponent();
+        }
+
+        public FrmItems(Form form1) : this()
+        {
+            this.form1 = form1;
         }
 
         private void FrmItems_Load(object sender, EventArgs e)
@@ -32,19 +41,19 @@ namespace MonsteHunterWorld
             {
                 dataGridView1.Columns.Add((i + 1).ToString(), (i + 1).ToString());
             }
-            for (int i = 0; i < items.Count; i++)
-            {
-                string[] arr = new string[5];
-                for (int j = 0; j < arr.Length; j++)
-                {
-                    if (i<items.Count)
-                    {
-                        arr[j] = items[i].Name;
-                        i++;
-                    }
-                }
-                dataGridView1.Rows.Add(arr);
-            }
+            //for (int i = 0; i < items.Count; i++)
+            //{
+            //    string[] arr = new string[5];
+            //    for (int j = 0; j < arr.Length; j++)
+            //    {
+            //        if (i < items.Count)
+            //        {
+            //            arr[j] = items[i].Name;
+            //            i++;
+            //        }
+            //    }
+            //    dataGridView1.Rows.Add(arr);
+            //}
             btnSearch_Click(null, null);
         }
 
@@ -72,9 +81,34 @@ namespace MonsteHunterWorld
                         j = 0;
                     }
                 }
-                if (i == items.Count-1)
+                if (i == items.Count - 1)
                 {
                     dataGridView1.Rows.Add(arr);
+                }
+            }
+            SetColorPerRank();
+        }
+
+        private void SetColorPerRank()
+        {
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                for (int j = 0; j < dataGridView1.Rows[i].Cells.Count; j++)
+                {
+                    if (dataGridView1.Rows[i].Cells.Count > 0)
+                    {
+                        foreach (var item in items)
+                        {
+                            if (dataGridView1.Rows[i].Cells[j].Value != null)
+                            {
+                                if (dataGridView1.Rows[i].Cells[j].Value.ToString() == item.Name)
+                                {
+                                    dataGridView1.Rows[i].Cells[j].Style.ForeColor = color[item.Rare - 1];
+                                } 
+                            }
+                        } 
+                    }
+
                 }
             }
         }

@@ -15,9 +15,16 @@ namespace MonsterHunterWorld.BUS
     public partial class FormJewel : Form, IGetListCollection<VO.Jewel>
     {
         static List<VO.Jewel> jewels;
+        private Form form1;
+
         public FormJewel()
         {
             InitializeComponent();
+        }
+
+        public FormJewel(Form form1) : this()
+        {
+            this.form1 = form1;
         }
 
         public IList<Jewel> GetListCollection(Parameter parameter)
@@ -91,23 +98,23 @@ namespace MonsterHunterWorld.BUS
 
             dataGridView1.Columns["슬롯레벨"].Width = 80;
             dataGridView1.Columns["레어도"].Width = 70;
-            dataGridView1.Columns["스킬"].Width = 140;            
+            dataGridView1.Columns["스킬"].Width = 140;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 4)
+            if (e.ColumnIndex == 4)
             {
                 FormSkill form = new FormSkill();
                 foreach (var item in form.GetListCollection())
                 {
-                    if(item.Idx == Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["스킬정보"].Value))
+                    if (item.Idx == Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["스킬정보"].Value))
                     {
                         FormSkillInfo ff = new FormSkillInfo(item);
                         ff.Show();
                         return;
                     }
-                }                
+                }
             }
         }
     }

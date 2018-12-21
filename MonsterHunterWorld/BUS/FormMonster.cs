@@ -17,11 +17,15 @@ namespace MonsterHunterWorld.BUS
     public partial class FormMonster : Form, IGetListCollection<Monster>
     {
         List<Monster> monsters;
+        Form Form;
         public FormMonster()
         {
             InitializeComponent();
         }
-
+        public FormMonster(Form Form) : this()
+        {
+            this.Form = Form;
+        }
 
         private void FormMonster_Load(object sender, EventArgs e)
         {

@@ -16,11 +16,19 @@ namespace MonsterHunterWorld.BUS
     public partial class FrmArmors : Form, IGetListCollection<Armors>
     {
         static List<Armors> armors;
+        Color[] color = new Color[] { Color.Gray, Color.Black, Color.LightGreen, Color.ForestGreen, Color.SkyBlue, Color.Purple, Color.HotPink, Color.Orange };
+        private Form form1;
+
         public FrmArmors()
         {
             InitializeComponent();
         }
-       
+
+        public FrmArmors(Form form1) : this()
+        {
+            this.form1 = form1;
+        }
+
         private void AddArmorList(JArray ja)
         {
             foreach (var item in ja)
@@ -117,7 +125,7 @@ namespace MonsterHunterWorld.BUS
                 {
                     slots = item.Text.Replace("_", "");
                 }
-                else
+                else if(item.Checked && item.Text == "상관없음")
                 {
                     slots = "";
                 }
@@ -128,14 +136,14 @@ namespace MonsterHunterWorld.BUS
                 {
                     part = item.Text;
                 }
-                else
+                else if(item.Checked && item.Text == "상관없음")
                 {
                     part = "";
                 }
             }
             foreach (var item in armors)
             {
-                if (item.Name.Contains(textBox1.Text) && item.Slots.Contains(slots) && item.Part.Contains(part))
+                if (item.Name.Contains(textBox1.Text) && item.Slots.Replace(" " , "") == slots && item.Part.Contains(part))
                 {
                     string[] temp = new string[4];
                     temp[0] = item.Name;
@@ -148,9 +156,27 @@ namespace MonsterHunterWorld.BUS
                     }
                     if (item.Skills.Count == 0)
                     {
-                        temp[3] += "스킬없음";
+                        temp[3] += "";
                     }
                     dataGridView1.Rows.Add(temp);
+                }
+            }
+            SetColorPerRare();
+        }
+
+        private void SetColorPerRare()
+        {
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                foreach (var item in armors)
+                {
+                    if (dataGridView1.Rows[i].Cells[0].Value != null)
+                    {
+                        if (dataGridView1.Rows[i].Cells[0].Value.ToString() == item.Name)
+                        {
+                            dataGridView1.Rows[i].Cells[0].Style.ForeColor = color[item.Rare - 1];
+                        }
+                    }
                 }
             }
         }

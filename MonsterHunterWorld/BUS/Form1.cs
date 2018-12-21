@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Web;
 using Newtonsoft.Json.Linq;
 using MonsteHunterWorld;
+using MonsterHunterWorld.VO;
 
 namespace MonsterHunterWorld.BUS
 {
@@ -24,89 +25,88 @@ namespace MonsterHunterWorld.BUS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //예제
-            //VO.Parameter parameter = new VO.Parameter("weapons/대검");
-            //DAO.MonsterHunterAPI api = new DAO.MonsterHunterAPI();
-            //JArray ja = JArray.Parse(api.GetJson(parameter));
-            //textBox1.Text = ja.ToString();
+        }
+        private void label7_MouseMove(object sender, MouseEventArgs e)
+        {
+            Label lbl = (Label)sender;
+            lbl.ForeColor = Color.White;
+        }
+        private void label7_MouseLeave(object sender, EventArgs e)
+        {
+            Label lbl = (Label)sender;
+            lbl.ForeColor = Color.Red;
+        }
 
-            //쥬얼폼
-            //FormJewel form = new FormJewel();
-            //foreach (var item in form.GetListCollection())
-            //{
-            //    textBox1.Text += "인덱스: " + item.Idx + "\r\n이름: " + item.Name + "\r\n레어도: " + item.Rare + "\r\n슬롯레벨: " + item.Slot_level + "\r\n";
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
-            //    textBox1.Text += "스킬인덱스: " + item.Skill.Idx + "\r\n스킬이름: " + item.Skill.Name + "\r\n스킬타입: " + item.Skill.Type + "\r\n";
-            //}
+        private void lblItems_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            FrmItems items = new FrmItems(this);
+            items.ShowDialog();
+        }
 
-            //스킬폼
-            //FormSkill form = new FormSkill();
-            //foreach (var item in form.GetListCollection())
-            //{
-            //    textBox1.Text += "인덱스: " + item.Idx + "\r\n이름: " + item.Name + "\r\n타입: " + item.Type;
-            //    foreach (var subitem in item.Desc)
-            //    {
-            //        textBox1.Text += "\r\n스킬이름: " + subitem.Name + "\r\n스킬레벨: " + subitem.Level + "\r\n스킬정보: " + subitem.Desc + "\r\n";
-            //    }
-            //    textBox1.Text += "\r\n";
-            //}
-
-
-            //몬스터폼
-            //FormMonster form = new FormMonster();
-            //foreach (var item in form.GetListCollection())
-            //{
-            //    textBox1.Text += "인덱스: " + item.Idx + "\r\n이미지경로: " + item.Image + "\r\n이름: " + item.Name + "\r\n별명: " + item.Nick + "\r\n구분: " + item.Gubun + "\r\n수렵정보: " + item.Hunt_info + "\r\n설명: " + item.Description;
-            //    textBox1.Text += "\r\n속성정보: " + "\r\n화: " + item.Weakness.Fire + "\r\n물: " + item.Weakness.Water + "\r\n번개: " + item.Weakness.Thunder + "\r\n빙: " + item.Weakness.Ice + "\r\n용: " + item.Weakness.Dragon;
-            //    textBox1.Text += "\r\n약점정보: " + "\r\n독: " + item.Debuff.Poison + "\r\n수면: " + item.Debuff.Sleep + "\r\n마비: " + item.Debuff.Paralysis + "\r\n폭파: " + item.Debuff.Explosion + "\r\n기절: " + item.Debuff.Faint;
-            //    if (item.Drop_Item != null)
-            //    {
-            //        foreach (var subitem in item.Drop_Item)
-            //        {
-            //            textBox1.Text += "\r\n인덱스번호: " + subitem.Idx + "\r\n아이템이름: " + subitem.Name + "\r\n레벨: " + subitem.Level + "\r\n파트: " + subitem.Part + "\r\n타입: " + subitem.Type + "\r\n서브타입: " + subitem.Subtype + "\r\n레어도: " + subitem.Rare + "\r\n판매가: " + subitem.Price;
-            //        }
-            //    }
-            //    textBox1.Text += "\r\n";
-            //}
-
-            // 몬스터 드랍아이템 획득방법종류뽑기
-            //FormMonster form = new FormMonster();
-            //foreach (var item in form.GetListCollection())
-            //{
-            //    foreach (var subitem in item.Drop_Item)
-            //    {
-            //        if (!textBox1.Text.Contains(subitem.Part))
-            //        {
-            //            textBox1.Text += subitem.Part + "\r\n";
-            //        }
-            //    }
-            //}
-
-            DataTable dt = new DataTable();
-            dt.Columns.Add("컬럼이름", typeof(ListView));
+        private void lblArmors_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            FrmArmors armors = new FrmArmors(this);
+            armors.ShowDialog();
         }
 
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void lblMonsters_Click(object sender, EventArgs e)
         {
-            FormMonster form = new FormMonster();
-            form.Owner = this;
-            form.Show();
+            this.Visible = false;
+            FormMonster monsters = new FormMonster(this);
+            monsters.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void lblWeapons_Click(object sender, EventArgs e)
         {
-            FormJewel form = new FormJewel();
-            form.Owner = this;
-            form.Show();
+            this.Visible = false;
+            FrmWeaponList weaponList = new FrmWeaponList(this);
+            weaponList.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void lblCharms_Click(object sender, EventArgs e)
         {
-            FormSkill form = new FormSkill();
-            form.Owner = this;
-            form.Show();
+            this.Visible = false;
+            FrmCharm charms = new FrmCharm(this);
+            charms.ShowDialog();
+        }
+
+        private void lblJewels_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            FormJewel jewels = new FormJewel(this);
+            jewels.ShowDialog();
+        }
+
+        private void lblSkillSimulator_Click(object sender, EventArgs e)
+        {
+            
+            this.Visible = false;
+            FrmSimulator simulator = new FrmSimulator(this);
+            simulator.ShowDialog();
+        }
+        private Point mousePoint;
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+            {
+                Location = new Point(this.Left - (mousePoint.X - e.X),
+                    this.Top - (mousePoint.Y - e.Y));
+            }
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mousePoint = new Point(e.X, e.Y);
         }
     }
 }

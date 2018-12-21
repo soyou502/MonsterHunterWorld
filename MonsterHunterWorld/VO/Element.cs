@@ -3,6 +3,7 @@
     /// <summary>
     /// 속성(화,물,번개,빙,용속성)정보 클래스
     /// </summary>
+
     public class Element
     {
         private int fire; // 불

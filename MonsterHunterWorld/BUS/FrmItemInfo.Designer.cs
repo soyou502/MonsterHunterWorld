@@ -162,7 +162,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmItemInfo";
             this.Text = "FrmItemInfo";
             this.Load += new System.EventHandler(this.FrmItemInfo_Load);

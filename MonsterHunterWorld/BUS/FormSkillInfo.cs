@@ -14,12 +14,14 @@ namespace MonsterHunterWorld.BUS
     public partial class FormSkillInfo : Form
     {
         Skill skill;
-        public FormSkillInfo(Skill skill)
+        public FormSkillInfo()
         {
             InitializeComponent();
+        }
+        public FormSkillInfo(Skill skill) : this()
+        {
             this.skill = skill;
         }
-
         private void FormSkillInfo_Load(object sender, EventArgs e)
         {
             //this.Location = this.Owner.Location;
