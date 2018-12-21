@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
             this.lblItems = new System.Windows.Forms.Label();
             this.lblArmors = new System.Windows.Forms.Label();
             this.lblMonsters = new System.Windows.Forms.Label();
@@ -37,14 +36,6 @@
             this.lblJewels = new System.Windows.Forms.Label();
             this.lblExit = new System.Windows.Forms.Label();
             this.lblSkillSimulator = new System.Windows.Forms.Label();
-=======
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
->>>>>>> 93f2cf2ed4f929573aacbcbfc0998e800a32f7d5
             this.SuspendLayout();
             // 
             // lblItems
@@ -167,14 +158,6 @@
             this.lblSkillSimulator.MouseLeave += new System.EventHandler(this.label7_MouseLeave);
             this.lblSkillSimulator.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label7_MouseMove);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(255, 74);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(319, 204);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -182,7 +165,6 @@
             this.BackgroundImage = global::MonsterHunterWorld.Properties.Resources._001;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-<<<<<<< HEAD
             this.Controls.Add(this.lblSkillSimulator);
             this.Controls.Add(this.lblExit);
             this.Controls.Add(this.lblJewels);
@@ -197,24 +179,11 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
-=======
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
->>>>>>> 93f2cf2ed4f929573aacbcbfc0998e800a32f7d5
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-<<<<<<< HEAD
         private System.Windows.Forms.Label lblItems;
         private System.Windows.Forms.Label lblArmors;
         private System.Windows.Forms.Label lblMonsters;
@@ -223,13 +192,6 @@
         private System.Windows.Forms.Label lblJewels;
         private System.Windows.Forms.Label lblExit;
         private System.Windows.Forms.Label lblSkillSimulator;
-=======
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.PictureBox pictureBox1;
->>>>>>> 93f2cf2ed4f929573aacbcbfc0998e800a32f7d5
     }
 }
 

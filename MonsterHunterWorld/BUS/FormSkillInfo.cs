@@ -22,7 +22,7 @@ namespace MonsterHunterWorld.BUS
 
         private void FormSkillInfo_Load(object sender, EventArgs e)
         {
-            this.Location = this.Owner.Location;
+            //this.Location = this.Owner.Location;
             labSkillName.Text = skill.Name;
             label1.Text = "";
             label1.Location = new Point(label1.Location.X+skill.Name.Length*8, label1.Location.Y);
