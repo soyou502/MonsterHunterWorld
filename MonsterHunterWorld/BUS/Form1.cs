@@ -95,9 +95,9 @@ namespace MonsterHunterWorld.BUS
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FormMonsterInfo form = new FormMonsterInfo();
-            form.Owner = this;
-            form.ShowDialog();
+            //FormMonsterInfo form = new FormMonsterInfo();
+            //form.Owner = this;
+            //form.ShowDialog();
         }
     }
 }

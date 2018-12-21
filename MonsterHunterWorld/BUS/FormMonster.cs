@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -24,20 +25,64 @@ namespace MonsterHunterWorld.BUS
 
         private void FormMonster_Load(object sender, EventArgs e)
         {
+            Monster dd = new Monster();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Image", typeof(Image));
+            dt.Columns.Add("Nick");
+            dt.Columns.Add("Name");
+            dt.Columns.Add("Weaknees");
+            dt.Columns.Add("Debuff");
+            dt.Columns.Add("Idx", typeof(Int32));
             foreach (var item in GetListCollection())
             {
-                //textBox1.Text += "인덱스: " + item.Idx + "\r\n이미지경로: " + item.Image + "\r\n이름: " + item.Name + "\r\n별명: " + item.Nick + "\r\n구분: " + item.Gubun + "\r\n수렵정보: " + item.Hunt_info + "\r\n설명: " + item.Description;
-                //textBox1.Text += "\r\n속성정보: " + "\r\n화: " + item.Weakness.Fire + "\r\n물: " + item.Weakness.Water + "\r\n번개: " + item.Weakness.Thunder + "\r\n빙: " + item.Weakness.Ice + "\r\n용: " + item.Weakness.Dragon;
-                //textBox1.Text += "\r\n약점정보: " + "\r\n독: " + item.Debuff.Poison + "\r\n수면: " + item.Debuff.Sleep + "\r\n마비: " + item.Debuff.Paralysis + "\r\n폭파: " + item.Debuff.Explosion + "\r\n기절: " + item.Debuff.Faint;
-                //if (item.Drop_Item != null)
-                //{
-                //    foreach (var subitem in item.Drop_Item)
-                //    {
-                //        textBox1.Text += "\r\n인덱스번호: " + subitem.Idx + "\r\n아이템이름: " + subitem.Name + "\r\n레벨: " + subitem.Level + "\r\n파트: " + subitem.Part + "\r\n타입: " + subitem.Type + "\r\n서브타입: " + subitem.Subtype + "\r\n레어도: " + subitem.Rare + "\r\n판매가: " + subitem.Price;
-                //    }
-                //}
-                //textBox1.Text += "\r\n";
+                DataRow row = dt.NewRow();
+                row["Image"] = item.Image;
+                row["Nick"] = item.Nick;
+                row["Name"] = item.Name;
+                row["Weaknees"] = item.Weakness.ToString();
+                row["Debuff"] = item.Debuff.ToString();
+                row["Idx"] = item.Idx;
+                dt.Rows.Add(row);
             }
+            gViewMonster.DataSource = dt;
+            gViewMonsterSetting();
+        }
+
+        private void gViewMonsterSetting()
+        {
+            gViewMonster.AllowUserToAddRows = false;
+            gViewMonster.AllowUserToDeleteRows = false;
+            gViewMonster.AllowUserToResizeColumns = false;
+            gViewMonster.AllowUserToResizeRows = false;
+            gViewMonster.EditMode = DataGridViewEditMode.EditProgrammatically;
+            gViewMonster.MultiSelect = false;
+            gViewMonster.ReadOnly = true;
+            gViewMonster.RowHeadersVisible = false;
+            //gViewComment.ColumnHeadersVisible = false;
+
+            gViewMonster.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            gViewMonster.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            //gViewMonster.Columns[0].Width = this.Size.Width / 5;
+            //gViewMonster.Columns[1].Width = this.Size.Width / 2;
+            //gViewMonster.Columns[2].Width = this.Size.Width / 10;
+            foreach (DataGridViewColumn column in gViewMonster.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+            gViewMonster.Columns["Idx"].Visible = false;
+            gViewMonster.Columns["Image"].Width = 110;
+            gViewMonster.Columns["Weaknees"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            gViewMonster.Columns["Debuff"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            gViewMonster.Columns["Image"].HeaderText = "아이콘";
+            gViewMonster.Columns["Nick"].HeaderText = "별명";
+            gViewMonster.Columns["Name"].HeaderText = "이름";
+            gViewMonster.Columns["Weaknees"].HeaderText = "유효속성";
+            gViewMonster.Columns["Debuff"].HeaderText = "상태이상";
+
+            int rowHeight = gViewMonster.Rows.GetRowsHeight(DataGridViewElementStates.Displayed);
+            int colWidth = gViewMonster.Columns.GetColumnsWidth(DataGridViewElementStates.Displayed);
+            gViewMonster.Size = new Size(colWidth, rowHeight);
         }
 
         public IList<Monster> GetListCollection(Parameter parameter)
@@ -53,7 +98,6 @@ namespace MonsterHunterWorld.BUS
             }
             return searchMonsters;
         }
-
         public IList<Monster> GetListCollection()
         {
             if (monsters == null)
@@ -65,19 +109,32 @@ namespace MonsterHunterWorld.BUS
                 JArray ja = JArray.Parse(api.GetJson(parameter));
                 foreach (var item in ja)
                 {
-                    Monster monster = SetMonster(item);
-                    monsters.Add(monster);
+                    if (item["gubun"].ToString() != "환경" && item["gubun"].ToString() != "소형")
+                    {
+                        Monster monster = SetMonster(item);
+                        monsters.Add(monster);
+                    }
                 }
             }
             return monsters;
         }
 
+        /// <summary>
+        /// 제이슨토큰을 파싱하여 하나의 Monster 객체를 반환하는 메서드
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
         private Monster SetMonster(JToken item)
         {
             Monster monster = new Monster();
             monster.Idx = Convert.ToInt32(item["idx"].ToString());
-            monster.Image = item["image"].ToString();
             monster.Gubun = item["gubun"].ToString();
+
+            WebRequest request = WebRequest.Create(item["image"].ToString());
+            WebResponse response = request.GetResponse();
+            Image originImage = Image.FromStream(response.GetResponseStream());
+            monster.Image = ReSizeImage(originImage, new Size(110, 110));
+
             monster.Name = item["name"].ToString();
             monster.Nick = item["nick"].ToString();
             monster.Description = item["description"].ToString();
@@ -106,27 +163,60 @@ namespace MonsterHunterWorld.BUS
                 Faint = Convert.ToInt32(item["debuff"]["faint"].ToString())
             };
 
-            if (item["gubun"].ToString() != "환경")
+            monster.Drop_Item = new List<Drop_Item>();
+            foreach (var drop in item["drop_items"])
             {
-                monster.Drop_Item = new List<Drop_Item>();
-                foreach (var drop in item["drop_items"])
+                monster.Drop_Item.Add(new Drop_Item
                 {
-                    monster.Drop_Item.Add(new Drop_Item
-                    {
-                        Idx = Convert.ToInt32(drop["idx"].ToString()),
-                        Level = drop["level"].ToString(),
-                        Part = drop["part"].ToString(),
-                        Difficulty = Convert.ToInt32(drop["difficulty"].ToString()),
-                        Type = drop["type"].ToString(),
-                        Subtype = drop["subtype"].ToString(),
-                        Name = drop["name"].ToString(),
-                        Description = drop["description"].ToString(),
-                        Rare = Convert.ToInt32(drop["rare"].ToString()),
-                        Price = Convert.ToInt32(drop["price"].ToString())
-                    });
-                }
+                    Idx = Convert.ToInt32(drop["idx"].ToString()),
+                    Level = drop["level"].ToString(),
+                    Part = drop["part"].ToString(),
+                    Difficulty = Convert.ToInt32(drop["difficulty"].ToString()),
+                    Type = drop["type"].ToString(),
+                    Subtype = drop["subtype"].ToString(),
+                    Name = drop["name"].ToString(),
+                    Description = drop["description"].ToString(),
+                    Rare = Convert.ToInt32(drop["rare"].ToString()),
+                    Price = Convert.ToInt32(drop["price"].ToString())
+                });
             }
+
             return monster;
+        }
+
+        /// <summary>
+        /// 이미지 리사이즈 메서드
+        /// </summary>
+        /// <param name="originImage"></param>
+        /// <param name="size"></param>
+        /// <returns></returns>
+        private Image ReSizeImage(Image originImage, Size size)
+        {
+            Image resizeImage = new Bitmap(originImage, size);
+            return resizeImage;
+        }
+
+        private bool IsValidCellAddress(int rowIndex, int columnIndex)
+        {
+            return rowIndex >= 0 && rowIndex < gViewMonster.RowCount &&
+        columnIndex >= 0 && columnIndex <= gViewMonster.ColumnCount;
+        }
+
+        private void gViewMonster_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (IsValidCellAddress(e.RowIndex, e.ColumnIndex) && (e.ColumnIndex == 0 || e.ColumnIndex == 1 || e.ColumnIndex == 2))
+            {
+                gViewMonster.Cursor = Cursors.Hand;
+                //monsterInfoToolTip.Show(gViewMonster.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString(),);
+            }
+        }
+
+        private void gViewMonster_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            if (IsValidCellAddress(e.RowIndex, e.ColumnIndex) && (e.ColumnIndex == 0 || e.ColumnIndex == 1 || e.ColumnIndex == 2))
+            {
+                gViewMonster.Cursor = Cursors.Default;
+            }
         }
     }
 }
