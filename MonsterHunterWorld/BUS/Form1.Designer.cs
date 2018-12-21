@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             this.lblItems = new System.Windows.Forms.Label();
             this.lblArmors = new System.Windows.Forms.Label();
             this.lblMonsters = new System.Windows.Forms.Label();
@@ -157,6 +158,7 @@
             this.lblSkillSimulator.Click += new System.EventHandler(this.lblSkillSimulator_Click);
             this.lblSkillSimulator.MouseLeave += new System.EventHandler(this.label7_MouseLeave);
             this.lblSkillSimulator.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label7_MouseMove);
+
             // 
             // Form1
             // 
@@ -165,6 +167,7 @@
             this.BackgroundImage = global::MonsterHunterWorld.Properties.Resources._001;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+
             this.Controls.Add(this.lblSkillSimulator);
             this.Controls.Add(this.lblExit);
             this.Controls.Add(this.lblJewels);
@@ -180,10 +183,12 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
         private System.Windows.Forms.Label lblItems;
         private System.Windows.Forms.Label lblArmors;
         private System.Windows.Forms.Label lblMonsters;

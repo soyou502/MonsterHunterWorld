@@ -56,6 +56,8 @@ namespace MonsterHunterWorld.BUS
             armors.ShowDialog();
         }
 
+
+
         private void lblMonsters_Click(object sender, EventArgs e)
         {
             this.Visible = false;
