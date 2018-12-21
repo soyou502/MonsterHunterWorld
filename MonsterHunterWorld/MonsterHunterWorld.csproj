@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2BC405FA-3C2C-4C9A-95F5-64AC03F62E4F}</ProjectGuid>
+    <ProjectGuid>{A7AA44B9-A3D8-4048-962D-7F0B4C6DCD24}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>MonsterHunterWorld</RootNamespace>
     <AssemblyName>MonsterHunterWorld</AssemblyName>
@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HtmlAgilityPack, Version=1.8.11.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <HintPath>..\packages\HtmlAgilityPack.1.8.11\lib\Net45\HtmlAgilityPack.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -67,11 +64,9 @@
     <Compile Include="BUS\FormJewel.Designer.cs">
       <DependentUpon>FormJewel.cs</DependentUpon>
     </Compile>
-    <Compile Include="BUS\FormJewlInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BUS\FormJewlInfo.Designer.cs">
-      <DependentUpon>FormJewlInfo.cs</DependentUpon>
+    <Compile Include="BUS\FormJewelInfo.cs" />
+    <Compile Include="BUS\FormJewelInfo.Designer.cs">
+      <DependentUpon>FormJewelInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="BUS\FormMonster.cs">
       <SubType>Form</SubType>
@@ -115,47 +110,17 @@
     <Compile Include="BUS\FrmChamList.Designer.cs">
       <DependentUpon>FrmChamList.cs</DependentUpon>
     </Compile>
-    <Compile Include="BUS\FrmCharm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BUS\FrmCharm.Designer.cs">
-      <DependentUpon>FrmCharm.cs</DependentUpon>
-    </Compile>
     <Compile Include="BUS\FrmItemInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BUS\FrmItemInfo.Designer.cs">
       <DependentUpon>FrmItemInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="BUS\FrmItems.cs">
+    <Compile Include="BUS\Frmitems.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BUS\FrmItems.Designer.cs">
-      <DependentUpon>FrmItems.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BUS\FrmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BUS\FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BUS\FrmSignIn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BUS\FrmSignIn.Designer.cs">
-      <DependentUpon>FrmSignIn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BUS\FrmSimulator.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BUS\FrmSimulator.Designer.cs">
-      <DependentUpon>FrmSimulator.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BUS\FrmSimulatorSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BUS\FrmSimulatorSearch.Designer.cs">
-      <DependentUpon>FrmSimulatorSearch.cs</DependentUpon>
+    <Compile Include="BUS\Frmitems.Designer.cs">
+      <DependentUpon>Frmitems.cs</DependentUpon>
     </Compile>
     <Compile Include="BUS\FrmWeaponInfo.cs">
       <SubType>Form</SubType>
@@ -170,24 +135,20 @@
       <DependentUpon>FrmWeaponList.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\MonsterHunterAPI.cs" />
-    <Compile Include="DAO\MonsterInfoHtmlDAO.cs" />
-    <Compile Include="DAO\MonsterHunterUserDB.cs" />
+    <Compile Include="IGetListCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VO\Armors.cs" />
-    <Compile Include="VO\ArmorSkill.cs" />
-    <Compile Include="VO\Charm.cs" />
+    <Compile Include="VO\Cham.cs" />
     <Compile Include="VO\Debuff.cs" />
+    <Compile Include="VO\Material.cs" />
+    <Compile Include="VO\SkillDesc.cs" />
     <Compile Include="VO\Drop_Item.cs" />
-    <Compile Include="VO\Element.cs" />
-    <Compile Include="VO\IGetListCollection.cs" />
     <Compile Include="VO\Items.cs" />
     <Compile Include="VO\Jewel.cs" />
-    <Compile Include="VO\Material.cs" />
     <Compile Include="VO\Monster.cs" />
     <Compile Include="VO\Parameter.cs" />
     <Compile Include="VO\Skill.cs" />
-<<<<<<< HEAD
     <Compile Include="VO\Element.cs" />
     <Compile Include="VO\WeaponBase.cs" />
     <Compile Include="VO\WeaponCreate.cs" />
@@ -195,60 +156,14 @@
     <Compile Include="VO\WeaponEelemental.cs" />
     <Compile Include="VO\Weapons_Durability.cs" />
     <Compile Include="VO\Weapons_Image.cs" />
-=======
-    <Compile Include="VO\SkillDesc.cs" />
-    <Compile Include="VO\UserInfo.cs" />
-    <Compile Include="VO\WeaponList.cs" />
->>>>>>> 4ea595b8dffe0437ef9d0f3702eda0f64ddb9faa
     <EmbeddedResource Include="BUS\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FormJewel.resx">
-      <DependentUpon>FormJewel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BUS\FormMonster.resx">
       <DependentUpon>FormMonster.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="BUS\FrmWeaponInfo.resx">
       <DependentUpon>FrmWeaponInfo.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="BUS\FormMonsterInfo.resx">
-      <DependentUpon>FormMonsterInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FormSkill.resx">
-      <DependentUpon>FormSkill.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FormSkillInfo.resx">
-      <DependentUpon>FormSkillInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FrmArmorInfo.resx">
-      <DependentUpon>FrmArmorInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FrmArmors.resx">
-      <DependentUpon>FrmArmors.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FrmCharm.resx">
-      <DependentUpon>FrmCharm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FrmItemInfo.resx">
-      <DependentUpon>FrmItemInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FrmItems.resx">
-      <DependentUpon>FrmItems.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FrmSignIn.resx">
-      <DependentUpon>FrmSignIn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FrmSimulator.resx">
-      <DependentUpon>FrmSimulator.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BUS\FrmSimulatorSearch.resx">
-      <DependentUpon>FrmSimulatorSearch.cs</DependentUpon>
->>>>>>> 4ea595b8dffe0437ef9d0f3702eda0f64ddb9faa
     </EmbeddedResource>
     <EmbeddedResource Include="BUS\FrmWeaponList.resx">
       <DependentUpon>FrmWeaponList.cs</DependentUpon>
@@ -261,7 +176,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="chams_kor.json" />
     <None Include="Weapons_durability.json" />
@@ -279,10 +193,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\001.jpg" />
-    <Content Include="HTMLPage1.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
