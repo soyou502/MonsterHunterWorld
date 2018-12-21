@@ -60,6 +60,7 @@ namespace MonsteHunterWorld
         private string debuff_name; // 디버프이름
         private int debuff_value; // 디버프 수치
         private string select_name; // 그리드뷰 선택한 행의 무기 이름
+        private Form1 form1;
 
         /*
          1. 예리도 파싱 // FrmWeaponsInfo 에 넘겨줄 데이터 파싱
@@ -75,6 +76,11 @@ namespace MonsteHunterWorld
         {
             InitializeComponent();
 
+        }
+
+        public FrmWeaponList(Form1 form1) : this()
+        {
+            this.form1 = form1;
         }
 
         private void FrmWeaponList_Load(object sender, EventArgs e)

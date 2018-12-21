@@ -15,9 +15,16 @@ namespace MonsterHunterWorld.BUS
     public partial class FormJewel : Form, IGetListCollection<VO.Jewel>
     {
         static List<VO.Jewel> jewels;
+        private Form form1;
+
         public FormJewel()
         {
             InitializeComponent();
+        }
+
+        public FormJewel(Form form1) : this()
+        {
+            this.form1 = form1;
         }
 
         public IList<Jewel> GetListCollection(Parameter parameter)

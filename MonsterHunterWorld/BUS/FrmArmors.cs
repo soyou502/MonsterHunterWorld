@@ -17,9 +17,16 @@ namespace MonsterHunterWorld.BUS
     {
         static List<Armors> armors;
         Color[] color = new Color[] { Color.Gray, Color.Black, Color.LightGreen, Color.ForestGreen, Color.SkyBlue, Color.Purple, Color.HotPink, Color.Orange };
+        private Form form1;
+
         public FrmArmors()
         {
             InitializeComponent();
+        }
+
+        public FrmArmors(Form form1) : this()
+        {
+            this.form1 = form1;
         }
 
         private void AddArmorList(JArray ja)

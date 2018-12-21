@@ -1,4 +1,5 @@
 ﻿using MonsterHunterWorld;
+using MonsterHunterWorld.BUS;
 using MonsterHunterWorld.DAO;
 using MonsterHunterWorld.VO;
 using Newtonsoft.Json.Linq;
@@ -18,9 +19,16 @@ namespace MonsteHunterWorld
     {
         static List<Items> items;
         Color[] color = new Color[] { Color.Gray, Color.Black, Color.LightGreen, Color.ForestGreen, Color.SkyBlue, Color.Purple, Color.HotPink, Color.Orange };
+        private Form form1;
+
         public FrmItems()
         {
             InitializeComponent();
+        }
+
+        public FrmItems(Form form1) : this()
+        {
+            this.form1 = form1;
         }
 
         private void FrmItems_Load(object sender, EventArgs e)

@@ -45,42 +45,42 @@ namespace MonsterHunterWorld.BUS
         private void lblItems_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            FrmItems items = new FrmItems();
+            FrmItems items = new FrmItems(this);
             items.ShowDialog();
         }
 
         private void lblArmors_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            FrmArmors armors = new FrmArmors();
+            FrmArmors armors = new FrmArmors(this);
             armors.ShowDialog();
         }
 
         private void lblMonsters_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            FormMonster monsters = new FormMonster();
+            FormMonster monsters = new FormMonster(this);
             monsters.ShowDialog();
         }
 
         private void lblWeapons_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            FrmWeaponList weaponList = new FrmWeaponList();
+            FrmWeaponList weaponList = new FrmWeaponList(this);
             weaponList.ShowDialog();
         }
 
         private void lblCharms_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            FrmCharm charms = new FrmCharm();
+            FrmCharm charms = new FrmCharm(this);
             charms.ShowDialog();
         }
 
         private void lblJewels_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            FormJewel jewels = new FormJewel();
+            FormJewel jewels = new FormJewel(this);
             jewels.ShowDialog();
         }
 
