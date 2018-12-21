@@ -16,5 +16,10 @@ namespace MonsterHunterWorld.BUS
         {
             InitializeComponent();
         }
+
+        private void FrmWeaponInfo_Load(object sender, EventArgs e)
+        {
+            //
+        }
     }
 }

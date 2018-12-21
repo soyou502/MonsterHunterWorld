@@ -40,6 +40,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -136,20 +137,35 @@
       <DependentUpon>FrmWeaponList.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\MonsterHunterAPI.cs" />
+    <Compile Include="IGetListCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VO\Armors.cs" />
     <Compile Include="VO\Cham.cs" />
+    <Compile Include="VO\Debuff.cs" />
+    <Compile Include="VO\Material.cs" />
+    <Compile Include="VO\SkillDesc.cs" />
+    <Compile Include="VO\Drop_Item.cs" />
     <Compile Include="VO\Items.cs" />
     <Compile Include="VO\Jewel.cs" />
+    <Compile Include="VO\Monster.cs" />
     <Compile Include="VO\Parameter.cs" />
     <Compile Include="VO\Skill.cs" />
-    <Compile Include="VO\WeaponList.cs" />
+    <Compile Include="VO\Element.cs" />
+    <Compile Include="VO\WeaponBase.cs" />
+    <Compile Include="VO\WeaponCreate.cs" />
+    <Compile Include="VO\WeaponDebuff.cs" />
+    <Compile Include="VO\WeaponEelemental.cs" />
+    <Compile Include="VO\Weapons_Durability.cs" />
+    <Compile Include="VO\Weapons_Image.cs" />
     <EmbeddedResource Include="BUS\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BUS\FormMonster.resx">
       <DependentUpon>FormMonster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmWeaponInfo.resx">
+      <DependentUpon>FrmWeaponInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BUS\FrmWeaponList.resx">
       <DependentUpon>FrmWeaponList.cs</DependentUpon>
@@ -163,6 +179,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="chams_kor.json" />
+    <None Include="Weapons_durability.json" />
+    <None Include="Weapons.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

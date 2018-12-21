@@ -24,13 +24,10 @@ namespace MonsterHunterWorld.BUS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //예제
-            //Parameter parameter = new Parameter("items");
-            //parameter.Name = "가마루코인";
-            //JArray ja = JArray.Parse(GetJson(parameter));          
-        }    
+           
+        }
 
-        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -40,6 +37,12 @@ namespace MonsterHunterWorld.BUS
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+            FrmWeaponList fwl = new FrmWeaponList();
+            fwl.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
         {
             FrmWeaponList fwl = new FrmWeaponList();
             fwl.Show();

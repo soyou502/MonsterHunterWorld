@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
@@ -28,14 +29,22 @@ namespace MonsterHunterWorld.DAO
             string status = response.StatusCode.ToString(); // 서버의 응답코드
             if (status == "OK")
             {
-                var stream = response.GetResponseStream();
-                StreamReader sr = new StreamReader(stream, Encoding.UTF8);
-                JsonStr = sr.ReadToEnd();
-                if (JsonStr[0].ToString() != "[")
+                try
                 {
-                    JsonStr = (String.Concat("[", JsonStr) + "]");
+                    var stream = response.GetResponseStream();
+                    StreamReader sr = new StreamReader(stream, Encoding.UTF8);
+                    JsonStr = sr.ReadToEnd();
+                    if (JsonStr[0].ToString() != "[")
+                    {
+                        JsonStr = String.Concat("[", JsonStr) + "]";
+                    }
+                    sr.Close();
                 }
-                sr.Close();
+                catch (WebException)
+                {
+                    Thread.Sleep(1000);
+                    return GetJson(parameter);
+                }
             }
             else
             {
@@ -64,6 +73,7 @@ namespace MonsterHunterWorld.DAO
             {
                 hexParameter += "&type=" + HttpUtility.UrlEncode(parameter.Type);
             }
+
             return ("http://www.mhwdb.kr/apis/" + hexParameter).Replace("%2f", "/");
         }
     }
