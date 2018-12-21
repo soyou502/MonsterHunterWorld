@@ -95,10 +95,8 @@ namespace MonsterHunterWorld.BUS
 
             dataGridView1.Columns["인덱스"].Visible = false;
             dataGridView1.Columns["스킬정보"].Visible = false;
-
-            dataGridView1.Columns["슬롯레벨"].Width = 80;
-            dataGridView1.Columns["레어도"].Width = 70;
-            dataGridView1.Columns["스킬"].Width = 140;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.Columns["스킬"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -136,6 +134,11 @@ namespace MonsterHunterWorld.BUS
         private void FormJewel_FormClosed(object sender, FormClosedEventArgs e)
         {
             form1.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

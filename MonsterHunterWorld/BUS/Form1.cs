@@ -109,5 +109,12 @@ namespace MonsterHunterWorld.BUS
         {
             mousePoint = new Point(e.X, e.Y);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            FormSkill skill = new FormSkill(this);
+            skill.ShowDialog();
+        }
     }
 }

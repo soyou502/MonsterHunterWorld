@@ -100,5 +100,10 @@ namespace MonsteHunterWorld
         {
             mousePoint = new Point(e.X, e.Y);
         }
+
+        private void FrmArmorInfo_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form.Show();
+        }
     }
 }

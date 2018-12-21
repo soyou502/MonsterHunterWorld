@@ -20,6 +20,11 @@ namespace MonsterHunterWorld.BUS
             InitializeComponent();
         }
 
+        public FormSkill(Form1 form1) : this()
+        {
+            this.form1 = form1;
+        }
+
         public IList<Skill> GetListCollection()
         {
             if (skills == null)
@@ -124,6 +129,7 @@ namespace MonsterHunterWorld.BUS
             }
         }
         private Point mousePoint;
+        private Form1 form1;
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -137,6 +143,11 @@ namespace MonsterHunterWorld.BUS
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
             mousePoint = new Point(e.X, e.Y);
+        }
+
+        private void FormSkill_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form1.Show();
         }
     }
 }

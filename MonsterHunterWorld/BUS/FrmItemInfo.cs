@@ -110,5 +110,10 @@ namespace MonsteHunterWorld
         {
             mousePoint = new Point(e.X, e.Y);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

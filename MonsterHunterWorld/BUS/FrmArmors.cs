@@ -200,5 +200,10 @@ namespace MonsterHunterWorld.BUS
         {
             mousePoint = new Point(e.X, e.Y);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
