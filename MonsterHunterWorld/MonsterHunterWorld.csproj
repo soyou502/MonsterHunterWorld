@@ -229,13 +229,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-
     <Content Include="HTMLPage1.html" />
     <Content Include="Images\나도한마디.PNG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\소재정보.PNG" />
-    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
