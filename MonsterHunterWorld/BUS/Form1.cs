@@ -44,51 +44,52 @@ namespace MonsterHunterWorld.BUS
 
         private void lblItems_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             FrmItems items = new FrmItems();
-            items.Location = this.Location;
-            items.Show();
+            items.ShowDialog();
         }
 
         private void lblArmors_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             FrmArmors armors = new FrmArmors();
-            armors.Location = this.Location;
-            armors.Show();
+            armors.ShowDialog();
         }
 
         private void lblMonsters_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             FormMonster monsters = new FormMonster();
-            monsters.Location = this.Location;
-            monsters.Show();
+            monsters.ShowDialog();
         }
 
         private void lblWeapons_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             FrmWeaponList weaponList = new FrmWeaponList();
-            weaponList.Location = this.Location;
-            weaponList.Show();
+            weaponList.ShowDialog();
         }
 
         private void lblCharms_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             FrmCharm charms = new FrmCharm();
-            charms.Location = this.Location;
-            charms.Show();
+            charms.ShowDialog();
         }
 
         private void lblJewels_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             FormJewel jewels = new FormJewel();
-            jewels.Location = this.Location;
-            jewels.Show();
+            jewels.ShowDialog();
         }
 
         private void lblSkillSimulator_Click(object sender, EventArgs e)
         {
-            FrmSimulator simulator = new FrmSimulator();
-            simulator.Location = this.Location;
-            simulator.Show();
+            
+            this.Visible = false;
+            FrmSimulator simulator = new FrmSimulator(this);
+            simulator.ShowDialog();
         }
         private Point mousePoint;
 
@@ -104,12 +105,6 @@ namespace MonsterHunterWorld.BUS
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
             mousePoint = new Point(e.X, e.Y);
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            FrmWeaponList fwl = new FrmWeaponList();
-            fwl.Show();
         }
     }
 }
