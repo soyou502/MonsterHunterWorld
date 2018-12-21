@@ -18,13 +18,15 @@ namespace MonsteHunterWorld
     public partial class FrmItemInfo : Form
     {
         string itemName;
+        Form form;
         public FrmItemInfo()
         {
             InitializeComponent();
         }
-        public FrmItemInfo(string itemName) : this()
+        public FrmItemInfo(string itemName, Form form) : this()
         {
             this.itemName = itemName;
+            this.form = form;
         }
         private void FrmItemInfo_Load(object sender, EventArgs e)
         {
@@ -84,9 +86,29 @@ namespace MonsteHunterWorld
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             string str = dataGridView1.Rows[e.RowIndex].Cells["name"].Value.ToString();
-            FrmArmorInfo fai = new FrmArmorInfo(str);
-            fai.Location = this.Location;
-            fai.Show();
+            this.Visible = false;
+            FrmArmorInfo fai = new FrmArmorInfo(str, this);
+            fai.ShowDialog();
+        }
+
+        private void FrmItemInfo_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form.Show();
+        }
+        private Point mousePoint;
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+            {
+                Location = new Point(this.Left - (mousePoint.X - e.X),
+                    this.Top - (mousePoint.Y - e.Y));
+            }
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mousePoint = new Point(e.X, e.Y);
         }
     }
 }

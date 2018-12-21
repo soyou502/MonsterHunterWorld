@@ -61,6 +61,8 @@
             this.Name = "FormSkill";
             this.Text = "FormSkill";
             this.Load += new System.EventHandler(this.FormSkill_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

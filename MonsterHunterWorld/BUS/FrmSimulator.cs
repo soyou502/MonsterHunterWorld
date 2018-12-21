@@ -679,4 +679,5 @@ namespace MonsterHunterWorld.BUS
             WeaponSlot();
         }
     }
+
 }

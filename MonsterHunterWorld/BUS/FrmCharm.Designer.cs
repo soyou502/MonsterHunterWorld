@@ -79,7 +79,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCharm";
             this.Text = "FrmCharm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmCharm_FormClosed);
             this.Load += new System.EventHandler(this.FrmCharm_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
