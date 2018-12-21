@@ -22,8 +22,12 @@ namespace MonsterHunterWorld.BUS
 
         private void FormMonsterInfo_Load(object sender, EventArgs e)
         {
-            picDetailMonster.Location = new Point((this.Width / 2) - picDetailMonster.Width/2,picDetailMonster.Location.Y);
+            // 폼 띄우는 위치 윈도우 화면 정중앙
+            this.Location = new Point(Screen.PrimaryScreen.Bounds.Width / 2 - this.Size.Width / 2, Screen.PrimaryScreen.Bounds.Height / 2 - this.Size.Height / 2);
+
+            picDetailMonster.Location = new Point((this.Width / 2) - picDetailMonster.Width / 2, picDetailMonster.Location.Y);
             dropItemSort();
+
             DAO.MonsterInfoHtmlDAO html = new DAO.MonsterInfoHtmlDAO();
             gViewComment.DataSource = html.GetCommentTable(monster.Nick + monster.Name);
             gViewCommentSetting();
@@ -32,12 +36,18 @@ namespace MonsterHunterWorld.BUS
             gViewDropItemSetting();
         }
 
+        /// <summary>
+        /// 드랍아이템리스트를 정렬하는 메서드
+        /// </summary>
         private void dropItemSort()
         {
             (monster.Drop_Item as List<VO.Drop_Item>).Sort(new VO.Drop_Item());
             (monster.Drop_Item as List<VO.Drop_Item>).Reverse();
         }
 
+        /// <summary>
+        /// 드랍아이템 그리드뷰의 기본설정값 세팅 메서드
+        /// </summary>
         private void gViewDropItemSetting()
         {
             gViewDropItem.AllowUserToAddRows = false;
@@ -69,6 +79,10 @@ namespace MonsterHunterWorld.BUS
             }
         }
 
+        /// <summary>
+        /// 드롭아이템 테이블을 반환하는 메서드
+        /// </summary>
+        /// <returns>드랍아이템 데이터테이블</returns>
         private DataTable GetDropItemTable()
         {
             //레벨(상/하위) , 파트(퀘스트보수/유실물등), difi(획득난이도), idx, name
@@ -95,7 +109,7 @@ namespace MonsterHunterWorld.BUS
         }
 
         /// <summary>
-        /// 코멘트 그리드뷰 기본설정값 세팅
+        /// 코멘트 그리드뷰 기본설정값 세팅 메서드
         /// </summary>
         private void gViewCommentSetting()
         {
@@ -126,6 +140,6 @@ namespace MonsterHunterWorld.BUS
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
-        }        
+        }
     }
 }
