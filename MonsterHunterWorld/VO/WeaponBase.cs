@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MonsterHunterWorld.VO
-{
+{//
     class WeaponBase
     {
         // 기본 정보
