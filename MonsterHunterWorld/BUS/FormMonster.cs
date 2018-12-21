@@ -29,7 +29,7 @@ namespace MonsterHunterWorld.BUS
 
         private void FormMonster_Load(object sender, EventArgs e)
         {
-            Monster dd = new Monster();
+            this.Location = Form.Location;
             DataTable dt = new DataTable();
             dt.Columns.Add("Image", typeof(Image));
             dt.Columns.Add("Nick");
