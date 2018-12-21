@@ -27,6 +27,7 @@ namespace MonsterHunterWorld.BUS
         {
             this.BackgroundImage = Image.FromFile(Application.StartupPath + @"\Images\FormMain.jpg");
         }
+
         private void label7_MouseMove(object sender, MouseEventArgs e)
         {
             Label lbl = (Label)sender;
