@@ -256,6 +256,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HTMLPage1.html" />
+    <Content Include="Images\나도한마디.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\소재 정보.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

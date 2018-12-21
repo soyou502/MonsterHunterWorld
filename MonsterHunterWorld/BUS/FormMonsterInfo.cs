@@ -11,9 +11,14 @@ using System.Windows.Forms;
 
 namespace MonsterHunterWorld.BUS
 {
+
     public partial class FormMonsterInfo : Form
     {
+        private bool mouseDown = false;
+        private Point lastLocation;
+
         VO.Monster monster;
+
         public FormMonsterInfo(VO.Monster monster)
         {
             InitializeComponent();
@@ -22,10 +27,15 @@ namespace MonsterHunterWorld.BUS
 
         private void FormMonsterInfo_Load(object sender, EventArgs e)
         {
+            labMonsterName.Parent = picBar;
+            labMonsterName.BackColor = Color.Transparent;
+            labMonsterName.Text = monster.Nick + " " + monster.Name;
+
+            picDropTab.ImageLocation = Application.StartupPath + @"\Images\소재정보.png";
+            picCommentTab.ImageLocation = Application.StartupPath + @"\Images\나도한마디.png";
+            this.BackColor = Color.White;
             // 폼 띄우는 위치 윈도우 화면 정중앙
             this.Location = new Point(Screen.PrimaryScreen.Bounds.Width / 2 - this.Size.Width / 2, Screen.PrimaryScreen.Bounds.Height / 2 - this.Size.Height / 2);
-
-            picDetailMonster.Location = new Point((this.Width / 2) - picDetailMonster.Width / 2, picDetailMonster.Location.Y);
             dropItemSort();
 
             DAO.MonsterInfoHtmlDAO html = new DAO.MonsterInfoHtmlDAO();
@@ -63,10 +73,6 @@ namespace MonsterHunterWorld.BUS
             gViewDropItem.Columns[2].HeaderText = "소재이름";
             gViewDropItem.Columns[3].HeaderText = "획득률";
             gViewDropItem.Columns[4].Visible = false;
-
-            int rowHeight = gViewDropItem.Rows.GetRowsHeight(DataGridViewElementStates.Displayed);
-            int colWidth = gViewDropItem.Columns.GetColumnsWidth(DataGridViewElementStates.Displayed);
-            gViewDropItem.Size = new Size(colWidth, rowHeight);
 
             gViewDropItem.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             gViewDropItem.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -113,6 +119,20 @@ namespace MonsterHunterWorld.BUS
         /// </summary>
         private void gViewCommentSetting()
         {
+            //gViewComment.AllowUserToAddRows = false;
+            //gViewComment.AllowUserToDeleteRows = false;
+            //gViewComment.AllowUserToOrderColumns = true;
+            //gViewComment.ReadOnly = true;
+            //gViewComment.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            //gViewComment.MultiSelect = false;
+            //gViewComment.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            //gViewComment.AllowUserToResizeColumns = false;
+            //gViewComment.ColumnHeadersHeightSizeMode =
+            //DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            //gViewComment.AllowUserToResizeRows = false;
+            //gViewComment.RowHeadersWidthSizeMode =
+            //DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+
             gViewComment.AllowUserToAddRows = false;
             gViewComment.AllowUserToDeleteRows = false;
             gViewComment.AllowUserToResizeColumns = false;
@@ -127,10 +147,6 @@ namespace MonsterHunterWorld.BUS
             gViewComment.Columns[1].HeaderText = "코멘트";
             gViewComment.Columns[2].HeaderText = "작성일";
 
-            int rowHeight = gViewComment.Rows.GetRowsHeight(DataGridViewElementStates.Displayed);
-            int colWidth = gViewComment.Columns.GetColumnsWidth(DataGridViewElementStates.Displayed);
-            gViewComment.Size = new Size(colWidth, rowHeight);
-
             gViewComment.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             gViewComment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             gViewComment.Columns[0].Width = this.Size.Width / 5;
@@ -140,6 +156,37 @@ namespace MonsterHunterWorld.BUS
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
+        }
+
+        /// <summary>
+        /// 폼 이동을 위한 이벤트
+        /// </summary>
+        private void Form_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        /// <summary>
+        /// 폼 이동을 위한 이벤트
+        /// </summary>
+        private void Form_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+
+                this.Update();
+            }
+        }
+
+        /// <summary>
+        /// 폼 이동을 위한 이벤트
+        /// </summary>
+        private void Form_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
         }
     }
 }
