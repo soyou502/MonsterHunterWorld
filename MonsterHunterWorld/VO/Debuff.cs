@@ -1,4 +1,6 @@
-﻿namespace MonsterHunterWorld.VO
+﻿using System;
+
+namespace MonsterHunterWorld.VO
 {
     /// <summary>
     /// 디버프 정보 클래스
@@ -38,5 +40,30 @@
         public int Paralysis { get => paralysis; set => paralysis = value; }
         public int Explosion { get => explosion; set => explosion = value; }
         public int Faint { get => faint; set => faint = value; }
+
+        public override string ToString()
+        {
+            string str = "독: " + PrintStar(poison) + Environment.NewLine+ "수면: " + PrintStar(Sleep) + Environment.NewLine + "마비: " + PrintStar(Paralysis) + Environment.NewLine + "폭파: " + PrintStar(Explosion) + Environment.NewLine + "기절: " + PrintStar(Faint);
+            return str;
+        }
+        private string PrintStar(int number)
+        {
+            string star = string.Empty;
+            if (number < 0)
+            {
+                for (int i = 0; i > number; number++)
+                {
+                    star += "X";
+                }
+            }
+            else
+            {
+                for (int i = 0; i < number; i++)
+                {
+                    star += "☆";
+                }
+            }
+            return star;
+        }
     }
 }
