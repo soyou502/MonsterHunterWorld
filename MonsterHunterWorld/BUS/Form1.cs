@@ -25,6 +25,7 @@ namespace MonsterHunterWorld.BUS
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.BackgroundImage = Image.FromFile(Application.StartupPath + @"\Images\FormMain.jpg");
         }
         private void label7_MouseMove(object sender, MouseEventArgs e)
         {
