@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-=======
             this.lblItems = new System.Windows.Forms.Label();
             this.lblArmors = new System.Windows.Forms.Label();
             this.lblMonsters = new System.Windows.Forms.Label();
@@ -41,20 +36,10 @@
             this.lblJewels = new System.Windows.Forms.Label();
             this.lblExit = new System.Windows.Forms.Label();
             this.lblSkillSimulator = new System.Windows.Forms.Label();
->>>>>>> 4ea595b8dffe0437ef9d0f3702eda0f64ddb9faa
             this.SuspendLayout();
             // 
             // lblItems
             // 
-<<<<<<< HEAD
-            this.button1.Location = new System.Drawing.Point(84, 50);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-=======
             this.lblItems.AutoSize = true;
             this.lblItems.BackColor = System.Drawing.Color.Transparent;
             this.lblItems.Font = new System.Drawing.Font("이순신 Regular", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -67,7 +52,6 @@
             this.lblItems.Click += new System.EventHandler(this.lblItems_Click);
             this.lblItems.MouseLeave += new System.EventHandler(this.label7_MouseLeave);
             this.lblItems.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label7_MouseMove);
->>>>>>> 4ea595b8dffe0437ef9d0f3702eda0f64ddb9faa
             // 
             // lblArmors
             // 
@@ -174,16 +158,6 @@
             this.lblSkillSimulator.MouseLeave += new System.EventHandler(this.label7_MouseLeave);
             this.lblSkillSimulator.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label7_MouseMove);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(660, 50);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "무기 도감";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -191,11 +165,6 @@
             this.BackgroundImage = global::MonsterHunterWorld.Properties.Resources._001;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-<<<<<<< HEAD
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-=======
             this.Controls.Add(this.lblSkillSimulator);
             this.Controls.Add(this.lblExit);
             this.Controls.Add(this.lblJewels);
@@ -205,7 +174,6 @@
             this.Controls.Add(this.lblArmors);
             this.Controls.Add(this.lblItems);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
->>>>>>> 4ea595b8dffe0437ef9d0f3702eda0f64ddb9faa
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -216,12 +184,6 @@
         }
 
         #endregion
-<<<<<<< HEAD
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-=======
         private System.Windows.Forms.Label lblItems;
         private System.Windows.Forms.Label lblArmors;
         private System.Windows.Forms.Label lblMonsters;
@@ -230,7 +192,6 @@
         private System.Windows.Forms.Label lblJewels;
         private System.Windows.Forms.Label lblExit;
         private System.Windows.Forms.Label lblSkillSimulator;
->>>>>>> 4ea595b8dffe0437ef9d0f3702eda0f64ddb9faa
     }
 }
 
