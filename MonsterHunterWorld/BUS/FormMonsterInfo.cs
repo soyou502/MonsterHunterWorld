@@ -27,6 +27,9 @@ namespace MonsterHunterWorld.BUS
 
         private void FormMonsterInfo_Load(object sender, EventArgs e)
         {
+            // 폼 띄우는 위치 윈도우 화면 정중앙
+            this.Location = new Point(Screen.PrimaryScreen.Bounds.Width / 2 - this.Size.Width / 2, Screen.PrimaryScreen.Bounds.Height / 2 - (this.Size.Height / 2) - 10);
+
             labMonsterName.Parent = picBar;
             labMonsterName.BackColor = Color.Transparent;
             labMonsterName.Text = monster.Nick + " " + monster.Name;
@@ -34,8 +37,7 @@ namespace MonsterHunterWorld.BUS
             picDropTab.ImageLocation = Application.StartupPath + @"\Images\소재정보.png";
             picCommentTab.ImageLocation = Application.StartupPath + @"\Images\나도한마디.png";
             this.BackColor = Color.White;
-            // 폼 띄우는 위치 윈도우 화면 정중앙
-            this.Location = new Point(Screen.PrimaryScreen.Bounds.Width / 2 - this.Size.Width / 2, Screen.PrimaryScreen.Bounds.Height / 2 - this.Size.Height / 2);
+
             dropItemSort();
 
             DAO.MonsterInfoHtmlDAO html = new DAO.MonsterInfoHtmlDAO();
@@ -187,6 +189,11 @@ namespace MonsterHunterWorld.BUS
         private void Form_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
+        }
+
+        private void gView_SelectionChanged(object sender, EventArgs e)
+        {
+            ((DataGridView)sender).ClearSelection();
         }
     }
 }

@@ -59,6 +59,7 @@
             this.gViewMonster.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gViewMonster_CellContentClick);
             this.gViewMonster.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gViewMonster_CellMouseEnter);
             this.gViewMonster.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.gViewMonster_CellMouseLeave);
+            this.gViewMonster.SelectionChanged += new System.EventHandler(this.gViewMonster_SelectionChanged);
             // 
             // FormMonster
             // 

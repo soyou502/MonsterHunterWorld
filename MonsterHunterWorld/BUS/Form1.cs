@@ -81,6 +81,9 @@ namespace MonsterHunterWorld.BUS
             //        }
             //    }
             //}
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("컬럼이름", typeof(ListView));
         }
 
 

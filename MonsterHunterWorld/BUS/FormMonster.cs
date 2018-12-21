@@ -236,5 +236,10 @@ namespace MonsterHunterWorld.BUS
 
             }
         }
+
+        private void gViewMonster_SelectionChanged(object sender, EventArgs e)
+        {
+            ((DataGridView)sender).ClearSelection();
+        }
     }
 }
