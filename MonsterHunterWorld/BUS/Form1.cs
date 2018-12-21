@@ -25,9 +25,6 @@ namespace MonsterHunterWorld.BUS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-           
-=======
         }
         private void label7_MouseMove(object sender, MouseEventArgs e)
         {
@@ -57,7 +54,6 @@ namespace MonsterHunterWorld.BUS
             FrmArmors armors = new FrmArmors();
             armors.Location = this.Location;
             armors.Show();
->>>>>>> 4ea595b8dffe0437ef9d0f3702eda0f64ddb9faa
         }
 
         private void lblMonsters_Click(object sender, EventArgs e)
