@@ -55,7 +55,10 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormJewel";
             this.Text = "FormJewel";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormJewel_FormClosed);
             this.Load += new System.EventHandler(this.FormJewel_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

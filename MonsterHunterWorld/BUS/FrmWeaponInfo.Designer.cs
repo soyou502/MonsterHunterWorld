@@ -385,6 +385,8 @@
             this.Name = "FrmWeaponInfo";
             this.Text = "무기상세정보";
             this.Load += new System.EventHandler(this.FrmWeaponInfo_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.weapon_pictur)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

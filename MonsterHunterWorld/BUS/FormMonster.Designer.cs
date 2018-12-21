@@ -67,7 +67,10 @@
             this.Controls.Add(this.gViewMonster);
             this.Name = "FormMonster";
             this.Text = "FormMonster";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMonster_FormClosed);
             this.Load += new System.EventHandler(this.FormMonster_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.gViewMonster)).EndInit();
             this.ResumeLayout(false);
 
