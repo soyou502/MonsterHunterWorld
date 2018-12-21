@@ -164,7 +164,11 @@
     <Compile Include="VO\Armors.cs" />
     <Compile Include="VO\ArmorSkill.cs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="VO\Cham.cs" />
+=======
+    <Compile Include="VO\Charm.cs" />
+>>>>>>> c8a2aedbdc29a3d7ebf9ae3d909a589ae7ad7f65
 =======
     <Compile Include="VO\Charm.cs" />
 >>>>>>> c8a2aedbdc29a3d7ebf9ae3d909a589ae7ad7f65
