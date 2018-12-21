@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace MonsterHunterWorld.VO
     public class Monster
     {
         private int idx; // 인덱스번호
-        private string image; // 이미지 주소
+        private Image image; // 이미지 주소
         private string gubun; // 구분
         private string name; // 이름
         private string nick; // 몬스터 별명
@@ -21,7 +22,7 @@ namespace MonsterHunterWorld.VO
         private IList<Drop_Item> drop_Item; // 드롭 아이템 정보
 
         public int Idx { get => idx; set => idx = value; }
-        public string Image { get => image; set => image = value; }
+        public Image Image { get => image; set => image = value; }
         public string Gubun { get => gubun; set => gubun = value; }
         public string Nick { get => nick; set => nick = value; }
         public string Description { get => description; set => description = value; }

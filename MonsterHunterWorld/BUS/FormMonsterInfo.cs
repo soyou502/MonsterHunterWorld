@@ -13,12 +13,24 @@ namespace MonsterHunterWorld.BUS
 {
     public partial class FormMonsterInfo : Form
     {
-        public FormMonsterInfo()
+        VO.Monster monster;
+        public FormMonsterInfo(VO.Monster monster)
         {
             InitializeComponent();
+            this.monster = monster;
         }
 
         private void FormMonsterInfo_Load(object sender, EventArgs e)
+        {
+            DAO.MonsterInfoHtmlDAO html = new DAO.MonsterInfoHtmlDAO();
+            gViewComment.DataSource = html.GetCommentTable(monster.Nick+monster.Name);
+            gViewCommentSetting();
+        }
+
+        /// <summary>
+        /// 코멘트 그리드뷰 기본설정값 세팅
+        /// </summary>
+        private void gViewCommentSetting()
         {
             gViewComment.AllowUserToAddRows = false;
             gViewComment.AllowUserToDeleteRows = false;
@@ -28,20 +40,25 @@ namespace MonsterHunterWorld.BUS
             gViewComment.MultiSelect = false;
             gViewComment.ReadOnly = true;
             gViewComment.RowHeadersVisible = false;
-            gViewComment.ColumnHeadersVisible = false;
+            //gViewComment.ColumnHeadersVisible = false;
+            gViewComment.Columns[0].HeaderText = "아이디";
 
-            DAO.MonsterInfoHtmlDAO html = new DAO.MonsterInfoHtmlDAO();
+            gViewComment.Columns[1].HeaderText = "코멘트";
+            gViewComment.Columns[2].HeaderText = "작성일";
 
-            
+            int rowHeight = gViewComment.Rows.GetRowsHeight(DataGridViewElementStates.Displayed);
+            int colWidth = gViewComment.Columns.GetColumnsWidth(DataGridViewElementStates.Displayed);
+            gViewComment.Size = new Size(colWidth, rowHeight);
 
-            HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlAgilityPack.HtmlDocument();
-            HtmlWeb web = new HtmlWeb();
-            string url = "http://mhf.inven.co.kr/dataninfo/mhw/monster?code=48";
-            htmlDoc = web.LoadFromBrowser(url);
-            HtmlNode root = htmlDoc.DocumentNode;
-            HtmlNodeCollection table = root.SelectSingleNode("//body/div/div").FirstChild.NextSibling.NextSibling.NextSibling.FirstChild.NextSibling.FirstChild.NextSibling.FirstChild.NextSibling.NextSibling.NextSibling.FirstChild.NextSibling.SelectNodes("div");
-
-            textBox1.Text = root.SelectSingleNode("//body/div/div").FirstChild.NextSibling.NextSibling.NextSibling.FirstChild.NextSibling.FirstChild.NextSibling.FirstChild.NextSibling.NextSibling.NextSibling.FirstChild.NextSibling.FirstChild.NextSibling.NextSibling.NextSibling.NextSibling.NextSibling.NextSibling.NextSibling.NextSibling.NextSibling.SelectNodes("div")[1].FirstChild.NextSibling.NextSibling.NextSibling.FirstChild.NextSibling.NextSibling.NextSibling.NextSibling.FirstChild.NextSibling.NextSibling.NextSibling.OuterHtml;
+            gViewComment.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            gViewComment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            gViewComment.Columns[0].Width = this.Size.Width / 5;
+            gViewComment.Columns[1].Width = this.Size.Width / 2;
+            gViewComment.Columns[2].Width = this.Size.Width / 10;
+            foreach (DataGridViewColumn column in gViewComment.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
         }
     }
 }

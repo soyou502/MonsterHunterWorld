@@ -103,7 +103,13 @@ namespace MonsterHunterWorld.BUS
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
+<<<<<<< HEAD
             mousePoint = new Point(e.X, e.Y);
+=======
+            //FormMonsterInfo form = new FormMonsterInfo();
+            //form.Owner = this;
+            //form.ShowDialog();
+>>>>>>> 93f2cf2ed4f929573aacbcbfc0998e800a32f7d5
         }
     }
 }
