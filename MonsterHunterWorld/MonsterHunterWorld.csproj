@@ -139,8 +139,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VO\Armors.cs" />
+    <Compile Include="VO\ArmorSkill.cs" />
     <Compile Include="VO\Cham.cs" />
     <Compile Include="VO\Debuff.cs" />
+    <Compile Include="VO\IGetListCollection.cs" />
     <Compile Include="VO\Material.cs" />
     <Compile Include="VO\SkillDesc.cs" />
     <Compile Include="VO\Drop_Item.cs" />

@@ -338,12 +338,7 @@ namespace MonsteHunterWorld
                     upgrade_price = Int32.Parse(obj["upgrade_price"].ToString()); // 업글비용 
                 }
                 // 제작정보
-
-
-                // 무기 기본 정보 데이터 저장
-                wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slots));
-
-
+                               
                 if (obj.ContainsKey("weakness"))
                 {
                     JToken elementalObj = obj["weakness"];
@@ -480,7 +475,7 @@ namespace MonsteHunterWorld
                     }
 
                 }
-
+            }
                 // 속성 정보 전달
                 foreach (var item in weList)
                 {
@@ -515,7 +510,7 @@ namespace MonsteHunterWorld
 
                 fwif.ShowDialog(); // 실행
             }
-        }
+
         /// <summary>
         /// 예리도 차트 ( 기본, 최종 예리도 )
         /// </summary>
@@ -658,128 +653,130 @@ namespace MonsteHunterWorld
             GetWeaponDate(("weapons/" + this.first_wtype));
 
             // 파싱조건
-            if (cheked_Build && cheked_Eelemental && cheked_SlotsLv && cheked_SlotsCount)
-            {
-                if (build_name == derivation && (elemental_Name == ele_name || elemental_Name == debuff_name))
-                {
-                    foreach (var Lv in slots_lv)
-                    {
-                        if (slot.Contains(Lv) && slot.Length == slots_count)
-                        {   // slot 에 해당 레벨이 있고 슬롯개수(길이) 가 Count 와 같으면
-                            imageList.Add(new Weapons_Image(idx, imageUri));
-                            wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
-                            wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
-                            weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
-                        }
-                    }
-                }
-            }
-            else if (cheked_Build && cheked_Eelemental && cheked_SlotsLv)
-            {
-                if (build_name == derivation && (elemental_Name == ele_name || elemental_Name == debuff_name))
-                {
-                    foreach (var Lv in slots_lv)
-                    {
-                        imageList.Add(new Weapons_Image(idx, imageUri));
-                        wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
-                        wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
-                        weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
-                    }
-                }
-            }
-            else if (cheked_Build && cheked_Eelemental)
-            {
-                if ((elemental_Name == ele_name || elemental_Name == debuff_name))
-                {
-                    // slot 에 해당 레벨이 있고 슬롯개수(길이) 가 Count 와 같으면
-                    imageList.Add(new Weapons_Image(idx, imageUri));
-                    wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
-                    wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
-                    weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
+            #region 조건 알고리즘 수정중
+            //if (cheked_Build && cheked_Eelemental && cheked_SlotsLv && cheked_SlotsCount)
+            //{
+            //    if (build_name == derivation && (elemental_Name == ele_name || elemental_Name == debuff_name))
+            //    {
+            //        foreach (var Lv in slots_lv)
+            //        {
+            //            if (slot.Contains(Lv) && slot.Length == slots_count)
+            //            {   // slot 에 해당 레벨이 있고 슬롯개수(길이) 가 Count 와 같으면
+            //                imageList.Add(new Weapons_Image(idx, imageUri));
+            //                wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
+            //                wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
+            //                weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
+            //            }
+            //        }
+            //    }
+            //}
+            //else if (cheked_Build && cheked_Eelemental && cheked_SlotsLv)
+            //{
+            //    if (build_name == derivation && (elemental_Name == ele_name || elemental_Name == debuff_name))
+            //    {
+            //        foreach (var Lv in slots_lv)
+            //        {
+            //            imageList.Add(new Weapons_Image(idx, imageUri));
+            //            wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
+            //            wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
+            //            weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
+            //        }
+            //    }
+            //}
+            //else if (cheked_Build && cheked_Eelemental)
+            //{
+            //    if ((elemental_Name == ele_name || elemental_Name == debuff_name))
+            //    {
+            //        // slot 에 해당 레벨이 있고 슬롯개수(길이) 가 Count 와 같으면
+            //        imageList.Add(new Weapons_Image(idx, imageUri));
+            //        wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
+            //        wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
+            //        weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
 
-                }
-            }
-            else if (cheked_Eelemental && cheked_SlotsLv && cheked_SlotsCount)
-            {
-                if (elemental_Name == ele_name || elemental_Name == debuff_name)
-                {
-                    foreach (var Lv in slots_lv)
-                    {
-                        if (slot.Contains(Lv) && slot.Length == slots_count)
-                        {
-                            //imageList
-                            //wbList
-                            //wcList
-                            //weList
-                        }
-                    }
-                }
-            }
-            else if (cheked_Eelemental && cheked_SlotsLv)
-            {
-                if (elemental_Name == ele_name || elemental_Name == debuff_name)
+            //    }
+            //}
+            //else if (cheked_Eelemental && cheked_SlotsLv && cheked_SlotsCount)
+            //{
+            //    if (elemental_Name == ele_name || elemental_Name == debuff_name)
+            //    {
+            //        foreach (var Lv in slots_lv)
+            //        {
+            //            if (slot.Contains(Lv) && slot.Length == slots_count)
+            //            {
+            //                //imageList
+            //                //wbList
+            //                //wcList
+            //                //weList
+            //            }
+            //        }
+            //    }
+            //}
+            //else if (cheked_Eelemental && cheked_SlotsLv)
+            //{
+            //    if (elemental_Name == ele_name || elemental_Name == debuff_name)
 
-                {
-                    foreach (var Lv in slots_lv)
-                    {
+            //    {
+            //        foreach (var Lv in slots_lv)
+            //        {
 
 
-                    }
-                }
-            }
-            else if (cheked_SlotsLv && cheked_SlotsCount)
-            {
-                foreach (var Lv in slots_lv)
-                {
-                    if (slot.Contains(Lv) && slot.Length == slots_count)
-                    {   // slot 에 해당 레벨이 있고 슬롯개수(길이) 가 Count 와 같으면
-                        imageList.Add(new Weapons_Image(idx, imageUri));
-                        wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
-                        wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
-                        weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
-                    }
-                }
-            }
-            else if (cheked_Build || cheked_Eelemental || cheked_SlotsLv || cheked_SlotsCount)
-            {
-                if (build_name == derivation)
-                {
-                    imageList.Add(new Weapons_Image(idx, imageUri));
-                    wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
-                    wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
-                    weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
-                }
-                else if (elemental_Name == ele_name || elemental_Name == debuff_name)
-                {
-                    imageList.Add(new Weapons_Image(idx, imageUri));
-                    wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
-                    wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
-                    weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
-                }
-                else if (cheked_SlotsLv)
-                {
-                    foreach (var Lv in slots_lv)
-                    {
-                        imageList.Add(new Weapons_Image(idx, imageUri));
-                        wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
-                        wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
-                        weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
-                    }
-                }
-                else if (cheked_SlotsCount)
-                {
-                    if (slot.Length == slots_count)
-                    {
-                        imageList.Add(new Weapons_Image(idx, imageUri));
-                        wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
-                        wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
-                        weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
-                    }
-                }
-            }
-            else
-            {
-            }
+            //        }
+            //    }
+            //}
+            //else if (cheked_SlotsLv && cheked_SlotsCount)
+            //{
+            //    foreach (var Lv in slots_lv)
+            //    {
+            //        if (slot.Contains(Lv) && slot.Length == slots_count)
+            //        {   // slot 에 해당 레벨이 있고 슬롯개수(길이) 가 Count 와 같으면
+            //            imageList.Add(new Weapons_Image(idx, imageUri));
+            //            wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
+            //            wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
+            //            weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
+            //        }
+            //    }
+            //}
+            //else if (cheked_Build || cheked_Eelemental || cheked_SlotsLv || cheked_SlotsCount)
+            //{
+            //    if (build_name == derivation)
+            //    {
+            //        imageList.Add(new Weapons_Image(idx, imageUri));
+            //        wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
+            //        wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
+            //        weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
+            //    }
+            //    else if (elemental_Name == ele_name || elemental_Name == debuff_name)
+            //    {
+            //        imageList.Add(new Weapons_Image(idx, imageUri));
+            //        wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
+            //        wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
+            //        weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
+            //    }
+            //    else if (cheked_SlotsLv)
+            //    {
+            //        foreach (var Lv in slots_lv)
+            //        {
+            //            imageList.Add(new Weapons_Image(idx, imageUri));
+            //            wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
+            //            wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
+            //            weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
+            //        }
+            //    }
+            //    else if (cheked_SlotsCount)
+            //    {
+            //        if (slot.Length == slots_count)
+            //        {
+            //            imageList.Add(new Weapons_Image(idx, imageUri));
+            //            wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
+            //            wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
+            //            weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //} 
+            #endregion
 
             GetDurability(DurabilityJSON());
         }
