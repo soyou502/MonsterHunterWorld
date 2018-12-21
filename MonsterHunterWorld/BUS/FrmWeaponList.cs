@@ -335,7 +335,12 @@ namespace MonsteHunterWorld
                 }
                 // 제작정보
 
+<<<<<<< HEAD
                 // 속성정보, 디버프정보
+=======
+                    // 무기 기본 정보 데이터 저장
+                    wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slots));
+>>>>>>> 68cad1807c3971104767a057c4c16bc13ef31fea
 
                 if (obj.ContainsKey("weakness"))
                 {
@@ -449,8 +454,14 @@ namespace MonsteHunterWorld
                     }
                     else
                     {
+<<<<<<< HEAD
                         fwif.lbl_Slots.Text = item.Slot.ToString();
                     }
+=======
+                        MessageBox.Show("Test");
+                    }
+                    #endregion
+>>>>>>> 68cad1807c3971104767a057c4c16bc13ef31fea
 
                     fwif.lbl_der.Text = wcList[select_idx].Derivation.ToString();
                 }
@@ -828,6 +839,7 @@ namespace MonsteHunterWorld
             }
         }
 
+<<<<<<< HEAD
         private void chk_slotsCount_3_Click(object sender, EventArgs e)
         {
             if (chk_slotsCount_All.Checked == ((CheckBox)sender).Checked)
@@ -869,5 +881,32 @@ namespace MonsteHunterWorld
                 MessageBox.Show("무기종류를 먼저 선택해주세요.");
             }
         }
+=======
+        /* //  메모용 
+        //기본정보
+        무기번호
+        이름
+        레어도
+        공격력
+        방어력
+        회심률
+        슬롯
+
+        //속성정보
+        무기번호
+        속성이름
+        속성수치
+        상태이상이름
+        상태이상수치
+
+        // 제작정보
+                무기번호
+        이미지
+        소재파생
+        제작가능여부
+        제작비용
+        업글비용
+        */ 
+>>>>>>> 68cad1807c3971104767a057c4c16bc13ef31fea
     }
 }
