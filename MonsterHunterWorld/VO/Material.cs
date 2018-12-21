@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MonsterHunterWorld.VO
 {
-    class Material
+    public class Material
     {
         private string name;
         private int count;

@@ -29,10 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
             this.btn_InpoShow = new System.Windows.Forms.Button();
             this.pictur_weapon = new System.Windows.Forms.PictureBox();
             this.weapon_data_View = new System.Windows.Forms.DataGridView();
             this.weapon_tree = new System.Windows.Forms.TreeView();
+=======
+            this.waepon_data = new System.Windows.Forms.DataGridView();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+>>>>>>> 4ea595b8dffe0437ef9d0f3702eda0f64ddb9faa
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_GreatSword = new System.Windows.Forms.Button();
             this.btn_tachi = new System.Windows.Forms.Button();
@@ -81,6 +86,7 @@
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
+<<<<<<< HEAD
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -104,6 +110,12 @@
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+=======
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.waepon_data)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+>>>>>>> 4ea595b8dffe0437ef9d0f3702eda0f64ddb9faa
             this.SuspendLayout();
             // 
             // panel1
@@ -117,6 +129,7 @@
             this.panel1.Size = new System.Drawing.Size(1213, 322);
             this.panel1.TabIndex = 0;
             // 
+<<<<<<< HEAD
             // btn_InpoShow
             // 
             this.btn_InpoShow.Location = new System.Drawing.Point(406, 269);
@@ -155,6 +168,23 @@
             this.weapon_tree.Name = "weapon_tree";
             this.weapon_tree.Size = new System.Drawing.Size(381, 316);
             this.weapon_tree.TabIndex = 1;
+=======
+            // waepon_data
+            // 
+            this.waepon_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.waepon_data.Location = new System.Drawing.Point(584, 3);
+            this.waepon_data.Name = "waepon_data";
+            this.waepon_data.RowTemplate.Height = 23;
+            this.waepon_data.Size = new System.Drawing.Size(459, 316);
+            this.waepon_data.TabIndex = 2;
+            // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(6, 3);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(572, 316);
+            this.treeView1.TabIndex = 1;
+>>>>>>> 4ea595b8dffe0437ef9d0f3702eda0f64ddb9faa
             // 
             // flowLayoutPanel1
             // 
@@ -730,6 +760,7 @@
             this.radioButton3.UseVisualStyleBackColor = true;
             this.radioButton3.Click += new System.EventHandler(this.rdio_Elemental_All_Click);
             // 
+<<<<<<< HEAD
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
@@ -893,6 +924,8 @@
             this.groupBox3.TabIndex = 43;
             this.groupBox3.TabStop = false;
             // 
+=======
+>>>>>>> 4ea595b8dffe0437ef9d0f3702eda0f64ddb9faa
             // FrmWeaponList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -913,6 +946,7 @@
             this.Text = "FrmWeaponList";
             this.Load += new System.EventHandler(this.FrmWeaponList_Load);
             this.panel1.ResumeLayout(false);
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.pictur_weapon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.weapon_data_View)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -924,6 +958,10 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.waepon_data)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+>>>>>>> 4ea595b8dffe0437ef9d0f3702eda0f64ddb9faa
             this.ResumeLayout(false);
             this.PerformLayout();
 

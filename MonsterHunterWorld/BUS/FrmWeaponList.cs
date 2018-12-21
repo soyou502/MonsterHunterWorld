@@ -79,6 +79,7 @@ namespace MonsteHunterWorld
 
         private void FrmWeaponList_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             pictur_weapon.SizeMode = PictureBoxSizeMode.Zoom;
 
             chk_slotsLevel_All.Checked = true;
@@ -143,6 +144,9 @@ namespace MonsteHunterWorld
         // 해외사이트 검색용으로 조건문들이 늘어남
         private string weapon_if(object sender, string type)
         {
+=======
+
+>>>>>>> 4ea595b8dffe0437ef9d0f3702eda0f64ddb9faa
 
             if (this.btn.Text == "대검" || first_wtype == "대검")
             {
@@ -202,6 +206,7 @@ namespace MonsteHunterWorld
             }
         }
 
+<<<<<<< HEAD
         #region 예리도데이터구하기
         private void GetDurability(string djson)
         {
@@ -216,6 +221,11 @@ namespace MonsteHunterWorld
                     for (int i = 0; i < item["durability"].Count(); i++)
                     {
                         JToken first_jtok = item["durability"][0];  // 처음 예리도
+=======
+
+
+
+>>>>>>> 4ea595b8dffe0437ef9d0f3702eda0f64ddb9faa
 
                         int red = Int32.Parse(first_jtok["red"].ToString());
                         int orange = Int32.Parse(first_jtok["orange"].ToString());
@@ -437,6 +447,7 @@ namespace MonsteHunterWorld
             {
                 if (item.Idx == wbList[select_idx].Idx)
                 {
+<<<<<<< HEAD
                     fwif.lbl_type.Text = weapon_button_name;
                     fwif.lbl_name.Text = item.WeaponName;
                     fwif.lbl_att.Text = item.Attack.ToString();
@@ -489,6 +500,28 @@ namespace MonsteHunterWorld
                 {
                     fwif.lbl_ele.Text = "없습니다";
                     fwif.lbl_eleValue.Visible = false;
+=======
+                    //wlist.Add(new WeaponList() {
+                    //ImgUri = item["icon"].ToString(),  // 이미지
+                    //WeaponName = item["name"].ToString(), // 무기이름
+                    //Rare = Int32.Parse(item["rare"].ToString()), // 레어도
+                    //Attack = Int32.Parse(item["attack"].ToString()),// 공격력
+                    //Defence = Int32.Parse(item["defense"].ToString()),// 방어력
+                    //Critical = Int32.Parse(item["critical"].ToString()),// 회심률
+                    //Slot = item["slots"].ToString(), // 슬롯수
+                    //Derivation = item["derivation"].ToString(),// 소재파생
+                    //                                           //  
+                    //Elmental_name = item["weakness"].ToString(), // 속성이름
+                    // Elmental_value = Int32.Parse(item["value"].ToString()), // 속성수치 
+
+                    // // 상태이상
+                    // Debuff_type = item["name"].ToString(), // 상태이상 이름
+                    // Debuff_value = Int32.Parse(item["name"].ToString()), // 상태이상 수치
+                    // Con_make = bool.Parse(item["name"].ToString()), // 생산 여부
+                    // Make_price = Int32.Parse(item["name"].ToString()), // 생산 비용
+                    // Upgrade_price = Int32.Parse(item["name"].ToString()), // 업그레이드 비용
+                    //});
+>>>>>>> 4ea595b8dffe0437ef9d0f3702eda0f64ddb9faa
                 }
             }
             // 디버프 정보 전달
@@ -781,6 +814,7 @@ namespace MonsteHunterWorld
 
         private void chk_slotsLevel_3_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (((CheckBox)sender).Name.Contains("All"))
             {   // 현재 체크한게 ALL 체크박스면 실행
                 
@@ -837,6 +871,9 @@ namespace MonsteHunterWorld
 
                 MessageBox.Show("무기종류를 먼저 선택해주세요.");
             }
+=======
+            GetWeaponDate(("weapons/" + ((Button)sender).Text));
+>>>>>>> 4ea595b8dffe0437ef9d0f3702eda0f64ddb9faa
         }
 
 <<<<<<< HEAD
