@@ -204,7 +204,7 @@ namespace MonsterHunterWorld.BUS
 
         private void gViewMonster_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
-            if (IsValidCellAddress(e.RowIndex, e.ColumnIndex) && (e.ColumnIndex == 0 || e.ColumnIndex == 1 || e.ColumnIndex == 2))
+            if (IsValidCellAddress(e.RowIndex, e.ColumnIndex) && e.ColumnIndex == 0)
             {
                 gViewMonster.Cursor = Cursors.Hand;
                 //monsterInfoToolTip.Show(gViewMonster.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString(),);
@@ -213,9 +213,27 @@ namespace MonsterHunterWorld.BUS
 
         private void gViewMonster_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
-            if (IsValidCellAddress(e.RowIndex, e.ColumnIndex) && (e.ColumnIndex == 0 || e.ColumnIndex == 1 || e.ColumnIndex == 2))
+            if (IsValidCellAddress(e.RowIndex, e.ColumnIndex) && e.ColumnIndex == 0)
             {
                 gViewMonster.Cursor = Cursors.Default;
+            }
+        }
+
+        private void gViewMonster_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 0)
+            {
+                int index = Convert.ToInt32(gViewMonster.Rows[e.RowIndex].Cells["Idx"].Value);
+                foreach (var item in GetListCollection())
+                {
+                    if (item.Idx == index)
+                    {
+                        FormMonsterInfo monsterInfo = new FormMonsterInfo(item);
+                        monsterInfo.ShowDialog();
+                        return;
+                    }
+                }
+
             }
         }
     }

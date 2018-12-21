@@ -68,6 +68,19 @@ namespace MonsterHunterWorld.BUS
             //    }
             //    textBox1.Text += "\r\n";
             //}
+
+            // 몬스터 드랍아이템 획득방법종류뽑기
+            //FormMonster form = new FormMonster();
+            //foreach (var item in form.GetListCollection())
+            //{
+            //    foreach (var subitem in item.Drop_Item)
+            //    {
+            //        if (!textBox1.Text.Contains(subitem.Part))
+            //        {
+            //            textBox1.Text += subitem.Part + "\r\n";
+            //        }
+            //    }
+            //}
         }
 
 
@@ -95,9 +108,9 @@ namespace MonsterHunterWorld.BUS
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //FormMonsterInfo form = new FormMonsterInfo();
-            //form.Owner = this;
-            //form.ShowDialog();
+            FormMonsterInfo form = new FormMonsterInfo(new VO.Monster());
+            form.Owner = this;
+            form.ShowDialog();
         }
     }
 }

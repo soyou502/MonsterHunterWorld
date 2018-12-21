@@ -56,6 +56,7 @@
             this.gViewMonster.RowTemplate.Height = 23;
             this.gViewMonster.Size = new System.Drawing.Size(800, 538);
             this.gViewMonster.TabIndex = 0;
+            this.gViewMonster.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gViewMonster_CellContentClick);
             this.gViewMonster.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gViewMonster_CellMouseEnter);
             this.gViewMonster.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.gViewMonster_CellMouseLeave);
             // 

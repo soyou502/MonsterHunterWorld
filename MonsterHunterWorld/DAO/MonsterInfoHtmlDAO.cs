@@ -10,6 +10,7 @@ namespace MonsterHunterWorld.DAO
 {
     class MonsterInfoHtmlDAO
     {
+        public HtmlAgilityPack.HtmlDocument htmlInfoDoc;
         private HtmlDocument GetHtmlDoc()
         {
             HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlAgilityPack.HtmlDocument();
@@ -20,11 +21,11 @@ namespace MonsterHunterWorld.DAO
         }
         private HtmlDocument GetHtmlDoc(string name)
         {
-            HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlAgilityPack.HtmlDocument();
+            htmlInfoDoc = new HtmlAgilityPack.HtmlDocument();
             HtmlWeb web = new HtmlWeb();
             string url = "http://mhf.inven.co.kr/dataninfo/mhw/monster" + GetCodeString(name);
-            htmlDoc = web.LoadFromBrowser(url);
-            return htmlDoc;
+            htmlInfoDoc = web.LoadFromBrowser(url);
+            return htmlInfoDoc;
         }
 
         /// <summary>
@@ -93,6 +94,12 @@ namespace MonsterHunterWorld.DAO
             }
 
             return dt;
+        }
+        public string GetInfoImageString()
+        {
+            HtmlNode root = htmlInfoDoc.DocumentNode;
+            string imageStr = root.SelectSingleNode("//body/div/div").FirstChild.NextSibling.NextSibling.NextSibling.SelectSingleNode("div/div").FirstChild.NextSibling.NextSibling.NextSibling.FirstChild.NextSibling.FirstChild.NextSibling.NextSibling.NextSibling.FirstChild.NextSibling.GetAttributeValue("src","");
+            return imageStr;
         }
     }
 }
