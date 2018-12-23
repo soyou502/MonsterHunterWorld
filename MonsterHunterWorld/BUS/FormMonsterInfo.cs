@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using MonsteHunterWorld;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -194,6 +195,42 @@ namespace MonsterHunterWorld.BUS
         private void gView_SelectionChanged(object sender, EventArgs e)
         {
             ((DataGridView)sender).ClearSelection();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void gViewDropItem_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 2)
+            {
+                FrmItemInfo form = new FrmItemInfo(gViewDropItem.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString(),this);
+                form.ShowDialog();
+            }
+        }
+
+        private void gViewDropItem_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (IsValidCellAddress(e.RowIndex, e.ColumnIndex) && e.ColumnIndex == 2)
+            {
+                gViewDropItem.Cursor = Cursors.Hand;
+            }
+        }
+
+        private bool IsValidCellAddress(int rowIndex, int columnIndex)
+        {
+            return rowIndex >= 0 && rowIndex < gViewDropItem.RowCount &&
+        columnIndex >= 0 && columnIndex <= gViewDropItem.ColumnCount;
+        }
+
+        private void gViewDropItem_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            if (IsValidCellAddress(e.RowIndex, e.ColumnIndex) && e.ColumnIndex == 2)
+            {
+                gViewDropItem.Cursor = Cursors.Default;
+            }
         }
     }
 }

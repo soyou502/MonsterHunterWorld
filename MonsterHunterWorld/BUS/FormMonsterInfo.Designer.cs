@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gViewComment = new System.Windows.Forms.DataGridView();
             this.picDetailMonster = new System.Windows.Forms.PictureBox();
             this.gViewDropItem = new System.Windows.Forms.DataGridView();
@@ -37,6 +37,7 @@
             this.labMonsterName = new System.Windows.Forms.Label();
             this.picDropTab = new System.Windows.Forms.PictureBox();
             this.picCommentTab = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gViewComment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDetailMonster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gViewDropItem)).BeginInit();
@@ -47,27 +48,28 @@
             // 
             // gViewComment
             // 
+            this.gViewComment.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gViewComment.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.gViewComment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gViewComment.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gViewComment.Location = new System.Drawing.Point(0, 841);
             this.gViewComment.Name = "gViewComment";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gViewComment.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gViewComment.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gViewComment.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gViewComment.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.gViewComment.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.gViewComment.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gViewComment.RowTemplate.Height = 23;
@@ -87,9 +89,10 @@
             // 
             // gViewDropItem
             // 
-            this.gViewDropItem.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gViewDropItem.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.gViewDropItem.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.gViewDropItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gViewDropItem.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gViewDropItem.DefaultCellStyle = dataGridViewCellStyle8;
             this.gViewDropItem.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.gViewDropItem.Location = new System.Drawing.Point(0, 510);
             this.gViewDropItem.Name = "gViewDropItem";
@@ -97,6 +100,9 @@
             this.gViewDropItem.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.gViewDropItem.Size = new System.Drawing.Size(710, 286);
             this.gViewDropItem.TabIndex = 3;
+            this.gViewDropItem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gViewDropItem_CellClick);
+            this.gViewDropItem.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gViewDropItem_CellMouseEnter);
+            this.gViewDropItem.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.gViewDropItem_CellMouseLeave);
             this.gViewDropItem.SelectionChanged += new System.EventHandler(this.gView_SelectionChanged);
             // 
             // picBar
@@ -142,12 +148,25 @@
             this.picCommentTab.TabIndex = 7;
             this.picCommentTab.TabStop = false;
             // 
+            // btnClose
+            // 
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Font = new System.Drawing.Font("문체부 제목 돋음체", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnClose.Location = new System.Drawing.Point(676, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(34, 30);
+            this.btnClose.TabIndex = 8;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FormMonsterInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(710, 1000);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.picCommentTab);
             this.Controls.Add(this.picDropTab);
             this.Controls.Add(this.labMonsterName);
@@ -182,5 +201,6 @@
         private System.Windows.Forms.Label labMonsterName;
         private System.Windows.Forms.PictureBox picDropTab;
         private System.Windows.Forms.PictureBox picCommentTab;
+        private System.Windows.Forms.Button btnClose;
     }
 }

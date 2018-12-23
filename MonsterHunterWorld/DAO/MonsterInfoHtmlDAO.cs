@@ -61,36 +61,43 @@ namespace MonsterHunterWorld.DAO
             dt.Columns.Add("Comment");
             dt.Columns.Add("Date");
 
-            foreach (var item in table)
+            try
             {
-                if (item.Attributes["class"].Value != "form")
+                foreach (var item in table)
                 {
-                    string nickName = String.Empty;
-                    string comment = String.Empty;
-                    string date = String.Empty;
-                    if (item.Attributes["class"].Value != "item")
+                    if (item.Attributes["class"].Value != "form")
                     {
-                        nickName = "└>   ";
-                    }
-                    HtmlNode ht = item.SelectSingleNode("td");
-                    //ht.SelectSingleNode("span/span").FirstChild.Attributes["class"]
-                    if (ht.SelectSingleNode("span/span").FirstChild.Attributes["class"] != null)
-                    {
-                        continue;
-                    }
-                    // 아이디 뽑기
-                    nickName += ht.SelectSingleNode("span/span/a/span").InnerText;
-                    // 코멘트 뽑기
-                    comment += ht.NextSibling.SelectSingleNode("span/span").InnerText;
-                    // 날짜 뽑기
-                    date = ht.NextSibling.NextSibling.SelectSingleNode("span/span").InnerText;
+                        string nickName = String.Empty;
+                        string comment = String.Empty;
+                        string date = String.Empty;
+                        if (item.Attributes["class"].Value != "item")
+                        {
+                            nickName = "└>   ";
+                        }
+                        HtmlNode ht = item.SelectSingleNode("td");
+                        //ht.SelectSingleNode("span/span").FirstChild.Attributes["class"]
+                        if (ht.SelectSingleNode("span/span").FirstChild.Attributes["class"] != null)
+                        {
+                            continue;
+                        }
+                        // 아이디 뽑기
+                        nickName += ht.SelectSingleNode("span/span/a/span").InnerText;
+                        // 코멘트 뽑기
+                        comment += ht.NextSibling.SelectSingleNode("span/span").InnerText;
+                        // 날짜 뽑기
+                        date = ht.NextSibling.NextSibling.SelectSingleNode("span/span").InnerText;
 
-                    DataRow row = dt.NewRow();
-                    row["NickName"] = nickName;
-                    row["Comment"] = comment;
-                    row["Date"] = date;
-                    dt.Rows.Add(row);
+                        DataRow row = dt.NewRow();
+                        row["NickName"] = nickName;
+                        row["Comment"] = comment;
+                        row["Date"] = date;
+                        dt.Rows.Add(row);
+                    }
                 }
+            }
+            catch (Exception)
+            {
+                dt = GetCommentTable(name);
             }
 
             return dt;

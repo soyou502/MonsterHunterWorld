@@ -24,16 +24,27 @@ namespace MonsterHunterWorld.BUS
         }
         private void FormSkillInfo_Load(object sender, EventArgs e)
         {
-            //this.Location = this.Owner.Location;
             labSkillName.Text = skill.Name;
-            label1.Text = "";
-            label1.Location = new Point(label1.Location.X+skill.Name.Length*8, label1.Location.Y);
+            labSkillDesc.Text = "";
+            labSkillName.Parent = picMenu;
+            labSkillName.BackColor = Color.Transparent;
+            bool check = true;
             foreach (var item in skill.Desc)
             {
-                label1.Text += item.Name+": "+item.Desc+"\n";
+                if (check)
+                {
+                    this.Width += item.Desc.Length*3;
+                    picMenu.Width = this.Width;
+                    btnClose.Location = new Point(this.Width - 30, 0);
+                    check = false;
+                }
+                this.Height += 14;
+                labSkillDesc.Text += item.Name+": "+item.Desc+"\n";
             }
         }
         private Point mousePoint;
+        private bool mouseDown;
+        private Point lastLocation;
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -47,6 +58,33 @@ namespace MonsterHunterWorld.BUS
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
             mousePoint = new Point(e.X, e.Y);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void picMenu_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void picMenu_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+
+                this.Update();
+            }
+        }
+
+        private void picMenu_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
         }
     }
 }
