@@ -67,8 +67,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 538);
             this.Controls.Add(this.gViewMonster);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormMonster";
-            this.Text = "FormMonster";
+            this.ShowIcon = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.Text = "몬스터 정보";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMonster_FormClosed);
             this.Load += new System.EventHandler(this.FormMonster_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
