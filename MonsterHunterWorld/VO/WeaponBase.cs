@@ -37,8 +37,22 @@ namespace MonsterHunterWorld.VO
             Defence = defence;
             Critical = critical;
             Slot = slot;
-        } 
+        }
+
+        public WeaponBase(int idx, string weaponName, int rare, int attack, int defence, int critical, string slot, string specal_type)
+        {
+            Idx = idx;
+            WeaponName = weaponName;
+            Rare = rare;
+            Attack = attack;
+            Defence = defence;
+            Critical = critical;
+            Slot = slot;
+            Specal_type = specal_type;
+        }
         #endregion
+
+
 
         public int Idx { get => idx; set => idx = value; }
         public string WeaponName { get => weaponName; set => weaponName = value; }
@@ -47,5 +61,7 @@ namespace MonsterHunterWorld.VO
         public int Defence { get => defence; set => defence = value; }
         public int Critical { get => critical; set => critical = value; }
         public string Slot { get => slot; set => slot = value; }
+        public string Specal_type { get => specal_type; set => specal_type = value; }
+        public string Melody { get => melody; set => melody = value; }
     }
 }

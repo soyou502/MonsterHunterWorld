@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MonsterHunterWorld.VO
-{//
+{   // 합본
     class WeaponCreate
     {
         private string weapon_name; // 무기이름
@@ -13,6 +13,15 @@ namespace MonsterHunterWorld.VO
         private string derivation; // 소재파생
         private int make_price; // 제작비용
         private int upgrade_price; // 업글비용
+
+
+        public WeaponCreate(string weapon_name, bool con_make, int make_price, string derivation)
+        {
+            Weapon_name = weapon_name;
+            Con_make = con_make;
+            Derivation = derivation;
+            Make_price = make_price;
+        }
 
         public WeaponCreate(string weapon_name, bool con_make, int make_price, int upgrade_price, string derivation)
         {

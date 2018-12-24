@@ -23,6 +23,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace MonsteHunterWorld
 {
+    // 통합본
     public partial class FrmWeaponList : Form
     {
         FrmWeaponInfo fwif;
@@ -36,14 +37,17 @@ namespace MonsteHunterWorld
         List<Weapons_Durability> duaList = new List<Weapons_Durability>(); // 예리도
         List<Weapons_Image> imageList = new List<Weapons_Image>(); // 이미지
 
+        // 조건 저장용 리스트
+        List<WeaponBase> if_wbList = new List<WeaponBase>(); // 기본정보
+
+
         private int make_price; // 제작비용
         private int upgrade_price; // 업글 비용
         private string weapon_type; // 무기종류(영문)
         private string weapon_button_name; // 무기이름
         private string first_wtype; // 첫실행시 무기타입
-        private string current_name; // 선택한 셀 인덱스
         private string build_name; // 파생트리 이름 저장용
-        private string[] slots_lv = new string[3]; // 슬롯 레벨
+        private int slots_lv; // 슬롯 레벨
         private int slots_count; // 슬롯 수
 
         private bool cheked_weapon = true; // 무기버튼 체크
@@ -55,21 +59,9 @@ namespace MonsteHunterWorld
         private int select_idx; // 데이터 그리드뷰 행 선택 인덱스
 
         private string elemental_Name;  // 이벤트용 속성이름
-        private string ele_name;      // 파싱용 속성이름
-        private int elemental_value; // 속성수치
-        private string debuff_name; // 디버프이름
-        private int debuff_value; // 디버프 수치
         private string select_name; // 그리드뷰 선택한 행의 무기 이름
+        private string sp_type; // 스페셜 타입
 
-        /*
-         1. 예리도 파싱 // FrmWeaponsInfo 에 넘겨줄 데이터 파싱
-         2. 속성 조건문 넣기  // ALL 구분하기
-         3. 파생트리 조건문 넣기 ( 속성처럼 체인지드 이벤트 )
-         4. 이름 조건문 넣기 ( 체인지드 이벤트 )
-         5. 그리드 뷰 행 클릭 이벤트 -> FrmWeaponsInfo 출력 -> 선택한 무기 상세정보 조회 ( 예리도, 재료 포함 ) // 새로 파싱
-         // (파싱) 무기명 검색 uri = @"http://www.mhwdb.kr/apis/weapons/건랜스";
-         */
-        // 후딱 끝내고 호석 파싱하러 가야돼
 
         public FrmWeaponList()
         {
@@ -141,6 +133,273 @@ namespace MonsteHunterWorld
 
             ScreenButton();
         }
+
+        private void ScreenButton2()
+        {   // wbList 조건문
+            // 체크포인트1
+            if_wbList.Clear();
+            if (cheked_Build && (cheked_SlotsCount || cheked_SlotsLv))
+            {
+                for (int i = 0; i < wbList.Count; i++)
+                {
+                    for (int j = 0; j < wcList.Count; j++)
+                    {
+                        if (wcList[i].Derivation.Contains(build_name))
+                        {
+                            string wp_name = wcList[i].Weapon_name;
+                            if (slots_count == 1)
+                            {
+                                if (wbList[i].Slot.Length == 1)
+                                {
+                                    if (wbList[i].Slot.Contains(slots_lv.ToString()) && wbList[j].WeaponName == wp_name)
+                                    {
+                                        if_wbList.Add(wbList[i]);
+                                    }
+                                }
+                            }
+                        }
+                        else if (wcList[i].Derivation.Contains(build_name))
+                        {
+                            string wp_name = wcList[i].Weapon_name;
+                            if (slots_count == 2)
+                            {
+                                if (wbList[i].Slot.Length == 2)
+                                {
+                                    if (wbList[i].Slot.Contains(slots_lv.ToString()) && wbList[j].WeaponName == wp_name)
+                                    {
+                                        if_wbList.Add(wbList[i]);
+                                    }
+                                }
+                            }
+                        }
+                        else if (wcList[i].Derivation.Contains(build_name))
+                        {
+                            string wp_name = wcList[i].Weapon_name;
+                            if (slots_count == 3)
+                            {
+                                if (wbList[i].Slot.Length == 3)
+                                {
+                                    if (wbList[i].Slot.Contains(slots_lv.ToString()) && wbList[j].WeaponName == wp_name)
+                                    {
+                                        if_wbList.Add(wbList[i]);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            else if (cheked_SlotsCount && cheked_SlotsLv)
+            {   // 슬롯 수 + 레벨
+                for (int i = 0; i < wbList.Count; i++)
+                {
+                    if (slots_count == 1)
+                    {
+                        if (wbList[i].Slot.Length == 1)
+                        {
+                            if (wbList[i].Slot.Contains(slots_lv.ToString()))
+                            {
+                                if_wbList.Add(wbList[i]);
+                            }
+                        }
+                    }
+                    else if (slots_count == 2)
+                    {
+                        if (wbList[i].Slot.Length == 2)
+                        {
+                            if (wbList[i].Slot.Contains(slots_lv.ToString()))
+                            {
+                                if_wbList.Add(wbList[i]);
+                            }
+
+                        }
+                    }
+                    else if (slots_count == 3)
+                    {
+                        if (wbList[i].Slot.Length == 3)
+                        {
+                            if (wbList[i].Slot.Contains(slots_lv.ToString()))
+                            {
+                                if_wbList.Add(wbList[i]);
+                            }
+                        }
+                    }
+                }
+            }
+            else if (cheked_Eelemental && cheked_Build)
+            { //속성+파생
+                for (int i = 0; i < weList.Count; i++)
+                {
+                    if (weList[i].Elmental_name == elemental_Name)
+                    {   // 속성
+                        int ele_idx = weList[i].Idx; // 속성 dix
+
+                            foreach (var wb in wbList)
+                            {
+                                if (wb.Idx == ele_idx)
+                                {
+                                    foreach (var wc in wcList)
+                                    {
+                                        if (wc.Weapon_name == build_name)
+                                        {
+                                            if (wb.WeaponName == wc.Weapon_name)
+                                            {
+                                                if_wbList.Add(wb);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                    }
+                }
+
+                for (int i = 0; i < wdList.Count; i++)
+                {
+                    if (wdList[i].Debuff_type == elemental_Name)
+                    {   // 속성
+                        int ele_idx = weList[i].Idx; // 속성 dix
+
+                        foreach (var item in wcList)
+                        {
+                            if (item.Weapon_name == build_name) // 파생 무기이름
+                            {
+                                string wp_name = item.Weapon_name;
+                                for (int j = 0; j < wbList.Count(); j++)
+                                {
+                                    if (wbList[j].Idx == ele_idx && wbList[j].WeaponName == wp_name)
+                                    {
+                                        if_wbList.Add(wbList[j]);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else if (cheked_Eelemental || cheked_Build || cheked_SlotsCount || cheked_SlotsLv)
+            {
+                if (cheked_Eelemental) // 속성 조건 검색
+                {
+                    for (int i = 0; i < weList.Count; i++)
+                    {
+                        if (weList[i].Elmental_name == elemental_Name)
+                        {   // 속성
+                            int ele_idx = weList[i].Idx;
+                            foreach (var item in wbList)
+                            {
+                                if (item.Idx == ele_idx)
+                                {
+                                    string wp_name = item.WeaponName;
+                                    if_wbList.Add(item);
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    for (int i = 0; i < wdList.Count; i++)
+                    {
+                        if (wdList[i].Debuff_type == elemental_Name)
+                        {   // 상태이상
+                            int dbf_idx = wdList[i].Idx;
+                            foreach (var item in wbList)
+                            {
+                                if (item.Idx == dbf_idx)
+                                {
+                                    string wp_name = item.WeaponName;
+                                    if_wbList.Add(item);
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
+                }
+                else if (cheked_Build)
+                {   // 파생조건
+                    for (int i = 0; i < wcList.Count; i++)
+                    {
+                        if (wcList[i].Derivation.Contains(build_name))
+                        {
+                            string wp_name = wcList[i].Weapon_name;
+                            foreach (var item in wbList)
+                            {
+                                if (item.WeaponName == wp_name)
+                                {
+                                    if_wbList.Add(item);
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+                else if (cheked_SlotsCount)
+                {// 슬롯 수 조건
+                    for (int i = 0; i < wbList.Count; i++)
+                    {
+                        if (slots_count == 1)
+                        {
+                            if (wbList[i].Slot.Length == 1)
+                            {
+                                if_wbList.Add(wbList[i]);
+                            }
+                        }
+                        else if (slots_count == 2)
+                        {
+                            if (wbList[i].Slot.Length == 2)
+                            {
+                                if_wbList.Add(wbList[i]);
+
+                            }
+                        }
+                        else if (slots_count == 3)
+                        {
+                            if (wbList[i].Slot.Length == 3)
+                            {
+                                if_wbList.Add(wbList[i]);
+                            }
+                        }
+                    }
+                }
+                else if (cheked_SlotsLv)
+                {   // 슬롯 레벨 조건
+                    for (int i = 0; i < wbList.Count; i++)
+                    {
+                        if (wbList[i].Slot.Contains(slots_lv.ToString()))
+                        {
+                            if_wbList.Add(wbList[i]);
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (var item in wbList)
+                    {
+                        if_wbList.Add(item);
+                    }
+                }
+            }
+            weapon_data_View.DataSource = null;
+            if (if_wbList.Count > 0)
+            {
+                weapon_data_View.DataSource = if_wbList;
+            }
+            else
+            {
+                weapon_data_View.DataSource = wbList;
+            }
+            weapon_data_View.Columns["idx"].Visible = false; // idx 열 안보임
+            weapon_data_View.Columns["Specal_type"].Visible = false; // idx 열 안보임
+            weapon_data_View.Columns["Melody"].Visible = false; // idx 열 안보임
+            weapon_data_View.Columns["idx"].Visible = false; // idx 열 안보임
+            weapon_data_View.Columns["WeaponName"].HeaderText = "무기이름";
+            weapon_data_View.Columns["Rare"].HeaderText = "레어도";
+            weapon_data_View.Columns["Attack"].HeaderText = "공격력";
+            weapon_data_View.Columns["Defence"].HeaderText = "방어력";
+            weapon_data_View.Columns["Critical"].HeaderText = "회심률";
+            weapon_data_View.Columns["Slot"].HeaderText = "슬롯";
+        }
+
         // 해외사이트 검색용으로 조건문들이 늘어남
         private string weapon_if(object sender, string type)
         {
@@ -213,40 +472,39 @@ namespace MonsteHunterWorld
             int count = 0;
 
             foreach (JObject item in json)
-            {
-                try
+            {// 해외사이트 이미지 링크 파싱
+                JObject job = JObject.Parse(item["assets"].ToString());
+                int idx = Int32.Parse(item["id"].ToString());
+                string image = job["image"].ToString();
+                imageList.Add(new Weapons_Image(idx, image));
+
+                // 예리도 파싱
+                for (int j = 0; j < item["durability"].Count(); j++)
                 {
-                    for (int i = 0; i < item["durability"].Count(); i++)
-                    {
-                        JToken first_jtok = item["durability"][0];  // 처음 예리도
+                    JToken first_jtok = item["durability"][0];  // 처음 예리도
 
 
-                        int red = Int32.Parse(first_jtok["red"].ToString());
-                        int orange = Int32.Parse(first_jtok["orange"].ToString());
-                        int yellow = Int32.Parse(first_jtok["yellow"].ToString());
-                        int green = Int32.Parse(first_jtok["green"].ToString());
-                        int blue = Int32.Parse(first_jtok["blue"].ToString());
-                        int white = Int32.Parse(first_jtok["white"].ToString());
+                    int red = Int32.Parse(first_jtok["red"].ToString());
+                    int orange = Int32.Parse(first_jtok["orange"].ToString());
+                    int yellow = Int32.Parse(first_jtok["yellow"].ToString());
+                    int green = Int32.Parse(first_jtok["green"].ToString());
+                    int blue = Int32.Parse(first_jtok["blue"].ToString());
+                    int white = Int32.Parse(first_jtok["white"].ToString());
 
-                        duaList.Add(new Weapons_Durability(wbList[count].Idx, red, orange, yellow, green, blue, white));
+                    duaList.Add(new Weapons_Durability(wbList[j].Idx, red, orange, yellow, green, blue, white));
 
-                        int last_Count = Int32.Parse(item["durability"].Count().ToString()); // 장비 최종 예리도
-                        JToken last_jtok = item["durability"][last_Count - 1]; // 마지막 예리도
-                        red = Int32.Parse(last_jtok["red"].ToString());
-                        orange = Int32.Parse(last_jtok["orange"].ToString());
-                        yellow = Int32.Parse(last_jtok["yellow"].ToString());
-                        green = Int32.Parse(last_jtok["green"].ToString());
-                        blue = Int32.Parse(last_jtok["blue"].ToString());
-                        white = Int32.Parse(last_jtok["white"].ToString());
+                    int last_Count = Int32.Parse(item["durability"].Count().ToString()); // 장비 최종 예리도
+                    JToken last_jtok = item["durability"][last_Count - 1]; // 마지막 예리도
+                    red = Int32.Parse(last_jtok["red"].ToString());
+                    orange = Int32.Parse(last_jtok["orange"].ToString());
+                    yellow = Int32.Parse(last_jtok["yellow"].ToString());
+                    green = Int32.Parse(last_jtok["green"].ToString());
+                    blue = Int32.Parse(last_jtok["blue"].ToString());
+                    white = Int32.Parse(last_jtok["white"].ToString());
 
-                        duaList.Add(new Weapons_Durability(wbList[count].Idx, red, orange, yellow, green, blue, white));
+                    duaList.Add(new Weapons_Durability(wbList[j].Idx, red, orange, yellow, green, blue, white));
 
-                        count++;
-                    }
-                }
-                catch (Exception)
-                {
-
+                    count++;
                 }
             }
         }
@@ -260,8 +518,11 @@ namespace MonsteHunterWorld
             //getData(weapon_type, json);
             DisplayTreeView(json, "무기도감");
 
+            weapon_data_View.DataSource = null;
             weapon_data_View.DataSource = wbList;
             weapon_data_View.Columns["idx"].Visible = false; // idx 열 안보임
+            weapon_data_View.Columns["Specal_type"].Visible = false; // idx 열 안보임
+            weapon_data_View.Columns["Melody"].Visible = false; // idx 열 안보임
             weapon_data_View.Columns["WeaponName"].HeaderText = "무기이름";
             weapon_data_View.Columns["Rare"].HeaderText = "레어도";
             weapon_data_View.Columns["Attack"].HeaderText = "공격력";
@@ -316,8 +577,24 @@ namespace MonsteHunterWorld
                 int defense = Int32.Parse(obj["defense"].ToString());
                 int critical = Int32.Parse(obj["critical"].ToString());
                 string slot = obj["slots"].ToString().Replace(" ", "").Trim();
-                string imageUri = obj["icon"].ToString();
                 // 기본정보
+
+                if (obj.ContainsKey("포격타입"))
+                {
+                    sp_type = obj["포격타입"].ToString();
+                }
+                else if (obj.ContainsKey("병"))
+                {
+                    sp_type = obj["병"].ToString();
+                }
+                else if (obj.ContainsKey("벌레"))
+                {
+                    sp_type = obj["벌레"].ToString();
+                }
+                else if (obj.ContainsKey("특수탄"))
+                {
+                    sp_type = obj["특수탄"].ToString();
+                }
 
                 // 제작정보
                 //string imgUri = obj["icon"].ToString(); // 이미지
@@ -337,37 +614,45 @@ namespace MonsteHunterWorld
                     make_price = Int32.Parse(obj["make_price"].ToString()); // 제작비용
                     upgrade_price = Int32.Parse(obj["upgrade_price"].ToString()); // 업글비용 
                 }
-                // 제작정보
-                               
+                // 제작정보 끝
+
                 if (obj.ContainsKey("weakness"))
                 {
                     JToken elementalObj = obj["weakness"];
-                    ele_name = elementalObj["type"].ToString();
-                    elemental_value = Int32.Parse(elementalObj["value"].ToString());
+                    string elemental_Name = elementalObj["type"].ToString();
+                    int elemental_value = Int32.Parse(elementalObj["value"].ToString());
+                    weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
+
                 }
                 else if (obj.ContainsKey("debuff"))
                 {
                     JToken debuffObj = obj["debuff"];
-                    debuff_name = debuffObj["type"].ToString();
-                    debuff_value = Int32.Parse(debuffObj["value"].ToString());
+                    string debuff_name = debuffObj["type"].ToString();
+                    int debuff_value = Int32.Parse(debuffObj["value"].ToString());
+                    weList.Add(new WeaponEelemental(idx, debuff_name, debuff_value));
                 }
-                else if (obj.ContainsKey("weakness") || obj.ContainsKey("debuff"))
+                else if (obj.ContainsKey("weakness") && obj.ContainsKey("debuff"))
                 {
                     JToken elementalObj = obj["weakness"];
-                    ele_name = elementalObj["type"].ToString();
-                    elemental_value = Int32.Parse(elementalObj["value"].ToString());
+                    string elemental_Name = elementalObj["type"].ToString();
+                    int elemental_value = Int32.Parse(elementalObj["value"].ToString());
+                    weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
 
                     JToken debuffObj = obj["debuff"];
-                    debuff_name = debuffObj["type"].ToString();
-                    debuff_value = Int32.Parse(debuffObj["value"].ToString());
+                    string debuff_name = debuffObj["type"].ToString();
+                    int debuff_value = Int32.Parse(debuffObj["value"].ToString());
+                    wdList.Add(new WeaponDebuff(idx, debuff_name, debuff_value));
                 }
                 // 속성정보, 디버프정보
-
-                imageList.Add(new Weapons_Image(idx, imageUri));
-                wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
+                if (weapon_button_name == "라이트보우건" || weapon_button_name == "헤비보우건" || weapon_button_name == "건랜스" || weapon_button_name == "차지액스" || weapon_button_name == "슬래시액스" || weapon_button_name == "조충곤")
+                {
+                    wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot, sp_type));
+                }
+                else
+                {
+                    wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
+                }
                 wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
-                weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
-
                 AddNode(obj2, childNode);
             }
             else if (token is JArray)
@@ -389,17 +674,23 @@ namespace MonsteHunterWorld
         // 무기파생트리 조건
         private void rdio_AllTree_CheckedChanged(object sender, EventArgs e)
         {
-            if (((RadioButton)sender).Checked)
-            {
-                build_name = ((RadioButton)sender).Text.Replace("파생", "").Replace(" ", "").Trim();
-                cheked_Build = true;
-            }
-            else if (((RadioButton)sender).Text == "전체")
-            {
+            if (rdio_Tree_All.Checked)
+            { // 파생이 전체로 체크되면
                 cheked_Build = false;
             }
-            cheked_weapon = false;
-            ScreenButton();
+            else
+            {
+                build_name = ((RadioButton)sender).Text.Replace(" ", "").Replace("파생", "").Replace("속성", "");
+                cheked_Build = true;
+            }
+            try
+            {
+                ScreenButton2();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("먼저 무기 타입을 선택하세요");
+            }
         }
 
         // 상세정보 윈폼 출력 버튼
@@ -409,25 +700,15 @@ namespace MonsteHunterWorld
             try
             {
                 this.select_name = weapon_data_View.CurrentRow.Cells["WeaponName"].ToString();
+                fwif = new FrmWeaponInfo();
+                fwif.weapon_pictur.ImageLocation = this.pictur_weapon.ImageLocation;
             }
             catch (Exception)
             {
                 MessageBox.Show("테이블에서 다시 선택후 클릭해주세요");
+                return;
             }
 
-            fwif = new FrmWeaponInfo();
-
-            fwif.weapon_pictur.ImageLocation = this.pictur_weapon.ImageLocation;
-
-
-
-            fwif.dataGridView1.Columns.Add("division", "구분");
-            fwif.dataGridView1.Columns.Add("Quantity", "수량");
-            fwif.dataGridView1.Columns.Add("Acquisition", "획득처");
-
-            fwif.dataGridView2.Columns.Add("division", "구분");
-            fwif.dataGridView2.Columns.Add("Quantity", "수량");
-            fwif.dataGridView2.Columns.Add("Acquisition", "획득처");
 
             // 기본정보 전달
             foreach (var item in wbList)
@@ -442,74 +723,80 @@ namespace MonsteHunterWorld
                     fwif.lbl_criti.Text = item.Critical.ToString();
                     fwif.lbl_debuf.Text = item.Defence.ToString();
                     fwif.lbl_rare.Text = item.Rare.ToString();
-                    if (item.Slot.ToString().Length == 1)
-                    {
-                        fwif.lbl_Slots.Text = item.Slot.ToString() + "__";
-                    }
-                    else if (item.Slot.ToString().Length == 2)
-                    {
-                        fwif.lbl_Slots.Text = item.Slot.ToString() + "_";
-                    }
-                    else
-                    {
-
-                        fwif.lbl_Slots.Text = item.Slot.ToString();
-                    }
-
-                    MessageBox.Show("Test");
+                    fwif.lbl_Slots.Text = item.Slot.ToString();
                 }
-
-
-
-                fwif.lbl_der.Text = wcList[select_idx].Derivation.ToString();
+                if (item.Specal_type == null)
+                {
+                    fwif.lbl_spc_type.Visible = false;
+                }
+                else if (item.Specal_type != null)
+                {
+                    fwif.lbl_spc_type.Visible = true;
+                    fwif.lbl_spc_type.Text = item.Specal_type;
+                }
             }
 
             // 제작 및 업그레이드 정보 전달
             foreach (var item in wcList)
             {
-                if (item.Weapon_name == wcList[select_idx].Weapon_name)
+                if (item.Weapon_name == wbList[select_idx].WeaponName)
                 {
-                    if (item.Con_make)
-                    {
-                        fwif.dataGridView1.Rows.Add("금액", item.Make_price, "");
-                    }
+                    fwif.lbl_der.Text = wcList[select_idx].Derivation.ToString();
+                    fwif.lbl_make_price.Text = wcList[select_idx].Make_price.ToString();
+                    fwif.upgrade_price.Text = wcList[select_idx].Upgrade_price.ToString();
 
-                }
-            }
-                // 속성 정보 전달
-                foreach (var item in weList)
-                {
-                    if (item.Idx == weList[select_idx].Idx)
+                    if (item.Con_make == true)
                     {
-                        fwif.lbl_ele.Text = item.Elmental_name;
-                        fwif.lbl_eleValue.Text = item.Elmental_value.ToString();
+                        fwif.lbl_creaft.Text = "가능";
+                        fwif.lbl_creaft.ForeColor = Color.AliceBlue;
+                        
                     }
                     else
                     {
-                        fwif.lbl_ele.Text = "없습니다";
-                        fwif.lbl_eleValue.Visible = false;
-
+                        fwif.lbl_creaft.Text = "불가능";
+                        fwif.lbl_creaft.ForeColor = Color.Red;
                     }
                 }
-                // 디버프 정보 전달
-                foreach (var item in wdList)
-                {
-                    if (String.IsNullOrEmpty(item.Debuff_type))
-                    {
-                        fwif.lbl_debuf.Text = "님 머임";
-                        fwif.lbl_deValue.Text = item.Debuff_value.ToString();
-                    }
-                    else
-                    {
-                        fwif.lbl_debuf.Text = "없습니다";
-                        fwif.lbl_deValue.Visible = false;
-                    }
-                }
-                // 예리도 정보 전달
-                Durability_Chart(fwif);
-
-                fwif.ShowDialog(); // 실행
             }
+            // 속성 정보 전달
+            foreach (var item in weList)
+            {
+                if (item.Idx == wbList[select_idx].Idx)
+                {
+                    fwif.lbl_ele.Text = item.Elmental_name;
+                    fwif.lbl_eleValue.Visible = true;
+                    fwif.lbl_eleValue.Text = item.Elmental_value.ToString();
+                    break;
+                }
+                else
+                {
+                    fwif.lbl_ele.Text = "없습니다";
+                    fwif.lbl_eleValue.Visible = false;
+
+                }
+            }
+            fwif.lbl_deValue.Visible = false;
+            // 디버프 정보 전달
+            foreach (var item in wdList)
+            {
+                if (String.IsNullOrEmpty(item.Debuff_type))
+                {
+                    fwif.lbl_debuf.Text = item.Debuff_type;
+                    fwif.lbl_eleValue.Visible = true;
+                    fwif.lbl_deValue.Text = item.Debuff_value.ToString().Replace("-", "");
+                    break;
+                }
+                else
+                {
+                    fwif.lbl_debuf.Text = "없습니다.";
+                    fwif.lbl_deValue.Visible = false;
+                }
+            }
+            // 예리도 정보 전달
+            Durability_Chart(fwif);
+
+            fwif.ShowDialog(); // 실행
+        }
 
         /// <summary>
         /// 예리도 차트 ( 기본, 최종 예리도 )
@@ -518,7 +805,6 @@ namespace MonsteHunterWorld
         private void Durability_Chart(FrmWeaponInfo fwif)
         {
             fwif.chart1.ChartAreas[0].BackColor = Color.SlateGray;
-            //fwif.chart1.ChartAreas[0].
             fwif.chart1.Series.Clear();
 
             fwif.chart1.ChartAreas[0].AxisX.MajorGrid.LineWidth = 0; //AxisY.Style |= AxisStyles.HideText;
@@ -533,6 +819,7 @@ namespace MonsteHunterWorld
             bool first_chk = true;
             bool last_chk = true;
             int for_index = select_idx + 1;
+            // 예리도 차트
             foreach (var item in duaList)
             {
                 if (first_chk) // 기본 예리도
@@ -541,20 +828,24 @@ namespace MonsteHunterWorld
                     {
                         fwif.chart1.Series["Red"].Points.Add(item.Red);
                         fwif.chart1.Series["Red"].Color = Color.Red;
+
                         fwif.chart1.Series["Orange"].Points.Add(item.Orange);
                         fwif.chart1.Series["Orange"].Color = Color.Orange;
+
                         fwif.chart1.Series["Yellow"].Points.Add(item.Yellow);
                         fwif.chart1.Series["Yellow"].Color = Color.Yellow;
+
                         fwif.chart1.Series["Green"].Points.Add(item.Green);
                         fwif.chart1.Series["Green"].Color = Color.Green;
+
                         fwif.chart1.Series["Blue"].Points.Add(item.Blue);
                         fwif.chart1.Series["Blue"].Color = Color.Blue;
+
                         fwif.chart1.Series["White"].Points.Add(item.White);
                         fwif.chart1.Series["White"].Color = Color.White;
 
                         first_chk = false;
                         last_chk = true;
-
                     }
                 }
                 else if (last_chk) // 최종 예리도
@@ -563,18 +854,25 @@ namespace MonsteHunterWorld
                     {
                         fwif.chart1.Series["Red"].Points.Add(item.Red);
                         fwif.chart1.Series["Red"].Color = Color.Red;
+
                         fwif.chart1.Series["Orange"].Points.Add(item.Orange);
                         fwif.chart1.Series["Orange"].Color = Color.Orange;
+
                         fwif.chart1.Series["Yellow"].Points.Add(item.Yellow);
                         fwif.chart1.Series["Yellow"].Color = Color.Yellow;
+
                         fwif.chart1.Series["Green"].Points.Add(item.Green);
                         fwif.chart1.Series["Green"].Color = Color.Green;
+
                         fwif.chart1.Series["Blue"].Points.Add(item.Blue);
                         fwif.chart1.Series["Blue"].Color = Color.Blue;
+
                         fwif.chart1.Series["White"].Points.Add(item.White);
                         fwif.chart1.Series["White"].Color = Color.White;
+
                         first_chk = true;
                         last_chk = false;
+                        break;
                     }
                 }
                 else if (for_index >= duaList.Count)
@@ -605,11 +903,7 @@ namespace MonsteHunterWorld
                     {
                         if (item.Idx == current_idx) // 리스트의 idx 와 선택한 행의 idx가 같으면
                         {
-                            pictur_weapon.ImageLocation = item.Image_Uri.ToString();
-                            if (item.Image_Uri.ToString() == "")
-                            {
-                                pictur_weapon.ImageLocation = @"https://media.istockphoto.com/vectors/no-knife-or-no-weapon-prohibition-sign-vector-illustration-vector-id844522804";
-                            }
+                            pictur_weapon.ImageLocation = item.Image_Uri;
                             break;
                         }
                     }
@@ -619,8 +913,8 @@ namespace MonsteHunterWorld
 
         private void rdio_Elemental_All_Click(object sender, EventArgs e)
         {
-            if (((RadioButton)sender).Name.Contains("All")) // <- 이거 이상함 내가 원하는거랑 반대로 작동함
-            {   // 선택한 라이도버튼의 이름이 ALL 이 아니면 실행
+            if (rdio_Elemental_All.Checked) // <- 이거 이상함 내가 원하는거랑 반대로 작동함
+            {   // 속성 전체가 체크되면 실행
 
                 cheked_Eelemental = false;
             }
@@ -629,15 +923,14 @@ namespace MonsteHunterWorld
                 this.elemental_Name = ((RadioButton)sender).Text;
                 cheked_Eelemental = true;
             }
-
             try
             {
-                ScreenButton();
+                ScreenButton2();
             }
             catch (Exception)
             {
 
-                MessageBox.Show("무기 종류를 먼저 선택해주세요");
+                MessageBox.Show("무기 종류를 먼저 선택해주세요", "속성 오류");
             }
         }
 
@@ -649,240 +942,90 @@ namespace MonsteHunterWorld
             wdList.Clear(); // 리스트 비우기
             duaList.Clear(); // 리스트 비우기
             imageList.Clear(); // 리스트 비우기
-            weapon_data_View.DataSource = null;
             GetWeaponDate(("weapons/" + this.first_wtype));
-
-            // 파싱조건
-            #region 조건 알고리즘 수정중
-            //if (cheked_Build && cheked_Eelemental && cheked_SlotsLv && cheked_SlotsCount)
-            //{
-            //    if (build_name == derivation && (elemental_Name == ele_name || elemental_Name == debuff_name))
-            //    {
-            //        foreach (var Lv in slots_lv)
-            //        {
-            //            if (slot.Contains(Lv) && slot.Length == slots_count)
-            //            {   // slot 에 해당 레벨이 있고 슬롯개수(길이) 가 Count 와 같으면
-            //                imageList.Add(new Weapons_Image(idx, imageUri));
-            //                wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
-            //                wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
-            //                weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
-            //            }
-            //        }
-            //    }
-            //}
-            //else if (cheked_Build && cheked_Eelemental && cheked_SlotsLv)
-            //{
-            //    if (build_name == derivation && (elemental_Name == ele_name || elemental_Name == debuff_name))
-            //    {
-            //        foreach (var Lv in slots_lv)
-            //        {
-            //            imageList.Add(new Weapons_Image(idx, imageUri));
-            //            wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
-            //            wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
-            //            weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
-            //        }
-            //    }
-            //}
-            //else if (cheked_Build && cheked_Eelemental)
-            //{
-            //    if ((elemental_Name == ele_name || elemental_Name == debuff_name))
-            //    {
-            //        // slot 에 해당 레벨이 있고 슬롯개수(길이) 가 Count 와 같으면
-            //        imageList.Add(new Weapons_Image(idx, imageUri));
-            //        wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
-            //        wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
-            //        weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
-
-            //    }
-            //}
-            //else if (cheked_Eelemental && cheked_SlotsLv && cheked_SlotsCount)
-            //{
-            //    if (elemental_Name == ele_name || elemental_Name == debuff_name)
-            //    {
-            //        foreach (var Lv in slots_lv)
-            //        {
-            //            if (slot.Contains(Lv) && slot.Length == slots_count)
-            //            {
-            //                //imageList
-            //                //wbList
-            //                //wcList
-            //                //weList
-            //            }
-            //        }
-            //    }
-            //}
-            //else if (cheked_Eelemental && cheked_SlotsLv)
-            //{
-            //    if (elemental_Name == ele_name || elemental_Name == debuff_name)
-
-            //    {
-            //        foreach (var Lv in slots_lv)
-            //        {
-
-
-            //        }
-            //    }
-            //}
-            //else if (cheked_SlotsLv && cheked_SlotsCount)
-            //{
-            //    foreach (var Lv in slots_lv)
-            //    {
-            //        if (slot.Contains(Lv) && slot.Length == slots_count)
-            //        {   // slot 에 해당 레벨이 있고 슬롯개수(길이) 가 Count 와 같으면
-            //            imageList.Add(new Weapons_Image(idx, imageUri));
-            //            wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
-            //            wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
-            //            weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
-            //        }
-            //    }
-            //}
-            //else if (cheked_Build || cheked_Eelemental || cheked_SlotsLv || cheked_SlotsCount)
-            //{
-            //    if (build_name == derivation)
-            //    {
-            //        imageList.Add(new Weapons_Image(idx, imageUri));
-            //        wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
-            //        wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
-            //        weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
-            //    }
-            //    else if (elemental_Name == ele_name || elemental_Name == debuff_name)
-            //    {
-            //        imageList.Add(new Weapons_Image(idx, imageUri));
-            //        wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
-            //        wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
-            //        weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
-            //    }
-            //    else if (cheked_SlotsLv)
-            //    {
-            //        foreach (var Lv in slots_lv)
-            //        {
-            //            imageList.Add(new Weapons_Image(idx, imageUri));
-            //            wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
-            //            wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
-            //            weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
-            //        }
-            //    }
-            //    else if (cheked_SlotsCount)
-            //    {
-            //        if (slot.Length == slots_count)
-            //        {
-            //            imageList.Add(new Weapons_Image(idx, imageUri));
-            //            wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
-            //            wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
-            //            weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
-            //        }
-            //    }
-            //}
-            //else
-            //{
-            //} 
-            #endregion
-
             GetDurability(DurabilityJSON());
         }
 
         private void chk_slotsLevel_3_Click(object sender, EventArgs e)
         {
 
-            if (((CheckBox)sender).Name.Contains("All"))
+            if (chk_slotsLevel_All.Checked)
             {   // 현재 체크한게 ALL 체크박스면 실행
 
                 cheked_SlotsLv = false; // Slot 박스 ALL
 
                 // 다른 레벨 체크박스 전부 해제
-                chk_slotsLevel_1.Checked = false;
-                chk_slotsLevel_2.Checked = false;
-                chk_slotsLevel_3.Checked = false;
             }
-            else if (!((CheckBox)sender).Name.Contains("All")) // 체크 이벤트가 발생한다면
+            else
             {
-                chk_slotsLevel_All.Checked = false;
                 cheked_SlotsLv = true;
-                if (((CheckBox)sender).Name.Contains("1"))
-                {   // 체크박스 이름에 1이 있다면
-                    slots_lv[0] = "1"; // 슬롯레벨[0] 에 1 넣기
+                if (chk_slotsLevel_1.Checked)
+                {
+                    slots_lv = 1; // 슬롯레벨[0] 에 1 넣기
                 }
-                else if (((CheckBox)sender).Name.Contains("2"))
-                {   // 체크박스 이름에 1이 있다면
-                    slots_lv[1] = "2";
+                else if (chk_slotsLevel_2.Checked)
+                {
+                    slots_lv = 2;
                 }
-                else if (((CheckBox)sender).Name.Contains("3"))
-                {   // 체크박스 이름에 1이 있다면
-                    slots_lv[2] = "3";
+                else if (chk_slotsLevel_3.Checked)
+                {
+                    slots_lv = 3;
                 }
-            }
-            else if (!((CheckBox)sender).Checked && !((CheckBox)sender).Name.Contains("All"))
-            {   // 선택한 체크박스가 해제 되고 All 체크박스가 아니면 실행
-                if (((CheckBox)sender).Name.Contains("1"))
-                {   // 체크박스 이름에 1이 있다면
-                    slots_lv[0] = null; // 비우기
-                }
-                else if (((CheckBox)sender).Name.Contains("2"))
-                {   // 체크박스 이름에 1이 있다면
-                    slots_lv[1] = null; // 비우기
-                }
-                else if (((CheckBox)sender).Name.Contains("3"))
-                {   // 체크박스 이름에 1이 있다면
-                    slots_lv[2] = null; // 비우기
-                }
-            }
-            else if (!chk_slotsLevel_1.Checked && !chk_slotsLevel_1.Checked && !chk_slotsLevel_1.Checked)
-            {   // All 을 제외한 모든 체크가 false 면
-                cheked_SlotsLv = false; // Slot 박스 ALL
-                slots_lv = null; // 슬롯을 비운다.
             }
             try
             {
-                ScreenButton();
+                if_wbList.Clear();
+                ScreenButton2();
             }
             catch (Exception)
             {
-
-                MessageBox.Show("무기종류를 먼저 선택해주세요.");
+                chk_slotsLevel_All.Checked = true;
+                MessageBox.Show("무기종류를 먼저 선택해주세요.", "슬롯레벨 오류");
             }
-            GetWeaponDate(("weapons/" + ((Button)sender).Text));
         }
 
-        private void chk_slotsCount_3_Click(object sender, EventArgs e)
+        private void chk_slotsCount_Click(object sender, EventArgs e)
         {
-            if (chk_slotsCount_All.Checked == ((CheckBox)sender).Checked)
+            if (chk_slotsCount_All.Checked)
             {   // 현재 체크한게 ALL 체크박스면 실행
 
-                slots_count = 0; // 슬롯 0으로 초기화.
+                slots_count = 0;// 실행완료 후 0으로 초기화
 
                 // 다른 레벨 체크박스 전부 해제
-                chk_slotsCount_1.Checked = false;
-                chk_slotsCount_2.Checked = false;
-                chk_slotsCount_3.Checked = false;
 
                 cheked_SlotsCount = false;
             }
-            else if (((CheckBox)sender).Checked) // 체크 이벤트가 발생한다면
+            else
             {
                 cheked_SlotsCount = true;
-                chk_slotsCount_All.Checked = false;
-                if (((CheckBox)sender).Name.Contains("1"))
-                {   // 체크박스 이름에 1이 있다면
-                    slots_count = 1; // 슬롯레벨[0] 에 1 넣기
+
+                if (chk_slotsCount_1.Checked)
+                {
+                    slots_count = 1;
                 }
-                else if (((CheckBox)sender).Name.Contains("2"))
-                {   // 체크박스 이름에 1이 있다면
+                else if (chk_slotsCount_2.Checked)
+                {
                     slots_count = 2;
                 }
-                else if (((CheckBox)sender).Name.Contains("3"))
-                {   // 체크박스 이름에 1이 있다면
+                else if (chk_slotsCount_3.Checked)
+                {
                     slots_count = 3;
                 }
             }
             try
             {
-                ScreenButton();
+                ScreenButton2();
             }
             catch (Exception)
             {
-
-                MessageBox.Show("무기종류를 먼저 선택해주세요.");
+                chk_slotsCount_All.Checked = true;
+                MessageBox.Show("무기종류를 먼저 선택해주세요.", "슬롯 수 오류");
             }
+        }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
