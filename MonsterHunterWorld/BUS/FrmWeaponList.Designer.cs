@@ -53,7 +53,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.rdio_Tree_All = new System.Windows.Forms.RadioButton();
+=======
+            this.txt_Serch = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.rdio_Slots_Lv1 = new System.Windows.Forms.RadioButton();
+            this.rdio_Slots_Lv3 = new System.Windows.Forms.RadioButton();
+            this.rdio_Slots_Lv2 = new System.Windows.Forms.RadioButton();
+            this.rdio_Slots_2Count = new System.Windows.Forms.RadioButton();
+            this.rdio_Slots_3Count = new System.Windows.Forms.RadioButton();
+            this.rdio_Slots_1Count = new System.Windows.Forms.RadioButton();
+            this.rdio_Slots_AllCount = new System.Windows.Forms.RadioButton();
+            this.rdio_Slots_All = new System.Windows.Forms.RadioButton();
+            this.rdio_AllTree = new System.Windows.Forms.RadioButton();
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             this.rido_OreTree = new System.Windows.Forms.RadioButton();
             this.rdio_LightningTree = new System.Windows.Forms.RadioButton();
             this.rdio_ExtinctionTree = new System.Windows.Forms.RadioButton();
@@ -75,7 +89,11 @@
             this.rdio_BlackTree = new System.Windows.Forms.RadioButton();
             this.rdio_YongsanTree = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
             this.rdio_Elemental_All = new System.Windows.Forms.RadioButton();
+=======
+            this.rdi_Elemental_All = new System.Windows.Forms.RadioButton();
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
@@ -86,6 +104,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+<<<<<<< HEAD
             this.chk_slotsLevel_3 = new System.Windows.Forms.CheckBox();
             this.chk_slotsLevel_2 = new System.Windows.Forms.CheckBox();
             this.chk_slotsLevel_1 = new System.Windows.Forms.CheckBox();
@@ -97,6 +116,10 @@
             this.chk_slotsCount_1 = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
+=======
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictur_weapon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weapon_data_View)).BeginInit();
@@ -113,7 +136,11 @@
             this.panel1.Controls.Add(this.pictur_weapon);
             this.panel1.Controls.Add(this.weapon_data_View);
             this.panel1.Controls.Add(this.weapon_tree);
+<<<<<<< HEAD
             this.panel1.Location = new System.Drawing.Point(12, 175);
+=======
+            this.panel1.Location = new System.Drawing.Point(12, 202);
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1213, 322);
             this.panel1.TabIndex = 0;
@@ -138,17 +165,26 @@
             // 
             // weapon_data_View
             // 
+<<<<<<< HEAD
             this.weapon_data_View.AllowUserToResizeColumns = false;
             this.weapon_data_View.AllowUserToResizeRows = false;
             this.weapon_data_View.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.weapon_data_View.Location = new System.Drawing.Point(563, 3);
+=======
+            this.weapon_data_View.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.weapon_data_View.Location = new System.Drawing.Point(560, 3);
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             this.weapon_data_View.MultiSelect = false;
             this.weapon_data_View.Name = "weapon_data_View";
             this.weapon_data_View.RowTemplate.Height = 23;
             this.weapon_data_View.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.weapon_data_View.Size = new System.Drawing.Size(650, 316);
             this.weapon_data_View.TabIndex = 2;
+<<<<<<< HEAD
             this.weapon_data_View.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.weapon_data_View_CellContentClick);
+=======
+            this.weapon_data_View.SelectionChanged += new System.EventHandler(this.weapon_data_SelectionChanged);
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             // 
             // weapon_tree
             // 
@@ -391,6 +427,7 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "파생 트리";
             // 
+<<<<<<< HEAD
             // rdio_Tree_All
             // 
             this.rdio_Tree_All.AutoSize = true;
@@ -656,6 +693,381 @@
             // 
             // radioButton9
             // 
+=======
+            // txt_Serch
+            // 
+            this.txt_Serch.Location = new System.Drawing.Point(75, 175);
+            this.txt_Serch.Name = "txt_Serch";
+            this.txt_Serch.Size = new System.Drawing.Size(227, 21);
+            this.txt_Serch.TabIndex = 7;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(40, 178);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(29, 12);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "이름";
+            // 
+            // rdio_Slots_Lv1
+            // 
+            this.rdio_Slots_Lv1.AutoSize = true;
+            this.rdio_Slots_Lv1.Location = new System.Drawing.Point(59, 13);
+            this.rdio_Slots_Lv1.Name = "rdio_Slots_Lv1";
+            this.rdio_Slots_Lv1.Size = new System.Drawing.Size(48, 16);
+            this.rdio_Slots_Lv1.TabIndex = 11;
+            this.rdio_Slots_Lv1.Text = "1 LV";
+            this.rdio_Slots_Lv1.UseVisualStyleBackColor = true;
+            this.rdio_Slots_Lv1.CheckedChanged += new System.EventHandler(this.rdio_Slots_All_CheckedChanged);
+            // 
+            // rdio_Slots_Lv3
+            // 
+            this.rdio_Slots_Lv3.AutoSize = true;
+            this.rdio_Slots_Lv3.Location = new System.Drawing.Point(167, 12);
+            this.rdio_Slots_Lv3.Name = "rdio_Slots_Lv3";
+            this.rdio_Slots_Lv3.Size = new System.Drawing.Size(48, 16);
+            this.rdio_Slots_Lv3.TabIndex = 12;
+            this.rdio_Slots_Lv3.Text = "3 LV";
+            this.rdio_Slots_Lv3.UseVisualStyleBackColor = true;
+            this.rdio_Slots_Lv3.CheckedChanged += new System.EventHandler(this.rdio_Slots_All_CheckedChanged);
+            // 
+            // rdio_Slots_Lv2
+            // 
+            this.rdio_Slots_Lv2.AutoSize = true;
+            this.rdio_Slots_Lv2.Location = new System.Drawing.Point(113, 12);
+            this.rdio_Slots_Lv2.Name = "rdio_Slots_Lv2";
+            this.rdio_Slots_Lv2.Size = new System.Drawing.Size(48, 16);
+            this.rdio_Slots_Lv2.TabIndex = 13;
+            this.rdio_Slots_Lv2.Text = "2 LV";
+            this.rdio_Slots_Lv2.UseVisualStyleBackColor = true;
+            this.rdio_Slots_Lv2.CheckedChanged += new System.EventHandler(this.rdio_Slots_All_CheckedChanged);
+            // 
+            // rdio_Slots_2Count
+            // 
+            this.rdio_Slots_2Count.AutoSize = true;
+            this.rdio_Slots_2Count.Location = new System.Drawing.Point(125, 11);
+            this.rdio_Slots_2Count.Name = "rdio_Slots_2Count";
+            this.rdio_Slots_2Count.Size = new System.Drawing.Size(45, 16);
+            this.rdio_Slots_2Count.TabIndex = 16;
+            this.rdio_Slots_2Count.Text = "2 개";
+            this.rdio_Slots_2Count.UseVisualStyleBackColor = true;
+            this.rdio_Slots_2Count.CheckedChanged += new System.EventHandler(this.rdio_Slots_AllCount_CheckedChanged);
+            // 
+            // rdio_Slots_3Count
+            // 
+            this.rdio_Slots_3Count.AutoSize = true;
+            this.rdio_Slots_3Count.Location = new System.Drawing.Point(189, 11);
+            this.rdio_Slots_3Count.Name = "rdio_Slots_3Count";
+            this.rdio_Slots_3Count.Size = new System.Drawing.Size(45, 16);
+            this.rdio_Slots_3Count.TabIndex = 15;
+            this.rdio_Slots_3Count.Text = "3 개";
+            this.rdio_Slots_3Count.UseVisualStyleBackColor = true;
+            this.rdio_Slots_3Count.CheckedChanged += new System.EventHandler(this.rdio_Slots_AllCount_CheckedChanged);
+            // 
+            // rdio_Slots_1Count
+            // 
+            this.rdio_Slots_1Count.AutoSize = true;
+            this.rdio_Slots_1Count.Location = new System.Drawing.Point(62, 10);
+            this.rdio_Slots_1Count.Name = "rdio_Slots_1Count";
+            this.rdio_Slots_1Count.Size = new System.Drawing.Size(45, 16);
+            this.rdio_Slots_1Count.TabIndex = 14;
+            this.rdio_Slots_1Count.Text = "1 개";
+            this.rdio_Slots_1Count.UseVisualStyleBackColor = true;
+            this.rdio_Slots_1Count.CheckedChanged += new System.EventHandler(this.rdio_Slots_AllCount_CheckedChanged);
+            // 
+            // rdio_Slots_AllCount
+            // 
+            this.rdio_Slots_AllCount.AutoSize = true;
+            this.rdio_Slots_AllCount.Checked = true;
+            this.rdio_Slots_AllCount.Location = new System.Drawing.Point(6, 10);
+            this.rdio_Slots_AllCount.Name = "rdio_Slots_AllCount";
+            this.rdio_Slots_AllCount.Size = new System.Drawing.Size(47, 16);
+            this.rdio_Slots_AllCount.TabIndex = 18;
+            this.rdio_Slots_AllCount.TabStop = true;
+            this.rdio_Slots_AllCount.Text = "전체";
+            this.rdio_Slots_AllCount.UseVisualStyleBackColor = true;
+            this.rdio_Slots_AllCount.CheckedChanged += new System.EventHandler(this.rdio_Slots_AllCount_CheckedChanged);
+            // 
+            // rdio_Slots_All
+            // 
+            this.rdio_Slots_All.AutoSize = true;
+            this.rdio_Slots_All.Checked = true;
+            this.rdio_Slots_All.Location = new System.Drawing.Point(6, 13);
+            this.rdio_Slots_All.Name = "rdio_Slots_All";
+            this.rdio_Slots_All.Size = new System.Drawing.Size(47, 16);
+            this.rdio_Slots_All.TabIndex = 17;
+            this.rdio_Slots_All.TabStop = true;
+            this.rdio_Slots_All.Text = "전체";
+            this.rdio_Slots_All.UseVisualStyleBackColor = true;
+            this.rdio_Slots_All.CheckedChanged += new System.EventHandler(this.rdio_Slots_All_CheckedChanged);
+            // 
+            // rdio_AllTree
+            // 
+            this.rdio_AllTree.AutoSize = true;
+            this.rdio_AllTree.Checked = true;
+            this.rdio_AllTree.Location = new System.Drawing.Point(6, 18);
+            this.rdio_AllTree.Name = "rdio_AllTree";
+            this.rdio_AllTree.Size = new System.Drawing.Size(47, 16);
+            this.rdio_AllTree.TabIndex = 19;
+            this.rdio_AllTree.TabStop = true;
+            this.rdio_AllTree.Text = "전체";
+            this.rdio_AllTree.UseVisualStyleBackColor = true;
+            this.rdio_AllTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // rido_OreTree
+            // 
+            this.rido_OreTree.AutoSize = true;
+            this.rido_OreTree.Location = new System.Drawing.Point(59, 20);
+            this.rido_OreTree.Name = "rido_OreTree";
+            this.rido_OreTree.Size = new System.Drawing.Size(75, 16);
+            this.rido_OreTree.TabIndex = 20;
+            this.rido_OreTree.Text = "광석 파생";
+            this.rido_OreTree.UseVisualStyleBackColor = true;
+            this.rido_OreTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // rdio_LightningTree
+            // 
+            this.rdio_LightningTree.AutoSize = true;
+            this.rdio_LightningTree.Location = new System.Drawing.Point(231, 20);
+            this.rdio_LightningTree.Name = "rdio_LightningTree";
+            this.rdio_LightningTree.Size = new System.Drawing.Size(99, 16);
+            this.rdio_LightningTree.TabIndex = 22;
+            this.rdio_LightningTree.Text = "번개속성 파생";
+            this.rdio_LightningTree.UseVisualStyleBackColor = true;
+            this.rdio_LightningTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // rdio_ExtinctionTree
+            // 
+            this.rdio_ExtinctionTree.AutoSize = true;
+            this.rdio_ExtinctionTree.Location = new System.Drawing.Point(58, 42);
+            this.rdio_ExtinctionTree.Name = "rdio_ExtinctionTree";
+            this.rdio_ExtinctionTree.Size = new System.Drawing.Size(87, 16);
+            this.rdio_ExtinctionTree.TabIndex = 21;
+            this.rdio_ExtinctionTree.Text = "멸진룡 파생";
+            this.rdio_ExtinctionTree.UseVisualStyleBackColor = true;
+            this.rdio_ExtinctionTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // rdio_RedlionTree
+            // 
+            this.rdio_RedlionTree.AutoSize = true;
+            this.rdio_RedlionTree.Location = new System.Drawing.Point(151, 42);
+            this.rdio_RedlionTree.Name = "rdio_RedlionTree";
+            this.rdio_RedlionTree.Size = new System.Drawing.Size(75, 16);
+            this.rdio_RedlionTree.TabIndex = 24;
+            this.rdio_RedlionTree.Text = "적룡 파생";
+            this.rdio_RedlionTree.UseVisualStyleBackColor = true;
+            this.rdio_RedlionTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // rdio_IceTree
+            // 
+            this.rdio_IceTree.AutoSize = true;
+            this.rdio_IceTree.Location = new System.Drawing.Point(336, 20);
+            this.rdio_IceTree.Name = "rdio_IceTree";
+            this.rdio_IceTree.Size = new System.Drawing.Size(99, 16);
+            this.rdio_IceTree.TabIndex = 23;
+            this.rdio_IceTree.Text = "얼음속성 파생";
+            this.rdio_IceTree.UseVisualStyleBackColor = true;
+            this.rdio_IceTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // rdio_DysfunctionalTree
+            // 
+            this.rdio_DysfunctionalTree.AutoSize = true;
+            this.rdio_DysfunctionalTree.Location = new System.Drawing.Point(441, 42);
+            this.rdio_DysfunctionalTree.Name = "rdio_DysfunctionalTree";
+            this.rdio_DysfunctionalTree.Size = new System.Drawing.Size(87, 16);
+            this.rdio_DysfunctionalTree.TabIndex = 27;
+            this.rdio_DysfunctionalTree.Text = "독요조 파생";
+            this.rdio_DysfunctionalTree.UseVisualStyleBackColor = true;
+            this.rdio_DysfunctionalTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // rdio_LavaTree
+            // 
+            this.rdio_LavaTree.AutoSize = true;
+            this.rdio_LavaTree.Location = new System.Drawing.Point(336, 42);
+            this.rdio_LavaTree.Name = "rdio_LavaTree";
+            this.rdio_LavaTree.Size = new System.Drawing.Size(87, 16);
+            this.rdio_LavaTree.TabIndex = 26;
+            this.rdio_LavaTree.Text = "용암룡 파생";
+            this.rdio_LavaTree.UseVisualStyleBackColor = true;
+            this.rdio_LavaTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // rdio_RainlessTree
+            // 
+            this.rdio_RainlessTree.AutoSize = true;
+            this.rdio_RainlessTree.Location = new System.Drawing.Point(232, 42);
+            this.rdio_RainlessTree.Name = "rdio_RainlessTree";
+            this.rdio_RainlessTree.Size = new System.Drawing.Size(87, 16);
+            this.rdio_RainlessTree.TabIndex = 25;
+            this.rdio_RainlessTree.Text = "비적룡 파생";
+            this.rdio_RainlessTree.UseVisualStyleBackColor = true;
+            this.rdio_RainlessTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // rdio_WarterTree
+            // 
+            this.rdio_WarterTree.AutoSize = true;
+            this.rdio_WarterTree.Location = new System.Drawing.Point(441, 20);
+            this.rdio_WarterTree.Name = "rdio_WarterTree";
+            this.rdio_WarterTree.Size = new System.Drawing.Size(87, 16);
+            this.rdio_WarterTree.TabIndex = 29;
+            this.rdio_WarterTree.Text = "물속성 파생";
+            this.rdio_WarterTree.UseVisualStyleBackColor = true;
+            this.rdio_WarterTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // rdio_BoneTree
+            // 
+            this.rdio_BoneTree.AutoSize = true;
+            this.rdio_BoneTree.Location = new System.Drawing.Point(151, 20);
+            this.rdio_BoneTree.Name = "rdio_BoneTree";
+            this.rdio_BoneTree.Size = new System.Drawing.Size(63, 16);
+            this.rdio_BoneTree.TabIndex = 28;
+            this.rdio_BoneTree.Text = "뼈 파생";
+            this.rdio_BoneTree.UseVisualStyleBackColor = true;
+            this.rdio_BoneTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // rdio_MandarinTree
+            // 
+            this.rdio_MandarinTree.AutoSize = true;
+            this.rdio_MandarinTree.Location = new System.Drawing.Point(546, 20);
+            this.rdio_MandarinTree.Name = "rdio_MandarinTree";
+            this.rdio_MandarinTree.Size = new System.Drawing.Size(87, 16);
+            this.rdio_MandarinTree.TabIndex = 31;
+            this.rdio_MandarinTree.Text = "만악룡 파생";
+            this.rdio_MandarinTree.UseVisualStyleBackColor = true;
+            this.rdio_MandarinTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // rdio_ShitouTree
+            // 
+            this.rdio_ShitouTree.AutoSize = true;
+            this.rdio_ShitouTree.Location = new System.Drawing.Point(546, 42);
+            this.rdio_ShitouTree.Name = "rdio_ShitouTree";
+            this.rdio_ShitouTree.Size = new System.Drawing.Size(87, 16);
+            this.rdio_ShitouTree.TabIndex = 30;
+            this.rdio_ShitouTree.Text = "시투룡 파생";
+            this.rdio_ShitouTree.UseVisualStyleBackColor = true;
+            this.rdio_ShitouTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // rdio_ToshiroTree
+            // 
+            this.rdio_ToshiroTree.AutoSize = true;
+            this.rdio_ToshiroTree.Location = new System.Drawing.Point(639, 20);
+            this.rdio_ToshiroTree.Name = "rdio_ToshiroTree";
+            this.rdio_ToshiroTree.Size = new System.Drawing.Size(87, 16);
+            this.rdio_ToshiroTree.TabIndex = 32;
+            this.rdio_ToshiroTree.Text = "토사룡 파생";
+            this.rdio_ToshiroTree.UseVisualStyleBackColor = true;
+            this.rdio_ToshiroTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // rdio_GoletTree
+            // 
+            this.rdio_GoletTree.AutoSize = true;
+            this.rdio_GoletTree.Location = new System.Drawing.Point(726, 20);
+            this.rdio_GoletTree.Name = "rdio_GoletTree";
+            this.rdio_GoletTree.Size = new System.Drawing.Size(87, 16);
+            this.rdio_GoletTree.TabIndex = 33;
+            this.rdio_GoletTree.Text = "골추룡 파생";
+            this.rdio_GoletTree.UseVisualStyleBackColor = true;
+            this.rdio_GoletTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // rdio_RefundTree
+            // 
+            this.rdio_RefundTree.AutoSize = true;
+            this.rdio_RefundTree.Location = new System.Drawing.Point(726, 42);
+            this.rdio_RefundTree.Name = "rdio_RefundTree";
+            this.rdio_RefundTree.Size = new System.Drawing.Size(75, 16);
+            this.rdio_RefundTree.TabIndex = 35;
+            this.rdio_RefundTree.Text = "환수 파생";
+            this.rdio_RefundTree.UseVisualStyleBackColor = true;
+            this.rdio_RefundTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // rdio_keelTree
+            // 
+            this.rdio_keelTree.AutoSize = true;
+            this.rdio_keelTree.Location = new System.Drawing.Point(639, 42);
+            this.rdio_keelTree.Name = "rdio_keelTree";
+            this.rdio_keelTree.Size = new System.Drawing.Size(75, 16);
+            this.rdio_keelTree.TabIndex = 34;
+            this.rdio_keelTree.Text = "용골 파생";
+            this.rdio_keelTree.UseVisualStyleBackColor = true;
+            this.rdio_keelTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // rdio_WorkshopTree
+            // 
+            this.rdio_WorkshopTree.AutoSize = true;
+            this.rdio_WorkshopTree.Location = new System.Drawing.Point(335, 64);
+            this.rdio_WorkshopTree.Name = "rdio_WorkshopTree";
+            this.rdio_WorkshopTree.Size = new System.Drawing.Size(99, 16);
+            this.rdio_WorkshopTree.TabIndex = 39;
+            this.rdio_WorkshopTree.Text = "공방무기 파생";
+            this.rdio_WorkshopTree.UseVisualStyleBackColor = true;
+            this.rdio_WorkshopTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // rdio_LanternTree
+            // 
+            this.rdio_LanternTree.AutoSize = true;
+            this.rdio_LanternTree.Location = new System.Drawing.Point(231, 64);
+            this.rdio_LanternTree.Name = "rdio_LanternTree";
+            this.rdio_LanternTree.Size = new System.Drawing.Size(87, 16);
+            this.rdio_LanternTree.TabIndex = 38;
+            this.rdio_LanternTree.Text = "명등룡 파생";
+            this.rdio_LanternTree.UseVisualStyleBackColor = true;
+            this.rdio_LanternTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // rdio_BlackTree
+            // 
+            this.rdio_BlackTree.AutoSize = true;
+            this.rdio_BlackTree.Location = new System.Drawing.Point(150, 64);
+            this.rdio_BlackTree.Name = "rdio_BlackTree";
+            this.rdio_BlackTree.Size = new System.Drawing.Size(75, 16);
+            this.rdio_BlackTree.TabIndex = 37;
+            this.rdio_BlackTree.Text = "흑강 파생";
+            this.rdio_BlackTree.UseVisualStyleBackColor = true;
+            this.rdio_BlackTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // rdio_YongsanTree
+            // 
+            this.rdio_YongsanTree.AutoSize = true;
+            this.rdio_YongsanTree.Location = new System.Drawing.Point(57, 64);
+            this.rdio_YongsanTree.Name = "rdio_YongsanTree";
+            this.rdio_YongsanTree.Size = new System.Drawing.Size(87, 16);
+            this.rdio_YongsanTree.TabIndex = 36;
+            this.rdio_YongsanTree.Text = "용산룡 파생";
+            this.rdio_YongsanTree.UseVisualStyleBackColor = true;
+            this.rdio_YongsanTree.CheckedChanged += new System.EventHandler(this.rdio_AllTree_CheckedChanged);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.rdi_Elemental_All);
+            this.panel2.Controls.Add(this.radioButton9);
+            this.panel2.Controls.Add(this.radioButton5);
+            this.panel2.Controls.Add(this.radioButton6);
+            this.panel2.Controls.Add(this.radioButton7);
+            this.panel2.Controls.Add(this.radioButton8);
+            this.panel2.Controls.Add(this.radioButton4);
+            this.panel2.Controls.Add(this.radioButton3);
+            this.panel2.Controls.Add(this.radioButton2);
+            this.panel2.Controls.Add(this.radioButton1);
+            this.panel2.Location = new System.Drawing.Point(75, 46);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1150, 30);
+            this.panel2.TabIndex = 40;
+            // 
+            // rdi_Elemental_All
+            // 
+            this.rdi_Elemental_All.AutoSize = true;
+            this.rdi_Elemental_All.Checked = true;
+            this.rdi_Elemental_All.Location = new System.Drawing.Point(6, 4);
+            this.rdi_Elemental_All.Name = "rdi_Elemental_All";
+            this.rdi_Elemental_All.Size = new System.Drawing.Size(47, 16);
+            this.rdi_Elemental_All.TabIndex = 9;
+            this.rdi_Elemental_All.TabStop = true;
+            this.rdi_Elemental_All.Text = "전체";
+            this.rdi_Elemental_All.UseVisualStyleBackColor = true;
+            this.rdi_Elemental_All.CheckedChanged += new System.EventHandler(this.EeleMental_Changed);
+            // 
+            // radioButton9
+            // 
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             this.radioButton9.AutoSize = true;
             this.radioButton9.Location = new System.Drawing.Point(727, 4);
             this.radioButton9.Name = "radioButton9";
@@ -663,7 +1075,11 @@
             this.radioButton9.TabIndex = 8;
             this.radioButton9.Text = "폭파";
             this.radioButton9.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
             this.radioButton9.Click += new System.EventHandler(this.rdio_Elemental_All_Click);
+=======
+            this.radioButton9.CheckedChanged += new System.EventHandler(this.EeleMental_Changed);
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             // 
             // radioButton5
             // 
@@ -674,7 +1090,11 @@
             this.radioButton5.TabIndex = 7;
             this.radioButton5.Text = "독";
             this.radioButton5.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
             this.radioButton5.Click += new System.EventHandler(this.rdio_Elemental_All_Click);
+=======
+            this.radioButton5.CheckedChanged += new System.EventHandler(this.EeleMental_Changed);
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             // 
             // radioButton6
             // 
@@ -685,7 +1105,11 @@
             this.radioButton6.TabIndex = 6;
             this.radioButton6.Text = "수면";
             this.radioButton6.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
             this.radioButton6.Click += new System.EventHandler(this.rdio_Elemental_All_Click);
+=======
+            this.radioButton6.CheckedChanged += new System.EventHandler(this.EeleMental_Changed);
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             // 
             // radioButton7
             // 
@@ -696,7 +1120,11 @@
             this.radioButton7.TabIndex = 5;
             this.radioButton7.Text = "마비";
             this.radioButton7.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
             this.radioButton7.Click += new System.EventHandler(this.rdio_Elemental_All_Click);
+=======
+            this.radioButton7.CheckedChanged += new System.EventHandler(this.EeleMental_Changed);
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             // 
             // radioButton8
             // 
@@ -707,7 +1135,11 @@
             this.radioButton8.TabIndex = 4;
             this.radioButton8.Text = "용";
             this.radioButton8.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
             this.radioButton8.Click += new System.EventHandler(this.rdio_Elemental_All_Click);
+=======
+            this.radioButton8.CheckedChanged += new System.EventHandler(this.EeleMental_Changed);
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             // 
             // radioButton4
             // 
@@ -718,7 +1150,11 @@
             this.radioButton4.TabIndex = 3;
             this.radioButton4.Text = "번개";
             this.radioButton4.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
             this.radioButton4.Click += new System.EventHandler(this.rdio_Elemental_All_Click);
+=======
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.EeleMental_Changed);
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             // 
             // radioButton3
             // 
@@ -729,7 +1165,11 @@
             this.radioButton3.TabIndex = 2;
             this.radioButton3.Text = "얼음";
             this.radioButton3.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
             this.radioButton3.Click += new System.EventHandler(this.rdio_Elemental_All_Click);
+=======
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.EeleMental_Changed);
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             // 
             // radioButton2
             // 
@@ -740,7 +1180,11 @@
             this.radioButton2.TabIndex = 1;
             this.radioButton2.Text = "물";
             this.radioButton2.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
             this.radioButton2.Click += new System.EventHandler(this.rdio_Elemental_All_Click);
+=======
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.EeleMental_Changed);
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             // 
             // radioButton1
             // 
@@ -751,6 +1195,7 @@
             this.radioButton1.TabIndex = 0;
             this.radioButton1.Text = "불";
             this.radioButton1.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
             this.radioButton1.Click += new System.EventHandler(this.rdio_Elemental_All_Click);
             // 
             // groupBox1
@@ -759,12 +1204,23 @@
             this.groupBox1.Controls.Add(this.chk_slotsLevel_2);
             this.groupBox1.Controls.Add(this.chk_slotsLevel_1);
             this.groupBox1.Controls.Add(this.chk_slotsLevel_All);
+=======
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.EeleMental_Changed);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rdio_Slots_All);
+            this.groupBox1.Controls.Add(this.rdio_Slots_Lv1);
+            this.groupBox1.Controls.Add(this.rdio_Slots_Lv2);
+            this.groupBox1.Controls.Add(this.rdio_Slots_Lv3);
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             this.groupBox1.Location = new System.Drawing.Point(960, 82);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(240, 30);
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
             // 
+<<<<<<< HEAD
             // chk_slotsLevel_3
             // 
             this.chk_slotsLevel_3.AutoSize = true;
@@ -815,12 +1271,21 @@
             this.groupBox2.Controls.Add(this.chk_slotsCount_2);
             this.groupBox2.Controls.Add(this.chk_slotsCount_All);
             this.groupBox2.Controls.Add(this.chk_slotsCount_1);
+=======
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rdio_Slots_AllCount);
+            this.groupBox2.Controls.Add(this.rdio_Slots_1Count);
+            this.groupBox2.Controls.Add(this.rdio_Slots_3Count);
+            this.groupBox2.Controls.Add(this.rdio_Slots_2Count);
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             this.groupBox2.Location = new System.Drawing.Point(960, 124);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(240, 30);
             this.groupBox2.TabIndex = 42;
             this.groupBox2.TabStop = false;
             // 
+<<<<<<< HEAD
             // chk_slotsCount_3
             // 
             this.chk_slotsCount_3.AutoSize = true;
@@ -868,6 +1333,11 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.rdio_Tree_All);
+=======
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.rdio_AllTree);
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             this.groupBox3.Controls.Add(this.rido_OreTree);
             this.groupBox3.Controls.Add(this.rdio_ExtinctionTree);
             this.groupBox3.Controls.Add(this.rdio_LightningTree);
@@ -893,6 +1363,7 @@
             this.groupBox3.Size = new System.Drawing.Size(820, 87);
             this.groupBox3.TabIndex = 43;
             this.groupBox3.TabStop = false;
+<<<<<<< HEAD
             // 
             // button1
             // 
@@ -903,17 +1374,28 @@
             this.button1.Text = "종료";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+=======
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             // 
             // FrmWeaponList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1234, 545);
             this.Controls.Add(this.button1);
+=======
+            this.ClientSize = new System.Drawing.Size(1234, 561);
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
+<<<<<<< HEAD
+=======
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txt_Serch);
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -956,7 +1438,19 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_tachi;
+<<<<<<< HEAD
         private System.Windows.Forms.RadioButton rdio_Tree_All;
+=======
+        private System.Windows.Forms.RadioButton rdio_Slots_Lv1;
+        private System.Windows.Forms.RadioButton rdio_Slots_Lv3;
+        private System.Windows.Forms.RadioButton rdio_Slots_Lv2;
+        private System.Windows.Forms.RadioButton rdio_Slots_2Count;
+        private System.Windows.Forms.RadioButton rdio_Slots_3Count;
+        private System.Windows.Forms.RadioButton rdio_Slots_1Count;
+        private System.Windows.Forms.RadioButton rdio_Slots_AllCount;
+        private System.Windows.Forms.RadioButton rdio_Slots_All;
+        private System.Windows.Forms.RadioButton rdio_AllTree;
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
         private System.Windows.Forms.TreeView weapon_tree;
         private System.Windows.Forms.DataGridView weapon_data_View;
         private System.Windows.Forms.Button btn_OneSword;
@@ -1006,6 +1500,7 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
+<<<<<<< HEAD
         private System.Windows.Forms.RadioButton rdio_Elemental_All;
         private System.Windows.Forms.CheckBox chk_slotsLevel_3;
         private System.Windows.Forms.CheckBox chk_slotsLevel_2;
@@ -1016,5 +1511,8 @@
         private System.Windows.Forms.CheckBox chk_slotsCount_All;
         private System.Windows.Forms.CheckBox chk_slotsCount_1;
         private System.Windows.Forms.Button button1;
+=======
+        private System.Windows.Forms.RadioButton rdi_Elemental_All;
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
     }
 }

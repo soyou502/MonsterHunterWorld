@@ -37,7 +37,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+=======
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             this.label10 = new System.Windows.Forms.Label();
             this.lbl_deValue = new System.Windows.Forms.Label();
             this.lbl_eleValue = new System.Windows.Forms.Label();
@@ -58,6 +61,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lbl_sangsan = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.lbl_jejak = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -66,6 +70,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+=======
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.lbl_jejak = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.weapon_pictur)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             this.SuspendLayout();
             // 
             // weapon_pictur
@@ -143,6 +156,7 @@
             this.panel2.Size = new System.Drawing.Size(527, 258);
             this.panel2.TabIndex = 17;
             // 
+<<<<<<< HEAD
             // chart1
             // 
             chartArea1.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
@@ -168,6 +182,12 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(25, 185);
+=======
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(25, 189);
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 12);
             this.label10.TabIndex = 25;
@@ -344,15 +364,39 @@
             this.lbl_sangsan.TabIndex = 10;
             this.lbl_sangsan.Text = "생산";
             // 
+<<<<<<< HEAD
             // lbl_jejak
             // 
             this.lbl_jejak.AutoSize = true;
             this.lbl_jejak.Location = new System.Drawing.Point(390, 283);
+=======
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(12, 298);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(320, 140);
+            this.listView1.TabIndex = 11;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView2
+            // 
+            this.listView2.Location = new System.Drawing.Point(338, 298);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(320, 140);
+            this.listView2.TabIndex = 24;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            // 
+            // lbl_jejak
+            // 
+            this.lbl_jejak.AutoSize = true;
+            this.lbl_jejak.Location = new System.Drawing.Point(336, 283);
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             this.lbl_jejak.Name = "lbl_jejak";
             this.lbl_jejak.Size = new System.Drawing.Size(29, 12);
             this.lbl_jejak.TabIndex = 23;
             this.lbl_jejak.Text = "제작";
             // 
+<<<<<<< HEAD
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -370,29 +414,60 @@
             this.dataGridView2.RowTemplate.Height = 23;
             this.dataGridView2.Size = new System.Drawing.Size(376, 150);
             this.dataGridView2.TabIndex = 25;
+=======
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(77, 171);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(318, 70);
+            this.chart1.TabIndex = 26;
+            this.chart1.Text = "chart1";
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             // 
             // FrmWeaponInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+<<<<<<< HEAD
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lbl_jejak);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.weapon_pictur);
+=======
+            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.lbl_jejak);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.weapon_pictur);
+            this.Controls.Add(this.listView1);
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             this.Controls.Add(this.lbl_sangsan);
             this.Name = "FrmWeaponInfo";
             this.Text = "무기상세정보";
             this.Load += new System.EventHandler(this.FrmWeaponInfo_Load);
+<<<<<<< HEAD
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
+=======
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             ((System.ComponentModel.ISupportInitialize)(this.weapon_pictur)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+=======
+>>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,12 +498,12 @@
         public System.Windows.Forms.Label lbl_type;
         private System.Windows.Forms.Label label11;
         public System.Windows.Forms.Label lbl_Slots;
+        public System.Windows.Forms.ListView listView1;
+        public System.Windows.Forms.ListView listView2;
         public System.Windows.Forms.Label lbl_jejak;
         public System.Windows.Forms.Label lbl_deValue;
         public System.Windows.Forms.Label lbl_eleValue;
         private System.Windows.Forms.Label label10;
         public System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        public System.Windows.Forms.DataGridView dataGridView1;
-        public System.Windows.Forms.DataGridView dataGridView2;
     }
 }
