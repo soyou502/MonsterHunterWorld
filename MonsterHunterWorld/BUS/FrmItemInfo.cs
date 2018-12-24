@@ -30,6 +30,7 @@ namespace MonsteHunterWorld
         }
         private void FrmItemInfo_Load(object sender, EventArgs e)
         {
+            this.Location = form.Location;
             dataGridView1.Columns.Add("Level", "단계");
             dataGridView1.Columns.Add("Part", "부위");
             dataGridView1.Columns.Add("Name", "이름");

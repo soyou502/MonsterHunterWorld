@@ -27,6 +27,7 @@ namespace MonsteHunterWorld
         }
         private void FrmArmorInfo_Load(object sender, EventArgs e)
         {
+            this.Location = form.Location;
             gViewItem.Columns.Add("item", "소재");
             gViewItem.Columns.Add("count", "필요량");
             gViewItem.Columns["item"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;

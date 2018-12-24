@@ -77,6 +77,7 @@ namespace MonsterHunterWorld.BUS
         DataTable dt;
         private void FormSkill_Load(object sender, EventArgs e)
         {
+            this.Location = form1.Location;
             if (skills == null)
             {
                 skills = GetListCollection() as List<Skill>;

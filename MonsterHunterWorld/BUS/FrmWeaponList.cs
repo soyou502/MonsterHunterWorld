@@ -85,7 +85,7 @@ namespace MonsteHunterWorld
 
         private void FrmWeaponList_Load(object sender, EventArgs e)
         {
-
+            this.Location = form1.Location;
             pictur_weapon.SizeMode = PictureBoxSizeMode.Zoom;
 
             chk_slotsLevel_All.Checked = true;
@@ -911,6 +911,11 @@ namespace MonsteHunterWorld
         private void FrmWeaponList_FormClosed(object sender, FormClosedEventArgs e)
         {
             form1.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

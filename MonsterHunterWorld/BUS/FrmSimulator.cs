@@ -54,6 +54,7 @@ namespace MonsterHunterWorld.BUS
             legJewel = new ComboBox[] { cboLJewel1, cboLJewel2, cboLJewel3 };
             weaponJewel = new ComboBox[] { cboWeaponJewel1, cboWeaponJewel2, cboWeaponJewel3 };
             gViewSetting();
+            boxes = new ComboBox[][] { weaponJewel, headJewel, chestJewel, armJewel, waistJewel, legJewel };
             foreach (var item in skill.GetListCollection())
             {
                 cboSkill1.Items.Add(item.Name);
@@ -183,7 +184,7 @@ namespace MonsterHunterWorld.BUS
 
         private void GetJewelSkill()
         {
-            boxes = new ComboBox[][] { weaponJewel, headJewel, chestJewel, armJewel, waistJewel, legJewel };
+            
             for (int i = 0; i < boxes.Length; i++)
             {
                 foreach (var item in boxes[i])
@@ -615,9 +616,16 @@ namespace MonsterHunterWorld.BUS
             root.AppendChild(legPart);
             XmlElement charmPart = doc.CreateElement("Charm");
             charmPart.InnerText = charm;
-            charmPart.SetAttribute("Rank", cboCharmRank.SelectedItem.ToString());
+
+            if (cboCharmRank.SelectedItem!=null)
+            {
+                charmPart.SetAttribute("Rank", cboCharmRank.SelectedItem.ToString()); 
+            }else
+            {
+                charmPart.SetAttribute("Rank", "");
+            }
             root.AppendChild(charmPart);
-            XmlTextWriter writer = new XmlTextWriter("../../" + fileName + ".xml", Encoding.UTF8);
+            XmlTextWriter writer = new XmlTextWriter(Application.StartupPath + "/Save/" + fileName + ".xml", Encoding.UTF8);
             writer.Formatting = Formatting.Indented;
             doc.WriteContentTo(writer);
             writer.Flush();
