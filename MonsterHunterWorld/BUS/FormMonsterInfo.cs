@@ -35,8 +35,8 @@ namespace MonsterHunterWorld.BUS
             labMonsterName.BackColor = Color.Transparent;
             labMonsterName.Text = monster.Nick + " " + monster.Name;
 
-            picDropTab.ImageLocation = Application.StartupPath + @"\Images\소재정보.png";
-            picCommentTab.ImageLocation = Application.StartupPath + @"\Images\나도한마디.png";
+            picDropTab.ImageLocation = Application.StartupPath + @"\Images\itemInfo.png";
+            picCommentTab.ImageLocation = Application.StartupPath + @"\Images\com.png";
             this.BackColor = Color.White;
 
             dropItemSort();

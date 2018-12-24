@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -625,10 +626,21 @@ namespace MonsterHunterWorld.BUS
                 charmPart.SetAttribute("Rank", "");
             }
             root.AppendChild(charmPart);
-            XmlTextWriter writer = new XmlTextWriter(Application.StartupPath + "/Save/" + fileName + ".xml", Encoding.UTF8);
+            XmlTextWriter writer = null;
+            try
+            {
+                writer = new XmlTextWriter(Application.LocalUserAppDataPath + "/Save/" + fileName + ".xml", Encoding.UTF8);
+            }
+            catch (DirectoryNotFoundException)
+            {
+                Directory.CreateDirectory(Application.LocalUserAppDataPath + "/Save");
+                writer = new XmlTextWriter(Application.LocalUserAppDataPath + "/Save/" + fileName + ".xml", Encoding.UTF8);
+            }
+                
             writer.Formatting = Formatting.Indented;
             doc.WriteContentTo(writer);
             writer.Flush();
+            MessageBox.Show("저장되었습니다.");
             writer.Close();
         }
 
