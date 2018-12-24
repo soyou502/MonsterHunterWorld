@@ -28,16 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label10 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.upgrade_price = new System.Windows.Forms.Label();
+            this.lbl_make_price = new System.Windows.Forms.Label();
+            this.lbl_creaft = new System.Windows.Forms.Label();
             this.lbl_deValue = new System.Windows.Forms.Label();
             this.lbl_eleValue = new System.Windows.Forms.Label();
             this.lbl_Slots = new System.Windows.Forms.Label();
@@ -56,24 +61,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txt_sp = new System.Windows.Forms.Label();
             this.lbl_spc_type = new System.Windows.Forms.Label();
+            this.txt_sp = new System.Windows.Forms.Label();
             this.weapon_pictur = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lbl_creaft = new System.Windows.Forms.Label();
-            this.lbl_make_price = new System.Windows.Forms.Label();
-            this.upgrade_price = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weapon_pictur)).BeginInit();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -143,36 +143,73 @@
             this.panel2.Size = new System.Drawing.Size(463, 197);
             this.panel2.TabIndex = 17;
             // 
-            // chart1
+            // panel4
             // 
-            this.chart1.BackColor = System.Drawing.Color.Transparent;
-            chartArea2.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
-            chartArea2.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea2.AxisX.IsMarginVisible = false;
-            chartArea2.AxisY.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
-            chartArea2.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(56, 3);
-            this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(312, 61);
-            this.chart1.TabIndex = 26;
-            this.chart1.Text = "chart1";
+            this.panel4.Controls.Add(this.label12);
+            this.panel4.Controls.Add(this.label13);
+            this.panel4.Controls.Add(this.label14);
+            this.panel4.Controls.Add(this.upgrade_price);
+            this.panel4.Controls.Add(this.lbl_make_price);
+            this.panel4.Controls.Add(this.lbl_creaft);
+            this.panel4.Location = new System.Drawing.Point(27, 139);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(415, 46);
+            this.panel4.TabIndex = 25;
             // 
-            // label10
+            // label12
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 27);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 12);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "예리도";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(290, 19);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 12);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "강화비용";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(156, 19);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 12);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "제작비용";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(22, 19);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(53, 12);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "상점구매";
+            // 
+            // upgrade_price
+            // 
+            this.upgrade_price.AutoSize = true;
+            this.upgrade_price.Location = new System.Drawing.Point(381, 19);
+            this.upgrade_price.Name = "upgrade_price";
+            this.upgrade_price.Size = new System.Drawing.Size(11, 12);
+            this.upgrade_price.TabIndex = 2;
+            this.upgrade_price.Text = "0";
+            // 
+            // lbl_make_price
+            // 
+            this.lbl_make_price.AutoSize = true;
+            this.lbl_make_price.Location = new System.Drawing.Point(253, 19);
+            this.lbl_make_price.Name = "lbl_make_price";
+            this.lbl_make_price.Size = new System.Drawing.Size(11, 12);
+            this.lbl_make_price.TabIndex = 1;
+            this.lbl_make_price.Text = "0";
+            // 
+            // lbl_creaft
+            // 
+            this.lbl_creaft.AutoSize = true;
+            this.lbl_creaft.ForeColor = System.Drawing.Color.Red;
+            this.lbl_creaft.Location = new System.Drawing.Point(81, 19);
+            this.lbl_creaft.Name = "lbl_creaft";
+            this.lbl_creaft.Size = new System.Drawing.Size(29, 12);
+            this.lbl_creaft.TabIndex = 0;
+            this.lbl_creaft.Text = "불가";
             // 
             // lbl_deValue
             // 
@@ -336,6 +373,37 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "회심률";
             // 
+            // chart1
+            // 
+            this.chart1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
+            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.AxisX.IsMarginVisible = false;
+            chartArea1.AxisY.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
+            chartArea1.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(56, 3);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(312, 61);
+            this.chart1.TabIndex = 26;
+            this.chart1.Text = "chart1";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(9, 27);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 12);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "예리도";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
@@ -355,6 +423,15 @@
             this.panel3.Size = new System.Drawing.Size(245, 64);
             this.panel3.TabIndex = 28;
             // 
+            // lbl_spc_type
+            // 
+            this.lbl_spc_type.AutoSize = true;
+            this.lbl_spc_type.Location = new System.Drawing.Point(12, 24);
+            this.lbl_spc_type.Name = "lbl_spc_type";
+            this.lbl_spc_type.Size = new System.Drawing.Size(44, 12);
+            this.lbl_spc_type.TabIndex = 4;
+            this.lbl_spc_type.Text = "label14";
+            // 
             // txt_sp
             // 
             this.txt_sp.AutoSize = true;
@@ -365,15 +442,6 @@
             this.txt_sp.TabIndex = 29;
             this.txt_sp.Text = "특수";
             // 
-            // lbl_spc_type
-            // 
-            this.lbl_spc_type.AutoSize = true;
-            this.lbl_spc_type.Location = new System.Drawing.Point(12, 24);
-            this.lbl_spc_type.Name = "lbl_spc_type";
-            this.lbl_spc_type.Size = new System.Drawing.Size(44, 12);
-            this.lbl_spc_type.TabIndex = 4;
-            this.lbl_spc_type.Text = "label14";
-            // 
             // weapon_pictur
             // 
             this.weapon_pictur.BackColor = System.Drawing.Color.Transparent;
@@ -382,74 +450,6 @@
             this.weapon_pictur.Size = new System.Drawing.Size(204, 198);
             this.weapon_pictur.TabIndex = 0;
             this.weapon_pictur.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label12);
-            this.panel4.Controls.Add(this.label13);
-            this.panel4.Controls.Add(this.label14);
-            this.panel4.Controls.Add(this.upgrade_price);
-            this.panel4.Controls.Add(this.lbl_make_price);
-            this.panel4.Controls.Add(this.lbl_creaft);
-            this.panel4.Location = new System.Drawing.Point(27, 139);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(415, 46);
-            this.panel4.TabIndex = 25;
-            // 
-            // lbl_creaft
-            // 
-            this.lbl_creaft.AutoSize = true;
-            this.lbl_creaft.ForeColor = System.Drawing.Color.Red;
-            this.lbl_creaft.Location = new System.Drawing.Point(81, 19);
-            this.lbl_creaft.Name = "lbl_creaft";
-            this.lbl_creaft.Size = new System.Drawing.Size(29, 12);
-            this.lbl_creaft.TabIndex = 0;
-            this.lbl_creaft.Text = "불가";
-            // 
-            // lbl_make_price
-            // 
-            this.lbl_make_price.AutoSize = true;
-            this.lbl_make_price.Location = new System.Drawing.Point(253, 19);
-            this.lbl_make_price.Name = "lbl_make_price";
-            this.lbl_make_price.Size = new System.Drawing.Size(11, 12);
-            this.lbl_make_price.TabIndex = 1;
-            this.lbl_make_price.Text = "0";
-            // 
-            // upgrade_price
-            // 
-            this.upgrade_price.AutoSize = true;
-            this.upgrade_price.Location = new System.Drawing.Point(381, 19);
-            this.upgrade_price.Name = "upgrade_price";
-            this.upgrade_price.Size = new System.Drawing.Size(11, 12);
-            this.upgrade_price.TabIndex = 2;
-            this.upgrade_price.Text = "0";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(290, 19);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 12);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "강화비용";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(156, 19);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(53, 12);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "제작비용";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(22, 19);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(53, 12);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "상점구매";
             // 
             // FrmWeaponInfo
             // 
@@ -472,22 +472,16 @@
             this.RightToLeftLayout = true;
             this.Text = "무기상세정보";
             this.Load += new System.EventHandler(this.FrmWeaponInfo_Load);
-<<<<<<< HEAD
-=======
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
-            ((System.ComponentModel.ISupportInitialize)(this.weapon_pictur)).EndInit();
->>>>>>> 35530ce8d66fd2b8c44b6ade9f5e8620fc7de1cc
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weapon_pictur)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

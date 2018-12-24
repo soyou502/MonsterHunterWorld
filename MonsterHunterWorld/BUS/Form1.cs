@@ -70,7 +70,7 @@ namespace MonsterHunterWorld.BUS
         private void lblWeapons_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            FrmWeaponList weaponList = new FrmWeaponList(this);
+            FrmWeaponList weaponList = new FrmWeaponList();
             weaponList.ShowDialog();
         }
 
