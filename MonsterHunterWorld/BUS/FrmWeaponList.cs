@@ -209,29 +209,18 @@ namespace MonsteHunterWorld
         {
             JArray json = JArray.Parse(djson);
 
-<<<<<<< HEAD
-            int count = 0;
-
-            foreach (JObject item in json)
-            {
-=======
             
             int count = 0;
             
             foreach (JObject item in json)
             {
                 
->>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
                 try
                 {
                     for (int i = 0; i < item["durability"].Count(); i++)
                     {
                         JToken first_jtok = item["durability"][0];  // 처음 예리도
 
-<<<<<<< HEAD
-
-=======
->>>>>>> bc3ee4e8bd619e11ebc90659cdfdfacaeaa3a045
                         int red = Int32.Parse(first_jtok["red"].ToString());
                         int orange = Int32.Parse(first_jtok["orange"].ToString());
                         int yellow = Int32.Parse(first_jtok["yellow"].ToString());
@@ -607,6 +596,7 @@ namespace MonsteHunterWorld
             fwif.ShowDialog();
         }
         private Point mousePoint;
+        private Form1 form1;
 
         private void Durability_Chart(FrmWeaponInfo fwif)
         {
