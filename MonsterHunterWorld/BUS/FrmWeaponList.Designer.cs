@@ -118,6 +118,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1213, 322);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // btn_InpoShow
             // 
@@ -136,6 +138,8 @@
             this.pictur_weapon.Size = new System.Drawing.Size(161, 260);
             this.pictur_weapon.TabIndex = 3;
             this.pictur_weapon.TabStop = false;
+            this.pictur_weapon.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.pictur_weapon.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // weapon_data_View
             // 
@@ -152,6 +156,8 @@
             this.weapon_data_View.Size = new System.Drawing.Size(650, 316);
             this.weapon_data_View.TabIndex = 2;
             this.weapon_data_View.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.weapon_data_View_CellContentClick);
+            this.weapon_data_View.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.weapon_data_View.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // weapon_tree
             // 
@@ -159,6 +165,8 @@
             this.weapon_tree.Name = "weapon_tree";
             this.weapon_tree.Size = new System.Drawing.Size(381, 316);
             this.weapon_tree.TabIndex = 1;
+            this.weapon_tree.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.weapon_tree.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // flowLayoutPanel1
             // 
@@ -363,6 +371,8 @@
             this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "무기 종류";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label2
             // 
@@ -375,6 +385,8 @@
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "속성";
+            this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label3
             // 
@@ -705,6 +717,8 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1150, 30);
             this.panel2.TabIndex = 40;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // rdio_Elemental_All
             // 
@@ -1003,6 +1017,8 @@
             this.btn_Close.TabIndex = 45;
             this.btn_Close.UseVisualStyleBackColor = true;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
+            this.btn_Close.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.btn_Close.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // FrmWeaponList
             // 
@@ -1031,9 +1047,10 @@
             this.MinimizeBox = false;
             this.Name = "FrmWeaponList";
             this.Text = "FrmWeaponList";
-            this.TopMost = true;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmWeaponList_FormClosed);
             this.Load += new System.EventHandler(this.FrmWeaponList_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictur_weapon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.weapon_data_View)).EndInit();

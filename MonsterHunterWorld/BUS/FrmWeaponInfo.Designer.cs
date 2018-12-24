@@ -84,6 +84,8 @@
             this.label6.Size = new System.Drawing.Size(29, 12);
             this.label6.TabIndex = 6;
             this.label6.Text = "파생";
+            this.label6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label7
             // 
@@ -93,6 +95,8 @@
             this.label7.Size = new System.Drawing.Size(41, 12);
             this.label7.TabIndex = 7;
             this.label7.Text = "레어도";
+            this.label7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label8
             // 
@@ -102,6 +106,8 @@
             this.label8.Size = new System.Drawing.Size(57, 12);
             this.label8.TabIndex = 8;
             this.label8.Text = "추가 방어";
+            this.label8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label9
             // 
@@ -111,6 +117,8 @@
             this.label9.Size = new System.Drawing.Size(53, 12);
             this.label9.TabIndex = 9;
             this.label9.Text = "상태이상";
+            this.label9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label9.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // panel2
             // 
@@ -142,6 +150,8 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(463, 197);
             this.panel2.TabIndex = 17;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // panel4
             // 
@@ -155,6 +165,8 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(415, 46);
             this.panel4.TabIndex = 25;
+            this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label12
             // 
@@ -164,6 +176,8 @@
             this.label12.Size = new System.Drawing.Size(53, 12);
             this.label12.TabIndex = 5;
             this.label12.Text = "강화비용";
+            this.label12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label12.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label13
             // 
@@ -173,6 +187,8 @@
             this.label13.Size = new System.Drawing.Size(53, 12);
             this.label13.TabIndex = 4;
             this.label13.Text = "제작비용";
+            this.label13.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label13.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label14
             // 
@@ -182,6 +198,8 @@
             this.label14.Size = new System.Drawing.Size(53, 12);
             this.label14.TabIndex = 3;
             this.label14.Text = "상점구매";
+            this.label14.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label14.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // upgrade_price
             // 
@@ -191,6 +209,8 @@
             this.upgrade_price.Size = new System.Drawing.Size(11, 12);
             this.upgrade_price.TabIndex = 2;
             this.upgrade_price.Text = "0";
+            this.upgrade_price.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.upgrade_price.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lbl_make_price
             // 
@@ -200,6 +220,8 @@
             this.lbl_make_price.Size = new System.Drawing.Size(11, 12);
             this.lbl_make_price.TabIndex = 1;
             this.lbl_make_price.Text = "0";
+            this.lbl_make_price.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lbl_make_price.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lbl_creaft
             // 
@@ -210,6 +232,8 @@
             this.lbl_creaft.Size = new System.Drawing.Size(29, 12);
             this.lbl_creaft.TabIndex = 0;
             this.lbl_creaft.Text = "불가";
+            this.lbl_creaft.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lbl_creaft.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lbl_deValue
             // 
@@ -219,6 +243,8 @@
             this.lbl_deValue.Size = new System.Drawing.Size(44, 12);
             this.lbl_deValue.TabIndex = 24;
             this.lbl_deValue.Text = "label19";
+            this.lbl_deValue.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lbl_deValue.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lbl_eleValue
             // 
@@ -228,6 +254,8 @@
             this.lbl_eleValue.Size = new System.Drawing.Size(53, 12);
             this.lbl_eleValue.TabIndex = 23;
             this.lbl_eleValue.Text = "속성수치";
+            this.lbl_eleValue.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lbl_eleValue.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lbl_Slots
             // 
@@ -237,6 +265,8 @@
             this.lbl_Slots.Size = new System.Drawing.Size(41, 12);
             this.lbl_Slots.TabIndex = 22;
             this.lbl_Slots.Text = "슬롯수";
+            this.lbl_Slots.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lbl_Slots.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label11
             // 
@@ -246,6 +276,8 @@
             this.label11.Size = new System.Drawing.Size(41, 12);
             this.label11.TabIndex = 21;
             this.label11.Text = "슬롯수";
+            this.label11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label11.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lbl_debuf
             // 
@@ -255,6 +287,8 @@
             this.lbl_debuf.Size = new System.Drawing.Size(44, 12);
             this.lbl_debuf.TabIndex = 20;
             this.lbl_debuf.Text = "label19";
+            this.lbl_debuf.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lbl_debuf.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lbl_defen
             // 
@@ -264,6 +298,8 @@
             this.lbl_defen.Size = new System.Drawing.Size(44, 12);
             this.lbl_defen.TabIndex = 19;
             this.lbl_defen.Text = "label20";
+            this.lbl_defen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lbl_defen.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lbl_rare
             // 
@@ -273,6 +309,8 @@
             this.lbl_rare.Size = new System.Drawing.Size(44, 12);
             this.lbl_rare.TabIndex = 18;
             this.lbl_rare.Text = "label18";
+            this.lbl_rare.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lbl_rare.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lbl_der
             // 
@@ -282,6 +320,8 @@
             this.lbl_der.Size = new System.Drawing.Size(44, 12);
             this.lbl_der.TabIndex = 17;
             this.lbl_der.Text = "label17";
+            this.lbl_der.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lbl_der.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lbl_criti
             // 
@@ -291,6 +331,8 @@
             this.lbl_criti.Size = new System.Drawing.Size(44, 12);
             this.lbl_criti.TabIndex = 16;
             this.lbl_criti.Text = "label16";
+            this.lbl_criti.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lbl_criti.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lbl_ele
             // 
@@ -300,6 +342,8 @@
             this.lbl_ele.Size = new System.Drawing.Size(53, 12);
             this.lbl_ele.TabIndex = 15;
             this.lbl_ele.Text = "속성타입";
+            this.lbl_ele.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lbl_ele.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lbl_att
             // 
@@ -309,6 +353,8 @@
             this.lbl_att.Size = new System.Drawing.Size(44, 12);
             this.lbl_att.TabIndex = 14;
             this.lbl_att.Text = "label14";
+            this.lbl_att.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lbl_att.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lbl_name
             // 
@@ -318,6 +364,8 @@
             this.lbl_name.Size = new System.Drawing.Size(44, 12);
             this.lbl_name.TabIndex = 13;
             this.lbl_name.Text = "label12";
+            this.lbl_name.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lbl_name.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lbl_type
             // 
@@ -327,6 +375,8 @@
             this.lbl_type.Size = new System.Drawing.Size(44, 12);
             this.lbl_type.TabIndex = 12;
             this.lbl_type.Text = "label11";
+            this.lbl_type.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lbl_type.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label1
             // 
@@ -336,6 +386,8 @@
             this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 1;
             this.label1.Text = "구분";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label2
             // 
@@ -345,6 +397,8 @@
             this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 2;
             this.label2.Text = "이름";
+            this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label3
             // 
@@ -354,6 +408,8 @@
             this.label3.Size = new System.Drawing.Size(41, 12);
             this.label3.TabIndex = 3;
             this.label3.Text = "공격력";
+            this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label4
             // 
@@ -363,6 +419,8 @@
             this.label4.Size = new System.Drawing.Size(57, 12);
             this.label4.TabIndex = 4;
             this.label4.Text = "무기 속성";
+            this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label5
             // 
@@ -372,6 +430,8 @@
             this.label5.Size = new System.Drawing.Size(41, 12);
             this.label5.TabIndex = 5;
             this.label5.Text = "회심률";
+            this.label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // chart1
             // 
@@ -394,6 +454,8 @@
             this.chart1.Size = new System.Drawing.Size(312, 61);
             this.chart1.TabIndex = 26;
             this.chart1.Text = "chart1";
+            this.chart1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.chart1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label10
             // 
@@ -403,6 +465,8 @@
             this.label10.Size = new System.Drawing.Size(41, 12);
             this.label10.TabIndex = 25;
             this.label10.Text = "예리도";
+            this.label10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label10.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // panel1
             // 
@@ -413,6 +477,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(372, 67);
             this.panel1.TabIndex = 27;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // panel3
             // 
@@ -422,6 +488,8 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(245, 64);
             this.panel3.TabIndex = 28;
+            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lbl_spc_type
             // 
@@ -431,6 +499,8 @@
             this.lbl_spc_type.Size = new System.Drawing.Size(44, 12);
             this.lbl_spc_type.TabIndex = 4;
             this.lbl_spc_type.Text = "label14";
+            this.lbl_spc_type.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lbl_spc_type.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // txt_sp
             // 
@@ -441,6 +511,8 @@
             this.txt_sp.Size = new System.Drawing.Size(29, 12);
             this.txt_sp.TabIndex = 29;
             this.txt_sp.Text = "특수";
+            this.txt_sp.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.txt_sp.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // weapon_pictur
             // 
@@ -450,6 +522,8 @@
             this.weapon_pictur.Size = new System.Drawing.Size(204, 198);
             this.weapon_pictur.TabIndex = 0;
             this.weapon_pictur.TabStop = false;
+            this.weapon_pictur.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.weapon_pictur.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // FrmWeaponInfo
             // 
@@ -472,6 +546,8 @@
             this.RightToLeftLayout = true;
             this.Text = "무기상세정보";
             this.Load += new System.EventHandler(this.FrmWeaponInfo_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
