@@ -25,7 +25,9 @@ namespace MonsterHunterWorld.BUS
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.BackgroundImage = Image.FromFile(Application.StartupPath + @"\Images\FormMain.jpg");
         }
+
         private void label7_MouseMove(object sender, MouseEventArgs e)
         {
             Label lbl = (Label)sender;
@@ -44,51 +46,54 @@ namespace MonsterHunterWorld.BUS
 
         private void lblItems_Click(object sender, EventArgs e)
         {
-            FrmItems items = new FrmItems();
-            items.Location = this.Location;
-            items.Show();
+            this.Visible = false;
+            FrmItems items = new FrmItems(this);
+            items.ShowDialog();
         }
 
         private void lblArmors_Click(object sender, EventArgs e)
         {
-            FrmArmors armors = new FrmArmors();
-            armors.Location = this.Location;
-            armors.Show();
+            this.Visible = false;
+            FrmArmors armors = new FrmArmors(this);
+            armors.ShowDialog();
         }
+
+
 
         private void lblMonsters_Click(object sender, EventArgs e)
         {
-            FormMonster monsters = new FormMonster();
-            monsters.Location = this.Location;
-            monsters.Show();
+            this.Visible = false;
+            FormMonster monsters = new FormMonster(this);
+            monsters.ShowDialog();
         }
 
         private void lblWeapons_Click(object sender, EventArgs e)
         {
-            FrmWeaponList weaponList = new FrmWeaponList();
-            weaponList.Location = this.Location;
-            weaponList.Show();
+            this.Visible = false;
+            FrmWeaponList weaponList = new FrmWeaponList(this);
+            weaponList.ShowDialog();
         }
 
         private void lblCharms_Click(object sender, EventArgs e)
         {
-            FrmCharm charms = new FrmCharm();
-            charms.Location = this.Location;
-            charms.Show();
+            this.Visible = false;
+            FrmCharm charms = new FrmCharm(this);
+            charms.ShowDialog();
         }
 
         private void lblJewels_Click(object sender, EventArgs e)
         {
-            FormJewel jewels = new FormJewel();
-            jewels.Location = this.Location;
-            jewels.Show();
+            this.Visible = false;
+            FormJewel jewels = new FormJewel(this);
+            jewels.ShowDialog();
         }
 
         private void lblSkillSimulator_Click(object sender, EventArgs e)
         {
-            FrmSimulator simulator = new FrmSimulator();
-            simulator.Location = this.Location;
-            simulator.Show();
+            
+            this.Visible = false;
+            FrmSimulator simulator = new FrmSimulator(this);
+            simulator.ShowDialog();
         }
         private Point mousePoint;
 
@@ -106,10 +111,11 @@ namespace MonsterHunterWorld.BUS
             mousePoint = new Point(e.X, e.Y);
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            FrmWeaponList fwl = new FrmWeaponList();
-            fwl.Show();
+            this.Visible = false;
+            FormSkill skill = new FormSkill(this);
+            skill.ShowDialog();
         }
     }
 }

@@ -17,9 +17,16 @@ namespace MonsterHunterWorld.BUS
     public partial class FrmCharm : Form, IGetListCollection<Charm>
     {
         static List<Charm> charms;
+        private Form form1;
+
         public FrmCharm()
         {
             InitializeComponent();
+        }
+
+        public FrmCharm(Form form1) : this()
+        {
+            this.form1 = form1;
         }
 
         public IList<Charm> GetListCollection()
@@ -133,9 +140,35 @@ namespace MonsterHunterWorld.BUS
         {
             if (e.ColumnIndex >= 3 && e.ColumnIndex <= 6)
             {
-                FrmItemInfo fii = new FrmItemInfo(dataGridView1.SelectedCells[0].Value.ToString());
+                this.Visible = false;
+                FrmItemInfo fii = new FrmItemInfo(dataGridView1.SelectedCells[0].Value.ToString(), this);
                 fii.ShowDialog();
             }
+        }
+
+        private void FrmCharm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form1.Show();
+        }
+        private Point mousePoint;
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+            {
+                Location = new Point(this.Left - (mousePoint.X - e.X),
+                    this.Top - (mousePoint.Y - e.Y));
+            }
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mousePoint = new Point(e.X, e.Y);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

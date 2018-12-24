@@ -60,13 +60,22 @@ namespace MonsteHunterWorld
 
         private string elemental_Name;  // 이벤트용 속성이름
         private string select_name; // 그리드뷰 선택한 행의 무기 이름
+<<<<<<< HEAD
         private string sp_type; // 스페셜 타입
+=======
+        private Form1 form1;
+>>>>>>> 35530ce8d66fd2b8c44b6ade9f5e8620fc7de1cc
 
 
         public FrmWeaponList()
         {
             InitializeComponent();
 
+        }
+
+        public FrmWeaponList(Form1 form1) : this()
+        {
+            this.form1 = form1;
         }
 
         private void FrmWeaponList_Load(object sender, EventArgs e)
@@ -614,7 +623,15 @@ namespace MonsteHunterWorld
                     make_price = Int32.Parse(obj["make_price"].ToString()); // 제작비용
                     upgrade_price = Int32.Parse(obj["upgrade_price"].ToString()); // 업글비용 
                 }
+<<<<<<< HEAD
                 // 제작정보 끝
+=======
+                // 제작정보
+
+
+                // 무기 기본 정보 데이터 저장
+                //wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slots));
+>>>>>>> 35530ce8d66fd2b8c44b6ade9f5e8620fc7de1cc
 
                 if (obj.ContainsKey("weakness"))
                 {
@@ -745,6 +762,7 @@ namespace MonsteHunterWorld
                     fwif.lbl_make_price.Text = wcList[select_idx].Make_price.ToString();
                     fwif.upgrade_price.Text = wcList[select_idx].Upgrade_price.ToString();
 
+<<<<<<< HEAD
                     if (item.Con_make == true)
                     {
                         fwif.lbl_creaft.Text = "가능";
@@ -772,6 +790,41 @@ namespace MonsteHunterWorld
                 {
                     fwif.lbl_ele.Text = "없습니다";
                     fwif.lbl_eleValue.Visible = false;
+=======
+                }
+
+                // 속성 정보 전달
+                //foreach (var item in weList)
+                //{
+                //    if (item.Idx == weList[select_idx].Idx)
+                //    {
+                //        fwif.lbl_ele.Text = item.Elmental_name;
+                //        fwif.lbl_eleValue.Text = item.Elmental_value.ToString();
+                //    }
+                //    else
+                //    {
+                //        fwif.lbl_ele.Text = "없습니다";
+                //        fwif.lbl_eleValue.Visible = false;
+
+                //    }
+                //}
+                //// 디버프 정보 전달
+                //foreach (var item in wdList)
+                //{
+                //    if (String.IsNullOrEmpty(item.Debuff_type))
+                //    {
+                //        fwif.lbl_debuf.Text = "님 머임";
+                //        fwif.lbl_deValue.Text = item.Debuff_value.ToString();
+                //    }
+                //    else
+                //    {
+                //        fwif.lbl_debuf.Text = "없습니다";
+                //        fwif.lbl_deValue.Visible = false;
+                //    }
+                //}
+                // 예리도 정보 전달
+                Durability_Chart(fwif);
+>>>>>>> 35530ce8d66fd2b8c44b6ade9f5e8620fc7de1cc
 
                 }
             }
@@ -943,6 +996,134 @@ namespace MonsteHunterWorld
             duaList.Clear(); // 리스트 비우기
             imageList.Clear(); // 리스트 비우기
             GetWeaponDate(("weapons/" + this.first_wtype));
+<<<<<<< HEAD
+=======
+
+            // 파싱조건
+            //if (cheked_Build && cheked_Eelemental && cheked_SlotsLv && cheked_SlotsCount)
+            //{
+            //    if (build_name == derivation && (elemental_Name == ele_name || elemental_Name == debuff_name))
+            //    {
+            //        foreach (var Lv in slots_lv)
+            //        {
+            //            if (slot.Contains(Lv) && slot.Length == slots_count)
+            //            {   // slot 에 해당 레벨이 있고 슬롯개수(길이) 가 Count 와 같으면
+            //                imageList.Add(new Weapons_Image(idx, imageUri));
+            //                wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
+            //                wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
+            //                weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
+            //            }
+            //        }
+            //    }
+            //}
+            //else if (cheked_Build && cheked_Eelemental && cheked_SlotsLv)
+            //{
+            //    if (build_name == derivation && (elemental_Name == ele_name || elemental_Name == debuff_name))
+            //    {
+            //        foreach (var Lv in slots_lv)
+            //        {
+            //            imageList.Add(new Weapons_Image(idx, imageUri));
+            //            wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
+            //            wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
+            //            weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
+            //        }
+            //    }
+            //}
+            //else if (cheked_Build && cheked_Eelemental)
+            //{
+            //    if ((elemental_Name == ele_name || elemental_Name == debuff_name))
+            //    {
+            //        // slot 에 해당 레벨이 있고 슬롯개수(길이) 가 Count 와 같으면
+            //        imageList.Add(new Weapons_Image(idx, imageUri));
+            //        wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
+            //        wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
+            //        weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
+
+            //    }
+            //}
+            //else if (cheked_Eelemental && cheked_SlotsLv && cheked_SlotsCount)
+            //{
+            //    if (elemental_Name == ele_name || elemental_Name == debuff_name)
+            //    {
+            //        foreach (var Lv in slots_lv)
+            //        {
+            //            if (slot.Contains(Lv) && slot.Length == slots_count)
+            //            {
+            //                //imageList
+            //                //wbList
+            //                //wcList
+            //                //weList
+            //            }
+            //        }
+            //    }
+            //}
+            //else if (cheked_Eelemental && cheked_SlotsLv)
+            //{
+            //    if (elemental_Name == ele_name || elemental_Name == debuff_name)
+
+            //    {
+            //        foreach (var Lv in slots_lv)
+            //        {
+
+
+            //        }
+            //    }
+            //}
+            //else if (cheked_SlotsLv && cheked_SlotsCount)
+            //{
+            //    foreach (var Lv in slots_lv)
+            //    {
+            //        if (slot.Contains(Lv) && slot.Length == slots_count)
+            //        {   // slot 에 해당 레벨이 있고 슬롯개수(길이) 가 Count 와 같으면
+            //            imageList.Add(new Weapons_Image(idx, imageUri));
+            //            wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
+            //            wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
+            //            weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
+            //        }
+            //    }
+            //}
+            //else if (cheked_Build || cheked_Eelemental || cheked_SlotsLv || cheked_SlotsCount)
+            //{
+            //    if (build_name == derivation)
+            //    {
+            //        imageList.Add(new Weapons_Image(idx, imageUri));
+            //        wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
+            //        wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
+            //        weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
+            //    }
+            //    else if (elemental_Name == ele_name || elemental_Name == debuff_name)
+            //    {
+            //        imageList.Add(new Weapons_Image(idx, imageUri));
+            //        wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
+            //        wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
+            //        weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
+            //    }
+            //    else if (cheked_SlotsLv)
+            //    {
+            //        foreach (var Lv in slots_lv)
+            //        {
+            //            imageList.Add(new Weapons_Image(idx, imageUri));
+            //            wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
+            //            wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
+            //            weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
+            //        }
+            //    }
+            //    else if (cheked_SlotsCount)
+            //    {
+            //        if (slot.Length == slots_count)
+            //        {
+            //            imageList.Add(new Weapons_Image(idx, imageUri));
+            //            wbList.Add(new WeaponBase(idx, name, rare, attack, defense, critical, slot));
+            //            wcList.Add(new WeaponCreate(name, con_make, make_price, upgrade_price, derivation));
+            //            weList.Add(new WeaponEelemental(idx, elemental_Name, elemental_value));
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //}
+
+>>>>>>> 35530ce8d66fd2b8c44b6ade9f5e8620fc7de1cc
             GetDurability(DurabilityJSON());
         }
 
@@ -1022,10 +1203,32 @@ namespace MonsteHunterWorld
                 MessageBox.Show("무기종류를 먼저 선택해주세요.", "슬롯 수 오류");
             }
         }
+<<<<<<< HEAD
 
         private void btn_Close_Click(object sender, EventArgs e)
         {
             this.Close();
+=======
+        private Point mousePoint;
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+            {
+                Location = new Point(this.Left - (mousePoint.X - e.X),
+                    this.Top - (mousePoint.Y - e.Y));
+            }
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mousePoint = new Point(e.X, e.Y);
+        }
+
+        private void FrmWeaponList_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form1.Show();
+>>>>>>> 35530ce8d66fd2b8c44b6ade9f5e8620fc7de1cc
         }
     }
 }

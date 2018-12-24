@@ -17,9 +17,16 @@ namespace MonsterHunterWorld.BUS
     {
         static List<Armors> armors;
         Color[] color = new Color[] { Color.Gray, Color.Black, Color.LightGreen, Color.ForestGreen, Color.SkyBlue, Color.Purple, Color.HotPink, Color.Orange };
+        private Form form1;
+
         public FrmArmors()
         {
             InitializeComponent();
+        }
+
+        public FrmArmors(Form form1) : this()
+        {
+            this.form1 = form1;
         }
 
         private void AddArmorList(JArray ja)
@@ -172,6 +179,31 @@ namespace MonsterHunterWorld.BUS
                     }
                 }
             }
+        }
+
+        private void FrmArmors_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form1.Show();
+        }
+        private Point mousePoint;
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+            {
+                Location = new Point(this.Left - (mousePoint.X - e.X),
+                    this.Top - (mousePoint.Y - e.Y));
+            }
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mousePoint = new Point(e.X, e.Y);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

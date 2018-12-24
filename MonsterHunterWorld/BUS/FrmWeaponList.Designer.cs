@@ -1029,8 +1029,14 @@
             this.MinimizeBox = false;
             this.Name = "FrmWeaponList";
             this.Text = "FrmWeaponList";
+<<<<<<< HEAD
             this.TopMost = true;
+=======
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmWeaponList_FormClosed);
+>>>>>>> 35530ce8d66fd2b8c44b6ade9f5e8620fc7de1cc
             this.Load += new System.EventHandler(this.FrmWeaponList_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictur_weapon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.weapon_data_View)).EndInit();

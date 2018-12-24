@@ -472,6 +472,12 @@
             this.RightToLeftLayout = true;
             this.Text = "무기상세정보";
             this.Load += new System.EventHandler(this.FrmWeaponInfo_Load);
+<<<<<<< HEAD
+=======
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
+            ((System.ComponentModel.ISupportInitialize)(this.weapon_pictur)).EndInit();
+>>>>>>> 35530ce8d66fd2b8c44b6ade9f5e8620fc7de1cc
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();

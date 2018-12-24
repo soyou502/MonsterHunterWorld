@@ -8,11 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace MonsterHunterWorld.BUS
 {
     public partial class FrmSimulator : Form
     {
+        Form form;
         FormSkill skill;
         FrmCharm charm;
         FormJewel Jewel;
@@ -26,13 +28,18 @@ namespace MonsterHunterWorld.BUS
         ComboBox[] waistJewel;
         ComboBox[] legJewel;
         ComboBox[] weaponJewel;
+        ComboBox[][] boxes;
         public FrmSimulator()
         {
             InitializeComponent();
         }
-
+        public FrmSimulator(Form form) : this()
+        {
+            this.form = form;
+        }
         private void FrmSimulator_Load(object sender, EventArgs e)
         {
+            this.Location = form.Location;
             skill = new FormSkill();
             charm = new FrmCharm();
             Jewel = new FormJewel();
@@ -46,6 +53,25 @@ namespace MonsterHunterWorld.BUS
             waistJewel = new ComboBox[] { cboWJewel1, cboWJewel2, cboWJewel3 };
             legJewel = new ComboBox[] { cboLJewel1, cboLJewel2, cboLJewel3 };
             weaponJewel = new ComboBox[] { cboWeaponJewel1, cboWeaponJewel2, cboWeaponJewel3 };
+            gViewSetting();
+            foreach (var item in skill.GetListCollection())
+            {
+                cboSkill1.Items.Add(item.Name);
+                cboSkill2.Items.Add(item.Name);
+            }
+            foreach (var item in charm.GetListCollection())
+            {
+                cboCharm.Items.Add(item.Name);
+            }
+            foreach (var item in Jewel.GetListCollection())
+            {
+                jewelName.Add(item.Name + " lv" + item.Slot_level);
+            }
+
+        }
+
+        private void gViewSetting()
+        {
             gViewResistance.Columns.Add("Part", "부위");
             gViewResistance.Columns.Add("Defence", "방어력");
             gViewResistance.Columns.Add("Fire", "화속성");
@@ -62,23 +88,8 @@ namespace MonsterHunterWorld.BUS
             gVIewSkill.Columns.Add("Leg", "다리");
             gVIewSkill.Columns.Add("Charm", "호석");
             gVIewSkill.Columns.Add("totla", "총합");
-            //gVIewSkill.Columns.Add
             gVIewSkill.Columns["Skill"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             gViewResistance.Rows.Add(new string[] { "총합", "0", "0", "0", "0", "0", "0" });
-            foreach (var item in skill.GetListCollection())
-            {
-                cboSkill1.Items.Add(item.Name);
-                cboSkill2.Items.Add(item.Name);
-            }
-            foreach (var item in charm.GetListCollection())
-            {
-                cboCharm.Items.Add(item.Name);
-            }
-            foreach (var item in Jewel.GetListCollection())
-            {
-                jewelName.Add(item.Name + " lv" + item.Slot_level);
-            }
-
         }
 
         private void cboCharm_SelectedIndexChanged(object sender, EventArgs e)
@@ -172,7 +183,7 @@ namespace MonsterHunterWorld.BUS
 
         private void GetJewelSkill()
         {
-            ComboBox[][] boxes = new ComboBox[][] { weaponJewel, headJewel, chestJewel, armJewel, waistJewel, legJewel };
+            boxes = new ComboBox[][] { weaponJewel, headJewel, chestJewel, armJewel, waistJewel, legJewel };
             for (int i = 0; i < boxes.Length; i++)
             {
                 foreach (var item in boxes[i])
@@ -231,7 +242,7 @@ namespace MonsterHunterWorld.BUS
                                         boxes[l][i].Items.Add("");
                                         foreach (var jewel in Jewel.GetListCollection())
                                         {
-                                            if (a[i].ToString() == jewel.Slot_level.ToString())
+                                            if (int.Parse(a[i].ToString()) >= int.Parse(jewel.Slot_level.ToString()))
                                             {
                                                 boxes[l][i].Items.Add(jewel.Name + " lv " + jewel.Slot_level);
                                             }
@@ -243,6 +254,10 @@ namespace MonsterHunterWorld.BUS
                     }
                 }
             }
+        }
+
+        private void WeaponSlot()
+        {
             if (cboWeapon.SelectedItem != null)
             {
                 string a = cboWeapon.SelectedItem.ToString().Replace("_", "");
@@ -257,14 +272,13 @@ namespace MonsterHunterWorld.BUS
                     weaponJewel[i].Items.Add("");
                     foreach (var jewel in Jewel.GetListCollection())
                     {
-                        if (a[i].ToString() == jewel.Slot_level.ToString())
+                        if (int.Parse(a[i].ToString()) >= int.Parse(jewel.Slot_level.ToString()))
                         {
                             weaponJewel[i].Items.Add(jewel.Name + " lv " + jewel.Slot_level);
                         }
                     }
                 }
             }
-
         }
 
         private void GetResistance(object sender)
@@ -476,5 +490,194 @@ namespace MonsterHunterWorld.BUS
                 }
             }
         }
+
+        private void FrmSimulator_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form.Show();
+        }
+
+        private Point mousePoint;
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+            {
+                Location = new Point(this.Left - (mousePoint.X - e.X),
+                    this.Top - (mousePoint.Y - e.Y));
+            }
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mousePoint = new Point(e.X, e.Y);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            
+            string fileName = txtSaveFileName.Text;
+            string head = "";
+            string chest = "";
+            string arm = "";
+            string waist = "";
+            string leg = "";
+            string charm = "";
+            string weapon = "";
+            string[] jewelSlot = new string[18];
+            string[] weaponJewel = new string[3];
+            int i = 0;
+            foreach (var combo in boxes)
+            {
+                foreach (var item in combo)
+                {
+                    if (item.SelectedItem!=null)
+                    {
+                        jewelSlot[i] = item.SelectedItem.ToString(); 
+                    }else
+                    {
+                        jewelSlot[i] = "";
+                    }
+                    i++;
+                }
+            }
+            if (cboWeapon.SelectedItem != null)
+            {
+                weapon = cboWeapon.SelectedItem.ToString();
+            }
+            if (cboHead.SelectedItem != null)
+            {
+                head = cboHead.SelectedItem.ToString(); 
+            }
+            if (cboChest.SelectedItem != null)
+            {
+                chest = cboChest.SelectedItem.ToString();
+            }
+            if (cboArm.SelectedItem != null)
+            {
+                arm = cboArm.SelectedItem.ToString();
+            }
+            if (cboWaist.SelectedItem != null)
+            {
+                waist = cboWaist.SelectedItem.ToString();
+            }
+            if (cboLeg.SelectedItem != null)
+            {
+                leg = cboLeg.SelectedItem.ToString();
+            }
+            if (cboCharm.SelectedItem != null)
+            {
+                charm = cboCharm.SelectedItem.ToString(); 
+            }
+
+            XmlDocument doc = new XmlDocument();
+            XmlElement root = doc.CreateElement("SkillSimulator");
+            doc.AppendChild(root);
+            XmlElement weaponPart = doc.CreateElement("Weapon");
+            weaponPart.InnerText = weapon;
+            weaponPart.SetAttribute("Jewel1", jewelSlot[0]);
+            weaponPart.SetAttribute("Jewel2", jewelSlot[1]);
+            weaponPart.SetAttribute("Jewel3", jewelSlot[2]);
+            root.AppendChild(weaponPart);
+            XmlElement headPart = doc.CreateElement("Head");
+            headPart.InnerText = head;
+            headPart.SetAttribute("Jewel1", jewelSlot[3]);
+            headPart.SetAttribute("Jewel2", jewelSlot[4]);
+            headPart.SetAttribute("Jewel3", jewelSlot[5]);
+            root.AppendChild(headPart);
+            XmlElement chestPart = doc.CreateElement("Chest");
+            chestPart.InnerText = chest;
+            chestPart.SetAttribute("Jewel1", jewelSlot[6]);
+            chestPart.SetAttribute("Jewel2", jewelSlot[7]);
+            chestPart.SetAttribute("Jewel3", jewelSlot[8]);
+            root.AppendChild(chestPart);
+            XmlElement armPart = doc.CreateElement("Arm");
+            armPart.InnerText = arm;
+            armPart.SetAttribute("Jewel1", jewelSlot[9]);
+            armPart.SetAttribute("Jewel2", jewelSlot[10]);
+            armPart.SetAttribute("Jewel3", jewelSlot[11]);
+            root.AppendChild(armPart);
+            XmlElement waistPart = doc.CreateElement("Waist");
+            waistPart.InnerText = waist;
+            waistPart.SetAttribute("Jewel1", jewelSlot[12]);
+            waistPart.SetAttribute("Jewel2", jewelSlot[13]);
+            waistPart.SetAttribute("Jewel3", jewelSlot[14]);
+            root.AppendChild(waistPart);
+            XmlElement legPart = doc.CreateElement("Leg");
+            legPart.InnerText = leg;
+            legPart.SetAttribute("Jewel1", jewelSlot[15]);
+            legPart.SetAttribute("Jewel2", jewelSlot[16]);
+            legPart.SetAttribute("Jewel3", jewelSlot[17]);
+            root.AppendChild(legPart);
+            XmlElement charmPart = doc.CreateElement("Charm");
+            charmPart.InnerText = charm;
+            charmPart.SetAttribute("Rank", cboCharmRank.SelectedItem.ToString());
+            root.AppendChild(charmPart);
+            XmlTextWriter writer = new XmlTextWriter("../../" + fileName + ".xml", Encoding.UTF8);
+            writer.Formatting = Formatting.Indented;
+            doc.WriteContentTo(writer);
+            writer.Flush();
+            writer.Close();
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Multiselect = false;
+            //open.InitialDirectory = "../..";
+            open.Filter = "xml파일|*.xml";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(open.FileName);
+                cboWeapon.Items.Clear();
+                cboHead.Items.Clear();
+                cboChest.Items.Clear();
+                cboArm.Items.Clear();
+                cboWaist.Items.Clear();
+                cboLeg.Items.Clear();
+                cboCharm.Items.Clear();
+                cboWeapon.Items.Add(doc.SelectSingleNode("//Weapon").InnerText);
+                cboWeapon.SelectedItem = cboWeapon.Items[0];
+                cboHead.Items.Add(doc.SelectSingleNode("//Head").InnerText);
+                cboHead.SelectedItem = cboHead.Items[0];
+                cboChest.Items.Add(doc.SelectSingleNode("//Chest").InnerText);
+                cboChest.SelectedItem = cboChest.Items[0];
+                cboArm.Items.Add(doc.SelectSingleNode("//Arm").InnerText);
+                cboArm.SelectedItem = cboArm.Items[0];
+                cboWaist.Items.Add(doc.SelectSingleNode("//Waist").InnerText);
+                cboWaist.SelectedItem = cboWaist.Items[0];
+                cboLeg.Items.Add(doc.SelectSingleNode("//Leg").InnerText);
+                cboLeg.SelectedItem = cboLeg.Items[0];
+                cboCharm.Items.Add(doc.SelectSingleNode("//Charm").InnerText);
+                cboCharm.SelectedItem = cboCharm.Items[0];
+
+                for (int i = 0; i < 3; i++)
+                {
+                    weaponJewel[i].Items.Add(doc.SelectSingleNode("//Weapon").Attributes[i].Value);
+                    weaponJewel[i].SelectedItem = weaponJewel[i].Items[0];
+                    headJewel[i].Items.Add(doc.SelectSingleNode("//Head").Attributes[i].Value);
+                    headJewel[i].SelectedItem = headJewel[i].Items[0];
+                    chestJewel[i].Items.Add(doc.SelectSingleNode("//Chest").Attributes[i].Value);
+                    chestJewel[i].SelectedItem = chestJewel[i].Items[0];
+                    armJewel[i].Items.Add(doc.SelectSingleNode("//Arm").Attributes[i].Value);
+                    armJewel[i].SelectedItem = armJewel[i].Items[0];
+                    waistJewel[i].Items.Add(doc.SelectSingleNode("//Waist").Attributes[i].Value);
+                    waistJewel[i].SelectedItem = waistJewel[i].Items[0];
+                    legJewel[i].Items.Add(doc.SelectSingleNode("//Leg").Attributes[i].Value);
+                    legJewel[i].SelectedItem = legJewel[i].Items[0];
+                }
+            }
+        }
+
+        private void cboWeapon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            WeaponSlot();
+        }
     }
+
 }

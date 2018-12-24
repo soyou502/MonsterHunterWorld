@@ -265,7 +265,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmArmorInfo";
             this.Text = "FrmArmorInfo";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmArmorInfo_FormClosed);
             this.Load += new System.EventHandler(this.FrmArmorInfo_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.gViewSkill)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gViewItem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

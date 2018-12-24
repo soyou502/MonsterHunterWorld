@@ -17,15 +17,19 @@ namespace MonsterHunterWorld.BUS
     public partial class FormMonster : Form, IGetListCollection<Monster>
     {
         List<Monster> monsters;
+        Form Form;
         public FormMonster()
         {
             InitializeComponent();
         }
-
+        public FormMonster(Form Form) : this()
+        {
+            this.Form = Form;
+        }
 
         private void FormMonster_Load(object sender, EventArgs e)
         {
-            Monster dd = new Monster();
+            this.Location = Form.Location;
             DataTable dt = new DataTable();
             dt.Columns.Add("Image", typeof(Image));
             dt.Columns.Add("Nick");
@@ -204,7 +208,7 @@ namespace MonsterHunterWorld.BUS
 
         private void gViewMonster_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
-            if (IsValidCellAddress(e.RowIndex, e.ColumnIndex) && (e.ColumnIndex == 0 || e.ColumnIndex == 1 || e.ColumnIndex == 2))
+            if (IsValidCellAddress(e.RowIndex, e.ColumnIndex) && e.ColumnIndex == 0)
             {
                 gViewMonster.Cursor = Cursors.Hand;
                 //monsterInfoToolTip.Show(gViewMonster.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString(),);
@@ -213,10 +217,55 @@ namespace MonsterHunterWorld.BUS
 
         private void gViewMonster_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
-            if (IsValidCellAddress(e.RowIndex, e.ColumnIndex) && (e.ColumnIndex == 0 || e.ColumnIndex == 1 || e.ColumnIndex == 2))
+            if (IsValidCellAddress(e.RowIndex, e.ColumnIndex) && e.ColumnIndex == 0)
             {
                 gViewMonster.Cursor = Cursors.Default;
             }
+        }
+
+        private Point mousePoint;
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+            {
+                Location = new Point(this.Left - (mousePoint.X - e.X),
+                    this.Top - (mousePoint.Y - e.Y));
+            }
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mousePoint = new Point(e.X, e.Y);
+        }
+
+        private void FormMonster_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form.Show();
+        }
+
+
+        private void gViewMonster_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 0)
+            {
+                int index = Convert.ToInt32(gViewMonster.Rows[e.RowIndex].Cells["Idx"].Value);
+                foreach (var item in GetListCollection())
+                {
+                    if (item.Idx == index)
+                    {
+                        FormMonsterInfo monsterInfo = new FormMonsterInfo(item);
+                        monsterInfo.ShowDialog();
+                        return;
+                    }
+                }
+
+            }
+        }
+
+        private void gViewMonster_SelectionChanged(object sender, EventArgs e)
+        {
+            ((DataGridView)sender).ClearSelection();
         }
     }
 }

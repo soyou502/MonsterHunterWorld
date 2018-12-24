@@ -1,4 +1,5 @@
 ﻿using MonsterHunterWorld;
+using MonsterHunterWorld.BUS;
 using MonsterHunterWorld.DAO;
 using MonsterHunterWorld.VO;
 using Newtonsoft.Json.Linq;
@@ -18,9 +19,16 @@ namespace MonsteHunterWorld
     {
         static List<Items> items;
         Color[] color = new Color[] { Color.Gray, Color.Black, Color.LightGreen, Color.ForestGreen, Color.SkyBlue, Color.Purple, Color.HotPink, Color.Orange };
+        private Form form1;
+
         public FrmItems()
         {
             InitializeComponent();
+        }
+
+        public FrmItems(Form form1) : this()
+        {
+            this.form1 = form1;
         }
 
         private void FrmItems_Load(object sender, EventArgs e)
@@ -51,9 +59,9 @@ namespace MonsteHunterWorld
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            FrmItemInfo info = new FrmItemInfo(dataGridView1.SelectedCells[0].Value.ToString());
-            info.Location = this.Location;
-            info.Show();
+            this.Visible = false;
+            FrmItemInfo info = new FrmItemInfo(dataGridView1.SelectedCells[0].Value.ToString(), this);
+            info.ShowDialog();
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -139,6 +147,31 @@ namespace MonsteHunterWorld
                 }
             }
             return items;
+        }
+
+        private void FrmItems_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form1.Show();
+        }
+        private Point mousePoint;
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+            {
+                Location = new Point(this.Left - (mousePoint.X - e.X),
+                    this.Top - (mousePoint.Y - e.Y));
+            }
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mousePoint = new Point(e.X, e.Y);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

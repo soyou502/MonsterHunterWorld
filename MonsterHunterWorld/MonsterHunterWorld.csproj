@@ -109,12 +109,6 @@
     <Compile Include="BUS\FrmArmors.Designer.cs">
       <DependentUpon>FrmArmors.cs</DependentUpon>
     </Compile>
-    <Compile Include="BUS\FrmChamList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BUS\FrmChamList.Designer.cs">
-      <DependentUpon>FrmChamList.cs</DependentUpon>
-    </Compile>
     <Compile Include="BUS\FrmCharm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,11 +178,38 @@
     <EmbeddedResource Include="BUS\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FormJewel.resx">
+      <DependentUpon>FormJewel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FormJewlInfo.resx">
+      <DependentUpon>FormJewlInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BUS\FormMonster.resx">
       <DependentUpon>FormMonster.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FormMonsterInfo.resx">
+      <DependentUpon>FormMonsterInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FormSkill.resx">
+      <DependentUpon>FormSkill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FormSkillInfo.resx">
+      <DependentUpon>FormSkillInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmArmorInfo.resx">
+      <DependentUpon>FrmArmorInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmArmors.resx">
+      <DependentUpon>FrmArmors.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BUS\FrmCharm.resx">
       <DependentUpon>FrmCharm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmItemInfo.resx">
+      <DependentUpon>FrmItemInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FrmItems.resx">
+      <DependentUpon>Frmitems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BUS\FrmSimulator.resx">
       <DependentUpon>FrmSimulator.cs</DependentUpon>
@@ -210,6 +231,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="korWeapon.json" />
     <None Include="weapon.json" />
@@ -226,6 +248,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\FormMain.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\나도한마디.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\소재정보.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions />
