@@ -85,6 +85,12 @@
     <Compile Include="BUS\FormMonsterInfo.Designer.cs">
       <DependentUpon>FormMonsterInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="BUS\FormMonsterInfoLoding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FormMonsterInfoLoding.Designer.cs">
+      <DependentUpon>FormMonsterInfoLoding.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\FormSkill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     <EmbeddedResource Include="BUS\FormMonsterInfo.resx">
       <DependentUpon>FormMonsterInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FormMonsterInfoLoding.resx">
+      <DependentUpon>FormMonsterInfoLoding.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BUS\FormSkill.resx">
       <DependentUpon>FormSkill.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,6 +260,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\FormMain.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Loding.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\monsterhunter_back.jpg">

@@ -17,8 +17,15 @@ namespace MonsterHunterWorld.BUS
     {
         private bool mouseDown = false;
         private Point lastLocation;
+        private DAO.MonsterInfoHtmlDAO html;
 
         VO.Monster monster;
+        public FormMonsterInfo(VO.Monster monster, DAO.MonsterInfoHtmlDAO html)
+        {
+            InitializeComponent();
+            this.monster = monster;
+            this.html = html;
+        }
 
         public FormMonsterInfo(VO.Monster monster)
         {
@@ -41,10 +48,10 @@ namespace MonsterHunterWorld.BUS
 
             dropItemSort();
 
-            DAO.MonsterInfoHtmlDAO html = new DAO.MonsterInfoHtmlDAO();
-            gViewComment.DataSource = html.GetCommentTable(monster.Nick + monster.Name);
+            //DAO.MonsterInfoHtmlDAO html = new DAO.MonsterInfoHtmlDAO(monster.Nick + monster.Name);
+            gViewComment.DataSource = html.CommentTable;
             gViewCommentSetting();
-            picDetailMonster.ImageLocation = html.GetInfoImageString();
+            picDetailMonster.ImageLocation = html.ImageStr;
             gViewDropItem.DataSource = GetDropItemTable();
             gViewDropItemSetting();
             MergeCellsInColumn(1, 0, gViewDropItem.Rows.Count-1);
