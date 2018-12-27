@@ -47,6 +47,9 @@ namespace MonsterHunterWorld.BUS
             picDetailMonster.ImageLocation = html.GetInfoImageString();
             gViewDropItem.DataSource = GetDropItemTable();
             gViewDropItemSetting();
+            MergeCellsInColumn(1, 0, gViewDropItem.Rows.Count-1);
+
+            gViewDropItem.Invalidate();
         }
 
         /// <summary>
@@ -82,11 +85,15 @@ namespace MonsterHunterWorld.BUS
             gViewDropItem.Columns[0].Width = this.Size.Width / 4;
             gViewDropItem.Columns[1].Width = this.Size.Width / 4;
             gViewDropItem.Columns[2].Width = this.Size.Width / 4;
+
+
             foreach (DataGridViewColumn column in gViewDropItem.Columns)
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
         }
+
+
 
         /// <summary>
         /// 드롭아이템 테이블을 반환하는 메서드
@@ -94,10 +101,10 @@ namespace MonsterHunterWorld.BUS
         /// <returns>드랍아이템 데이터테이블</returns>
         private DataTable GetDropItemTable()
         {
-            //레벨(상/하위) , 파트(퀘스트보수/유실물등), difi(획득난이도), idx, name
+            //Level(상/하위) , Part(퀘스트보수/유실물등), Difficulty(획득난이도), idx, name
             DataTable dt = new DataTable();
-            dt.Columns.Add("Level");
-            dt.Columns.Add("Part");
+            dt.Columns.Add("Level", typeof(string));
+            dt.Columns.Add("Part", typeof(string));
             dt.Columns.Add("Name");
             dt.Columns.Add("Difficulty");
             dt.Columns.Add("Idx");
@@ -113,7 +120,6 @@ namespace MonsterHunterWorld.BUS
 
                 dt.Rows.Add(row);
             }
-
             return dt;
         }
 
@@ -204,9 +210,9 @@ namespace MonsterHunterWorld.BUS
 
         private void gViewDropItem_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 2)
+            if (e.ColumnIndex == 2 && e.RowIndex != -1)
             {
-                FrmItemInfo form = new FrmItemInfo(gViewDropItem.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString(),this);
+                FrmItemInfo form = new FrmItemInfo(gViewDropItem.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString(), this);
                 form.ShowDialog();
             }
         }
@@ -232,5 +238,50 @@ namespace MonsterHunterWorld.BUS
                 gViewDropItem.Cursor = Cursors.Default;
             }
         }
+
+        #region 셀병합
+        private void MergeCellsInRow(int row, int col1, int col2)
+        {
+            Graphics g = gViewDropItem.CreateGraphics();
+            Pen p = new Pen(gViewDropItem.GridColor);
+            Rectangle r1 = gViewDropItem.GetCellDisplayRectangle(col1, row, true);
+            Rectangle r2 = gViewDropItem.GetCellDisplayRectangle(col2, row, true);
+
+            int recWidth = 0;
+            string recValue = string.Empty;
+            for (int i = col1; i <= col2; i++)
+            {
+                recWidth += gViewDropItem.GetCellDisplayRectangle(i, row, true).Width;
+                if (gViewDropItem[i, row].Value != null)
+                    recValue += gViewDropItem[i, row].Value.ToString() + " ";
+            }
+            Rectangle newCell = new Rectangle(r1.X, r1.Y, recWidth, r1.Height);
+            g.FillRectangle(new SolidBrush(gViewDropItem.DefaultCellStyle.BackColor), newCell);
+            g.DrawRectangle(p, newCell);
+            g.DrawString(recValue, gViewDropItem.DefaultCellStyle.Font, new SolidBrush(gViewDropItem.DefaultCellStyle.ForeColor), newCell.X + 3, newCell.Y + 3);
+        }
+
+        private void MergeCellsInColumn(int col, int row1, int row2)
+        {
+            Graphics g = gViewDropItem.CreateGraphics();
+            Pen p = new Pen(gViewDropItem.GridColor);
+            Rectangle r1 = gViewDropItem.GetCellDisplayRectangle(col, row1, true);
+            Rectangle r2 = gViewDropItem.GetCellDisplayRectangle(col, row2, true);
+
+            int recHeight = 0;
+            string recValue = string.Empty;
+            for (int i = row1; i <= row2; i++)
+            {
+                recHeight += gViewDropItem.GetCellDisplayRectangle(col, i, true).Height;
+                if (gViewDropItem[col, i].Value != null)
+                    recValue += gViewDropItem[col, i].Value.ToString() + " ";
+            }
+            Rectangle newCell = new Rectangle(r1.X, r1.Y, r1.Width, recHeight);
+            g.FillRectangle(new SolidBrush(gViewDropItem.DefaultCellStyle.BackColor), newCell);
+            g.DrawRectangle(p, newCell);
+            g.DrawString(recValue, gViewDropItem.DefaultCellStyle.Font, new SolidBrush(gViewDropItem.DefaultCellStyle.ForeColor), newCell.X + 3, newCell.Y + 3);
+        }
+        #endregion
+
     }
 }

@@ -77,9 +77,6 @@
             this.gViewComment.Size = new System.Drawing.Size(710, 159);
             this.gViewComment.TabIndex = 0;
             this.gViewComment.SelectionChanged += new System.EventHandler(this.gView_SelectionChanged);
-            this.gViewComment.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
-            this.gViewComment.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
-            this.gViewComment.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form_MouseUp);
             // 
             // picDetailMonster
             // 
@@ -89,13 +86,9 @@
             this.picDetailMonster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picDetailMonster.TabIndex = 2;
             this.picDetailMonster.TabStop = false;
-            this.picDetailMonster.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
-            this.picDetailMonster.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
-            this.picDetailMonster.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form_MouseUp);
             // 
             // gViewDropItem
             // 
-            this.gViewDropItem.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gViewDropItem.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gViewDropItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gViewDropItem.DefaultCellStyle = dataGridViewCellStyle2;
@@ -110,9 +103,6 @@
             this.gViewDropItem.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gViewDropItem_CellMouseEnter);
             this.gViewDropItem.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.gViewDropItem_CellMouseLeave);
             this.gViewDropItem.SelectionChanged += new System.EventHandler(this.gView_SelectionChanged);
-            this.gViewDropItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
-            this.gViewDropItem.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
-            this.gViewDropItem.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form_MouseUp);
             // 
             // picBar
             // 
@@ -148,9 +138,6 @@
             this.picDropTab.Size = new System.Drawing.Size(206, 28);
             this.picDropTab.TabIndex = 6;
             this.picDropTab.TabStop = false;
-            this.picDropTab.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
-            this.picDropTab.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
-            this.picDropTab.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form_MouseUp);
             // 
             // picCommentTab
             // 
@@ -159,9 +146,6 @@
             this.picCommentTab.Size = new System.Drawing.Size(149, 32);
             this.picCommentTab.TabIndex = 7;
             this.picCommentTab.TabStop = false;
-            this.picCommentTab.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
-            this.picCommentTab.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
-            this.picCommentTab.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form_MouseUp);
             // 
             // btnClose
             // 
@@ -196,9 +180,6 @@
             this.Name = "FormMonsterInfo";
             this.Text = "FormMonsterInfo";
             this.Load += new System.EventHandler(this.FormMonsterInfo_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form_MouseUp);
             ((System.ComponentModel.ISupportInitialize)(this.gViewComment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDetailMonster)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gViewDropItem)).EndInit();
