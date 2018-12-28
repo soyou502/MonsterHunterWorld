@@ -187,8 +187,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 21);
             this.textBox1.TabIndex = 5;
-            this.textBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
-            this.textBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboHead
             // 
@@ -871,8 +869,6 @@
             this.txtSaveFileName.Name = "txtSaveFileName";
             this.txtSaveFileName.Size = new System.Drawing.Size(100, 21);
             this.txtSaveFileName.TabIndex = 55;
-            this.txtSaveFileName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
-            this.txtSaveFileName.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // btnOpen
             // 
