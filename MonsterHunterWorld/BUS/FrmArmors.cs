@@ -1,4 +1,5 @@
-﻿using MonsterHunterWorld.DAO;
+﻿using MonsteHunterWorld;
+using MonsterHunterWorld.DAO;
 using MonsterHunterWorld.VO;
 using Newtonsoft.Json.Linq;
 using System;
@@ -205,6 +206,14 @@ namespace MonsterHunterWorld.BUS
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string str = dataGridView1.Rows[e.RowIndex].Cells["name"].Value.ToString();
+            this.Visible = false;
+            FrmArmorInfo fai = new FrmArmorInfo(str, this);
+            fai.ShowDialog();
         }
     }
 }

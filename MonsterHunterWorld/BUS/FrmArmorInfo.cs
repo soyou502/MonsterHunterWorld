@@ -15,6 +15,7 @@ namespace MonsteHunterWorld
     {
         private string str;
         Form form;
+        FormSkill skill;
         public FrmArmorInfo()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace MonsteHunterWorld
 
         public FrmArmorInfo(string str, Form form) : this()
         {
+            skill = new FormSkill();
             this.str = str;
             this.form = form;
         }
@@ -32,11 +34,13 @@ namespace MonsteHunterWorld
             gViewItem.Columns.Add("count", "필요량");
             gViewItem.Columns["item"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             gViewItem.BackgroundColor = Color.White;
+            gViewSkill.Columns.Add("idx", "idx");
             gViewSkill.Columns.Add("type", "타입");
             gViewSkill.Columns.Add("name", "이름");
             gViewSkill.Columns.Add("level", "등급");
             gViewSkill.BackgroundColor = Color.White;
             gViewSkill.Columns["name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            gViewSkill.Columns["idx"].Visible = false;
             foreach (var item in new FrmArmors().GetListCollection())
             {
                 if (item.Name == str)
@@ -70,10 +74,11 @@ namespace MonsteHunterWorld
                     }
                     foreach (var skill in item.Skills)
                     {
-                        string[] arr = new string[3];
-                        arr[0] = skill.Type;
-                        arr[1] = skill.Name;
-                        arr[2] = skill.Level.ToString();
+                        string[] arr = new string[4];
+                        arr[0] = skill.Idx.ToString();
+                        arr[1] = skill.Type;
+                        arr[2] = skill.Name;
+                        arr[3] = skill.Level.ToString();
                         gViewSkill.Rows.Add(arr);
                     }
                 }
@@ -87,7 +92,6 @@ namespace MonsteHunterWorld
             fii.ShowDialog();
         }
         private Point mousePoint;
-
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
             if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
@@ -105,6 +109,25 @@ namespace MonsteHunterWorld
         private void FrmArmorInfo_FormClosed(object sender, FormClosedEventArgs e)
         {
             form.Show();
+        }
+
+        private void gViewSkill_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string skilldesc = "";
+            if (e.RowIndex != -1)
+            {
+                foreach (var item in skill.GetListCollection())
+                {                    
+                    if (gViewSkill.Rows[e.RowIndex].Cells["idx"].Value.ToString() == item.Idx.ToString())
+                    {
+                        foreach (var desc in item.Desc)
+                        {
+                            skilldesc +=  "Lv" + desc.Level + " " +  desc.Desc + Environment.NewLine;
+                        }
+                    }
+                }
+                MessageBox.Show(skilldesc);
+            }
         }
     }
 }

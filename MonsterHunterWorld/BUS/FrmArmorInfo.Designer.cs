@@ -54,6 +54,10 @@
             // 
             // gViewSkill
             // 
+            this.gViewSkill.AllowUserToAddRows = false;
+            this.gViewSkill.AllowUserToDeleteRows = false;
+            this.gViewSkill.AllowUserToResizeColumns = false;
+            this.gViewSkill.AllowUserToResizeRows = false;
             this.gViewSkill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.gViewSkill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gViewSkill.Location = new System.Drawing.Point(257, 170);
@@ -64,6 +68,7 @@
             this.gViewSkill.RowTemplate.Height = 23;
             this.gViewSkill.Size = new System.Drawing.Size(220, 136);
             this.gViewSkill.TabIndex = 0;
+            this.gViewSkill.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gViewSkill_CellDoubleClick);
             this.gViewSkill.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.gViewSkill.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 

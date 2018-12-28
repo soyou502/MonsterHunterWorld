@@ -18,7 +18,7 @@ namespace MonsterHunterWorld.BUS
     {
         static List<Charm> charms;
         private Form form1;
-
+        FormSkill skill;
         public FrmCharm()
         {
             InitializeComponent();
@@ -27,6 +27,7 @@ namespace MonsterHunterWorld.BUS
         public FrmCharm(Form form1) : this()
         {
             this.form1 = form1;
+            skill = new FormSkill();
         }
 
         public IList<Charm> GetListCollection()
@@ -97,8 +98,13 @@ namespace MonsterHunterWorld.BUS
                     str[1] = (j + 1).ToString();
                     foreach (var skill in charms[i].Skills)
                     {
-                        str[2] += skill.Name;
+                        str[2] += skill.Name + ", ";
                     }
+                    if (str[2].Length > 2)
+                    {
+                        str[2] = str[2].Remove(str[2].Length - 2, 2); 
+                    }
+
                     if (charms[i].Items.Count != 0 && materialIndex < charms[i].Items.Count - 1)
                     {
                         for (int k = 3; k < 7; k++)
@@ -144,6 +150,24 @@ namespace MonsterHunterWorld.BUS
                 this.Visible = false;
                 FrmItemInfo fii = new FrmItemInfo(dataGridView1.SelectedCells[0].Value.ToString(), this);
                 fii.ShowDialog();
+            }
+            if (e.ColumnIndex == 2)
+            {
+                string skilldesc = "";
+                if (e.RowIndex != -1)
+                {
+                    foreach (var item in skill.GetListCollection())
+                    {
+                        if (dataGridView1.Rows[e.RowIndex].Cells["skill"].Value.ToString().Contains(item.Name))
+                        {
+                            foreach (var desc in item.Desc)
+                            {
+                                skilldesc +=item.Name +  " Lv" + desc.Level + " " + desc.Desc + Environment.NewLine;
+                            }
+                        }
+                    }
+                    MessageBox.Show(skilldesc);
+                }
             }
         }
 
