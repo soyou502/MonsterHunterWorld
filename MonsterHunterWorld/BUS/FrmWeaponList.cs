@@ -76,7 +76,7 @@ namespace MonsteHunterWorld
 
         private void FrmWeaponList_Load(object sender, EventArgs e)
         {
-
+            this.Location = form1.Location;
             pictur_weapon.SizeMode = PictureBoxSizeMode.Zoom;
 
             chk_slotsLevel_All.Checked = true;
@@ -1047,7 +1047,6 @@ namespace MonsteHunterWorld
         {
             this.Close();
         }
-
         private void weapon_tree_NodeMouseClick_1(object sender, TreeNodeMouseClickEventArgs e)
         {
             //string select_node = weapon_tree.SelectedNode.Text;

@@ -55,40 +55,34 @@
             this.gViewJewels.ReadOnly = true;
             this.gViewJewels.RowHeadersVisible = false;
             this.gViewJewels.RowTemplate.Height = 23;
-            this.gViewJewels.Size = new System.Drawing.Size(450, 250);
+            this.gViewJewels.Size = new System.Drawing.Size(450, 239);
             this.gViewJewels.TabIndex = 0;
             this.gViewJewels.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.gViewJewels.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gViewJewels_CellMouseEnter);
             this.gViewJewels.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.gViewJewels_CellMouseLeave);
             this.gViewJewels.SelectionChanged += new System.EventHandler(this.gViewJewels_SelectionChanged);
+            this.gViewJewels.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.gViewJewels.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("문체부 제목 돋음체", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(447, 0);
+            this.button1.Location = new System.Drawing.Point(12, 276);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 30);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 264);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(500, 23);
+            this.button1.Size = new System.Drawing.Size(453, 34);
             this.button1.TabIndex = 1;
             this.button1.Text = "종료";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // FormJewel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(477, 288);
+            this.ClientSize = new System.Drawing.Size(477, 318);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.gViewJewels);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -54,6 +54,10 @@
             // 
             // gViewSkill
             // 
+            this.gViewSkill.AllowUserToAddRows = false;
+            this.gViewSkill.AllowUserToDeleteRows = false;
+            this.gViewSkill.AllowUserToResizeColumns = false;
+            this.gViewSkill.AllowUserToResizeRows = false;
             this.gViewSkill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.gViewSkill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gViewSkill.Location = new System.Drawing.Point(257, 170);
@@ -64,6 +68,9 @@
             this.gViewSkill.RowTemplate.Height = 23;
             this.gViewSkill.Size = new System.Drawing.Size(220, 136);
             this.gViewSkill.TabIndex = 0;
+            this.gViewSkill.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gViewSkill_CellDoubleClick);
+            this.gViewSkill.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.gViewSkill.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label1
             // 
@@ -73,6 +80,8 @@
             this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 1;
             this.label1.Text = "이름";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label2
             // 
@@ -82,6 +91,8 @@
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 2;
             this.label2.Text = "착용부위";
+            this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label3
             // 
@@ -91,6 +102,8 @@
             this.label3.Size = new System.Drawing.Size(41, 12);
             this.label3.TabIndex = 3;
             this.label3.Text = "레어도";
+            this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label4
             // 
@@ -100,6 +113,8 @@
             this.label4.Size = new System.Drawing.Size(41, 12);
             this.label4.TabIndex = 4;
             this.label4.Text = "방어력";
+            this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label5
             // 
@@ -109,6 +124,8 @@
             this.label5.Size = new System.Drawing.Size(29, 12);
             this.label5.TabIndex = 5;
             this.label5.Text = "슬롯";
+            this.label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label6
             // 
@@ -118,6 +135,8 @@
             this.label6.Size = new System.Drawing.Size(29, 12);
             this.label6.TabIndex = 6;
             this.label6.Text = "내성";
+            this.label6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // gViewItem
             // 
@@ -137,6 +156,8 @@
             this.gViewItem.Size = new System.Drawing.Size(238, 136);
             this.gViewItem.TabIndex = 12;
             this.gViewItem.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gViewItem_CellDoubleClick);
+            this.gViewItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.gViewItem.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label12
             // 
@@ -146,6 +167,8 @@
             this.label12.Size = new System.Drawing.Size(57, 12);
             this.label12.TabIndex = 13;
             this.label12.Text = "생산 소재";
+            this.label12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label12.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label13
             // 
@@ -155,6 +178,8 @@
             this.label13.Size = new System.Drawing.Size(29, 12);
             this.label13.TabIndex = 14;
             this.label13.Text = "스킬";
+            this.label13.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label13.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lblName
             // 
@@ -164,6 +189,8 @@
             this.lblName.Size = new System.Drawing.Size(38, 12);
             this.lblName.TabIndex = 7;
             this.lblName.Text = "label7";
+            this.lblName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lblName.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lblRare
             // 
@@ -173,6 +200,8 @@
             this.lblRare.Size = new System.Drawing.Size(38, 12);
             this.lblRare.TabIndex = 8;
             this.lblRare.Text = "label8";
+            this.lblRare.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lblRare.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lblSlots
             // 
@@ -182,6 +211,8 @@
             this.lblSlots.Size = new System.Drawing.Size(38, 12);
             this.lblSlots.TabIndex = 9;
             this.lblSlots.Text = "label9";
+            this.lblSlots.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lblSlots.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lblPart
             // 
@@ -191,6 +222,8 @@
             this.lblPart.Size = new System.Drawing.Size(44, 12);
             this.lblPart.TabIndex = 10;
             this.lblPart.Text = "label10";
+            this.lblPart.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lblPart.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lblDefense
             // 
@@ -200,6 +233,8 @@
             this.lblDefense.Size = new System.Drawing.Size(44, 12);
             this.lblDefense.TabIndex = 11;
             this.lblDefense.Text = "label11";
+            this.lblDefense.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lblDefense.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lblResistances
             // 
@@ -209,6 +244,8 @@
             this.lblResistances.Size = new System.Drawing.Size(44, 12);
             this.lblResistances.TabIndex = 15;
             this.lblResistances.Text = "label14";
+            this.lblResistances.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lblResistances.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label7
             // 
@@ -218,6 +255,8 @@
             this.label7.Size = new System.Drawing.Size(29, 12);
             this.label7.TabIndex = 16;
             this.label7.Text = "등급";
+            this.label7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // lblLevel
             // 
@@ -227,6 +266,8 @@
             this.lblLevel.Size = new System.Drawing.Size(44, 12);
             this.lblLevel.TabIndex = 17;
             this.lblLevel.Text = "label14";
+            this.lblLevel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.lblLevel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // pictureBox1
             // 
@@ -237,6 +278,8 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // FrmArmorInfo
             // 

@@ -8,9 +8,21 @@ using System.Threading.Tasks;
 
 namespace MonsterHunterWorld.DAO
 {
-    class MonsterInfoHtmlDAO
+    public class MonsterInfoHtmlDAO
     {
-        public HtmlAgilityPack.HtmlDocument htmlInfoDoc;
+        private DataTable commentTable;
+        private string imageStr;
+        private HtmlAgilityPack.HtmlDocument htmlInfoDoc;
+
+        public DataTable CommentTable { get => commentTable; set => commentTable = value; }
+        public string ImageStr { get => imageStr; set => imageStr = value; }
+
+        public MonsterInfoHtmlDAO(string name)
+        {
+            CommentTable = SetCommentTable(name);
+            ImageStr = SetInfoImageString();
+        }      
+
         private HtmlDocument GetHtmlDoc()
         {
             HtmlAgilityPack.HtmlDocument htmlDoc = new HtmlAgilityPack.HtmlDocument();
@@ -52,7 +64,7 @@ namespace MonsterHunterWorld.DAO
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public DataTable GetCommentTable(string name)
+        private DataTable SetCommentTable(string name)
         {
             HtmlNode root = GetHtmlDoc(name).DocumentNode;
             HtmlNodeCollection table = root.SelectSingleNode("//body/div/div").FirstChild.NextSibling.NextSibling.NextSibling.FirstChild.NextSibling.FirstChild.NextSibling.FirstChild.NextSibling.NextSibling.NextSibling.FirstChild.NextSibling.FirstChild.NextSibling.NextSibling.NextSibling.NextSibling.NextSibling.NextSibling.NextSibling.NextSibling.NextSibling.SelectNodes("div")[1].FirstChild.NextSibling.NextSibling.NextSibling.FirstChild.NextSibling.NextSibling.NextSibling.NextSibling.FirstChild.NextSibling.NextSibling.NextSibling.SelectNodes("tr");
@@ -97,12 +109,17 @@ namespace MonsterHunterWorld.DAO
             }
             catch (Exception)
             {
-                dt = GetCommentTable(name);
+                dt = SetCommentTable(name);
             }
 
-            return dt;
+            return dt.Copy();
         }
-        public string GetInfoImageString()
+
+        /// <summary>
+        /// 몬스터 상세정보 이미지주소를 반환하는 메서드
+        /// </summary>
+        /// <returns></returns>
+        public string SetInfoImageString()
         {
             HtmlNode root = htmlInfoDoc.DocumentNode;
             string imageStr = root.SelectSingleNode("//body/div/div").FirstChild.NextSibling.NextSibling.NextSibling.SelectSingleNode("div/div").FirstChild.NextSibling.NextSibling.NextSibling.FirstChild.NextSibling.FirstChild.NextSibling.NextSibling.NextSibling.FirstChild.NextSibling.GetAttributeValue("src","");

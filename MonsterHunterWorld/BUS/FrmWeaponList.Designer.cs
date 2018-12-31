@@ -117,7 +117,8 @@
             this.panel1.Controls.Add(this.weapon_tree);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            // 
+
+            //
             // btn_InpoShow
             // 
             resources.ApplyResources(this.btn_InpoShow, "btn_InpoShow");
@@ -130,6 +131,7 @@
             resources.ApplyResources(this.pictur_weapon, "pictur_weapon");
             this.pictur_weapon.Name = "pictur_weapon";
             this.pictur_weapon.TabStop = false;
+
             // 
             // weapon_data_View
             // 
@@ -144,12 +146,15 @@
             this.weapon_data_View.RowTemplate.Height = 23;
             this.weapon_data_View.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.weapon_data_View.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.weapon_data_View_CellContentClick);
+
             // 
             // weapon_tree
             // 
             resources.ApplyResources(this.weapon_tree, "weapon_tree");
             this.weapon_tree.Name = "weapon_tree";
+
             this.weapon_tree.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.weapon_tree_NodeMouseClick_1);
+
             // 
             // flowLayoutPanel1
             // 
@@ -170,6 +175,8 @@
             this.flowLayoutPanel1.Controls.Add(this.btn_Bow);
             resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+
+
             // 
             // btn_GreatSword
             // 
@@ -303,6 +310,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Name = "label1";
+
             // 
             // label2
             // 
@@ -310,6 +318,8 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Name = "label2";
+
+
             // 
             // label3
             // 
@@ -518,6 +528,7 @@
             this.panel2.ForeColor = System.Drawing.SystemColors.Highlight;
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
+
             // 
             // rdio_Elemental_All
             // 
@@ -733,6 +744,7 @@
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.UseVisualStyleBackColor = true;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
+
             // 
             // FrmWeaponList
             // 
@@ -756,9 +768,12 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmWeaponList";
+
             this.Tag = "ss";
             this.TopMost = true;
+
             this.Load += new System.EventHandler(this.FrmWeaponList_Load);
+
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictur_weapon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.weapon_data_View)).EndInit();

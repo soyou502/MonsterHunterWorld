@@ -73,6 +73,7 @@ namespace MonsterHunterWorld.BUS
 
         private void FormJewel_Load(object sender, EventArgs e)
         {
+            this.Location = form1.Location;
             DataTable dt = new DataTable("Jewel");
             dt.Columns.Add("인덱스");
             dt.Columns.Add("이름");

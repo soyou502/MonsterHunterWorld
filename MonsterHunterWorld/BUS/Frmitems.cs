@@ -33,6 +33,7 @@ namespace MonsteHunterWorld
 
         private void FrmItems_Load(object sender, EventArgs e)
         {
+            this.Location = form1.Location;
             GetListCollection();
             textBox1.AutoCompleteMode = AutoCompleteMode.Suggest;
             textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;

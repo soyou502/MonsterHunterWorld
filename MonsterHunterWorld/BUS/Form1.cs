@@ -26,6 +26,14 @@ namespace MonsterHunterWorld.BUS
         private void Form1_Load(object sender, EventArgs e)
         {
             this.BackgroundImage = Image.FromFile(Application.StartupPath + @"\Images\FormMain.jpg");
+            try
+            {
+                Directory.CreateDirectory(Application.LocalUserAppDataPath + "/Save");
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void label7_MouseMove(object sender, MouseEventArgs e)
@@ -70,7 +78,7 @@ namespace MonsterHunterWorld.BUS
         private void lblWeapons_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            FrmWeaponList weaponList = new FrmWeaponList();
+            FrmWeaponList weaponList = new FrmWeaponList(this);
             weaponList.ShowDialog();
         }
 

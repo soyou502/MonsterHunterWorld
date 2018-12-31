@@ -254,8 +254,9 @@ namespace MonsterHunterWorld.BUS
                 {
                     if (item.Idx == index)
                     {
-                        FormMonsterInfo monsterInfo = new FormMonsterInfo(item);
-                        monsterInfo.ShowDialog();
+                        FormMonsterInfoLoding Loding = new FormMonsterInfoLoding(item);
+                        Loding.Owner = this;
+                        Loding.ShowDialog();
                         return;
                     }
                 }

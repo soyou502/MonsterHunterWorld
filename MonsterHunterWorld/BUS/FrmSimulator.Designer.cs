@@ -109,6 +109,8 @@
             this.cboSkill1.Name = "cboSkill1";
             this.cboSkill1.Size = new System.Drawing.Size(300, 20);
             this.cboSkill1.TabIndex = 0;
+            this.cboSkill1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboSkill1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboSkill2
             // 
@@ -120,6 +122,8 @@
             this.cboSkill2.Name = "cboSkill2";
             this.cboSkill2.Size = new System.Drawing.Size(300, 20);
             this.cboSkill2.TabIndex = 1;
+            this.cboSkill2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboSkill2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboSlotLevel
             // 
@@ -134,6 +138,8 @@
             this.cboSlotLevel.Name = "cboSlotLevel";
             this.cboSlotLevel.Size = new System.Drawing.Size(121, 20);
             this.cboSlotLevel.TabIndex = 2;
+            this.cboSlotLevel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboSlotLevel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboSlotCount
             // 
@@ -153,6 +159,8 @@
             this.cboSlotCount.Name = "cboSlotCount";
             this.cboSlotCount.Size = new System.Drawing.Size(121, 20);
             this.cboSlotCount.TabIndex = 3;
+            this.cboSlotCount.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboSlotCount.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboPart
             // 
@@ -170,6 +178,8 @@
             this.cboPart.Name = "cboPart";
             this.cboPart.Size = new System.Drawing.Size(121, 20);
             this.cboPart.TabIndex = 4;
+            this.cboPart.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboPart.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // textBox1
             // 
@@ -189,6 +199,8 @@
             this.cboHead.Size = new System.Drawing.Size(300, 20);
             this.cboHead.TabIndex = 6;
             this.cboHead.SelectedIndexChanged += new System.EventHandler(this.cboHead_SelectedIndexChanged);
+            this.cboHead.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboHead.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboChest
             // 
@@ -201,6 +213,8 @@
             this.cboChest.Size = new System.Drawing.Size(300, 20);
             this.cboChest.TabIndex = 7;
             this.cboChest.SelectedIndexChanged += new System.EventHandler(this.cboHead_SelectedIndexChanged);
+            this.cboChest.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboChest.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboArm
             // 
@@ -213,6 +227,8 @@
             this.cboArm.Size = new System.Drawing.Size(300, 20);
             this.cboArm.TabIndex = 8;
             this.cboArm.SelectedIndexChanged += new System.EventHandler(this.cboHead_SelectedIndexChanged);
+            this.cboArm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboArm.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboWaist
             // 
@@ -225,6 +241,8 @@
             this.cboWaist.Size = new System.Drawing.Size(300, 20);
             this.cboWaist.TabIndex = 9;
             this.cboWaist.SelectedIndexChanged += new System.EventHandler(this.cboHead_SelectedIndexChanged);
+            this.cboWaist.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboWaist.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboLeg
             // 
@@ -237,6 +255,8 @@
             this.cboLeg.Size = new System.Drawing.Size(300, 20);
             this.cboLeg.TabIndex = 10;
             this.cboLeg.SelectedIndexChanged += new System.EventHandler(this.cboHead_SelectedIndexChanged);
+            this.cboLeg.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboLeg.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // gViewResistance
             // 
@@ -255,6 +275,8 @@
             this.gViewResistance.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gViewResistance.Size = new System.Drawing.Size(451, 167);
             this.gViewResistance.TabIndex = 11;
+            this.gViewResistance.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.gViewResistance.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboWeapon
             // 
@@ -276,6 +298,8 @@
             this.cboWeapon.Size = new System.Drawing.Size(300, 20);
             this.cboWeapon.TabIndex = 12;
             this.cboWeapon.SelectedIndexChanged += new System.EventHandler(this.cboWeapon_SelectedIndexChanged);
+            this.cboWeapon.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboWeapon.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label1
             // 
@@ -285,6 +309,8 @@
             this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 13;
             this.label1.Text = "무기";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label2
             // 
@@ -294,6 +320,8 @@
             this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 14;
             this.label2.Text = "머리";
+            this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label3
             // 
@@ -303,6 +331,8 @@
             this.label3.Size = new System.Drawing.Size(29, 12);
             this.label3.TabIndex = 15;
             this.label3.Text = "몸통";
+            this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label4
             // 
@@ -312,6 +342,8 @@
             this.label4.Size = new System.Drawing.Size(17, 12);
             this.label4.TabIndex = 16;
             this.label4.Text = "팔";
+            this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label5
             // 
@@ -321,6 +353,8 @@
             this.label5.Size = new System.Drawing.Size(29, 12);
             this.label5.TabIndex = 17;
             this.label5.Text = "허리";
+            this.label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label6
             // 
@@ -330,6 +364,8 @@
             this.label6.Size = new System.Drawing.Size(29, 12);
             this.label6.TabIndex = 18;
             this.label6.Text = "다리";
+            this.label6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label7
             // 
@@ -339,6 +375,8 @@
             this.label7.Size = new System.Drawing.Size(35, 12);
             this.label7.TabIndex = 19;
             this.label7.Text = "스킬1";
+            this.label7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label8
             // 
@@ -348,6 +386,8 @@
             this.label8.Size = new System.Drawing.Size(35, 12);
             this.label8.TabIndex = 20;
             this.label8.Text = "스킬2";
+            this.label8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label9
             // 
@@ -357,6 +397,8 @@
             this.label9.Size = new System.Drawing.Size(53, 12);
             this.label9.TabIndex = 21;
             this.label9.Text = "슬롯레벨";
+            this.label9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label9.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label10
             // 
@@ -366,6 +408,8 @@
             this.label10.Size = new System.Drawing.Size(53, 12);
             this.label10.TabIndex = 22;
             this.label10.Text = "슬롯갯수";
+            this.label10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label10.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label11
             // 
@@ -375,6 +419,8 @@
             this.label11.Size = new System.Drawing.Size(29, 12);
             this.label11.TabIndex = 23;
             this.label11.Text = "부위";
+            this.label11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label11.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label12
             // 
@@ -384,6 +430,8 @@
             this.label12.Size = new System.Drawing.Size(29, 12);
             this.label12.TabIndex = 24;
             this.label12.Text = "이름";
+            this.label12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label12.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboCharm
             // 
@@ -394,6 +442,8 @@
             this.cboCharm.Size = new System.Drawing.Size(258, 20);
             this.cboCharm.TabIndex = 25;
             this.cboCharm.SelectedIndexChanged += new System.EventHandler(this.cboCharm_SelectedIndexChanged);
+            this.cboCharm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboCharm.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label13
             // 
@@ -403,6 +453,8 @@
             this.label13.Size = new System.Drawing.Size(29, 12);
             this.label13.TabIndex = 26;
             this.label13.Text = "호석";
+            this.label13.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label13.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label14
             // 
@@ -412,6 +464,8 @@
             this.label14.Size = new System.Drawing.Size(29, 12);
             this.label14.TabIndex = 27;
             this.label14.Text = "내성";
+            this.label14.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label14.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // gVIewSkill
             // 
@@ -430,6 +484,8 @@
             this.gVIewSkill.Size = new System.Drawing.Size(451, 277);
             this.gVIewSkill.TabIndex = 28;
             this.gVIewSkill.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVIewSkill_CellClick);
+            this.gVIewSkill.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.gVIewSkill.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // label15
             // 
@@ -439,6 +495,8 @@
             this.label15.Size = new System.Drawing.Size(29, 12);
             this.label15.TabIndex = 29;
             this.label15.Text = "스킬";
+            this.label15.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.label15.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // button1
             // 
@@ -449,6 +507,8 @@
             this.button1.Text = "검색";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboCharmRank
             // 
@@ -459,6 +519,8 @@
             this.cboCharmRank.Size = new System.Drawing.Size(37, 20);
             this.cboCharmRank.TabIndex = 31;
             this.cboCharmRank.SelectedIndexChanged += new System.EventHandler(this.cboCharmRank_SelectedIndexChanged);
+            this.cboCharmRank.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboCharmRank.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboWeaponJewel1
             // 
@@ -470,6 +532,8 @@
             this.cboWeaponJewel1.Size = new System.Drawing.Size(95, 20);
             this.cboWeaponJewel1.TabIndex = 32;
             this.cboWeaponJewel1.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
+            this.cboWeaponJewel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboWeaponJewel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboWeaponJewel2
             // 
@@ -481,6 +545,8 @@
             this.cboWeaponJewel2.Size = new System.Drawing.Size(95, 20);
             this.cboWeaponJewel2.TabIndex = 33;
             this.cboWeaponJewel2.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
+            this.cboWeaponJewel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboWeaponJewel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboWeaponJewel3
             // 
@@ -492,6 +558,8 @@
             this.cboWeaponJewel3.Size = new System.Drawing.Size(95, 20);
             this.cboWeaponJewel3.TabIndex = 34;
             this.cboWeaponJewel3.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
+            this.cboWeaponJewel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboWeaponJewel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // panel1
             // 
@@ -502,6 +570,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(308, 33);
             this.panel1.TabIndex = 50;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // panel2
             // 
@@ -512,6 +582,8 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(308, 33);
             this.panel2.TabIndex = 51;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboCJewel1
             // 
@@ -523,6 +595,8 @@
             this.cboCJewel1.Size = new System.Drawing.Size(95, 20);
             this.cboCJewel1.TabIndex = 32;
             this.cboCJewel1.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
+            this.cboCJewel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboCJewel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboCJewel2
             // 
@@ -534,6 +608,8 @@
             this.cboCJewel2.Size = new System.Drawing.Size(95, 20);
             this.cboCJewel2.TabIndex = 33;
             this.cboCJewel2.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
+            this.cboCJewel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboCJewel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboCJewel3
             // 
@@ -545,6 +621,8 @@
             this.cboCJewel3.Size = new System.Drawing.Size(95, 20);
             this.cboCJewel3.TabIndex = 34;
             this.cboCJewel3.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
+            this.cboCJewel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboCJewel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // panel3
             // 
@@ -555,6 +633,8 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(308, 33);
             this.panel3.TabIndex = 51;
+            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboHJewel1
             // 
@@ -566,6 +646,8 @@
             this.cboHJewel1.Size = new System.Drawing.Size(95, 20);
             this.cboHJewel1.TabIndex = 32;
             this.cboHJewel1.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
+            this.cboHJewel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboHJewel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboHJewel2
             // 
@@ -577,6 +659,8 @@
             this.cboHJewel2.Size = new System.Drawing.Size(95, 20);
             this.cboHJewel2.TabIndex = 33;
             this.cboHJewel2.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
+            this.cboHJewel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboHJewel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboHJewel3
             // 
@@ -588,6 +672,8 @@
             this.cboHJewel3.Size = new System.Drawing.Size(95, 20);
             this.cboHJewel3.TabIndex = 34;
             this.cboHJewel3.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
+            this.cboHJewel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboHJewel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // panel4
             // 
@@ -598,6 +684,8 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(308, 33);
             this.panel4.TabIndex = 51;
+            this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboAJewel1
             // 
@@ -609,6 +697,8 @@
             this.cboAJewel1.Size = new System.Drawing.Size(95, 20);
             this.cboAJewel1.TabIndex = 32;
             this.cboAJewel1.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
+            this.cboAJewel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboAJewel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboAJewel2
             // 
@@ -620,6 +710,8 @@
             this.cboAJewel2.Size = new System.Drawing.Size(95, 20);
             this.cboAJewel2.TabIndex = 33;
             this.cboAJewel2.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
+            this.cboAJewel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboAJewel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboAJewel3
             // 
@@ -631,6 +723,8 @@
             this.cboAJewel3.Size = new System.Drawing.Size(95, 20);
             this.cboAJewel3.TabIndex = 34;
             this.cboAJewel3.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
+            this.cboAJewel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboAJewel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // panel5
             // 
@@ -641,6 +735,8 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(308, 33);
             this.panel5.TabIndex = 51;
+            this.panel5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.panel5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboWJewel1
             // 
@@ -652,6 +748,8 @@
             this.cboWJewel1.Size = new System.Drawing.Size(95, 20);
             this.cboWJewel1.TabIndex = 32;
             this.cboWJewel1.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
+            this.cboWJewel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboWJewel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboWJewel2
             // 
@@ -663,6 +761,8 @@
             this.cboWJewel2.Size = new System.Drawing.Size(95, 20);
             this.cboWJewel2.TabIndex = 33;
             this.cboWJewel2.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
+            this.cboWJewel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboWJewel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboWJewel3
             // 
@@ -674,6 +774,8 @@
             this.cboWJewel3.Size = new System.Drawing.Size(95, 20);
             this.cboWJewel3.TabIndex = 34;
             this.cboWJewel3.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
+            this.cboWJewel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboWJewel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // panel6
             // 
@@ -684,6 +786,8 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(308, 33);
             this.panel6.TabIndex = 51;
+            this.panel6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.panel6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboLJewel1
             // 
@@ -695,6 +799,8 @@
             this.cboLJewel1.Size = new System.Drawing.Size(95, 20);
             this.cboLJewel1.TabIndex = 32;
             this.cboLJewel1.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
+            this.cboLJewel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboLJewel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboLJewel2
             // 
@@ -706,6 +812,8 @@
             this.cboLJewel2.Size = new System.Drawing.Size(95, 20);
             this.cboLJewel2.TabIndex = 33;
             this.cboLJewel2.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
+            this.cboLJewel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboLJewel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // cboLJewel3
             // 
@@ -717,6 +825,8 @@
             this.cboLJewel3.Size = new System.Drawing.Size(95, 20);
             this.cboLJewel3.TabIndex = 34;
             this.cboLJewel3.SelectedIndexChanged += new System.EventHandler(this.cboWeaponJewel1_SelectedIndexChanged);
+            this.cboLJewel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.cboLJewel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // txtSkillInfo
             // 
@@ -726,6 +836,8 @@
             this.txtSkillInfo.ReadOnly = true;
             this.txtSkillInfo.Size = new System.Drawing.Size(451, 106);
             this.txtSkillInfo.TabIndex = 52;
+            this.txtSkillInfo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.txtSkillInfo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // btnSave
             // 
@@ -736,6 +848,8 @@
             this.btnSave.Text = "저장";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.btnSave.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // btnClose
             // 
@@ -746,6 +860,8 @@
             this.btnClose.Text = "종료";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.btnClose.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // txtSaveFileName
             // 
@@ -763,6 +879,8 @@
             this.btnOpen.Text = "불러오기";
             this.btnOpen.UseVisualStyleBackColor = true;
             this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            this.btnOpen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.btnOpen.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // FrmSimulator
             // 

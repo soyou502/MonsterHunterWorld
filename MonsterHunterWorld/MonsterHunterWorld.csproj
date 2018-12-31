@@ -85,6 +85,12 @@
     <Compile Include="BUS\FormMonsterInfo.Designer.cs">
       <DependentUpon>FormMonsterInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="BUS\FormMonsterInfoLoding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUS\FormMonsterInfoLoding.Designer.cs">
+      <DependentUpon>FormMonsterInfoLoding.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUS\FormSkill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,7 +180,7 @@
     <Compile Include="VO\WeaponDebuff.cs" />
     <Compile Include="VO\WeaponEelemental.cs" />
     <Compile Include="VO\Weapons_Durability.cs" />
-    <Compile Include="VO\Weapons_Image.cs" />
+    <Compile Include="VO\weapons_Image.cs" />
     <EmbeddedResource Include="BUS\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BUS\FormMonsterInfo.resx">
       <DependentUpon>FormMonsterInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUS\FormMonsterInfoLoding.resx">
+      <DependentUpon>FormMonsterInfoLoding.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BUS\FormSkill.resx">
       <DependentUpon>FormSkill.cs</DependentUpon>
@@ -253,19 +262,26 @@
     <Content Include="Images\FormMain.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\Loding.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\monsterhunter_back.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\나도한마디.PNG">
+    <Content Include="Images\com.PNG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\닫기버튼.jpg">
+    <Content Include="Images\close.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\소재정보.PNG">
+    <Content Include="Images\itemInfo.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Save\Save.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions />
 </Project>

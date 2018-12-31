@@ -1,9 +1,11 @@
-﻿using MonsterHunterWorld.VO;
+﻿using MonsteHunterWorld;
+using MonsterHunterWorld.VO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,6 +56,7 @@ namespace MonsterHunterWorld.BUS
             legJewel = new ComboBox[] { cboLJewel1, cboLJewel2, cboLJewel3 };
             weaponJewel = new ComboBox[] { cboWeaponJewel1, cboWeaponJewel2, cboWeaponJewel3 };
             gViewSetting();
+            boxes = new ComboBox[][] { weaponJewel, headJewel, chestJewel, armJewel, waistJewel, legJewel };
             foreach (var item in skill.GetListCollection())
             {
                 cboSkill1.Items.Add(item.Name);
@@ -67,7 +70,6 @@ namespace MonsterHunterWorld.BUS
             {
                 jewelName.Add(item.Name + " lv" + item.Slot_level);
             }
-
         }
 
         private void gViewSetting()
@@ -174,7 +176,7 @@ namespace MonsterHunterWorld.BUS
         {
             GetResistance(sender);
             GetSkillList();
-            SetJewelSlots();
+            SetJewelSlots(sender);
             GetJewelSkill();
             GetCharmSkill();
             SkillTotalScore();
@@ -183,7 +185,6 @@ namespace MonsterHunterWorld.BUS
 
         private void GetJewelSkill()
         {
-            boxes = new ComboBox[][] { weaponJewel, headJewel, chestJewel, armJewel, waistJewel, legJewel };
             for (int i = 0; i < boxes.Length; i++)
             {
                 foreach (var item in boxes[i])
@@ -196,16 +197,10 @@ namespace MonsterHunterWorld.BUS
                             {
                                 if (item.SelectedItem.ToString().Contains(jewel.Name))
                                 {
-                                    foreach (var skill in skill.GetListCollection())
-                                    {
-                                        if (jewel.Skill.Name == skill.Name)
-                                        {
-                                            string[] temp = new string[] { "0", "0", "0", "0", "0", "0", "0", "0", "0"  };
-                                            temp[0] = skill.Name;
-                                            temp[i + 1] = "1";
-                                            gVIewSkill.Rows.Add(temp);
-                                        }
-                                    }
+                                    string[] temp = new string[] { "0", "0", "0", "0", "0", "0", "0", "0", "0"  };
+                                    temp[0] = jewel.Skill.Name;
+                                    temp[i + 1] = "1";
+                                    gVIewSkill.Rows.Add(temp);
                                 }
                             }
                         }
@@ -214,15 +209,15 @@ namespace MonsterHunterWorld.BUS
             }
         }
 
-        private void SetJewelSlots()
+        private void SetJewelSlots(object sender)
         {
-            ComboBox[][] boxes = new ComboBox[][] { headJewel, chestJewel, armJewel, waistJewel, legJewel };
+            ComboBox[][] boxes = new ComboBox[][] {headJewel, chestJewel, armJewel, waistJewel, legJewel };
             string[] parts = new string[] { "머리", "몸통", "팔", "허리", "다리" };
             for (int k = 0; k < ArmorCombo.Length; k++)
             {
                 foreach (var item in armors.GetListCollection())
                 {
-                    if (ArmorCombo[k].SelectedItem != null)
+                    if (ArmorCombo[k].SelectedItem != null && ArmorCombo[k] == (ComboBox)sender)
                     {
                         if (ArmorCombo[k].SelectedItem.ToString() == item.Name)
                         {
@@ -357,37 +352,31 @@ namespace MonsterHunterWorld.BUS
                     {
                         if (item.SelectedItem.ToString() == armor.Name)
                         {
-                            foreach (var skill in skill.GetListCollection())
+                            foreach (var armorSkill in armor.Skills)
                             {
-                                foreach (var armorSkill in armor.Skills)
+                                string[] temp = new string[] { "0", "0", "0", "0", "0", "0", "0", "0", "0" };
+                                temp[0] = armorSkill.Name;
+                                if (armor.Part == "머리")
                                 {
-                                    if (armorSkill.Name.Contains(skill.Name))
-                                    {
-                                        string[] temp = new string[] { "0", "0", "0", "0", "0", "0", "0", "0", "0" };
-                                        temp[0] = skill.Name;
-                                        if (armor.Part == "머리")
-                                        {
-                                            temp[2] = armorSkill.Level.ToString();
-                                        }
-                                        if (armor.Part == "몸통")
-                                        {
-                                            temp[3] = armorSkill.Level.ToString();
-                                        }
-                                        if (armor.Part == "팔")
-                                        {
-                                            temp[4] = armorSkill.Level.ToString();
-                                        }
-                                        if (armor.Part == "허리")
-                                        {
-                                            temp[5] = armorSkill.Level.ToString();
-                                        }
-                                        if (armor.Part == "다리")
-                                        {
-                                            temp[6] = armorSkill.Level.ToString();
-                                        }
-                                        gVIewSkill.Rows.Add(temp);
-                                    }
+                                    temp[2] = armorSkill.Level.ToString();
                                 }
+                                if (armor.Part == "몸통")
+                                {
+                                    temp[3] = armorSkill.Level.ToString();
+                                }
+                                if (armor.Part == "팔")
+                                {
+                                    temp[4] = armorSkill.Level.ToString();
+                                }
+                                if (armor.Part == "허리")
+                                {
+                                    temp[5] = armorSkill.Level.ToString();
+                                }
+                                if (armor.Part == "다리")
+                                {
+                                    temp[6] = armorSkill.Level.ToString();
+                                }
+                                gVIewSkill.Rows.Add(temp);
                             }
                         }
                     }
@@ -402,7 +391,7 @@ namespace MonsterHunterWorld.BUS
                 for (int i = 0; i < gVIewSkill.Rows.Count; i++)
                 {
                     int result = 0;
-                    for (int j = 2; j < 9; j++)
+                    for (int j = 1; j < 9; j++)
                     {
                         if (!string.IsNullOrEmpty(gVIewSkill.Rows[i].Cells[j].Value.ToString()))
                         {
@@ -416,25 +405,33 @@ namespace MonsterHunterWorld.BUS
 
         private void SkillOverLapDelete()
         {
-            for (int i = 0; i < gVIewSkill.Rows.Count; i++)
+            int count = gVIewSkill.Rows.Count;
+            for (int i = 0; i < count; i++)
             {
-                for (int j = 0; j < gVIewSkill.Rows.Count; j++)
+                for (int j = 0; j < count; j++)
                 {
                     if (i != j)
                     {
-                        if (gVIewSkill.Rows[i].Cells["Skill"].Value.ToString()== gVIewSkill.Rows[j].Cells["Skill"].Value.ToString())
+                        try
                         {
-                            for (int k = 1; k < gVIewSkill.Rows[i].Cells.Count; k++)
+                            if (gVIewSkill.Rows[i].Cells["Skill"].Value.ToString() == gVIewSkill.Rows[j].Cells["Skill"].Value.ToString())
                             {
-                                gVIewSkill.Rows[i].Cells[k].Value = (int.Parse(gVIewSkill.Rows[i].Cells[k].Value.ToString()) + int.Parse(gVIewSkill.Rows[j].Cells[k].Value.ToString())).ToString();
+                                for (int k = 1; k < gVIewSkill.Rows[i].Cells.Count; k++)
+                                {
+                                    gVIewSkill.Rows[i].Cells[k].Value = (int.Parse(gVIewSkill.Rows[i].Cells[k].Value.ToString()) + int.Parse(gVIewSkill.Rows[j].Cells[k].Value.ToString())).ToString();
+                                }
+                                gVIewSkill.Rows.RemoveAt(j);
+                                count = gVIewSkill.Rows.Count;
                             }
-                            gVIewSkill.Rows.RemoveAt(j);
-                            gVIewSkill.Refresh();
+                        }
+                        catch (ArgumentOutOfRangeException)
+                        {
                             SkillOverLapDelete();
                         }
                     }
                 }
             }
+            gVIewSkill.Refresh();
         }
 
         private void GetCharmSkill()
@@ -615,12 +612,21 @@ namespace MonsterHunterWorld.BUS
             root.AppendChild(legPart);
             XmlElement charmPart = doc.CreateElement("Charm");
             charmPart.InnerText = charm;
-            charmPart.SetAttribute("Rank", cboCharmRank.SelectedItem.ToString());
+
+            if (cboCharmRank.SelectedItem!=null)
+            {
+                charmPart.SetAttribute("Rank", cboCharmRank.SelectedItem.ToString()); 
+            }else
+            {
+                charmPart.SetAttribute("Rank", "");
+            }
             root.AppendChild(charmPart);
-            XmlTextWriter writer = new XmlTextWriter("../../" + fileName + ".xml", Encoding.UTF8);
+            XmlTextWriter writer = null;
+            writer = new XmlTextWriter(Application.LocalUserAppDataPath + "/Save/" + fileName + ".xml", Encoding.UTF8);
             writer.Formatting = Formatting.Indented;
             doc.WriteContentTo(writer);
             writer.Flush();
+            MessageBox.Show("저장되었습니다.");
             writer.Close();
         }
 
@@ -628,20 +634,24 @@ namespace MonsterHunterWorld.BUS
         {
             OpenFileDialog open = new OpenFileDialog();
             open.Multiselect = false;
-            //open.InitialDirectory = "../..";
+            open.InitialDirectory = Application.LocalUserAppDataPath + @"\Save";
             open.Filter = "xml파일|*.xml";
             if (open.ShowDialog() == DialogResult.OK)
             {
                 XmlDocument doc = new XmlDocument();
                 doc.Load(open.FileName);
-                cboWeapon.Items.Clear();
                 cboHead.Items.Clear();
                 cboChest.Items.Clear();
                 cboArm.Items.Clear();
                 cboWaist.Items.Clear();
                 cboLeg.Items.Clear();
-                cboCharm.Items.Clear();
-                cboWeapon.Items.Add(doc.SelectSingleNode("//Weapon").InnerText);
+                for (int i = 0; i < cboWeapon.Items.Count; i++)
+                {
+                    if (cboWeapon.Items[i].ToString() == doc.SelectSingleNode("//Weapon").InnerText)
+                    {
+                        cboWeapon.SelectedItem = cboWeapon.Items[i];
+                    }
+                }
                 cboWeapon.SelectedItem = cboWeapon.Items[0];
                 cboHead.Items.Add(doc.SelectSingleNode("//Head").InnerText);
                 cboHead.SelectedItem = cboHead.Items[0];
@@ -653,8 +663,13 @@ namespace MonsterHunterWorld.BUS
                 cboWaist.SelectedItem = cboWaist.Items[0];
                 cboLeg.Items.Add(doc.SelectSingleNode("//Leg").InnerText);
                 cboLeg.SelectedItem = cboLeg.Items[0];
-                cboCharm.Items.Add(doc.SelectSingleNode("//Charm").InnerText);
-                cboCharm.SelectedItem = cboCharm.Items[0];
+                for (int i = 0; i < cboCharm.Items.Count; i++)
+                {
+                    if (cboCharm.Items[i].ToString() == doc.SelectSingleNode("//Charm").InnerText)
+                    {
+                        cboCharm.SelectedItem = cboCharm.Items[i];
+                    }
+                }
 
                 for (int i = 0; i < 3; i++)
                 {
