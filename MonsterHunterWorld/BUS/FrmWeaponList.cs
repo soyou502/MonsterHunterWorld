@@ -81,6 +81,15 @@ namespace MonsteHunterWorld
 
             chk_slotsLevel_All.Checked = true;
             chk_slotsCount_All.Checked = true;
+
+            weapon_data_View.Columns.Add("idx", "IDX");
+            weapon_data_View.Columns.Add("WeaponName", "무기이름");
+            weapon_data_View.Columns.Add("Rare", "레어도");
+            weapon_data_View.Columns.Add("Attack", "공격력");
+            weapon_data_View.Columns.Add("Defence", "방어력");
+            weapon_data_View.Columns.Add("Critical", "회심률");
+            weapon_data_View.Columns.Add("Slot", "슬롯");
+            weapon_data_View.Columns.Add("Specal_type", "특수공격");
         }
 
         private string DurabilityJSON()
@@ -144,7 +153,7 @@ namespace MonsteHunterWorld
             // 체크포인트1
             if_wbList.Clear();
             if (cheked_Build && (cheked_SlotsCount || cheked_SlotsLv))
-            {
+            {   // 파생 true 이고 (슬롯 수 또는 슬롯 레벨이 Ture 이면 실행)
                 for (int i = 0; i < wbList.Count; i++)
                 {
                     for (int j = 0; j < wcList.Count; j++)
@@ -153,7 +162,7 @@ namespace MonsteHunterWorld
                         {
                             string wp_name = wcList[i].Weapon_name;
                             if (slots_count == 1)
-                            {
+                            { // 슬롯수 1 
                                 if (wbList[i].Slot.Length == 1)
                                 {
                                     if (wbList[i].Slot.Contains(slots_lv.ToString()) && wbList[j].WeaponName == wp_name)
@@ -167,7 +176,7 @@ namespace MonsteHunterWorld
                         {
                             string wp_name = wcList[i].Weapon_name;
                             if (slots_count == 2)
-                            {
+                            {   // 슬롯 수 2
                                 if (wbList[i].Slot.Length == 2)
                                 {
                                     if (wbList[i].Slot.Contains(slots_lv.ToString()) && wbList[j].WeaponName == wp_name)
@@ -181,7 +190,7 @@ namespace MonsteHunterWorld
                         {
                             string wp_name = wcList[i].Weapon_name;
                             if (slots_count == 3)
-                            {
+                            {   // 슬롯 수 3
                                 if (wbList[i].Slot.Length == 3)
                                 {
                                     if (wbList[i].Slot.Contains(slots_lv.ToString()) && wbList[j].WeaponName == wp_name)
@@ -192,7 +201,7 @@ namespace MonsteHunterWorld
                             }
                         }
                     }
-                    
+
                 }
             }
             else if (cheked_SlotsCount && cheked_SlotsLv)
@@ -200,21 +209,21 @@ namespace MonsteHunterWorld
                 for (int i = 0; i < wbList.Count; i++)
                 {
                     if (slots_count == 1)
-                    {
+                    {   // 슬롯 수1 이고
                         if (wbList[i].Slot.Length == 1)
-                        {
+                        {   // wbList[i].Slot의 길이가 1이고
                             if (wbList[i].Slot.Contains(slots_lv.ToString()))
-                            {
+                            {   // 위의 슬롯에 현재레벨이 기입되어있다면 실행
                                 if_wbList.Add(wbList[i]);
                             }
                         }
                     }
                     else if (slots_count == 2)
-                    {
+                    {    // 슬롯 수2 이고
                         if (wbList[i].Slot.Length == 2)
-                        {
+                        {   // wbList[i].Slot의 길이가 2이고
                             if (wbList[i].Slot.Contains(slots_lv.ToString()))
-                            {
+                            {   // 위의 슬롯에 현재레벨이 기입되어있다면 실행
                                 if_wbList.Add(wbList[i]);
                             }
 
@@ -235,27 +244,27 @@ namespace MonsteHunterWorld
             else if (cheked_Eelemental && cheked_Build)
             { //속성+파생
                 for (int i = 0; i < weList.Count; i++)
-                {
+                {   // 속성 리스트 만큼 반복
                     if (weList[i].Elmental_name == elemental_Name)
-                    {   // 속성
+                    {   // 속성리스트의 속성명과 클릭한 속성명의 이름이 같으면 실행
                         int ele_idx = weList[i].Idx; // 속성 dix
-
-                            foreach (var wb in wbList)
-                            {
-                                if (wb.Idx == ele_idx)
+                                                     // 속성의 dix 를 받습니다.
+                        foreach (var wb in wbList)
+                        {
+                            if (wb.Idx == ele_idx)
+                            {   // 기본 리스트의 idx 와 같은지 비교
+                                foreach (var wc in wcList)
                                 {
-                                    foreach (var wc in wcList)
-                                    {
-                                        if (wc.Weapon_name == build_name)
-                                        {
-                                            if (wb.WeaponName == wc.Weapon_name)
-                                            {
-                                                if_wbList.Add(wb);
-                                            }
-                                        }
+                                    if (wc.Derivation.Contains(build_name) && wb.WeaponName == wc.Weapon_name)
+                                    {   // 제작List의 파생명에 클릭된 파생명이 포함되어 있고 
+                                        // 기본정보 리스트와 제작리스트의 무기명이 같은지 비교
+
+                                        if_wbList.Add(wb);
+
                                     }
                                 }
                             }
+                        }
                     }
                 }
 
@@ -284,17 +293,17 @@ namespace MonsteHunterWorld
             }
             else if (cheked_Eelemental || cheked_Build || cheked_SlotsCount || cheked_SlotsLv)
             {
-                if (cheked_Eelemental) // 속성 조건 검색
-                {
+                if (cheked_Eelemental)
+                {   // 속성체크가 ture 이면 실행
                     for (int i = 0; i < weList.Count; i++)
                     {
                         if (weList[i].Elmental_name == elemental_Name)
-                        {   // 속성
-                            int ele_idx = weList[i].Idx;
+                        {   // 속성리스트의 속성명과 클릭된 속성명이 같다면
+                            int ele_idx = weList[i].Idx; // ele_idx에 welist의 idx를 저장
                             foreach (var item in wbList)
                             {
                                 if (item.Idx == ele_idx)
-                                {
+                                {   // 기본정보리스트의 idx와 ele_idx 가 같으지 비교
                                     string wp_name = item.WeaponName;
                                     if_wbList.Add(item);
                                     break;
@@ -305,13 +314,13 @@ namespace MonsteHunterWorld
                     for (int i = 0; i < wdList.Count; i++)
                     {
                         if (wdList[i].Debuff_type == elemental_Name)
-                        {   // 상태이상
-                            int dbf_idx = wdList[i].Idx;
+                        {   // 상태이상_속성명이 클릭된 속성명과 같다면
+                            int dbf_idx = wdList[i].Idx;// idx 저장
                             foreach (var item in wbList)
                             {
                                 if (item.Idx == dbf_idx)
-                                {
-                                    string wp_name = item.WeaponName;
+                                {   // 기본정보 idx와 상태이상 idx를 비교
+                                    string wp_name = item.WeaponName; // 장비명을 저장
                                     if_wbList.Add(item);
                                     break;
                                 }
@@ -325,12 +334,12 @@ namespace MonsteHunterWorld
                     for (int i = 0; i < wcList.Count; i++)
                     {
                         if (wcList[i].Derivation.Contains(build_name))
-                        {
-                            string wp_name = wcList[i].Weapon_name;
+                        {   // 속성 파생명에 build_name 이 포함되었다면
+                            string wp_name = wcList[i].Weapon_name; // 파생명을 저장
                             foreach (var item in wbList)
                             {
                                 if (item.WeaponName == wp_name)
-                                {
+                                {   // 무기병이 같다면
                                     if_wbList.Add(item);
                                     break;
                                 }
@@ -343,9 +352,9 @@ namespace MonsteHunterWorld
                     for (int i = 0; i < wbList.Count; i++)
                     {
                         if (slots_count == 1)
-                        {
+                        {   // 선택한 슬롯수가 1 이고
                             if (wbList[i].Slot.Length == 1)
-                            {
+                            {   // 슬롯의 길이가 1 이면
                                 if_wbList.Add(wbList[i]);
                             }
                         }
@@ -377,26 +386,33 @@ namespace MonsteHunterWorld
                     }
                 }
                 else
-                {
+                {   // 모든 체크가 false면
                     foreach (var item in wbList)
-                    {
+                    {   // wbList 통채로 주면 wbList가 비워지니 주의
                         if_wbList.Add(item);
                     }
                 }
             }
-            weapon_data_View.DataSource = null;
+
+            //weapon_data_View.DataSource = null;
+            weapon_data_View.Rows.Clear();
             if (if_wbList.Count > 0)
             {
-                weapon_data_View.DataSource = if_wbList;
+                foreach (var item in if_wbList)
+                {
+                    weapon_data_View.Rows.Add(item.Idx, item.WeaponName, item.Rare, item.Attack, item.Defence, item.Critical, item.Slot, item.Specal_type);
+                }
             }
             else
             {
-                weapon_data_View.DataSource = wbList;
+                //weapon_data_View.DataSource = wbList;
+                foreach (var item in wbList)
+                {
+                    weapon_data_View.Rows.Add(item.Idx, item.WeaponName, item.Rare, item.Attack, item.Defence, item.Critical, item.Slot, item.Specal_type);
+                }
             }
             weapon_data_View.Columns["idx"].Visible = false; // idx 열 안보임
             weapon_data_View.Columns["Specal_type"].Visible = false; // idx 열 안보임
-            weapon_data_View.Columns["Melody"].Visible = false; // idx 열 안보임
-            weapon_data_View.Columns["idx"].Visible = false; // idx 열 안보임
             weapon_data_View.Columns["WeaponName"].HeaderText = "무기이름";
             weapon_data_View.Columns["Rare"].HeaderText = "레어도";
             weapon_data_View.Columns["Attack"].HeaderText = "공격력";
@@ -523,17 +539,14 @@ namespace MonsteHunterWorld
             //getData(weapon_type, json);
             DisplayTreeView(json, "무기도감");
 
-            weapon_data_View.DataSource = null;
-            weapon_data_View.DataSource = wbList;
-            weapon_data_View.Columns["idx"].Visible = false; // idx 열 안보임
-            weapon_data_View.Columns["Specal_type"].Visible = false; // idx 열 안보임
-            weapon_data_View.Columns["Melody"].Visible = false; // idx 열 안보임
-            weapon_data_View.Columns["WeaponName"].HeaderText = "무기이름";
-            weapon_data_View.Columns["Rare"].HeaderText = "레어도";
-            weapon_data_View.Columns["Attack"].HeaderText = "공격력";
-            weapon_data_View.Columns["Defence"].HeaderText = "방어력";
-            weapon_data_View.Columns["Critical"].HeaderText = "회심률";
-            weapon_data_View.Columns["Slot"].HeaderText = "슬롯";
+            //weapon_data_View.DataSource = null;
+            weapon_data_View.Rows.Clear();
+            foreach (var item in wbList)
+            {
+                //weapon_data_View.DataSource = wbList;
+                weapon_data_View.Rows.Add(item.Idx, item.WeaponName, item.Rare, item.Attack, item.Defence, item.Critical, item.Slot, item.Specal_type);
+            }
+
         }
 
         // 트리뷰 출력
@@ -694,6 +707,7 @@ namespace MonsteHunterWorld
             }
             catch (Exception)
             {
+                rdio_Tree_All.Checked = true;
                 MessageBox.Show("먼저 무기 타입을 선택하세요");
             }
         }
@@ -710,6 +724,7 @@ namespace MonsteHunterWorld
             }
             catch (Exception)
             {
+
                 MessageBox.Show("테이블에서 다시 선택후 클릭해주세요");
                 return;
             }
@@ -754,7 +769,7 @@ namespace MonsteHunterWorld
                     {
                         fwif.lbl_creaft.Text = "가능";
                         fwif.lbl_creaft.ForeColor = Color.AliceBlue;
-                        
+
                     }
                     else
                     {
@@ -933,7 +948,7 @@ namespace MonsteHunterWorld
             }
             catch (Exception)
             {
-
+                rdio_Elemental_All.Checked = true;
                 MessageBox.Show("무기 종류를 먼저 선택해주세요", "속성 오류");
             }
         }
@@ -1031,6 +1046,58 @@ namespace MonsteHunterWorld
         private void btn_Close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void weapon_tree_NodeMouseClick_1(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            //string select_node = weapon_tree.SelectedNode.Text;
+            string select_node = e.Node.Text; // 클릭한 노드의 텍스트 ( 무기명 )
+
+            foreach (var wb in wbList)
+            {
+                int count = 0;
+                if (wb.WeaponName == select_node)
+                {
+                    int node_idx = wb.Idx;
+                    foreach (DataGridViewRow dview in weapon_data_View.Rows)
+                    {
+                        if (dview.Cells[0].ToString() == node_idx.ToString())
+                        {
+                            MessageBox.Show("표와 일치");
+                            dview.Selected = true;
+                            btn_InpoShow_Click(null, null);
+                            break;
+                        }
+                    }
+
+                    this.select_idx = node_idx;
+
+                    if (!cheked_weapon)
+                    {
+                        // 선태한 행의 인덱스를 idx 로 전달
+                        if (weapon_data_View.Rows.Count >= 1)
+                        {   // 행의 수가 1이상이면 실행
+                            // 현재 행의 idx 를 current_idx 로 전달
+                            int current_idx = node_idx;
+                            // 이미지 넣기
+                            foreach (var item in imageList)
+                            {
+                                if (item.Idx == current_idx) // 리스트의 idx 와 선택한 행의 idx가 같으면
+                                {
+                                    pictur_weapon.ImageLocation = item.Image_Uri;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+                else if (count == wbList.Count)
+                {
+                    MessageBox.Show("표에 해당 무기가 없습니다.");
+                    break;
+                }
+                count += 1;
+            }
         }
     }
 }

@@ -117,4 +117,1882 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btn_InpoShow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>406, 269</value>
+  </data>
+  <data name="btn_InpoShow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 45</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btn_InpoShow.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btn_InpoShow.Text" xml:space="preserve">
+    <value>세부 정보 보기</value>
+  </data>
+  <data name="&gt;&gt;btn_InpoShow.Name" xml:space="preserve">
+    <value>btn_InpoShow</value>
+  </data>
+  <data name="&gt;&gt;btn_InpoShow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_InpoShow.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btn_InpoShow.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pictur_weapon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>393, 3</value>
+  </data>
+  <data name="pictur_weapon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 260</value>
+  </data>
+  <data name="pictur_weapon.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pictur_weapon.Name" xml:space="preserve">
+    <value>pictur_weapon</value>
+  </data>
+  <data name="&gt;&gt;pictur_weapon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictur_weapon.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;pictur_weapon.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="weapon_data_View.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Off</value>
+  </data>
+  <data name="weapon_data_View.Location" type="System.Drawing.Point, System.Drawing">
+    <value>563, 3</value>
+  </data>
+  <data name="weapon_data_View.Size" type="System.Drawing.Size, System.Drawing">
+    <value>650, 316</value>
+  </data>
+  <data name="weapon_data_View.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;weapon_data_View.Name" xml:space="preserve">
+    <value>weapon_data_View</value>
+  </data>
+  <data name="&gt;&gt;weapon_data_View.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;weapon_data_View.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;weapon_data_View.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="weapon_tree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 3</value>
+  </data>
+  <data name="weapon_tree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>381, 316</value>
+  </data>
+  <data name="weapon_tree.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;weapon_tree.Name" xml:space="preserve">
+    <value>weapon_tree</value>
+  </data>
+  <data name="&gt;&gt;weapon_tree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;weapon_tree.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;weapon_tree.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 212</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1213, 322</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="btn_GreatSword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="btn_GreatSword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btn_GreatSword.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btn_GreatSword.Text" xml:space="preserve">
+    <value>대검</value>
+  </data>
+  <data name="&gt;&gt;btn_GreatSword.Name" xml:space="preserve">
+    <value>btn_GreatSword</value>
+  </data>
+  <data name="&gt;&gt;btn_GreatSword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_GreatSword.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btn_GreatSword.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btn_tachi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 3</value>
+  </data>
+  <data name="btn_tachi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btn_tachi.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btn_tachi.Text" xml:space="preserve">
+    <value>태도</value>
+  </data>
+  <data name="&gt;&gt;btn_tachi.Name" xml:space="preserve">
+    <value>btn_tachi</value>
+  </data>
+  <data name="&gt;&gt;btn_tachi.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_tachi.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btn_tachi.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btn_OneSword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 3</value>
+  </data>
+  <data name="btn_OneSword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btn_OneSword.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btn_OneSword.Text" xml:space="preserve">
+    <value>한손검</value>
+  </data>
+  <data name="&gt;&gt;btn_OneSword.Name" xml:space="preserve">
+    <value>btn_OneSword</value>
+  </data>
+  <data name="&gt;&gt;btn_OneSword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_OneSword.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btn_OneSword.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btn_dualSword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 3</value>
+  </data>
+  <data name="btn_dualSword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btn_dualSword.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btn_dualSword.Text" xml:space="preserve">
+    <value>쌍검</value>
+  </data>
+  <data name="&gt;&gt;btn_dualSword.Name" xml:space="preserve">
+    <value>btn_dualSword</value>
+  </data>
+  <data name="&gt;&gt;btn_dualSword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_dualSword.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btn_dualSword.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btn_Hammer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>327, 3</value>
+  </data>
+  <data name="btn_Hammer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btn_Hammer.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btn_Hammer.Text" xml:space="preserve">
+    <value>해머</value>
+  </data>
+  <data name="&gt;&gt;btn_Hammer.Name" xml:space="preserve">
+    <value>btn_Hammer</value>
+  </data>
+  <data name="&gt;&gt;btn_Hammer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_Hammer.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btn_Hammer.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btn_Hunting_Horn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>408, 3</value>
+  </data>
+  <data name="btn_Hunting_Horn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btn_Hunting_Horn.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btn_Hunting_Horn.Text" xml:space="preserve">
+    <value>수렵피리</value>
+  </data>
+  <data name="&gt;&gt;btn_Hunting_Horn.Name" xml:space="preserve">
+    <value>btn_Hunting_Horn</value>
+  </data>
+  <data name="&gt;&gt;btn_Hunting_Horn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_Hunting_Horn.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btn_Hunting_Horn.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btn_Lance.Location" type="System.Drawing.Point, System.Drawing">
+    <value>489, 3</value>
+  </data>
+  <data name="btn_Lance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btn_Lance.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btn_Lance.Text" xml:space="preserve">
+    <value>랜스</value>
+  </data>
+  <data name="&gt;&gt;btn_Lance.Name" xml:space="preserve">
+    <value>btn_Lance</value>
+  </data>
+  <data name="&gt;&gt;btn_Lance.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_Lance.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btn_Lance.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btn_GunLance.Location" type="System.Drawing.Point, System.Drawing">
+    <value>570, 3</value>
+  </data>
+  <data name="btn_GunLance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btn_GunLance.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btn_GunLance.Text" xml:space="preserve">
+    <value>건랜스</value>
+  </data>
+  <data name="&gt;&gt;btn_GunLance.Name" xml:space="preserve">
+    <value>btn_GunLance</value>
+  </data>
+  <data name="&gt;&gt;btn_GunLance.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_GunLance.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btn_GunLance.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btn_SwitchAxe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>651, 3</value>
+  </data>
+  <data name="btn_SwitchAxe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btn_SwitchAxe.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btn_SwitchAxe.Text" xml:space="preserve">
+    <value>슬래시액스</value>
+  </data>
+  <data name="&gt;&gt;btn_SwitchAxe.Name" xml:space="preserve">
+    <value>btn_SwitchAxe</value>
+  </data>
+  <data name="&gt;&gt;btn_SwitchAxe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_SwitchAxe.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btn_SwitchAxe.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btn_ChargeAxe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>732, 3</value>
+  </data>
+  <data name="btn_ChargeAxe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btn_ChargeAxe.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btn_ChargeAxe.Text" xml:space="preserve">
+    <value>차지액스</value>
+  </data>
+  <data name="&gt;&gt;btn_ChargeAxe.Name" xml:space="preserve">
+    <value>btn_ChargeAxe</value>
+  </data>
+  <data name="&gt;&gt;btn_ChargeAxe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_ChargeAxe.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btn_ChargeAxe.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btn_InsectGon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>813, 3</value>
+  </data>
+  <data name="btn_InsectGon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btn_InsectGon.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btn_InsectGon.Text" xml:space="preserve">
+    <value>조충곤</value>
+  </data>
+  <data name="&gt;&gt;btn_InsectGon.Name" xml:space="preserve">
+    <value>btn_InsectGon</value>
+  </data>
+  <data name="&gt;&gt;btn_InsectGon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_InsectGon.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btn_InsectGon.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="btn_Light_Bowgun.Location" type="System.Drawing.Point, System.Drawing">
+    <value>894, 3</value>
+  </data>
+  <data name="btn_Light_Bowgun.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 23</value>
+  </data>
+  <data name="btn_Light_Bowgun.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="btn_Light_Bowgun.Text" xml:space="preserve">
+    <value>라이트보우건</value>
+  </data>
+  <data name="&gt;&gt;btn_Light_Bowgun.Name" xml:space="preserve">
+    <value>btn_Light_Bowgun</value>
+  </data>
+  <data name="&gt;&gt;btn_Light_Bowgun.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_Light_Bowgun.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btn_Light_Bowgun.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="btn_Heavy_Bowgun.Location" type="System.Drawing.Point, System.Drawing">
+    <value>986, 3</value>
+  </data>
+  <data name="btn_Heavy_Bowgun.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btn_Heavy_Bowgun.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="btn_Heavy_Bowgun.Text" xml:space="preserve">
+    <value>헤비보우건</value>
+  </data>
+  <data name="&gt;&gt;btn_Heavy_Bowgun.Name" xml:space="preserve">
+    <value>btn_Heavy_Bowgun</value>
+  </data>
+  <data name="&gt;&gt;btn_Heavy_Bowgun.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_Heavy_Bowgun.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btn_Heavy_Bowgun.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="btn_Bow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1067, 3</value>
+  </data>
+  <data name="btn_Bow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="btn_Bow.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="btn_Bow.Text" xml:space="preserve">
+    <value>활</value>
+  </data>
+  <data name="&gt;&gt;btn_Bow.Name" xml:space="preserve">
+    <value>btn_Bow</value>
+  </data>
+  <data name="&gt;&gt;btn_Bow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_Bow.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;btn_Bow.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 49</value>
+  </data>
+  <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1150, 31</value>
+  </data>
+  <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Name" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 57</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 13</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>무기 종류</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 91</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>속성</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>901, 134</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 12</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>슬롯레벨</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>909, 176</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 12</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>슬롯 수</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 139</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 13</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>파생 트리</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="rdio_Tree_All.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_Tree_All.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9.75pt, style=Bold</value>
+  </data>
+  <data name="rdio_Tree_All.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 18</value>
+  </data>
+  <data name="rdio_Tree_All.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 17</value>
+  </data>
+  <data name="rdio_Tree_All.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="rdio_Tree_All.Text" xml:space="preserve">
+    <value>전체</value>
+  </data>
+  <data name="&gt;&gt;rdio_Tree_All.Name" xml:space="preserve">
+    <value>rdio_Tree_All</value>
+  </data>
+  <data name="&gt;&gt;rdio_Tree_All.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_Tree_All.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdio_Tree_All.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="rido_OreTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rido_OreTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="rido_OreTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 20</value>
+  </data>
+  <data name="rido_OreTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 16</value>
+  </data>
+  <data name="rido_OreTree.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="rido_OreTree.Text" xml:space="preserve">
+    <value>광석 파생</value>
+  </data>
+  <data name="&gt;&gt;rido_OreTree.Name" xml:space="preserve">
+    <value>rido_OreTree</value>
+  </data>
+  <data name="&gt;&gt;rido_OreTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rido_OreTree.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rido_OreTree.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="rdio_LightningTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_LightningTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="rdio_LightningTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>231, 20</value>
+  </data>
+  <data name="rdio_LightningTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 16</value>
+  </data>
+  <data name="rdio_LightningTree.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="rdio_LightningTree.Text" xml:space="preserve">
+    <value>번개속성 파생</value>
+  </data>
+  <data name="&gt;&gt;rdio_LightningTree.Name" xml:space="preserve">
+    <value>rdio_LightningTree</value>
+  </data>
+  <data name="&gt;&gt;rdio_LightningTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_LightningTree.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdio_LightningTree.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="rdio_ExtinctionTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_ExtinctionTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="rdio_ExtinctionTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>58, 42</value>
+  </data>
+  <data name="rdio_ExtinctionTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 16</value>
+  </data>
+  <data name="rdio_ExtinctionTree.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="rdio_ExtinctionTree.Text" xml:space="preserve">
+    <value>멸진룡 파생</value>
+  </data>
+  <data name="&gt;&gt;rdio_ExtinctionTree.Name" xml:space="preserve">
+    <value>rdio_ExtinctionTree</value>
+  </data>
+  <data name="&gt;&gt;rdio_ExtinctionTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_ExtinctionTree.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdio_ExtinctionTree.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="rdio_RedlionTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_RedlionTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="rdio_RedlionTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>151, 42</value>
+  </data>
+  <data name="rdio_RedlionTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 16</value>
+  </data>
+  <data name="rdio_RedlionTree.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="rdio_RedlionTree.Text" xml:space="preserve">
+    <value>적룡 파생</value>
+  </data>
+  <data name="&gt;&gt;rdio_RedlionTree.Name" xml:space="preserve">
+    <value>rdio_RedlionTree</value>
+  </data>
+  <data name="&gt;&gt;rdio_RedlionTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_RedlionTree.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdio_RedlionTree.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="rdio_IceTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_IceTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="rdio_IceTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>336, 20</value>
+  </data>
+  <data name="rdio_IceTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 16</value>
+  </data>
+  <data name="rdio_IceTree.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="rdio_IceTree.Text" xml:space="preserve">
+    <value>얼음속성 파생</value>
+  </data>
+  <data name="&gt;&gt;rdio_IceTree.Name" xml:space="preserve">
+    <value>rdio_IceTree</value>
+  </data>
+  <data name="&gt;&gt;rdio_IceTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_IceTree.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdio_IceTree.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="rdio_DysfunctionalTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_DysfunctionalTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="rdio_DysfunctionalTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 42</value>
+  </data>
+  <data name="rdio_DysfunctionalTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 16</value>
+  </data>
+  <data name="rdio_DysfunctionalTree.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="rdio_DysfunctionalTree.Text" xml:space="preserve">
+    <value>독요조 파생</value>
+  </data>
+  <data name="&gt;&gt;rdio_DysfunctionalTree.Name" xml:space="preserve">
+    <value>rdio_DysfunctionalTree</value>
+  </data>
+  <data name="&gt;&gt;rdio_DysfunctionalTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_DysfunctionalTree.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdio_DysfunctionalTree.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="rdio_LavaTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_LavaTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="rdio_LavaTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>336, 42</value>
+  </data>
+  <data name="rdio_LavaTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 16</value>
+  </data>
+  <data name="rdio_LavaTree.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="rdio_LavaTree.Text" xml:space="preserve">
+    <value>용암룡 파생</value>
+  </data>
+  <data name="&gt;&gt;rdio_LavaTree.Name" xml:space="preserve">
+    <value>rdio_LavaTree</value>
+  </data>
+  <data name="&gt;&gt;rdio_LavaTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_LavaTree.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdio_LavaTree.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="rdio_RainlessTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_RainlessTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="rdio_RainlessTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>232, 42</value>
+  </data>
+  <data name="rdio_RainlessTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 16</value>
+  </data>
+  <data name="rdio_RainlessTree.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="rdio_RainlessTree.Text" xml:space="preserve">
+    <value>비적룡 파생</value>
+  </data>
+  <data name="&gt;&gt;rdio_RainlessTree.Name" xml:space="preserve">
+    <value>rdio_RainlessTree</value>
+  </data>
+  <data name="&gt;&gt;rdio_RainlessTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_RainlessTree.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdio_RainlessTree.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="rdio_WarterTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_WarterTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="rdio_WarterTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 20</value>
+  </data>
+  <data name="rdio_WarterTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 16</value>
+  </data>
+  <data name="rdio_WarterTree.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="rdio_WarterTree.Text" xml:space="preserve">
+    <value>물속성 파생</value>
+  </data>
+  <data name="&gt;&gt;rdio_WarterTree.Name" xml:space="preserve">
+    <value>rdio_WarterTree</value>
+  </data>
+  <data name="&gt;&gt;rdio_WarterTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_WarterTree.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdio_WarterTree.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="rdio_BoneTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_BoneTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="rdio_BoneTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>151, 20</value>
+  </data>
+  <data name="rdio_BoneTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 16</value>
+  </data>
+  <data name="rdio_BoneTree.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="rdio_BoneTree.Text" xml:space="preserve">
+    <value>뼈 파생</value>
+  </data>
+  <data name="&gt;&gt;rdio_BoneTree.Name" xml:space="preserve">
+    <value>rdio_BoneTree</value>
+  </data>
+  <data name="&gt;&gt;rdio_BoneTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_BoneTree.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdio_BoneTree.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="rdio_MandarinTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_MandarinTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="rdio_MandarinTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>546, 20</value>
+  </data>
+  <data name="rdio_MandarinTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 16</value>
+  </data>
+  <data name="rdio_MandarinTree.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="rdio_MandarinTree.Text" xml:space="preserve">
+    <value>만악룡 파생</value>
+  </data>
+  <data name="&gt;&gt;rdio_MandarinTree.Name" xml:space="preserve">
+    <value>rdio_MandarinTree</value>
+  </data>
+  <data name="&gt;&gt;rdio_MandarinTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_MandarinTree.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdio_MandarinTree.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="rdio_ShitouTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_ShitouTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="rdio_ShitouTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>546, 42</value>
+  </data>
+  <data name="rdio_ShitouTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 16</value>
+  </data>
+  <data name="rdio_ShitouTree.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="rdio_ShitouTree.Text" xml:space="preserve">
+    <value>시투룡 파생</value>
+  </data>
+  <data name="&gt;&gt;rdio_ShitouTree.Name" xml:space="preserve">
+    <value>rdio_ShitouTree</value>
+  </data>
+  <data name="&gt;&gt;rdio_ShitouTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_ShitouTree.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdio_ShitouTree.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="rdio_ToshiroTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_ToshiroTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="rdio_ToshiroTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>639, 20</value>
+  </data>
+  <data name="rdio_ToshiroTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 16</value>
+  </data>
+  <data name="rdio_ToshiroTree.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="rdio_ToshiroTree.Text" xml:space="preserve">
+    <value>토사룡 파생</value>
+  </data>
+  <data name="&gt;&gt;rdio_ToshiroTree.Name" xml:space="preserve">
+    <value>rdio_ToshiroTree</value>
+  </data>
+  <data name="&gt;&gt;rdio_ToshiroTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_ToshiroTree.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdio_ToshiroTree.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="rdio_GoletTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_GoletTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="rdio_GoletTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>726, 20</value>
+  </data>
+  <data name="rdio_GoletTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 16</value>
+  </data>
+  <data name="rdio_GoletTree.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="rdio_GoletTree.Text" xml:space="preserve">
+    <value>골추룡 파생</value>
+  </data>
+  <data name="&gt;&gt;rdio_GoletTree.Name" xml:space="preserve">
+    <value>rdio_GoletTree</value>
+  </data>
+  <data name="&gt;&gt;rdio_GoletTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_GoletTree.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdio_GoletTree.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="rdio_RefundTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_RefundTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="rdio_RefundTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>726, 42</value>
+  </data>
+  <data name="rdio_RefundTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 16</value>
+  </data>
+  <data name="rdio_RefundTree.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="rdio_RefundTree.Text" xml:space="preserve">
+    <value>환수 파생</value>
+  </data>
+  <data name="&gt;&gt;rdio_RefundTree.Name" xml:space="preserve">
+    <value>rdio_RefundTree</value>
+  </data>
+  <data name="&gt;&gt;rdio_RefundTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_RefundTree.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdio_RefundTree.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="rdio_keelTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_keelTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="rdio_keelTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>639, 42</value>
+  </data>
+  <data name="rdio_keelTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 16</value>
+  </data>
+  <data name="rdio_keelTree.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="rdio_keelTree.Text" xml:space="preserve">
+    <value>용골 파생</value>
+  </data>
+  <data name="&gt;&gt;rdio_keelTree.Name" xml:space="preserve">
+    <value>rdio_keelTree</value>
+  </data>
+  <data name="&gt;&gt;rdio_keelTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_keelTree.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdio_keelTree.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="rdio_WorkshopTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_WorkshopTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="rdio_WorkshopTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>335, 64</value>
+  </data>
+  <data name="rdio_WorkshopTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 16</value>
+  </data>
+  <data name="rdio_WorkshopTree.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="rdio_WorkshopTree.Text" xml:space="preserve">
+    <value>공방무기 파생</value>
+  </data>
+  <data name="&gt;&gt;rdio_WorkshopTree.Name" xml:space="preserve">
+    <value>rdio_WorkshopTree</value>
+  </data>
+  <data name="&gt;&gt;rdio_WorkshopTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_WorkshopTree.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdio_WorkshopTree.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="rdio_LanternTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_LanternTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="rdio_LanternTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>231, 64</value>
+  </data>
+  <data name="rdio_LanternTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 16</value>
+  </data>
+  <data name="rdio_LanternTree.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="rdio_LanternTree.Text" xml:space="preserve">
+    <value>명등룡 파생</value>
+  </data>
+  <data name="&gt;&gt;rdio_LanternTree.Name" xml:space="preserve">
+    <value>rdio_LanternTree</value>
+  </data>
+  <data name="&gt;&gt;rdio_LanternTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_LanternTree.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdio_LanternTree.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="rdio_BlackTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_BlackTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="rdio_BlackTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 64</value>
+  </data>
+  <data name="rdio_BlackTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 16</value>
+  </data>
+  <data name="rdio_BlackTree.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="rdio_BlackTree.Text" xml:space="preserve">
+    <value>흑강 파생</value>
+  </data>
+  <data name="&gt;&gt;rdio_BlackTree.Name" xml:space="preserve">
+    <value>rdio_BlackTree</value>
+  </data>
+  <data name="&gt;&gt;rdio_BlackTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_BlackTree.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdio_BlackTree.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="rdio_YongsanTree.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_YongsanTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="rdio_YongsanTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 64</value>
+  </data>
+  <data name="rdio_YongsanTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 16</value>
+  </data>
+  <data name="rdio_YongsanTree.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="rdio_YongsanTree.Text" xml:space="preserve">
+    <value>용산룡 파생</value>
+  </data>
+  <data name="&gt;&gt;rdio_YongsanTree.Name" xml:space="preserve">
+    <value>rdio_YongsanTree</value>
+  </data>
+  <data name="&gt;&gt;rdio_YongsanTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_YongsanTree.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rdio_YongsanTree.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="rdio_Elemental_All.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="rdio_Elemental_All.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 4</value>
+  </data>
+  <data name="rdio_Elemental_All.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 16</value>
+  </data>
+  <data name="rdio_Elemental_All.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="rdio_Elemental_All.Text" xml:space="preserve">
+    <value>전체</value>
+  </data>
+  <data name="&gt;&gt;rdio_Elemental_All.Name" xml:space="preserve">
+    <value>rdio_Elemental_All</value>
+  </data>
+  <data name="&gt;&gt;rdio_Elemental_All.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdio_Elemental_All.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;rdio_Elemental_All.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radioButton9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>727, 4</value>
+  </data>
+  <data name="radioButton9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 16</value>
+  </data>
+  <data name="radioButton9.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="radioButton9.Text" xml:space="preserve">
+    <value>폭파</value>
+  </data>
+  <data name="&gt;&gt;radioButton9.Name" xml:space="preserve">
+    <value>radioButton9</value>
+  </data>
+  <data name="&gt;&gt;radioButton9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton9.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;radioButton9.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radioButton5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>646, 4</value>
+  </data>
+  <data name="radioButton5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 16</value>
+  </data>
+  <data name="radioButton5.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="radioButton5.Text" xml:space="preserve">
+    <value>독</value>
+  </data>
+  <data name="&gt;&gt;radioButton5.Name" xml:space="preserve">
+    <value>radioButton5</value>
+  </data>
+  <data name="&gt;&gt;radioButton5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton5.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;radioButton5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="radioButton6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>565, 4</value>
+  </data>
+  <data name="radioButton6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 16</value>
+  </data>
+  <data name="radioButton6.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="radioButton6.Text" xml:space="preserve">
+    <value>수면</value>
+  </data>
+  <data name="&gt;&gt;radioButton6.Name" xml:space="preserve">
+    <value>radioButton6</value>
+  </data>
+  <data name="&gt;&gt;radioButton6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton6.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;radioButton6.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="radioButton7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>484, 4</value>
+  </data>
+  <data name="radioButton7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 16</value>
+  </data>
+  <data name="radioButton7.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="radioButton7.Text" xml:space="preserve">
+    <value>마비</value>
+  </data>
+  <data name="&gt;&gt;radioButton7.Name" xml:space="preserve">
+    <value>radioButton7</value>
+  </data>
+  <data name="&gt;&gt;radioButton7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton7.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;radioButton7.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="radioButton8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>403, 4</value>
+  </data>
+  <data name="radioButton8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 16</value>
+  </data>
+  <data name="radioButton8.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="radioButton8.Text" xml:space="preserve">
+    <value>용</value>
+  </data>
+  <data name="&gt;&gt;radioButton8.Name" xml:space="preserve">
+    <value>radioButton8</value>
+  </data>
+  <data name="&gt;&gt;radioButton8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton8.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;radioButton8.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="radioButton4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 4</value>
+  </data>
+  <data name="radioButton4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 16</value>
+  </data>
+  <data name="radioButton4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="radioButton4.Text" xml:space="preserve">
+    <value>번개</value>
+  </data>
+  <data name="&gt;&gt;radioButton4.Name" xml:space="preserve">
+    <value>radioButton4</value>
+  </data>
+  <data name="&gt;&gt;radioButton4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton4.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;radioButton4.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="radioButton3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 4</value>
+  </data>
+  <data name="radioButton3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 16</value>
+  </data>
+  <data name="radioButton3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="radioButton3.Text" xml:space="preserve">
+    <value>얼음</value>
+  </data>
+  <data name="&gt;&gt;radioButton3.Name" xml:space="preserve">
+    <value>radioButton3</value>
+  </data>
+  <data name="&gt;&gt;radioButton3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton3.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;radioButton3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="radioButton2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 4</value>
+  </data>
+  <data name="radioButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 16</value>
+  </data>
+  <data name="radioButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="radioButton2.Text" xml:space="preserve">
+    <value>물</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Name" xml:space="preserve">
+    <value>radioButton2</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="radioButton1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 4</value>
+  </data>
+  <data name="radioButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 16</value>
+  </data>
+  <data name="radioButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radioButton1.Text" xml:space="preserve">
+    <value>불</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Name" xml:space="preserve">
+    <value>radioButton1</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 83</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1150, 30</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="chk_slotsLevel_3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chk_slotsLevel_3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>168, 13</value>
+  </data>
+  <data name="chk_slotsLevel_3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 16</value>
+  </data>
+  <data name="chk_slotsLevel_3.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="chk_slotsLevel_3.Text" xml:space="preserve">
+    <value>Lv 3</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsLevel_3.Name" xml:space="preserve">
+    <value>chk_slotsLevel_3</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsLevel_3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsLevel_3.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsLevel_3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chk_slotsLevel_2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chk_slotsLevel_2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 13</value>
+  </data>
+  <data name="chk_slotsLevel_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 16</value>
+  </data>
+  <data name="chk_slotsLevel_2.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="chk_slotsLevel_2.Text" xml:space="preserve">
+    <value>Lv 2</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsLevel_2.Name" xml:space="preserve">
+    <value>chk_slotsLevel_2</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsLevel_2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsLevel_2.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsLevel_2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chk_slotsLevel_All.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chk_slotsLevel_All.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 13</value>
+  </data>
+  <data name="chk_slotsLevel_All.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 16</value>
+  </data>
+  <data name="chk_slotsLevel_All.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="chk_slotsLevel_All.Text" xml:space="preserve">
+    <value>전체</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsLevel_All.Name" xml:space="preserve">
+    <value>chk_slotsLevel_All</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsLevel_All.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsLevel_All.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsLevel_All.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="chk_slotsLevel_1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chk_slotsLevel_1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 13</value>
+  </data>
+  <data name="chk_slotsLevel_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 16</value>
+  </data>
+  <data name="chk_slotsLevel_1.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="chk_slotsLevel_1.Text" xml:space="preserve">
+    <value>Lv 1</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsLevel_1.Name" xml:space="preserve">
+    <value>chk_slotsLevel_1</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsLevel_1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsLevel_1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsLevel_1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>960, 119</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 40</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="chk_slotsCount_3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chk_slotsCount_3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>168, 13</value>
+  </data>
+  <data name="chk_slotsCount_3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 16</value>
+  </data>
+  <data name="chk_slotsCount_3.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="chk_slotsCount_3.Text" xml:space="preserve">
+    <value>3개</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsCount_3.Name" xml:space="preserve">
+    <value>chk_slotsCount_3</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsCount_3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsCount_3.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsCount_3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chk_slotsCount_2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chk_slotsCount_2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 13</value>
+  </data>
+  <data name="chk_slotsCount_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 16</value>
+  </data>
+  <data name="chk_slotsCount_2.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="chk_slotsCount_2.Text" xml:space="preserve">
+    <value>2개</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsCount_2.Name" xml:space="preserve">
+    <value>chk_slotsCount_2</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsCount_2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsCount_2.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsCount_2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chk_slotsCount_1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chk_slotsCount_1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 13</value>
+  </data>
+  <data name="chk_slotsCount_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 16</value>
+  </data>
+  <data name="chk_slotsCount_1.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="chk_slotsCount_1.Text" xml:space="preserve">
+    <value>1개</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsCount_1.Name" xml:space="preserve">
+    <value>chk_slotsCount_1</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsCount_1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsCount_1.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsCount_1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="chk_slotsCount_All.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chk_slotsCount_All.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 13</value>
+  </data>
+  <data name="chk_slotsCount_All.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 16</value>
+  </data>
+  <data name="chk_slotsCount_All.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="chk_slotsCount_All.Text" xml:space="preserve">
+    <value>전체</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsCount_All.Name" xml:space="preserve">
+    <value>chk_slotsCount_All</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsCount_All.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsCount_All.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;chk_slotsCount_All.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>굴림, 9pt, style=Bold</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>960, 161</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 40</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 119</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>820, 87</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btn_Close.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btn_Close.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1192, 12</value>
+  </data>
+  <data name="btn_Close.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <data name="btn_Close.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="&gt;&gt;btn_Close.Name" xml:space="preserve">
+    <value>btn_Close</value>
+  </data>
+  <data name="&gt;&gt;btn_Close.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_Close.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btn_Close.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 12</value>
+  </data>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1234, 549</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>Manual</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>FrmWeaponList</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FrmWeaponList</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
