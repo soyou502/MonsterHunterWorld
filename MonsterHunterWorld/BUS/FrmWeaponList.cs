@@ -1098,5 +1098,10 @@ namespace MonsteHunterWorld
                 count += 1;
             }
         }
+
+        private void FrmWeaponList_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form1.Show();
+        }
     }
 }
