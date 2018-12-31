@@ -7,6 +7,7 @@
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_FormMain.jpg" Value="..\MonsterHunterWorld\bin\Debug\Images"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_HtmlAgilityPack.dll" Value="..\packages\HtmlAgilityPack.1.8.11\lib\Net45"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Loding.gif" Value="..\MonsterHunterWorld\bin\Debug\Images"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_MonsterHunterWorld.exe" Value="..\MonsterHunterWorld\bin\Debug"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_MonsterHunterWorld.exe.config" Value="..\MonsterHunterWorld\bin\Debug"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_MonsterHunterWorld.pdb" Value="..\MonsterHunterWorld\bin\Debug"/>
@@ -18,6 +19,7 @@
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_monsterhunter_back.jpg" Value="..\MonsterHunterWorld\bin\Debug\Images"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_FormMain.jpg" Value="FormMain.jpg"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_HtmlAgilityPack.dll" Value="HtmlAgilityPack.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Loding.gif" Value="Loding.gif"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_MonsterHunterWorld.exe" Value="MonsterHunterWorld.exe"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_MonsterHunterWorld.exe.config" Value="MonsterHunterWorld.exe.config"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_MonsterHunterWorld.pdb" Value="MonsterHunterWorld.pdb"/>
@@ -69,9 +71,10 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
     <ROW File="FormMain.jpg" Component_="MonsterHunterWorld_ContentOutput_Images" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_FormMain.jpg]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_FormMain.jpg&gt;" SelfReg="false" NextFile="monsterhunter_back.jpg"/>
     <ROW File="HtmlAgilityPack.dll" Component_="MonsterHunterWorld_References" FileName="HTMLAG~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_HtmlAgilityPack.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_HtmlAgilityPack.dll&gt;" SelfReg="false" NextFile="Newtonsoft.Json.dll"/>
+    <ROW File="Loding.gif" Component_="MonsterHunterWorld_ContentOutput_Images" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_Loding.gif]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Loding.gif&gt;" SelfReg="false"/>
     <ROW File="MonsterHunterWorld.exe" Component_="MonsterHunterWorld_PrimaryOutput" FileName="MONSTE~2.EXE|[|AI_PROPPATH_FILENAME_PERBUILD_MonsterHunterWorld.exe]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_MonsterHunterWorld.exe&gt;" SelfReg="false" NextFile="MonsterHunterWorld.exe.config" DigSign="true"/>
     <ROW File="MonsterHunterWorld.exe.config" Component_="MonsterHunterWorld_PrimaryOutput" FileName="MONSTE~2.CON|[|AI_PROPPATH_FILENAME_PERBUILD_MonsterHunterWorld.exe.config]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_MonsterHunterWorld.exe.config&gt;" SelfReg="false" NextFile="HtmlAgilityPack.dll"/>
-    <ROW File="MonsterHunterWorld.pdb" Component_="MonsterHunterWorld_SymbolsOutput" FileName="MONSTE~2.PDB|[|AI_PROPPATH_FILENAME_PERBUILD_MonsterHunterWorld.pdb]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_MonsterHunterWorld.pdb&gt;" SelfReg="false"/>
+    <ROW File="MonsterHunterWorld.pdb" Component_="MonsterHunterWorld_SymbolsOutput" FileName="MONSTE~2.PDB|[|AI_PROPPATH_FILENAME_PERBUILD_MonsterHunterWorld.pdb]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_MonsterHunterWorld.pdb&gt;" SelfReg="false" NextFile="Loding.gif"/>
     <ROW File="Newtonsoft.Json.dll" Component_="MonsterHunterWorld_References" FileName="NEWTON~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Newtonsoft.Json.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Newtonsoft.Json.dll&gt;" SelfReg="false" NextFile="FormMain.jpg"/>
     <ROW File="PNG" Component_="MonsterHunterWorld_ContentOutput_Images" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_PNG]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_PNG&gt;" SelfReg="false" NextFile="jpg"/>
     <ROW File="PNG_1" Component_="MonsterHunterWorld_ContentOutput_Images" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_PNG_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_PNG_1&gt;" SelfReg="false" NextFile="Save.txt"/>
@@ -82,6 +85,7 @@
   <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
     <ROW Name="AI_APPPATH_PERBUILD_FormMain.jpg" Path="[|AI_PROPPATH_DIR_PERBUILD_FormMain.jpg]\[|AI_PROPPATH_FILENAME_PERBUILD_FormMain.jpg]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_HtmlAgilityPack.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_HtmlAgilityPack.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_HtmlAgilityPack.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_Loding.gif" Path="[|AI_PROPPATH_DIR_PERBUILD_Loding.gif]\[|AI_PROPPATH_FILENAME_PERBUILD_Loding.gif]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_MonsterHunterWorld.exe" Path="[|AI_PROPPATH_DIR_PERBUILD_MonsterHunterWorld.exe]\[|AI_PROPPATH_FILENAME_PERBUILD_MonsterHunterWorld.exe]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_MonsterHunterWorld.exe.config" Path="[|AI_PROPPATH_DIR_PERBUILD_MonsterHunterWorld.exe.config]\[|AI_PROPPATH_FILENAME_PERBUILD_MonsterHunterWorld.exe.config]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_MonsterHunterWorld.pdb" Path="[|AI_PROPPATH_DIR_PERBUILD_MonsterHunterWorld.pdb]\[|AI_PROPPATH_FILENAME_PERBUILD_MonsterHunterWorld.pdb]" Type="2" Content="0"/>
@@ -206,5 +210,6 @@
     <ROW ProjectId="{2bc405fa-3c2c-4c9a-95f5-64ac03f62e4f}" ProjectName="MonsterHunterWorld" OutputGroup="ContentOutput" OutputFile="PNG_1"/>
     <ROW ProjectId="{2bc405fa-3c2c-4c9a-95f5-64ac03f62e4f}" ProjectName="MonsterHunterWorld" OutputGroup="ContentOutput" OutputFile="Save.txt"/>
     <ROW ProjectId="{2bc405fa-3c2c-4c9a-95f5-64ac03f62e4f}" ProjectName="MonsterHunterWorld" OutputGroup="SymbolsOutput" OutputFile="MonsterHunterWorld.pdb"/>
+    <ROW ProjectId="{2bc405fa-3c2c-4c9a-95f5-64ac03f62e4f}" ProjectName="MonsterHunterWorld" OutputGroup="ContentOutput" OutputFile="Loding.gif"/>
   </COMPONENT>
 </DOCUMENT>
