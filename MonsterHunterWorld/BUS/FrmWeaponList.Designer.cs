@@ -133,6 +133,7 @@
             // 
             // weapon_data_View
             // 
+            this.weapon_data_View.AllowUserToAddRows = false;
             this.weapon_data_View.AllowUserToResizeColumns = false;
             this.weapon_data_View.AllowUserToResizeRows = false;
             this.weapon_data_View.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
